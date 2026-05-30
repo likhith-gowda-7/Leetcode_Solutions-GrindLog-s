@@ -1,0 +1,18 @@
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
+        res=[]
+        sol=[]
+        def backtrack(op,cl):
+            if(op==n and cl==n):
+                res.append("".join(sol))
+                return
+            if(op<n):
+                sol.append("(")
+                backtrack(op+1,cl)
+                sol.pop()
+            if(op>cl):
+                sol.append(")")
+                backtrack(op,cl+1)
+                sol.pop()
+        backtrack(0,0)
+        return res
