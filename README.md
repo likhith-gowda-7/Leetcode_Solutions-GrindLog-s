@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*5 problems solved across 5 topics in 1 language(s)*
+*1 problems solved across 2 topics in 1 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-5-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-3-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-1-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-1-ff375f?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-1-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-1-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-0-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 </div>
 
@@ -26,10 +26,10 @@
 
 | Difficulty | Solved | Percentage |
 |:----------:|:------:|:----------:|
-| 🟢 Easy | 3 | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ 60% |
-| 🟡 Medium | 1 | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ 20% |
-| 🔴 Hard | 1 | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ 20% |
-| **Total** | **5** | |
+| 🟢 Easy | 1 | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 100% |
+| 🟡 Medium | 0 | ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0% |
+| 🔴 Hard | 0 | ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0% |
+| **Total** | **1** | |
 
 ---
 
@@ -37,9 +37,7 @@
 
 | Topic | Problems | Status |
 |:------|:--------:|:------:|
-| Array | 2 | 🌱 Starting |
-| Hash Table | 2 | 🌱 Starting |
-| String | 1 | 🌱 Starting |
+| Array | 1 | 🌱 Starting |
 
 
 ---
@@ -49,10 +47,6 @@
 | # | Problem | Difficulty | Language | Date |
 |:-:|:--------|:----------:|:--------:|:----:|
 | 3300 | [Minimum Element After Replacement With Digit Sum](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/) | 🟢 Easy | Python | 2026-05-29 |
-| 3093 | [Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries/) | 🔴 Hard | Python | 2026-05-28 |
-| 3121 | [Count the Number of Special Characters II](https://leetcode.com/problems/count-the-number-of-special-characters-ii/) | 🟡 Medium | Python | 2026-05-27 |
-| 520 | [Detect Capital](https://leetcode.com/problems/detect-capital/) | 🟢 Easy | Python | 2026-05-26 |
-| 3120 | [Count the Number of Special Characters I](https://leetcode.com/problems/count-the-number-of-special-characters-i/) | 🟢 Easy | Python | 2026-05-26 |
 
 
 ---
@@ -66,10 +60,6 @@
 
 | # | Problem | Difficulty | Topics | Language | Runtime | Memory |
 |:-:|:--------|:----------:|:-------|:--------:|:-------:|:------:|
-| 520 | [Detect Capital](https://leetcode.com/problems/detect-capital/) | 🟢 Easy | String | Python | 0 ms | 19.4 MB |
-| 3093 | [Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries/) | 🔴 Hard | Array, String, Trie | Python | 1621 ms | 222.3 MB |
-| 3120 | [Count the Number of Special Characters I](https://leetcode.com/problems/count-the-number-of-special-characters-i/) | 🟢 Easy | Hash Table, String | Python | 0 ms | 19.2 MB |
-| 3121 | [Count the Number of Special Characters II](https://leetcode.com/problems/count-the-number-of-special-characters-ii/) | 🟡 Medium | Hash Table, String | Python | 201 ms | 21.7 MB |
 | 3300 | [Minimum Element After Replacement With Digit Sum](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/) | 🟢 Easy | Array, Math | Python | 3 ms | 19.3 MB |
 
 </details>
