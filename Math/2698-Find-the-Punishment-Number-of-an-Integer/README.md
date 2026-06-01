@@ -58,7 +58,7 @@ Hence, the punishment number of 37 is 1 + 81 + 100 + 1296 = 1478
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 4 ms (Beats 83.12%) |
+| ⏱️ Runtime | 4 ms (Beats 82.33%) |
 | 💾 Memory | 17.9 MB (Beats 100%) |
 | 📅 Solved | 2025-02-15 |
 | 💻 Language | Python |

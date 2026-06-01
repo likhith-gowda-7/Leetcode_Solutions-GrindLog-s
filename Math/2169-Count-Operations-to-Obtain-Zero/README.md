@@ -57,7 +57,7 @@ So the total number of operations required is 1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 35 ms (Beats 68.43%) |
+| ⏱️ Runtime | 35 ms (Beats 68.7%) |
 | 💾 Memory | 17.7 MB (Beats 100%) |
 | 📅 Solved | 2025-11-09 |
 | 💻 Language | Python |

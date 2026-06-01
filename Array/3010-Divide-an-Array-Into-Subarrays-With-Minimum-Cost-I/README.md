@@ -67,6 +67,6 @@ It can be shown that 12 is the minimum cost achievable.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.2 MB (Beats 87.07%) |
+| 💾 Memory | 19.2 MB (Beats 87.03%) |
 | 📅 Solved | 2026-02-01 |
 | 💻 Language | Python |

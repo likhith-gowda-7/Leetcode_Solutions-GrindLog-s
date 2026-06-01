@@ -65,7 +65,7 @@ Products table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 419 ms (Beats 65.89%) |
+| ⏱️ Runtime | 419 ms (Beats 65.57%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-15 |
 | 💻 Language | mssql |

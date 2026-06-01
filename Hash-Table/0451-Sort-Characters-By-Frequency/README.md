@@ -60,7 +60,7 @@ Note that 'A' and 'a' are treated as two different characters.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 97.16%) |
+| ⏱️ Runtime | 3 ms (Beats 97.06%) |
 | 💾 Memory | 18.9 MB (Beats 100%) |
 | 📅 Solved | 2025-07-06 |
 | 💻 Language | Python |

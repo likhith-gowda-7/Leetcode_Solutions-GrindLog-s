@@ -65,7 +65,7 @@ counter.reset(); // 0
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 59 ms (Beats 11.87%) |
+| ⏱️ Runtime | 59 ms (Beats 11.77%) |
 | 💾 Memory | 51.3 MB (Beats 100%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

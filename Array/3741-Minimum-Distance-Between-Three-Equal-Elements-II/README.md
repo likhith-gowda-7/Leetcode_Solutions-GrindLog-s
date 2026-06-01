@@ -65,7 +65,7 @@ There are no good tuples. Therefore, the answer is -1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 371 ms (Beats 34.91%) |
+| ⏱️ Runtime | 371 ms (Beats 34.92%) |
 | 💾 Memory | 50.7 MB (Beats 34.38%) |
 | 📅 Solved | 2026-04-11 |
 | 💻 Language | Python |

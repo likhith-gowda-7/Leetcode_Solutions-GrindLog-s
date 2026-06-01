@@ -58,7 +58,7 @@ At i = 2: 1, 2, and 3 are common in A and B, so C[2] = 3.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 7 ms (Beats 61.4%) |
-| 💾 Memory | 19.4 MB (Beats 5.16%) |
+| ⏱️ Runtime | 7 ms (Beats 61.42%) |
+| 💾 Memory | 19.4 MB (Beats 5.19%) |
 | 📅 Solved | 2026-05-21 |
 | 💻 Language | Python |

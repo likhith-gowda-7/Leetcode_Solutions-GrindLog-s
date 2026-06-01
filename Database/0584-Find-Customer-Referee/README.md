@@ -71,7 +71,7 @@ Customer table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 499 ms (Beats 51.53%) |
+| ⏱️ Runtime | 499 ms (Beats 51.63%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | mssql |

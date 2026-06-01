@@ -69,7 +69,7 @@ Since the areas above and below the line are equal, the output is `7/6 = 1.16667
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1447 ms (Beats 84.61%) |
-| 💾 Memory | 48.3 MB (Beats 40.48%) |
+| ⏱️ Runtime | 1447 ms (Beats 85.07%) |
+| 💾 Memory | 48.3 MB (Beats 39.75%) |
 | 📅 Solved | 2026-01-13 |
 | 💻 Language | Python |

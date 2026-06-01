@@ -63,7 +63,7 @@ numArray.sumRange(0, 2); // return 1 + 2 + 5 = 8
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 408 ms (Beats 68.78%) |
+| ⏱️ Runtime | 408 ms (Beats 69.13%) |
 | 💾 Memory | 36.1 MB (Beats 100%) |
 | 📅 Solved | 2025-07-02 |
 | 💻 Language | Python |

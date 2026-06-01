@@ -84,7 +84,7 @@ merged: a p b q c   d
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 33 ms (Beats 98.22%) |
+| ⏱️ Runtime | 33 ms (Beats 98.17%) |
 | 💾 Memory | 17.5 MB (Beats 100%) |
 | 📅 Solved | 2024-12-09 |
 | 💻 Language | Python |

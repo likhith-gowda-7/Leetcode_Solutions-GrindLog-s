@@ -106,7 +106,7 @@ There is no path that reaches cell `(1, 1)`​​​​​​​ without exceedi
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 13965 ms (Beats 7.09%) |
-| 💾 Memory | 22.7 MB (Beats 88.61%) |
+| ⏱️ Runtime | 13965 ms (Beats 6.98%) |
+| 💾 Memory | 22.7 MB (Beats 88.62%) |
 | 📅 Solved | 2026-04-30 |
 | 💻 Language | Python |

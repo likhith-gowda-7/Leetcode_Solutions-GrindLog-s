@@ -65,7 +65,7 @@ Number of valid subsequences (63 - 2 = 61).
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 147 ms (Beats 68.17%) |
+| ⏱️ Runtime | 147 ms (Beats 68.38%) |
 | 💾 Memory | 27.8 MB (Beats 100%) |
 | 📅 Solved | 2025-06-29 |
 | 💻 Language | Python |

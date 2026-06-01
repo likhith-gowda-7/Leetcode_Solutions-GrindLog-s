@@ -57,7 +57,7 @@ rangeModule.queryRange(16, 17); // return True, (The number 16 in [16, 17) is st
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 406 ms (Beats 46.88%) |
+| ⏱️ Runtime | 406 ms (Beats 46.68%) |
 | 💾 Memory | 22.5 MB (Beats 100%) |
 | 📅 Solved | 2025-06-30 |
 | 💻 Language | Python |

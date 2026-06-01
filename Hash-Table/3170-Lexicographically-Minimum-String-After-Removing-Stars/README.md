@@ -53,7 +53,7 @@ There is no `'*'` in the string.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 562 ms (Beats 41.36%) |
+| ⏱️ Runtime | 562 ms (Beats 40.37%) |
 | 💾 Memory | 21.7 MB (Beats 99.38%) |
 | 📅 Solved | 2025-06-07 |
 | 💻 Language | Python |

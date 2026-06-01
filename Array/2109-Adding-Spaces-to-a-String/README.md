@@ -70,7 +70,7 @@ We are also able to place spaces before the first character of the string.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 41 ms (Beats 89.71%) |
-| 💾 Memory | 48.9 MB (Beats 33.9%) |
+| ⏱️ Runtime | 41 ms (Beats 89.77%) |
+| 💾 Memory | 48.9 MB (Beats 34.66%) |
 | 📅 Solved | 2024-12-16 |
 | 💻 Language | Python |

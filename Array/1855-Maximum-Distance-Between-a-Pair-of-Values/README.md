@@ -66,7 +66,7 @@ The maximum distance is 2 with pair (2,4).
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 49 ms (Beats 60.21%) |
-| 💾 Memory | 35.9 MB (Beats 57.23%) |
+| ⏱️ Runtime | 49 ms (Beats 60.19%) |
+| 💾 Memory | 35.9 MB (Beats 57.21%) |
 | 📅 Solved | 2026-04-19 |
 | 💻 Language | Python |

@@ -59,7 +59,7 @@ One of the longest balanced substrings is `"ab"` because both distinct character
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 803 ms (Beats 94.54%) |
-| 💾 Memory | 45.2 MB (Beats 88.24%) |
+| ⏱️ Runtime | 803 ms (Beats 93.83%) |
+| 💾 Memory | 45.2 MB (Beats 87.22%) |
 | 📅 Solved | 2026-02-13 |
 | 💻 Language | Python |

@@ -55,7 +55,7 @@ The array answer is [|0 - 0|] = [0].
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1 ms (Beats 82.11%) |
+| ⏱️ Runtime | 1 ms (Beats 83.48%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-02-10 |
 | 💻 Language | Python |

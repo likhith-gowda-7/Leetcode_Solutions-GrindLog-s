@@ -84,7 +84,7 @@ After that, it will rain over lakes [1,2]. It's easy to prove that no matter whi
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 187 ms (Beats 94.48%) |
-| 💾 Memory | 40.2 MB (Beats 17.13%) |
+| ⏱️ Runtime | 187 ms (Beats 96.02%) |
+| 💾 Memory | 40.2 MB (Beats 15.91%) |
 | 📅 Solved | 2025-10-09 |
 | 💻 Language | Python |

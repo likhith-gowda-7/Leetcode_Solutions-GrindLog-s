@@ -73,7 +73,7 @@ The difference between any two elements in each array is less than or equal to 1
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 72 ms (Beats 88.58%) |
+| ⏱️ Runtime | 72 ms (Beats 89.09%) |
 | 💾 Memory | 33.4 MB (Beats 100%) |
 | 📅 Solved | 2025-06-18 |
 | 💻 Language | Python |

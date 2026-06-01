@@ -72,7 +72,7 @@ The composition of zero functions is the identity function
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 69 ms (Beats 5.98%) |
+| ⏱️ Runtime | 69 ms (Beats 6.01%) |
 | 💾 Memory | 50 MB (Beats 100%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

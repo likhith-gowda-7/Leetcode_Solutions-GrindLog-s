@@ -64,7 +64,7 @@ minStack.getMin(); // return -2
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 4 ms (Beats 67.27%) |
+| ⏱️ Runtime | 4 ms (Beats 67.39%) |
 | 💾 Memory | 21.3 MB (Beats 100%) |
 | 📅 Solved | 2025-08-22 |
 | 💻 Language | Python |

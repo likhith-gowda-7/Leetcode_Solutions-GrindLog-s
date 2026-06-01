@@ -65,7 +65,7 @@ twitter.getNewsFeed(1);  // User 1's news feed should return a list with 1 tweet
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 12 ms (Beats 67.65%) |
-| 💾 Memory | 27.6 MB (Beats 92.4%) |
+| ⏱️ Runtime | 12 ms (Beats 67.51%) |
+| 💾 Memory | 27.6 MB (Beats 92.47%) |
 | 📅 Solved | 2025-07-13 |
 | 💻 Language | Python |

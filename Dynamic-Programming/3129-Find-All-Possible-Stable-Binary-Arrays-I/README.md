@@ -67,7 +67,7 @@ All the possible stable binary arrays are `[0,0,1,0,1,1]`, `[0,0,1,1,0,1]`, `[0,
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 21 ms (Beats 96.46%) |
-| 💾 Memory | 19.5 MB (Beats 96.46%) |
+| ⏱️ Runtime | 21 ms (Beats 95.77%) |
+| 💾 Memory | 19.5 MB (Beats 95.77%) |
 | 📅 Solved | 2026-03-09 |
 | 💻 Language | Python |

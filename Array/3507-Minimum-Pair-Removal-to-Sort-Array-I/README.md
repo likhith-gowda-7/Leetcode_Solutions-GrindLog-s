@@ -57,7 +57,7 @@ The array `nums` is already sorted.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 11 ms (Beats 73.82%) |
-| 💾 Memory | 19.4 MB (Beats 25.41%) |
+| ⏱️ Runtime | 11 ms (Beats 73.64%) |
+| 💾 Memory | 19.4 MB (Beats 25.58%) |
 | 📅 Solved | 2026-01-22 |
 | 💻 Language | Python |

@@ -59,7 +59,7 @@ Day 4: A forgets the secret. B, C, and D share the secret with 3 new people. (6 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 88.94%) |
+| ⏱️ Runtime | 3 ms (Beats 89.22%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-09-09 |
 | 💻 Language | Python |

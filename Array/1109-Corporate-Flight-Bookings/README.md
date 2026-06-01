@@ -66,7 +66,7 @@ Hence, answer = [10,25]
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 22 ms (Beats 81.5%) |
+| ⏱️ Runtime | 22 ms (Beats 81.57%) |
 | 💾 Memory | 28.9 MB (Beats 100%) |
 | 📅 Solved | 2025-03-13 |
 | 💻 Language | Python |

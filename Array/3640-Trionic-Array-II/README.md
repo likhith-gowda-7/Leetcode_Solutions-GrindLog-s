@@ -73,7 +73,7 @@ Pick l = 0`, p = 1`, q = 2`, r = 3`:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 155 ms (Beats 80.3%) |
-| 💾 Memory | 31.2 MB (Beats 93.1%) |
+| ⏱️ Runtime | 155 ms (Beats 81.15%) |
+| 💾 Memory | 31.2 MB (Beats 94.76%) |
 | 📅 Solved | 2026-02-04 |
 | 💻 Language | Python |

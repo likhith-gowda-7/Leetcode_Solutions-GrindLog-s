@@ -69,7 +69,7 @@ Note that if the number of students is odd, there is no need to change the last 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 371 ms (Beats 32.79%) |
+| ⏱️ Runtime | 371 ms (Beats 33.42%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-02-09 |
 | 💻 Language | MySQL |

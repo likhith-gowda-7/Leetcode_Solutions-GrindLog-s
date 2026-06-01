@@ -70,6 +70,6 @@ version1 has less revisions, which means every missing revision are treated as "
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.3 MB (Beats 28.18%) |
+| 💾 Memory | 19.3 MB (Beats 28.47%) |
 | 📅 Solved | 2026-01-28 |
 | 💻 Language | Python |

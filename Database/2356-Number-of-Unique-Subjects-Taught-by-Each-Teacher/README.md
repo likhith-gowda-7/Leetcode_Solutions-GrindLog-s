@@ -75,7 +75,7 @@ Teacher 2:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 468 ms (Beats 97.08%) |
+| ⏱️ Runtime | 468 ms (Beats 97.66%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-25 |
 | 💻 Language | MySQL |

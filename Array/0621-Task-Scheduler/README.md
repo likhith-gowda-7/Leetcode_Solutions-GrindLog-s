@@ -59,7 +59,7 @@ There are only two types of tasks, A and B, which need to be separated by 3 inte
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 148 ms (Beats 50.49%) |
+| ⏱️ Runtime | 148 ms (Beats 50.4%) |
 | 💾 Memory | 19.2 MB (Beats 100%) |
 | 📅 Solved | 2025-07-08 |
 | 💻 Language | Python |

@@ -75,7 +75,7 @@ High Salary: Accounts 3, 6, and 8.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1475 ms (Beats 78.32%) |
+| ⏱️ Runtime | 1475 ms (Beats 78.58%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-31 |
 | 💻 Language | MySQL |

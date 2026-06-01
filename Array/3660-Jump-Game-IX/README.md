@@ -67,7 +67,7 @@ Thus, `ans = [3, 3, 3]`.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 223 ms (Beats 51.57%) |
-| 💾 Memory | 39.6 MB (Beats 55.74%) |
+| ⏱️ Runtime | 223 ms (Beats 51.6%) |
+| 💾 Memory | 39.6 MB (Beats 55.76%) |
 | 📅 Solved | 2026-05-07 |
 | 💻 Language | Python |

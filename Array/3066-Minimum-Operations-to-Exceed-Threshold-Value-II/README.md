@@ -77,7 +77,7 @@ It can be shown that 4 is the minimum number of operations needed so that all el
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 210 ms (Beats 82.39%) |
-| 💾 Memory | 35.9 MB (Beats 99.43%) |
+| ⏱️ Runtime | 210 ms (Beats 83.74%) |
+| 💾 Memory | 35.9 MB (Beats 100%) |
 | 📅 Solved | 2025-02-13 |
 | 💻 Language | Python |

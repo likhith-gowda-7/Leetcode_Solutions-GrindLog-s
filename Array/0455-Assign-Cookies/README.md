@@ -57,7 +57,7 @@ You need to output 2.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 11 ms (Beats 97.49%) |
+| ⏱️ Runtime | 11 ms (Beats 97.57%) |
 | 💾 Memory | 19.8 MB (Beats 100%) |
 | 📅 Solved | 2025-12-03 |
 | 💻 Language | Python |

@@ -89,7 +89,7 @@ The output is 4.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1516 ms (Beats 27.27%) |
+| ⏱️ Runtime | 1516 ms (Beats 25.53%) |
 | 💾 Memory | 54.4 MB (Beats 100%) |
 | 📅 Solved | 2025-09-07 |
 | 💻 Language | Python |

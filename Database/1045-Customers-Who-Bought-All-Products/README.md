@@ -88,7 +88,7 @@ The customers who bought all the products (5 and 6) are customers with IDs 1 and
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 532 ms (Beats 89.89%) |
+| ⏱️ Runtime | 532 ms (Beats 90.96%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | MySQL |

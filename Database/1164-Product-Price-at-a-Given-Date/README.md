@@ -65,7 +65,7 @@ Products table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 431 ms (Beats 96.27%) |
+| ⏱️ Runtime | 431 ms (Beats 96.67%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-27 |
 | 💻 Language | MySQL |

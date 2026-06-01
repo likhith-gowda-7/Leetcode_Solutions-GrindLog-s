@@ -62,6 +62,6 @@ There is no way to pick `p` and `q` to form the required three segments.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.3 MB (Beats 70.81%) |
+| 💾 Memory | 19.3 MB (Beats 70.89%) |
 | 📅 Solved | 2026-02-03 |
 | 💻 Language | Python |

@@ -121,7 +121,7 @@ router.forwardPacket(); // There are no packets left, return `[]`.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 480 ms (Beats 30.63%) |
-| 💾 Memory | 88.8 MB (Beats 5.85%) |
+| ⏱️ Runtime | 480 ms (Beats 30.5%) |
+| 💾 Memory | 88.8 MB (Beats 5.38%) |
 | 📅 Solved | 2025-09-20 |
 | 💻 Language | Python |

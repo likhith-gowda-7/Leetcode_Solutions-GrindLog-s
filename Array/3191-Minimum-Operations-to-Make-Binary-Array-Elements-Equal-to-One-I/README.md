@@ -59,7 +59,7 @@ It is impossible to make all elements equal to 1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 107 ms (Beats 72.33%) |
+| ⏱️ Runtime | 107 ms (Beats 71.65%) |
 | 💾 Memory | 21.7 MB (Beats 100%) |
 | 📅 Solved | 2025-04-01 |
 | 💻 Language | Python |

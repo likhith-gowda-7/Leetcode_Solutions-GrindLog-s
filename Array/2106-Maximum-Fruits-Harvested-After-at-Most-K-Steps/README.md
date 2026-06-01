@@ -82,7 +82,7 @@ You can move at most k = 2 steps and cannot reach any position with fruits.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 136 ms (Beats 37.65%) |
+| ⏱️ Runtime | 136 ms (Beats 37.5%) |
 | 💾 Memory | 52.4 MB (Beats 100%) |
 | 📅 Solved | 2025-08-03 |
 | 💻 Language | Python |

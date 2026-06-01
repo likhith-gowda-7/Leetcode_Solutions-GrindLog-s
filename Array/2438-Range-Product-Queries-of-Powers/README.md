@@ -58,7 +58,7 @@ The answer to the only query is powers[0] = 2. The answer modulo 10^9 + 7 is the
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 55 ms (Beats 79.86%) |
-| 💾 Memory | 48.3 MB (Beats 93.75%) |
+| ⏱️ Runtime | 55 ms (Beats 78.19%) |
+| 💾 Memory | 48.3 MB (Beats 93.98%) |
 | 📅 Solved | 2025-08-11 |
 | 💻 Language | Python |

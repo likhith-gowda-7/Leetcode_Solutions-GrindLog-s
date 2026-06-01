@@ -74,6 +74,6 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.3 MB (Beats 38.41%) |
+| 💾 Memory | 19.3 MB (Beats 38.45%) |
 | 📅 Solved | 2026-05-03 |
 | 💻 Language | Python |

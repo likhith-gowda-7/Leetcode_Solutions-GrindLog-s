@@ -67,7 +67,7 @@ If we had started at the first tree, we would only pick from trees [1,2].
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 132 ms (Beats 92.09%) |
+| ⏱️ Runtime | 132 ms (Beats 92.11%) |
 | 💾 Memory | 23.6 MB (Beats 100%) |
 | 📅 Solved | 2025-08-04 |
 | 💻 Language | Python |

@@ -66,7 +66,7 @@ The relative ordering of the elements less than and greater than pivot is also m
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 19 ms (Beats 93.31%) |
-| 💾 Memory | 35.6 MB (Beats 5.59%) |
+| ⏱️ Runtime | 19 ms (Beats 93.76%) |
+| 💾 Memory | 35.6 MB (Beats 5.69%) |
 | 📅 Solved | 2025-03-03 |
 | 💻 Language | Python |

@@ -69,7 +69,7 @@ No node has value 5.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 52 ms (Beats 97.75%) |
+| ⏱️ Runtime | 52 ms (Beats 97.66%) |
 | 💾 Memory | 58.2 MB (Beats 100%) |
 | 📅 Solved | 2025-11-03 |
 | 💻 Language | Python |

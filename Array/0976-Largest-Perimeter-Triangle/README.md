@@ -49,7 +49,7 @@ As we cannot use any three side lengths to form a triangle of non-zero area, we 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 11 ms (Beats 82.65%) |
+| ⏱️ Runtime | 11 ms (Beats 82.96%) |
 | 💾 Memory | 18.9 MB (Beats 100%) |
 | 📅 Solved | 2025-09-28 |
 | 💻 Language | Python |

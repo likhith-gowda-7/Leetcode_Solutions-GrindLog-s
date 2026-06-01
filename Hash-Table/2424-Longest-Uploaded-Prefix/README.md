@@ -63,7 +63,7 @@ server.longest();                    // The prefix [1,2,3] is the longest upload
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 94 ms (Beats 72.56%) |
-| 💾 Memory | 73 MB (Beats 43.29%) |
+| ⏱️ Runtime | 94 ms (Beats 73.49%) |
+| 💾 Memory | 73 MB (Beats 43.37%) |
 | 📅 Solved | 2025-07-01 |
 | 💻 Language | Python |

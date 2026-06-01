@@ -71,7 +71,7 @@ findSumPairs.count(7);  // return 11; pairs (2,1), (2,2), (2,4), (3,1), (3,2), (
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 173 ms (Beats 79.88%) |
-| 💾 Memory | 48.3 MB (Beats 85.67%) |
+| ⏱️ Runtime | 173 ms (Beats 79.75%) |
+| 💾 Memory | 48.3 MB (Beats 85.36%) |
 | 📅 Solved | 2025-07-06 |
 | 💻 Language | Python |

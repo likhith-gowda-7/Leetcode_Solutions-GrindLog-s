@@ -58,7 +58,7 @@ Note that common prefixes between elements of the same array do not count.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 238 ms (Beats 66.09%) |
-| 💾 Memory | 29.9 MB (Beats 81.05%) |
+| ⏱️ Runtime | 238 ms (Beats 66.2%) |
+| 💾 Memory | 29.9 MB (Beats 81.12%) |
 | 📅 Solved | 2026-05-21 |
 | 💻 Language | Python |

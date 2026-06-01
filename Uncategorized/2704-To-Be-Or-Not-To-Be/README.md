@@ -51,7 +51,7 @@ Example 3:**
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 56 ms (Beats 6.42%) |
+| ⏱️ Runtime | 56 ms (Beats 6.54%) |
 | 💾 Memory | 48.7 MB (Beats 100%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

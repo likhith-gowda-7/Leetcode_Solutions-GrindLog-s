@@ -76,7 +76,7 @@ lfu.get(4);      // return 4
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 127 ms (Beats 78.88%) |
-| 💾 Memory | 79.9 MB (Beats 6.5%) |
+| ⏱️ Runtime | 127 ms (Beats 78.51%) |
+| 💾 Memory | 79.9 MB (Beats 6.47%) |
 | 📅 Solved | 2025-05-09 |
 | 💻 Language | Python |

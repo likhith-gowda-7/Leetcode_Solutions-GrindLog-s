@@ -69,7 +69,7 @@ bank.withdraw(10, 50);   // return false, it is invalid because account 10 does 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 23 ms (Beats 84%) |
+| ⏱️ Runtime | 23 ms (Beats 83.91%) |
 | 💾 Memory | 47.7 MB (Beats 100%) |
 | 📅 Solved | 2025-10-26 |
 | 💻 Language | Python |

@@ -61,7 +61,7 @@ wordDictionary.search("b.."); // return True
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1139 ms (Beats 24.18%) |
-| 💾 Memory | 65.7 MB (Beats 81.53%) |
+| ⏱️ Runtime | 1139 ms (Beats 24.15%) |
+| 💾 Memory | 65.7 MB (Beats 81.47%) |
 | 📅 Solved | 2025-06-23 |
 | 💻 Language | Python |

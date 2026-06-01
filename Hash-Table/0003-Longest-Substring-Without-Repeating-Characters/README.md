@@ -56,7 +56,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 15 ms (Beats 91.83%) |
-| 💾 Memory | 13.1 MB (Beats 44.48%) |
+| ⏱️ Runtime | 15 ms (Beats 91.86%) |
+| 💾 Memory | 13.1 MB (Beats 44.4%) |
 | 📅 Solved | 2025-03-09 |
 | 💻 Language | Python |

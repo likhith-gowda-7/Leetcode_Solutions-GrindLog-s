@@ -64,6 +64,6 @@ Meetings are scheduled for all working days.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 220 ms (Beats 16.22%) |
-| 💾 Memory | 52.8 MB (Beats 91.74%) |
+| 💾 Memory | 52.8 MB (Beats 91.59%) |
 | 📅 Solved | 2025-03-24 |
 | 💻 Language | Python |

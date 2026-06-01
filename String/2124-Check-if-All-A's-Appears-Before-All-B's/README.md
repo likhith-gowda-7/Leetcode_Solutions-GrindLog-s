@@ -61,6 +61,6 @@ There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.2 MB (Beats 42.64%) |
+| 💾 Memory | 19.2 MB (Beats 42.19%) |
 | 📅 Solved | 2026-02-07 |
 | 💻 Language | Python |

@@ -66,7 +66,7 @@ The followers of 2 are {0,1}
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 505 ms (Beats 93.34%) |
+| ⏱️ Runtime | 505 ms (Beats 94.32%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-25 |
 | 💻 Language | MySQL |

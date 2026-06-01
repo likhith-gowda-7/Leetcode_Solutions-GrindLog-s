@@ -1,0 +1,68 @@
+> 📌 **Cross-listed:** Primary location is [Array/0500-Keyboard-Row](../../Array/0500-Keyboard-Row). This problem also appears under: **Array**, **Hash Table**, **String**
+
+# 500. Keyboard Row
+
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00b8a3) ![Language](https://img.shields.io/badge/Language-Python-blue) ![Array](https://img.shields.io/badge/Array-purple) ![Hash Table](https://img.shields.io/badge/Hash%20Table-purple) ![String](https://img.shields.io/badge/String-purple)
+
+
+🔗 [View on LeetCode](https://leetcode.com/problems/keyboard-row/)
+
+
+## 📝 Problem Description
+
+Given an array of strings `words`, return *the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below*.
+
+**Note** that the strings are **case-insensitive**, both lowercased and uppercased of the same letter are treated as if they are at the same row.
+
+In the **American keyboard**:
+
+	- the first row consists of the characters `"qwertyuiop"`,
+
+	- the second row consists of the characters `"asdfghjkl"`, and
+
+	- the third row consists of the characters `"zxcvbnm"`.
+
+![](https://assets.leetcode.com/uploads/2018/10/12/keyboard.png)
+ 
+
+Example 1:**
+
+**Input:** words = ["Hello","Alaska","Dad","Peace"]
+
+**Output:** ["Alaska","Dad"]
+
+**Explanation:**
+
+Both `"a"` and `"A"` are in the 2nd row of the American keyboard due to case insensitivity.
+
+Example 2:**
+
+**Input:** words = ["omk"]
+
+**Output:** []
+
+Example 3:**
+
+**Input:** words = ["adsdf","sfd"]
+
+**Output:** ["adsdf","sfd"]
+
+ 
+
+**Constraints:**
+
+	- `1 <= words.length <= 20`
+
+	- `1 <= words[i].length <= 100`
+
+	- `words[i]` consists of English letters (both lowercase and uppercase).
+
+## 📊 Metrics
+
+| Metric | Value |
+|:-------|:------|
+| ⏱️ Runtime | 0 ms (Beats 100%) |
+| 💾 Memory | 17.7 MB (Beats 100%) |
+| 📅 Solved | 2025-04-09 |
+| 💻 Language | Python |

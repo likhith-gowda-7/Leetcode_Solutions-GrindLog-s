@@ -54,7 +54,7 @@ snapshotArr.get(0,0);  // Get the value of array[0] with snap_id = 0, return 5
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 180 ms (Beats 52.87%) |
+| ⏱️ Runtime | 180 ms (Beats 52.76%) |
 | 💾 Memory | 44.1 MB (Beats 99.8%) |
 | 📅 Solved | 2025-02-28 |
 | 💻 Language | Python |

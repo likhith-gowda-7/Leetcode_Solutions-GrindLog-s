@@ -64,7 +64,7 @@ We need to wait until time 16 so that (0, 0) and (4, 4) are connected.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 23 ms (Beats 68.24%) |
+| ⏱️ Runtime | 23 ms (Beats 68.38%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-10-06 |
 | 💻 Language | Python |

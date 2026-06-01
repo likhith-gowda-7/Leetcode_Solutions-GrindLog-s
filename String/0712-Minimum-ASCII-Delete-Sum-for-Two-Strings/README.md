@@ -51,7 +51,7 @@ If instead we turned both strings into "lee" or "eet", we would get answers of 4
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 273 ms (Beats 42.3%) |
-| 💾 Memory | 23.8 MB (Beats 31.33%) |
+| ⏱️ Runtime | 273 ms (Beats 42.97%) |
+| 💾 Memory | 23.8 MB (Beats 32.23%) |
 | 📅 Solved | 2026-01-10 |
 | 💻 Language | Python |

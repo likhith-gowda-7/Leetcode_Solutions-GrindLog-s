@@ -96,7 +96,7 @@ The unique ID of Jonathan is 1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1072 ms (Beats 95.35%) |
+| ⏱️ Runtime | 1072 ms (Beats 96%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-15 |
 | 💻 Language | MySQL |

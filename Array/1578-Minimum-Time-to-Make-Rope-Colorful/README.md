@@ -68,7 +68,7 @@ There are no longer two consecutive balloons of the same color. Total time = 1 +
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 87 ms (Beats 49.38%) |
+| ⏱️ Runtime | 87 ms (Beats 48.14%) |
 | 💾 Memory | 26.4 MB (Beats 100%) |
 | 📅 Solved | 2025-11-03 |
 | 💻 Language | Python |

@@ -57,7 +57,7 @@ Each value in `nums` is unique, so no index shares the same value as the queried
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 291 ms (Beats 77.74%) |
+| ⏱️ Runtime | 291 ms (Beats 77.72%) |
 | 💾 Memory | 53.2 MB (Beats 86.61%) |
 | 📅 Solved | 2026-04-16 |
 | 💻 Language | Python |

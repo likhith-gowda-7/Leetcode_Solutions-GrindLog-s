@@ -62,7 +62,7 @@ Only node 4 is a terminal node, and every path starting at node 4 leads to node 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 24 ms (Beats 88.13%) |
+| ⏱️ Runtime | 24 ms (Beats 88.2%) |
 | 💾 Memory | 23.4 MB (Beats 100%) |
 | 📅 Solved | 2025-08-27 |
 | 💻 Language | Python |

@@ -65,7 +65,7 @@ Box 10 has the most number of balls with 2 balls.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 199 ms (Beats 70.63%) |
+| ⏱️ Runtime | 199 ms (Beats 70.02%) |
 | 💾 Memory | 17.9 MB (Beats 100%) |
 | 📅 Solved | 2025-02-07 |
 | 💻 Language | Python |

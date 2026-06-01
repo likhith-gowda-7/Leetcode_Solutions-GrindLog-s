@@ -86,7 +86,7 @@ All 3 columns are not sorted, so you will delete all 3.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 25 ms (Beats 98.81%) |
+| ⏱️ Runtime | 25 ms (Beats 98.79%) |
 | 💾 Memory | 18.4 MB (Beats 100%) |
 | 📅 Solved | 2025-12-20 |
 | 💻 Language | Python |

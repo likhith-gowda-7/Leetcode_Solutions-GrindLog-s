@@ -67,7 +67,7 @@ Employee table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 432 ms (Beats 9.52%) |
+| ⏱️ Runtime | 432 ms (Beats 9.41%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-20 |
 | 💻 Language | MySQL |

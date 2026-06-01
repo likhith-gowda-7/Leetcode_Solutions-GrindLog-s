@@ -66,7 +66,7 @@ Note that "ll" is another longest palindrome that can be created, and so is "xx"
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 45 ms (Beats 86.56%) |
-| 💾 Memory | 35.8 MB (Beats 96.35%) |
+| ⏱️ Runtime | 45 ms (Beats 86.27%) |
+| 💾 Memory | 35.8 MB (Beats 96.52%) |
 | 📅 Solved | 2025-05-25 |
 | 💻 Language | Python |

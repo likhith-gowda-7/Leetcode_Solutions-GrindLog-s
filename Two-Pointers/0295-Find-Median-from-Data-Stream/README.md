@@ -67,7 +67,7 @@ medianFinder.findMedian(); // return 2.0
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 111 ms (Beats 99.26%) |
+| ⏱️ Runtime | 111 ms (Beats 99.21%) |
 | 💾 Memory | 39.1 MB (Beats 99.99%) |
 | 📅 Solved | 2025-07-13 |
 | 💻 Language | Python |

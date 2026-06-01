@@ -80,7 +80,7 @@ Room 0 held 1 meeting while rooms 1 and 2 each held 2 meetings, so we return 1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 167 ms (Beats 95.15%) |
-| 💾 Memory | 51.5 MB (Beats 98.59%) |
+| ⏱️ Runtime | 167 ms (Beats 94.97%) |
+| 💾 Memory | 51.5 MB (Beats 98.52%) |
 | 📅 Solved | 2025-07-11 |
 | 💻 Language | Python |

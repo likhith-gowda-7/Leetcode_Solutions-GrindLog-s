@@ -81,7 +81,7 @@ Starting with 27 energy, we finish the tasks in the following order:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 54 ms (Beats 58.4%) |
-| 💾 Memory | 55.5 MB (Beats 54.19%) |
+| ⏱️ Runtime | 54 ms (Beats 58.45%) |
+| 💾 Memory | 55.5 MB (Beats 54.26%) |
 | 📅 Solved | 2026-05-13 |
 | 💻 Language | Python |

@@ -68,7 +68,7 @@ So the result is customer_number 3.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 435 ms (Beats 89.74%) |
+| ⏱️ Runtime | 435 ms (Beats 90.82%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | MySQL |

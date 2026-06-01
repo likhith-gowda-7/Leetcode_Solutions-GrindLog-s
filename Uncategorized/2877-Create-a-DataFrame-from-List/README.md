@@ -47,7 +47,7 @@ A DataFrame was created on top of student_data, with two columns named `student_
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 234 ms (Beats 93.27%) |
-| 💾 Memory | 65.5 MB (Beats 97.07%) |
+| ⏱️ Runtime | 234 ms (Beats 93.16%) |
+| 💾 Memory | 65.5 MB (Beats 97.05%) |
 | 📅 Solved | 2024-12-06 |
 | 💻 Language | pythondata |

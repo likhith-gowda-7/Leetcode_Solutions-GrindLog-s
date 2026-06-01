@@ -84,7 +84,7 @@ The maximum pair sum is max(3+5, 4+4, 6+2) = max(8, 8, 8) = 8.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 856 ms (Beats 48.32%) |
-| 💾 Memory | 33.5 MB (Beats 51.79%) |
+| ⏱️ Runtime | 856 ms (Beats 48.36%) |
+| 💾 Memory | 33.5 MB (Beats 51.85%) |
 | 📅 Solved | 2026-01-24 |
 | 💻 Language | Python |

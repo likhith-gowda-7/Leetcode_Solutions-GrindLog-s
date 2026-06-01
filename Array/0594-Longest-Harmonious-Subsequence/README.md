@@ -57,7 +57,7 @@ No harmonic subsequence exists.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 12 ms (Beats 97.61%) |
+| ⏱️ Runtime | 12 ms (Beats 97.68%) |
 | 💾 Memory | 19.4 MB (Beats 100%) |
 | 📅 Solved | 2025-06-30 |
 | 💻 Language | Python |

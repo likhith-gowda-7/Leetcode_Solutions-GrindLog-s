@@ -71,7 +71,7 @@ Courses table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 305 ms (Beats 92.34%) |
+| ⏱️ Runtime | 305 ms (Beats 93.21%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | MySQL |

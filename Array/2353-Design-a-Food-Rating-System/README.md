@@ -89,7 +89,7 @@ foodRatings.highestRated("japanese"); // return "ramen"
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 109 ms (Beats 48.5%) |
-| 💾 Memory | 52.8 MB (Beats 18.26%) |
+| ⏱️ Runtime | 109 ms (Beats 47.78%) |
+| 💾 Memory | 52.8 MB (Beats 16.94%) |
 | 📅 Solved | 2025-09-17 |
 | 💻 Language | Python |

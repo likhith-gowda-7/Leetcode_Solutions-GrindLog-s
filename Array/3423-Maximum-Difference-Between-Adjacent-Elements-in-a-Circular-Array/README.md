@@ -47,7 +47,7 @@ The adjacent elements `nums[0]` and `nums[1]` have the maximum absolute differen
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 2 ms (Beats 48.63%) |
+| ⏱️ Runtime | 2 ms (Beats 46.83%) |
 | 💾 Memory | 17.7 MB (Beats 100%) |
 | 📅 Solved | 2025-06-12 |
 | 💻 Language | Python |

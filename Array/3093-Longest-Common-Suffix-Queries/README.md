@@ -71,7 +71,7 @@ Let's look at each `wordsQuery[i]` separately:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1621 ms (Beats 37.04%) |
-| 💾 Memory | 222.3 MB (Beats 8.61%) |
+| ⏱️ Runtime | 1621 ms (Beats 37.55%) |
+| 💾 Memory | 222.3 MB (Beats 9.26%) |
 | 📅 Solved | 2026-05-28 |
 | 💻 Language | Python |

@@ -71,7 +71,7 @@ myCircularQueue.Rear();     // return 4
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 4 ms (Beats 75.9%) |
+| ⏱️ Runtime | 4 ms (Beats 76.2%) |
 | 💾 Memory | 18.6 MB (Beats 100%) |
 | 📅 Solved | 2025-03-24 |
 | 💻 Language | Python |

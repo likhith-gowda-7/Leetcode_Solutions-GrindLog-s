@@ -53,7 +53,7 @@ Example 2:**
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 84 ms (Beats 82.35%) |
+| ⏱️ Runtime | 84 ms (Beats 81.76%) |
 | 💾 Memory | 17.8 MB (Beats 100%) |
 | 📅 Solved | 2025-10-14 |
 | 💻 Language | Python |

@@ -62,6 +62,6 @@ You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.4 MB (Beats 16.47%) |
+| 💾 Memory | 19.4 MB (Beats 16.45%) |
 | 📅 Solved | 2026-05-23 |
 | 💻 Language | Python |

@@ -69,7 +69,7 @@ Since `k = 2` and `s` has only one `'0'`, it is impossible to flip exactly `k` i
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 98 ms (Beats 58.72%) |
-| 💾 Memory | 20.3 MB (Beats 55.05%) |
+| ⏱️ Runtime | 98 ms (Beats 58.1%) |
+| 💾 Memory | 20.3 MB (Beats 54.29%) |
 | 📅 Solved | 2026-02-27 |
 | 💻 Language | Python |

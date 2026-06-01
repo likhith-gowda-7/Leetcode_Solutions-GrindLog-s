@@ -58,7 +58,7 @@ trie.search("app");     // return True
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 46 ms (Beats 31.8%) |
-| 💾 Memory | 32.2 MB (Beats 80.4%) |
+| ⏱️ Runtime | 46 ms (Beats 31.72%) |
+| 💾 Memory | 32.2 MB (Beats 80.48%) |
 | 📅 Solved | 2025-06-17 |
 | 💻 Language | Python |

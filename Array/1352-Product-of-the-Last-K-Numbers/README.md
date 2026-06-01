@@ -69,7 +69,7 @@ productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 61 ms (Beats 28.29%) |
+| ⏱️ Runtime | 61 ms (Beats 28.79%) |
 | 💾 Memory | 32 MB (Beats 100%) |
 | 📅 Solved | 2025-02-14 |
 | 💻 Language | Python |

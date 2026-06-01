@@ -106,7 +106,7 @@ Products with product_id = 5 is ordered in February a total of (50 + 50) = 100.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 639 ms (Beats 98.7%) |
+| ⏱️ Runtime | 639 ms (Beats 98.97%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | MySQL |

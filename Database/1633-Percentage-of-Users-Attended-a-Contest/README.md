@@ -102,7 +102,7 @@ Bob registered in contest 207 and the percentage is ((1/3) * 100) = 33.33%
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 942 ms (Beats 72.92%) |
+| ⏱️ Runtime | 942 ms (Beats 73.95%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-23 |
 | 💻 Language | MySQL |

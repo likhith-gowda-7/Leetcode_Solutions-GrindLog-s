@@ -46,7 +46,7 @@ promise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 58 ms (Beats 30.73%) |
+| ⏱️ Runtime | 58 ms (Beats 30.55%) |
 | 💾 Memory | 49.4 MB (Beats 100%) |
 | 📅 Solved | 2024-09-29 |
 | 💻 Language | JavaScript |

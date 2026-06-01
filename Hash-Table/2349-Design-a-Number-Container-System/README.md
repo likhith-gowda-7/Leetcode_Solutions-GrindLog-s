@@ -60,7 +60,7 @@ nc.find(10); // Number 10 is at the indices 2, 3, and 5. The smallest index that
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 636 ms (Beats 5.32%) |
-| 💾 Memory | 151.8 MB (Beats 5.32%) |
+| ⏱️ Runtime | 636 ms (Beats 5.38%) |
+| 💾 Memory | 151.8 MB (Beats 6.99%) |
 | 📅 Solved | 2025-02-08 |
 | 💻 Language | Python |

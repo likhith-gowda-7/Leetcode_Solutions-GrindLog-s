@@ -76,7 +76,7 @@ Activity table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 444 ms (Beats 97.29%) |
+| ⏱️ Runtime | 444 ms (Beats 97.78%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | MySQL |

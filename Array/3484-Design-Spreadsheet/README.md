@@ -66,7 +66,7 @@ spreadsheet.getValue("=A1+B2"); // returns 15 (0+15)
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 78 ms (Beats 79.27%) |
+| ⏱️ Runtime | 78 ms (Beats 79.15%) |
 | 💾 Memory | 23.5 MB (Beats 100%) |
 | 📅 Solved | 2025-09-19 |
 | 💻 Language | Python |

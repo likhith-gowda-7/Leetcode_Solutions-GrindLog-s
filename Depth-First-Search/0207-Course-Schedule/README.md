@@ -57,7 +57,7 @@ To take course 1 you should have finished course 0, and to take course 0 you sho
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 87.4%) |
+| ⏱️ Runtime | 3 ms (Beats 87.39%) |
 | 💾 Memory | 19.3 MB (Beats 100%) |
 | 📅 Solved | 2025-08-10 |
 | 💻 Language | Python |

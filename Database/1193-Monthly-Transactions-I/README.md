@@ -67,7 +67,7 @@ Transactions table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 545 ms (Beats 93.35%) |
+| ⏱️ Runtime | 545 ms (Beats 94.04%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | MySQL |

@@ -55,7 +55,7 @@ answer = [7,1,3,9].
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 75.4%) |
+| ⏱️ Runtime | 3 ms (Beats 75.42%) |
 | 💾 Memory | 19.6 MB (Beats 16.54%) |
 | 📅 Solved | 2026-05-11 |
 | 💻 Language | Python |

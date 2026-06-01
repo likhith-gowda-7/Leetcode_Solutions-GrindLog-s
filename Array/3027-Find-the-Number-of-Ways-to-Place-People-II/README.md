@@ -82,7 +82,7 @@ Note that it does not matter if the fence encloses any area, the first and secon
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1458 ms (Beats 55%) |
+| ⏱️ Runtime | 1458 ms (Beats 57.89%) |
 | 💾 Memory | 18.3 MB (Beats 100%) |
 | 📅 Solved | 2025-09-03 |
 | 💻 Language | Python |

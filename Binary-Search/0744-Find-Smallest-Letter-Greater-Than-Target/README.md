@@ -1,0 +1,71 @@
+> 📌 **Cross-listed:** Primary location is [Array/0744-Find-Smallest-Letter-Greater-Than-Target](../../Array/0744-Find-Smallest-Letter-Greater-Than-Target). This problem also appears under: **Array**, **Binary Search**
+
+# 744. Find Smallest Letter Greater Than Target
+
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00b8a3) ![Language](https://img.shields.io/badge/Language-Python-blue) ![Array](https://img.shields.io/badge/Array-purple) ![Binary Search](https://img.shields.io/badge/Binary%20Search-purple)
+
+
+🔗 [View on LeetCode](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
+
+
+## 📝 Problem Description
+
+You are given an array of characters `letters` that is sorted in **non-decreasing order**, and a character `target`. There are **at least two different** characters in `letters`.
+
+Return *the smallest character in *`letters`* that is lexicographically greater than *`target`. If such a character does not exist, return the first character in `letters`.
+
+ 
+
+Example 1:**
+
+```
+
+**Input:** letters = ["c","f","j"], target = "a"
+**Output:** "c"
+**Explanation:** The smallest character that is lexicographically greater than 'a' in letters is 'c'.
+
+```
+
+Example 2:**
+
+```
+
+**Input:** letters = ["c","f","j"], target = "c"
+**Output:** "f"
+**Explanation:** The smallest character that is lexicographically greater than 'c' in letters is 'f'.
+
+```
+
+Example 3:**
+
+```
+
+**Input:** letters = ["x","x","y","y"], target = "z"
+**Output:** "x"
+**Explanation:** There are no characters in letters that is lexicographically greater than 'z' so we return letters[0].
+
+```
+
+ 
+
+**Constraints:**
+
+	- `2 <= letters.length <= 10^4`
+
+	- `letters[i]` is a lowercase English letter.
+
+	- `letters` is sorted in **non-decreasing** order.
+
+	- `letters` contains at least two different characters.
+
+	- `target` is a lowercase English letter.
+
+## 📊 Metrics
+
+| Metric | Value |
+|:-------|:------|
+| ⏱️ Runtime | 0 ms (Beats 100%) |
+| 💾 Memory | 20.9 MB (Beats 15.83%) |
+| 📅 Solved | 2026-01-31 |
+| 💻 Language | Python |

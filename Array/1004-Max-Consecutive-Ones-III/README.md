@@ -48,7 +48,7 @@ Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 67 ms (Beats 29.03%) |
+| ⏱️ Runtime | 67 ms (Beats 28.81%) |
 | 💾 Memory | 18.4 MB (Beats 100%) |
 | 📅 Solved | 2025-03-09 |
 | 💻 Language | Python |

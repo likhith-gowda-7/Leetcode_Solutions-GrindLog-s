@@ -61,7 +61,7 @@ Person table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 349 ms (Beats 92.72%) |
+| ⏱️ Runtime | 349 ms (Beats 93.65%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-05-17 |
 | 💻 Language | MySQL |

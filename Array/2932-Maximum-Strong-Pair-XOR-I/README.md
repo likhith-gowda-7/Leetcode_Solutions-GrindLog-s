@@ -66,7 +66,7 @@ The maximum XOR possible from these pairs is 25 XOR 30 = 7 since the only other 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 16 ms (Beats 81.18%) |
+| ⏱️ Runtime | 16 ms (Beats 80.8%) |
 | 💾 Memory | 17.9 MB (Beats 100%) |
 | 📅 Solved | 2025-06-21 |
 | 💻 Language | Python |

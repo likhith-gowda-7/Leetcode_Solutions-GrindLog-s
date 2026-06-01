@@ -50,7 +50,7 @@ There may exists other ways to achieve this answer too.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 87 ms (Beats 51.02%) |
+| ⏱️ Runtime | 87 ms (Beats 50.99%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-04-02 |
 | 💻 Language | Python |

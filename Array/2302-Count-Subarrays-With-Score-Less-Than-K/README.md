@@ -64,6 +64,6 @@ Thus, there are 5 subarrays having scores less than 5.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 105 ms (Beats 100%) |
-| 💾 Memory | 30.7 MB (Beats 96.8%) |
+| 💾 Memory | 30.7 MB (Beats 96.76%) |
 | 📅 Solved | 2025-04-28 |
 | 💻 Language | Python |

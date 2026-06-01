@@ -88,7 +88,7 @@ The cancellation was scheduled to occur after a delay of cancelTimeMs (100ms), w
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 67 ms (Beats 8.75%) |
+| ⏱️ Runtime | 67 ms (Beats 8.68%) |
 | 💾 Memory | 49.3 MB (Beats 100%) |
 | 📅 Solved | 2024-09-30 |
 | 💻 Language | JavaScript |

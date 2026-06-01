@@ -59,7 +59,7 @@ Applying any two edits to "yes" cannot make it equal to "not". Thus, we return a
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 91 ms (Beats 35.3%) |
-| 💾 Memory | 19.4 MB (Beats 43.19%) |
+| ⏱️ Runtime | 91 ms (Beats 35.31%) |
+| 💾 Memory | 19.4 MB (Beats 43.2%) |
 | 📅 Solved | 2026-04-22 |
 | 💻 Language | Python |

@@ -59,7 +59,7 @@ Each player can only be matched with one trainer, so the maximum answer is 1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 61 ms (Beats 99.66%) |
-| 💾 Memory | 33.7 MB (Beats 98.62%) |
+| ⏱️ Runtime | 61 ms (Beats 99.65%) |
+| 💾 Memory | 33.7 MB (Beats 98.58%) |
 | 📅 Solved | 2025-07-13 |
 | 💻 Language | Python |

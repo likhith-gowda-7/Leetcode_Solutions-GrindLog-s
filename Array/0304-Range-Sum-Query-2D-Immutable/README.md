@@ -64,7 +64,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (i.e sum of the blue rectangle)
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 107 ms (Beats 77.49%) |
-| 💾 Memory | 30.8 MB (Beats 99.97%) |
+| ⏱️ Runtime | 107 ms (Beats 77.56%) |
+| 💾 Memory | 30.8 MB (Beats 100%) |
 | 📅 Solved | 2024-12-19 |
 | 💻 Language | Python |

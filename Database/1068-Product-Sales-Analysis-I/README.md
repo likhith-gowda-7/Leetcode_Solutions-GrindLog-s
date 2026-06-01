@@ -96,7 +96,7 @@ From sale_id = 7, we can conclude that Apple was sold for 9000 in the year 2011.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 2500 ms (Beats 99.88%) |
+| ⏱️ Runtime | 2500 ms (Beats 99.84%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-15 |
 | 💻 Language | mssql |

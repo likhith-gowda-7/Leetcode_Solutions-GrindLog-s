@@ -99,7 +99,7 @@ values = [[5],[]]
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 287 ms (Beats 15.62%) |
+| ⏱️ Runtime | 287 ms (Beats 15.64%) |
 | 💾 Memory | 84.9 MB (Beats 100%) |
 | 📅 Solved | 2024-09-29 |
 | 💻 Language | JavaScript |

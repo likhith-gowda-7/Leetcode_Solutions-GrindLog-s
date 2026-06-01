@@ -63,7 +63,7 @@ The total weight gained after eating all the pizzas is `2 + 1 = 3.`
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 167 ms (Beats 84.35%) |
-| 💾 Memory | 47.9 MB (Beats 8.16%) |
+| ⏱️ Runtime | 167 ms (Beats 84.62%) |
+| 💾 Memory | 47.9 MB (Beats 7.69%) |
 | 📅 Solved | 2026-05-16 |
 | 💻 Language | Python |

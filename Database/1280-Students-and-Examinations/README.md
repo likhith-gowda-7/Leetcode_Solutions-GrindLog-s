@@ -136,7 +136,7 @@ John attended the Math exam 1 time, the Physics exam 1 time, and the Programming
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 931 ms (Beats 85.85%) |
+| ⏱️ Runtime | 931 ms (Beats 87.24%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-19 |
 | 💻 Language | MySQL |

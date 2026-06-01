@@ -75,7 +75,7 @@ The last day where it is possible to cross from top to bottom is on day 3.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 851 ms (Beats 59.08%) |
+| ⏱️ Runtime | 851 ms (Beats 61.6%) |
 | 💾 Memory | 24.9 MB (Beats 100%) |
 | 📅 Solved | 2026-01-01 |
 | 💻 Language | Python |

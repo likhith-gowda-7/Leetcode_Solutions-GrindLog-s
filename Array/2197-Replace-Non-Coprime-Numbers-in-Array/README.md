@@ -74,7 +74,7 @@ Note that there are other ways to obtain the same resultant array.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 115 ms (Beats 77.97%) |
-| 💾 Memory | 31.4 MB (Beats 99.15%) |
+| ⏱️ Runtime | 115 ms (Beats 78.07%) |
+| 💾 Memory | 31.4 MB (Beats 98.25%) |
 | 📅 Solved | 2025-09-16 |
 | 💻 Language | Python |

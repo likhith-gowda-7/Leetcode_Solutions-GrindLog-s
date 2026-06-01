@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*731 problems solved across 61 topics in 5 language(s)*
+*735 problems solved across 61 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-731-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-299-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-368-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-64-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-555555?style=for-the-badge&logo=code&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-735-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-300-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-370-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-65-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-555555?style=for-the-badge&logo=code&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 </div>
 
@@ -26,10 +26,10 @@
 
 | Difficulty | Solved | Percentage |
 |:----------:|:------:|:----------:|
-| 🟢 Easy | 299 | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ 41% |
-| 🟡 Medium | 368 | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ 50% |
-| 🔴 Hard | 64 | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ 9% |
-| **Total** | **731** | |
+| 🟢 Easy | 300 | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ 41% |
+| 🟡 Medium | 370 | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ 50% |
+| 🔴 Hard | 65 | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ 9% |
+| **Total** | **735** | |
 
 ---
 
@@ -37,7 +37,7 @@
 
 | Topic | Problems | Status |
 |:------|:--------:|:------:|
-| Array | 394 | ✅ Strong |
+| Array | 398 | ✅ Strong |
 | String | 63 | ✅ Strong |
 | Hash Table | 61 | ✅ Strong |
 | Math | 47 | ✅ Strong |
@@ -63,6 +63,10 @@
 
 | # | Problem | Difficulty | Language | Date |
 |:-:|:--------|:----------:|:--------:|:----:|
+| 2144 | [Minimum Cost of Buying Candies With Discount](https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/) | 🟢 Easy | Python | 2026-06-01 |
+| 2126 | [Destroying Asteroids](https://leetcode.com/problems/destroying-asteroids/) | 🟡 Medium | Python | 2026-05-31 |
+| 1674 | [Minimum Moves to Make Array Complementary](https://leetcode.com/problems/minimum-moves-to-make-array-complementary/) | 🟡 Medium | Python | 2026-05-30 |
+| 3161 | [Block Placement Queries](https://leetcode.com/problems/block-placement-queries/) | 🔴 Hard | Python | 2026-05-30 |
 | 3300 | [Minimum Element After Replacement With Digit Sum](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/) | 🟢 Easy | Python | 2026-05-29 |
 | 3093 | [Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries/) | 🔴 Hard | Python | 2026-05-28 |
 | 3121 | [Count the Number of Special Characters II](https://leetcode.com/problems/count-the-number-of-special-characters-ii/) | 🟡 Medium | Python | 2026-05-27 |
@@ -74,10 +78,6 @@
 | 81 | [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | 🟡 Medium | Python | 2026-05-22 |
 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | 🟡 Medium | Python | 2026-05-22 |
 | 3043 | [Find the Length of the Longest Common Prefix](https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/) | 🟡 Medium | Python | 2026-05-21 |
-| 2657 | [Find the Prefix Common Array of Two Arrays](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/) | 🟡 Medium | Python | 2026-05-21 |
-| 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 🟡 Medium | Python | 2026-05-19 |
-| 2540 | [Minimum Common Value](https://leetcode.com/problems/minimum-common-value/) | 🟢 Easy | Python | 2026-05-19 |
-| 1345 | [Jump Game IV](https://leetcode.com/problems/jump-game-iv/) | 🔴 Hard | Python | 2026-05-18 |
 
 
 ---
@@ -536,6 +536,7 @@
 | 1653 | [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/) | 🟡 Medium | String, Dynamic Programming, Stack | Python | 141 ms | 20.1 MB |
 | 1661 | [Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/) | 🟢 Easy | Database | MySQL | 232 ms | 0B |
 | 1665 | [Minimum Initial Energy to Finish Tasks](https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks/) | 🔴 Hard | Array, Greedy, Sorting | Python | 54 ms | 55.5 MB |
+| 1674 | [Minimum Moves to Make Array Complementary](https://leetcode.com/problems/minimum-moves-to-make-array-complementary/) | 🟡 Medium | Array, Hash Table, Prefix Sum | Python | 207 ms | 31 MB |
 | 1680 | [Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/) | 🟡 Medium | Math, Bit Manipulation, Simulation | Python | 695 ms | 19.2 MB |
 | 1683 | [Invalid Tweets](https://leetcode.com/problems/invalid-tweets/) | 🟢 Easy | Database | mssql | 780 ms | 0B |
 | 1689 | [Partitioning Into Minimum Number Of Deci-Binary Numbers](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/) | 🟡 Medium | String, Greedy | Python | 19 ms | 19.9 MB |
@@ -614,9 +615,11 @@
 | 2110 | [Number of Smooth Descent Periods of a Stock](https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/) | 🟡 Medium | Array, Math, Two Pointers | Python | 57 ms | 29.7 MB |
 | 2124 | [Check if All A's Appears Before All B's](https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/) | 🟢 Easy | String | Python | 0 ms | 19.2 MB |
 | 2125 | [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) | 🟡 Medium | Array, Math, String | Python | 0 ms | 19.7 MB |
+| 2126 | [Destroying Asteroids](https://leetcode.com/problems/destroying-asteroids/) | 🟡 Medium | Array, Greedy, Sorting | Python | 71 ms | 34.1 MB |
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/) | 🟡 Medium | Array, Hash Table, String | Python | 45 ms | 35.8 MB |
 | 2138 | [Divide a String Into Groups of Size k](https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/) | 🟢 Easy | String, Simulation | Python | 0 ms | 17.7 MB |
 | 2141 | [Maximum Running Time of N Computers](https://leetcode.com/problems/maximum-running-time-of-n-computers/) | 🔴 Hard | Array, Binary Search, Greedy | Python | 1403 ms | 31.1 MB |
+| 2144 | [Minimum Cost of Buying Candies With Discount](https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/) | 🟢 Easy | Array, Greedy, Sorting | Python | 0 ms | 19.2 MB |
 | 2154 | [Keep Multiplying Found Values by Two](https://leetcode.com/problems/keep-multiplying-found-values-by-two/) | 🟢 Easy | Array, Hash Table, Sorting | Python | 0 ms | 17.9 MB |
 | 2161 | [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/) | 🟡 Medium | Array, Two Pointers, Simulation | Python | 19 ms | 35.6 MB |
 | 2163 | [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) | 🔴 Hard | Array, Dynamic Programming, Heap (Priority Queue) | Python | 280 ms | 47.6 MB |
@@ -744,6 +747,7 @@
 | 3147 | [Taking Maximum Energy From the Mystic Dungeon](https://leetcode.com/problems/taking-maximum-energy-from-the-mystic-dungeon/) | 🟡 Medium | Array, Dynamic Programming, Prefix Sum | Python | 1088 ms | 31.2 MB |
 | 3151 | [Special Array I](https://leetcode.com/problems/special-array-i/) | 🟢 Easy | Array | Python | 0 ms | 18 MB |
 | 3160 | [Find the Number of Distinct Colors Among the Balls](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls/) | 🟡 Medium | Array, Hash Table, Simulation | Python | 74 ms | 63 MB |
+| 3161 | [Block Placement Queries](https://leetcode.com/problems/block-placement-queries/) | 🔴 Hard | Array, Binary Search, Binary Indexed Tree | Python | 6352 ms | 78.8 MB |
 | 3169 | [Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings/) | 🟡 Medium | Array, Sorting | Python | 220 ms | 52.8 MB |
 | 3170 | [Lexicographically Minimum String After Removing Stars](https://leetcode.com/problems/lexicographically-minimum-string-after-removing-stars/) | 🟡 Medium | Hash Table, String, Stack | Python | 562 ms | 21.7 MB |
 | 3174 | [Clear Digits](https://leetcode.com/problems/clear-digits/) | 🟢 Easy | String, Stack, Simulation | Python | 0 ms | 18 MB |
@@ -831,7 +835,7 @@
 
 ---
 
-*🔄 Auto-generated by [GrindLog](https://github.com/likhith-gowda-7/GrindLog-s) on 2026-05-30*
+*🔄 Auto-generated by [GrindLog](https://github.com/likhith-gowda-7/GrindLog-s) on 2026-06-01*
 
 *⭐ Star this repo if you find it helpful!*
 

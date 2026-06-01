@@ -81,7 +81,7 @@ The optimal path with no stops from city 0 to 2 is marked in red and has cost 50
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 88.22%) |
+| ⏱️ Runtime | 3 ms (Beats 88.4%) |
 | 💾 Memory | 19.1 MB (Beats 100%) |
 | 📅 Solved | 2025-09-06 |
 | 💻 Language | Python |

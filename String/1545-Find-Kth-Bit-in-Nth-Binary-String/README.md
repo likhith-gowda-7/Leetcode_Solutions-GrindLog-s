@@ -65,7 +65,7 @@ The 11^th bit is "1".
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 299 ms (Beats 24.67%) |
-| 💾 Memory | 22.1 MB (Beats 35.83%) |
+| ⏱️ Runtime | 299 ms (Beats 25.59%) |
+| 💾 Memory | 22.1 MB (Beats 36.61%) |
 | 📅 Solved | 2026-03-03 |
 | 💻 Language | Python |

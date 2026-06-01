@@ -65,7 +65,7 @@ There are a total of 4 unguarded cells, so we return 4.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 365 ms (Beats 40.85%) |
+| ⏱️ Runtime | 365 ms (Beats 45.5%) |
 | 💾 Memory | 39.4 MB (Beats 100%) |
 | 📅 Solved | 2025-11-07 |
 | 💻 Language | Python |

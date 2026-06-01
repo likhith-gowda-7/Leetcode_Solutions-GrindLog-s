@@ -58,7 +58,7 @@ There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 2 ms (Beats 80%) |
+| ⏱️ Runtime | 2 ms (Beats 79.57%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-03-17 |
 | 💻 Language | Python |

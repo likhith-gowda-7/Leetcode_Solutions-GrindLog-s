@@ -59,7 +59,7 @@ The longest subarray with that value is [4], so we return 1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 63 ms (Beats 6.62%) |
+| ⏱️ Runtime | 63 ms (Beats 7.09%) |
 | 💾 Memory | 30.6 MB (Beats 100%) |
 | 📅 Solved | 2025-07-31 |
 | 💻 Language | Python |

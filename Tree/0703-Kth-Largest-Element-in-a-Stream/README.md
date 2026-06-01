@@ -85,7 +85,7 @@ kthLargest.add(9); // return 8
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 7 ms (Beats 96.65%) |
+| ⏱️ Runtime | 7 ms (Beats 96.58%) |
 | 💾 Memory | 23.9 MB (Beats 99.99%) |
 | 📅 Solved | 2025-07-05 |
 | 💻 Language | Python |

@@ -61,7 +61,7 @@ Triangle table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 276 ms (Beats 86.75%) |
+| ⏱️ Runtime | 276 ms (Beats 88.26%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-27 |
 | 💻 Language | MySQL |

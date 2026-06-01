@@ -63,7 +63,7 @@ Total continuous subarrays = 3 + 2 + 1 = 6.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 608 ms (Beats 39.8%) |
+| ⏱️ Runtime | 608 ms (Beats 39.32%) |
 | 💾 Memory | 27.9 MB (Beats 100%) |
 | 📅 Solved | 2025-03-26 |
 | 💻 Language | Python |

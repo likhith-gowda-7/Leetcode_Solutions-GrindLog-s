@@ -74,7 +74,7 @@ Since three subsequences were created, we return 3. It can be shown that 3 is th
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 47 ms (Beats 99.25%) |
-| 💾 Memory | 33.2 MB (Beats 75.75%) |
+| ⏱️ Runtime | 47 ms (Beats 99.26%) |
+| 💾 Memory | 33.2 MB (Beats 74.94%) |
 | 📅 Solved | 2025-06-19 |
 | 💻 Language | Python |

@@ -58,7 +58,7 @@ So the minimum time needed to complete 1 trip is 2.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 582 ms (Beats 97.85%) |
+| ⏱️ Runtime | 582 ms (Beats 97.77%) |
 | 💾 Memory | 30.4 MB (Beats 100%) |
 | 📅 Solved | 2025-07-08 |
 | 💻 Language | Python |

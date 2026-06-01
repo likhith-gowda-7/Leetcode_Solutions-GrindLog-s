@@ -56,7 +56,7 @@ The third child gets 1 candy because it satisfies the above two conditions.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 15 ms (Beats 71.25%) |
-| 💾 Memory | 21.4 MB (Beats 77.74%) |
+| ⏱️ Runtime | 15 ms (Beats 71.21%) |
+| 💾 Memory | 21.4 MB (Beats 77.42%) |
 | 📅 Solved | 2026-02-04 |
 | 💻 Language | Python |

@@ -64,7 +64,7 @@ Example 3:**
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1 ms (Beats 98.14%) |
-| 💾 Memory | 20.9 MB (Beats 19.33%) |
+| ⏱️ Runtime | 1 ms (Beats 97.81%) |
+| 💾 Memory | 20.9 MB (Beats 20.18%) |
 | 📅 Solved | 2026-03-02 |
 | 💻 Language | Python |

@@ -63,7 +63,7 @@ There is only one horizontal trapezoid that can be formed.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 71 ms (Beats 69.16%) |
+| ⏱️ Runtime | 71 ms (Beats 70%) |
 | 💾 Memory | 63.4 MB (Beats 100%) |
 | 📅 Solved | 2025-12-02 |
 | 💻 Language | Python |

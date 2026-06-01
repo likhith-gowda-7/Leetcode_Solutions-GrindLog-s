@@ -60,7 +60,7 @@ No two adjacent strings in words are anagrams of each other, so no operations ar
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 7 ms (Beats 52.58%) |
+| ⏱️ Runtime | 7 ms (Beats 51.94%) |
 | 💾 Memory | 17.8 MB (Beats 100%) |
 | 📅 Solved | 2025-10-13 |
 | 💻 Language | Python |

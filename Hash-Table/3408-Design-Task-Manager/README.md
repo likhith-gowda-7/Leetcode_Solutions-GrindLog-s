@@ -92,7 +92,7 @@ taskManager.execTop(); // return 5. Executes task 105 for User 5.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 607 ms (Beats 23.79%) |
-| 💾 Memory | 104.8 MB (Beats 55.65%) |
+| ⏱️ Runtime | 607 ms (Beats 24.5%) |
+| 💾 Memory | 104.8 MB (Beats 54.15%) |
 | 📅 Solved | 2025-09-18 |
 | 💻 Language | Python |

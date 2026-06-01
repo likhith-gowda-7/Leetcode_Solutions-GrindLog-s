@@ -59,7 +59,7 @@ Only the first 3 rows are displayed.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 267 ms (Beats 72.07%) |
-| 💾 Memory | 66.9 MB (Beats 11.33%) |
+| ⏱️ Runtime | 267 ms (Beats 71.85%) |
+| 💾 Memory | 66.9 MB (Beats 11.25%) |
 | 📅 Solved | 2025-06-10 |
 | 💻 Language | pythondata |

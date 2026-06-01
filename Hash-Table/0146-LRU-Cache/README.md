@@ -63,7 +63,7 @@ lRUCache.get(4);    // return 4
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 92 ms (Beats 91.57%) |
-| 💾 Memory | 78.1 MB (Beats 30.83%) |
+| ⏱️ Runtime | 92 ms (Beats 91.53%) |
+| 💾 Memory | 78.1 MB (Beats 30.72%) |
 | 📅 Solved | 2025-05-09 |
 | 💻 Language | Python |

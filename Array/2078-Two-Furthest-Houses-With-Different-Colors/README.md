@@ -72,6 +72,6 @@ House 0 has color 0, and house 1 has color 1. The distance between them is abs(0
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.3 MB (Beats 19.49%) |
+| 💾 Memory | 19.3 MB (Beats 19.51%) |
 | 📅 Solved | 2026-04-20 |
 | 💻 Language | Python |

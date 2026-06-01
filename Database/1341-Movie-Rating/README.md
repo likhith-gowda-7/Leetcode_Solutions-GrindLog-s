@@ -122,7 +122,7 @@ Frozen 2 and Joker have a rating average of 3.5 in February but Frozen 2 is smal
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1174 ms (Beats 95.05%) |
+| ⏱️ Runtime | 1174 ms (Beats 95.62%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-02-10 |
 | 💻 Language | MySQL |

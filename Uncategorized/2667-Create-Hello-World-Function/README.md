@@ -50,7 +50,7 @@ Any arguments could be passed to the function but it should still always return 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 55 ms (Beats 5.05%) |
+| ⏱️ Runtime | 55 ms (Beats 6.98%) |
 | 💾 Memory | 48 MB (Beats 100%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

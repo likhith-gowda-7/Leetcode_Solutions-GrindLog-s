@@ -113,7 +113,7 @@ The furthest point the robot ever gets from the origin is `(0, 6)`, which square
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 37 ms (Beats 41.7%) |
-| 💾 Memory | 23.8 MB (Beats 50.49%) |
+| ⏱️ Runtime | 37 ms (Beats 41.68%) |
+| 💾 Memory | 23.8 MB (Beats 50.51%) |
 | 📅 Solved | 2026-04-06 |
 | 💻 Language | Python |

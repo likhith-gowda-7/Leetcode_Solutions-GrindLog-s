@@ -65,7 +65,7 @@ fancy.getIndex(2); // return 20
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 416 ms (Beats 19.72%) |
+| ⏱️ Runtime | 416 ms (Beats 19.46%) |
 | 💾 Memory | 54.2 MB (Beats 95.42%) |
 | 📅 Solved | 2026-03-15 |
 | 💻 Language | Python |

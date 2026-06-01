@@ -49,7 +49,7 @@ Example 2:**
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 57 ms (Beats 5.16%) |
+| ⏱️ Runtime | 57 ms (Beats 5.02%) |
 | 💾 Memory | 49 MB (Beats 100%) |
 | 📅 Solved | 2024-09-30 |
 | 💻 Language | JavaScript |

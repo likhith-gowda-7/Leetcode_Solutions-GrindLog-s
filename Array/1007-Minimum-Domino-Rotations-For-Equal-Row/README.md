@@ -57,7 +57,7 @@ In this case, it is not possible to rotate the dominoes to make one row of value
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 20 ms (Beats 94.87%) |
+| ⏱️ Runtime | 20 ms (Beats 94.62%) |
 | 💾 Memory | 18.6 MB (Beats 100%) |
 | 📅 Solved | 2025-05-04 |
 | 💻 Language | Python |

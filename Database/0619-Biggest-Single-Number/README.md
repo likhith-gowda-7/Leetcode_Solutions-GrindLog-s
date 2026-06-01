@@ -94,7 +94,7 @@ MyNumbers table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 410 ms (Beats 82.15%) |
+| ⏱️ Runtime | 410 ms (Beats 83.8%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-25 |
 | 💻 Language | MySQL |

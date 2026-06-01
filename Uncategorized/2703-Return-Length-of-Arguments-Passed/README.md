@@ -50,7 +50,7 @@ Three values were passed to the function so it should return 3.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 49 ms (Beats 21.59%) |
+| ⏱️ Runtime | 49 ms (Beats 21.73%) |
 | 💾 Memory | 49.1 MB (Beats 100%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

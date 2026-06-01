@@ -63,7 +63,7 @@ Since `k == x`, `answer[i]` is equal to the sum of the subarray `nums[i..i + k -
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 15 ms (Beats 94.68%) |
+| ⏱️ Runtime | 15 ms (Beats 94.59%) |
 | 💾 Memory | 17.9 MB (Beats 100%) |
 | 📅 Solved | 2025-11-04 |
 | 💻 Language | Python |

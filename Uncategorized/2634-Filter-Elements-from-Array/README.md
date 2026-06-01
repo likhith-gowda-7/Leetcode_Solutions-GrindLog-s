@@ -69,7 +69,7 @@ Falsey values such as 0 should be filtered out
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 53 ms (Beats 9.25%) |
+| ⏱️ Runtime | 53 ms (Beats 9.22%) |
 | 💾 Memory | 49.2 MB (Beats 100%) |
 | 📅 Solved | 2024-09-27 |
 | 💻 Language | JavaScript |

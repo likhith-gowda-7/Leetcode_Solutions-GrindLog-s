@@ -99,7 +99,7 @@ The maximum Manhattan distance from the origin that can be achieved is 6. Hence,
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1973 ms (Beats 29.51%) |
+| ⏱️ Runtime | 1973 ms (Beats 31.58%) |
 | 💾 Memory | 18.2 MB (Beats 100%) |
 | 📅 Solved | 2025-06-21 |
 | 💻 Language | Python |

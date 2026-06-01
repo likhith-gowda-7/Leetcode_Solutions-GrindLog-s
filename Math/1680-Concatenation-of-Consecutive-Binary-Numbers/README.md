@@ -56,7 +56,7 @@ After modulo 10^9 + 7, the result is 505379714.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 695 ms (Beats 71.61%) |
-| 💾 Memory | 19.2 MB (Beats 43.01%) |
+| ⏱️ Runtime | 695 ms (Beats 71.89%) |
+| 💾 Memory | 19.2 MB (Beats 44.24%) |
 | 📅 Solved | 2026-02-28 |
 | 💻 Language | Python |

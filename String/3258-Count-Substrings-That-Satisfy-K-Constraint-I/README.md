@@ -65,7 +65,7 @@ All substrings of `s` satisfy the k-constraint.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 79.06%) |
+| ⏱️ Runtime | 3 ms (Beats 78.55%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-03-11 |
 | 💻 Language | Python |

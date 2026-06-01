@@ -62,7 +62,7 @@ Now s has no occurrences of "xy".
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 15 ms (Beats 20.88%) |
+| ⏱️ Runtime | 15 ms (Beats 20.76%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-02-11 |
 | 💻 Language | Python |

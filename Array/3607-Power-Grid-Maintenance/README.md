@@ -97,7 +97,7 @@ Example 2:**
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 368 ms (Beats 59.78%) |
+| ⏱️ Runtime | 368 ms (Beats 61.07%) |
 | 💾 Memory | 103.5 MB (Beats 99.62%) |
 | 📅 Solved | 2025-11-07 |
 | 💻 Language | Python |

@@ -65,7 +65,7 @@ There is no valid play for Alice in her first turn, so Alice loses the game.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 20 ms (Beats 62.56%) |
+| ⏱️ Runtime | 20 ms (Beats 66.67%) |
 | 💾 Memory | 18.2 MB (Beats 100%) |
 | 📅 Solved | 2025-09-12 |
 | 💻 Language | Python |

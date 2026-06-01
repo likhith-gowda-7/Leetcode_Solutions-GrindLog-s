@@ -58,7 +58,7 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 99%) |
+| ⏱️ Runtime | 3 ms (Beats 98.98%) |
 | 💾 Memory | 17.9 MB (Beats 100%) |
 | 📅 Solved | 2025-02-02 |
 | 💻 Language | Python |

@@ -69,7 +69,7 @@ Since all fruits are successfully placed, we return 0.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1932 ms (Beats 71.54%) |
-| 💾 Memory | 39.2 MB (Beats 67.69%) |
+| ⏱️ Runtime | 1932 ms (Beats 70.59%) |
+| 💾 Memory | 39.2 MB (Beats 66.18%) |
 | 📅 Solved | 2025-08-06 |
 | 💻 Language | Python |

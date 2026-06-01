@@ -101,7 +101,7 @@ As we can see, users with IDs 30 and 96 visited the mall one time without making
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1130 ms (Beats 86.98%) |
+| ⏱️ Runtime | 1130 ms (Beats 86.86%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-15 |
 | 💻 Language | mssql |

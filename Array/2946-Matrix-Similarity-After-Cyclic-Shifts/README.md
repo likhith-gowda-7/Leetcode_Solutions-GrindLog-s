@@ -73,7 +73,7 @@ As all the values are equal in the matrix, even after performing cyclic shifts t
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 9 ms (Beats 12.08%) |
-| 💾 Memory | 19.2 MB (Beats 97.18%) |
+| ⏱️ Runtime | 9 ms (Beats 11.33%) |
+| 💾 Memory | 19.2 MB (Beats 96.89%) |
 | 📅 Solved | 2026-04-12 |
 | 💻 Language | Python |

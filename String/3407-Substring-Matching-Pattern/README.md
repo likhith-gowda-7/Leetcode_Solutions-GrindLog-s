@@ -64,6 +64,6 @@ The substrings `"u"`, `"uc"`, and `"uck"` match the pattern.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.4 MB (Beats 28.09%) |
+| 💾 Memory | 19.4 MB (Beats 29.23%) |
 | 📅 Solved | 2026-03-01 |
 | 💻 Language | Python |

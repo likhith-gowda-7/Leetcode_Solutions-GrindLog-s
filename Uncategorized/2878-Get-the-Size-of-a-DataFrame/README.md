@@ -64,7 +64,7 @@ This DataFrame contains 10 rows and 5 columns.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 273 ms (Beats 61.16%) |
-| 💾 Memory | 66.6 MB (Beats 13.06%) |
+| ⏱️ Runtime | 273 ms (Beats 61.12%) |
+| 💾 Memory | 66.6 MB (Beats 12.92%) |
 | 📅 Solved | 2025-06-10 |
 | 💻 Language | pythondata |

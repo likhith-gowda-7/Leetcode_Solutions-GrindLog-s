@@ -75,7 +75,7 @@ Diagonals with exactly one element are already in order, so no changes are neede
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 11 ms (Beats 49.78%) |
+| ⏱️ Runtime | 11 ms (Beats 49.32%) |
 | 💾 Memory | 17.7 MB (Beats 100%) |
 | 📅 Solved | 2025-08-28 |
 | 💻 Language | Python |

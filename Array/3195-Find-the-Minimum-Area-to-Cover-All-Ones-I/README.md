@@ -53,7 +53,7 @@ The smallest rectangle has both height and width 1, so its area is `1 * 1 = 1`.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 2571 ms (Beats 6.4%) |
+| ⏱️ Runtime | 2571 ms (Beats 6.35%) |
 | 💾 Memory | 47.4 MB (Beats 100%) |
 | 📅 Solved | 2025-08-22 |
 | 💻 Language | Python |

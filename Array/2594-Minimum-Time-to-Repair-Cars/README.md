@@ -62,7 +62,7 @@ It can be proved that the cars cannot be repaired in less than 16 minutes.​​
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 347 ms (Beats 77.87%) |
+| ⏱️ Runtime | 347 ms (Beats 77.53%) |
 | 💾 Memory | 21.8 MB (Beats 100%) |
 | 📅 Solved | 2025-03-16 |
 | 💻 Language | Python |

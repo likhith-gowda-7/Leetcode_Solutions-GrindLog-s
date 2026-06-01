@@ -61,7 +61,7 @@ We return 0 because no subarrays meet the conditions.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 91 ms (Beats 91.5%) |
-| 💾 Memory | 34.1 MB (Beats 84.33%) |
+| ⏱️ Runtime | 91 ms (Beats 91.39%) |
+| 💾 Memory | 34.1 MB (Beats 84.26%) |
 | 📅 Solved | 2026-03-31 |
 | 💻 Language | Python |

@@ -54,7 +54,7 @@ n = -2
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 50 ms (Beats 14.47%) |
+| ⏱️ Runtime | 50 ms (Beats 14.42%) |
 | 💾 Memory | 48.9 MB (Beats 100%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

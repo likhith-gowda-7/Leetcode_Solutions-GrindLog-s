@@ -90,7 +90,7 @@ addressId = 1 contains information about the address of personId = 2.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 386 ms (Beats 88.61%) |
+| ⏱️ Runtime | 386 ms (Beats 89.86%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-26 |
 | 💻 Language | MySQL |

@@ -58,6 +58,6 @@ The only special character in `word` is `'b'`.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.2 MB (Beats 57.25%) |
+| 💾 Memory | 19.2 MB (Beats 57.52%) |
 | 📅 Solved | 2026-05-26 |
 | 💻 Language | Python |

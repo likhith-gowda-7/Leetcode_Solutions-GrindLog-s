@@ -60,7 +60,7 @@ timeMap.get("foo", 5);         // return "bar2"
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 98 ms (Beats 78.31%) |
-| 💾 Memory | 75.1 MB (Beats 5.85%) |
+| ⏱️ Runtime | 98 ms (Beats 78.44%) |
+| 💾 Memory | 75.1 MB (Beats 5.79%) |
 | 📅 Solved | 2025-02-27 |
 | 💻 Language | Python |

@@ -69,7 +69,7 @@ Each prefix has a score of one, so the total is answer[0] = 1 + 1 + 1 + 1 = 4.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 2334 ms (Beats 37.64%) |
-| 💾 Memory | 307.9 MB (Beats 82.8%) |
+| ⏱️ Runtime | 2334 ms (Beats 39.59%) |
+| 💾 Memory | 307.9 MB (Beats 85.42%) |
 | 📅 Solved | 2025-06-25 |
 | 💻 Language | Python |

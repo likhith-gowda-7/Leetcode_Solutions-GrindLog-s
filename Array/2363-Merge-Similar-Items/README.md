@@ -80,7 +80,7 @@ Therefore, we return [[1,7],[2,4],[7,1]].
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 83.33%) |
+| ⏱️ Runtime | 3 ms (Beats 83.18%) |
 | 💾 Memory | 18.7 MB (Beats 100%) |
 | 📅 Solved | 2025-02-08 |
 | 💻 Language | Python |

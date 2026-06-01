@@ -72,7 +72,7 @@ Example 3:**
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 281 ms (Beats 70.31%) |
+| ⏱️ Runtime | 281 ms (Beats 70.28%) |
 | 💾 Memory | 53.5 MB (Beats 96.42%) |
 | 📅 Solved | 2026-04-26 |
 | 💻 Language | Python |

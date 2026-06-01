@@ -136,7 +136,7 @@ Thus, the maximum possible profit is 9, which is achieved without any modificati
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 292 ms (Beats 36.89%) |
-| 💾 Memory | 33.9 MB (Beats 39.78%) |
+| ⏱️ Runtime | 292 ms (Beats 38.16%) |
+| 💾 Memory | 33.9 MB (Beats 38.85%) |
 | 📅 Solved | 2025-12-18 |
 | 💻 Language | Python |

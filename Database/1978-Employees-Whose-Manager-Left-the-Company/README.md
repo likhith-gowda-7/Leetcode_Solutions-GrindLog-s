@@ -70,7 +70,7 @@ Joziah's manager is employee 6, who left the company because there is no row for
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 405 ms (Beats 49.1%) |
+| ⏱️ Runtime | 405 ms (Beats 48.84%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-31 |
 | 💻 Language | mssql |

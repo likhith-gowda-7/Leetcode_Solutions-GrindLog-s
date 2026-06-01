@@ -57,7 +57,7 @@ The minimum possible difference is 2.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 95.75%) |
-| 💾 Memory | 19.6 MB (Beats 14.54%) |
+| ⏱️ Runtime | 3 ms (Beats 96.25%) |
+| 💾 Memory | 19.6 MB (Beats 14.62%) |
 | 📅 Solved | 2026-01-25 |
 | 💻 Language | Python |

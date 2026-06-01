@@ -59,7 +59,7 @@ Alternating groups:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 50 ms (Beats 95.72%) |
+| ⏱️ Runtime | 50 ms (Beats 95.89%) |
 | 💾 Memory | 17.7 MB (Beats 100%) |
 | 📅 Solved | 2025-03-09 |
 | 💻 Language | Python |

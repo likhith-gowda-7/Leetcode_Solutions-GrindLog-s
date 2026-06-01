@@ -65,7 +65,7 @@ Logs table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 499 ms (Beats 98.04%) |
+| ⏱️ Runtime | 499 ms (Beats 98.34%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-27 |
 | 💻 Language | MySQL |

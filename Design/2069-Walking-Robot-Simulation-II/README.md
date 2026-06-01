@@ -74,6 +74,6 @@ robot.getDir(); // return "West"
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 85 ms (Beats 34.43%) |
-| 💾 Memory | 24.1 MB (Beats 27.5%) |
+| 💾 Memory | 24.1 MB (Beats 27.51%) |
 | 📅 Solved | 2026-04-07 |
 | 💻 Language | Python |

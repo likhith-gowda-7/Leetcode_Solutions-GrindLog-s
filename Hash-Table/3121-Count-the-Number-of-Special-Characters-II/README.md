@@ -57,7 +57,7 @@ There are no special characters in `word`.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 201 ms (Beats 82.09%) |
-| 💾 Memory | 21.7 MB (Beats 22.46%) |
+| ⏱️ Runtime | 201 ms (Beats 82.23%) |
+| 💾 Memory | 21.7 MB (Beats 22.55%) |
 | 📅 Solved | 2026-05-27 |
 | 💻 Language | Python |

@@ -62,7 +62,7 @@ We can run the two computers simultaneously for at most 2 minutes, so we return 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1403 ms (Beats 5.11%) |
-| 💾 Memory | 31.1 MB (Beats 98.22%) |
+| ⏱️ Runtime | 1403 ms (Beats 5.1%) |
+| 💾 Memory | 31.1 MB (Beats 98.23%) |
 | 📅 Solved | 2025-12-01 |
 | 💻 Language | Python |

@@ -1,0 +1,67 @@
+> 📌 **Cross-listed:** Primary location is [Array/0240-Search-a-2D-Matrix-II](../../Array/0240-Search-a-2D-Matrix-II). This problem also appears under: **Array**, **Binary Search**, **Divide and Conquer**, **Matrix**
+
+# 240. Search a 2D Matrix II
+
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-ffc01e) ![Language](https://img.shields.io/badge/Language-Python-blue) ![Array](https://img.shields.io/badge/Array-purple) ![Binary Search](https://img.shields.io/badge/Binary%20Search-purple) ![Divide and Conquer](https://img.shields.io/badge/Divide%20and%20Conquer-purple) ![Matrix](https://img.shields.io/badge/Matrix-purple)
+
+
+🔗 [View on LeetCode](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+
+
+## 📝 Problem Description
+
+Write an efficient algorithm that searches for a value `target` in an `m x n` integer matrix `matrix`. This matrix has the following properties:
+
+	- Integers in each row are sorted in ascending from left to right.
+
+	- Integers in each column are sorted in ascending from top to bottom.
+
+ 
+
+Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/11/24/searchgrid2.jpg)
+```
+
+**Input:** matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
+**Output:** true
+
+```
+
+Example 2:**
+
+![](https://assets.leetcode.com/uploads/2020/11/24/searchgrid.jpg)
+```
+
+**Input:** matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20
+**Output:** false
+
+```
+
+ 
+
+**Constraints:**
+
+	- `m == matrix.length`
+
+	- `n == matrix[i].length`
+
+	- `1 <= n, m <= 300`
+
+	- `-10^9 <= matrix[i][j] <= 10^9`
+
+	- All the integers in each row are **sorted** in ascending order.
+
+	- All the integers in each column are **sorted** in ascending order.
+
+	- `-10^9 <= target <= 10^9`
+
+## 📊 Metrics
+
+| Metric | Value |
+|:-------|:------|
+| ⏱️ Runtime | 145 ms (Beats 41.7%) |
+| 💾 Memory | 23.5 MB (Beats 100%) |
+| 📅 Solved | 2025-12-21 |
+| 💻 Language | Python |

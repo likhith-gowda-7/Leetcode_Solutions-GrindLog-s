@@ -61,7 +61,7 @@ exection -> execution (insert 'u')
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 44 ms (Beats 68.21%) |
-| 💾 Memory | 19.4 MB (Beats 90.31%) |
+| ⏱️ Runtime | 44 ms (Beats 68.11%) |
+| 💾 Memory | 19.4 MB (Beats 90.24%) |
 | 📅 Solved | 2026-02-20 |
 | 💻 Language | Python |

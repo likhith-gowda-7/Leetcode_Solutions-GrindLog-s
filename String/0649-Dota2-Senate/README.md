@@ -66,7 +66,7 @@ And in round 2, the third senator can just announce the victory since he is the 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 11 ms (Beats 82.45%) |
+| ⏱️ Runtime | 11 ms (Beats 82.34%) |
 | 💾 Memory | 18.1 MB (Beats 100%) |
 | 📅 Solved | 2025-03-29 |
 | 💻 Language | Python |

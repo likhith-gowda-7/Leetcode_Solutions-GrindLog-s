@@ -63,7 +63,7 @@ Note that only one of the two unmatched 1s is counted as a cow since the non-bul
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 7 ms (Beats 44.66%) |
+| ⏱️ Runtime | 7 ms (Beats 44.57%) |
 | 💾 Memory | 17.2 MB (Beats 100%) |
 | 📅 Solved | 2025-12-27 |
 | 💻 Language | Python |

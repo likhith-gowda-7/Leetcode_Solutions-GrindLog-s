@@ -65,7 +65,7 @@ magicDictionary.search("leetcoded"); // return False
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 112 ms (Beats 40.59%) |
-| 💾 Memory | 20.8 MB (Beats 59.6%) |
+| ⏱️ Runtime | 112 ms (Beats 40.44%) |
+| 💾 Memory | 20.8 MB (Beats 59.75%) |
 | 📅 Solved | 2025-06-23 |
 | 💻 Language | Python |

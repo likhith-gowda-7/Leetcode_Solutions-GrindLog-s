@@ -60,7 +60,7 @@ onceFn(4, 6, 8); // undefined, fn was not called
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 54 ms (Beats 7.35%) |
+| ⏱️ Runtime | 54 ms (Beats 7.32%) |
 | 💾 Memory | 48.4 MB (Beats 100%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

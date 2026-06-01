@@ -59,7 +59,7 @@ stockSpanner.next(85);  // return 6
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 63 ms (Beats 55.47%) |
+| ⏱️ Runtime | 63 ms (Beats 55.36%) |
 | 💾 Memory | 22.2 MB (Beats 100%) |
 | 📅 Solved | 2025-01-30 |
 | 💻 Language | Python |

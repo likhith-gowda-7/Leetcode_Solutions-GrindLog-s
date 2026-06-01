@@ -72,7 +72,7 @@ World table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 557 ms (Beats 65.51%) |
+| ⏱️ Runtime | 557 ms (Beats 64.95%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-15 |
 | 💻 Language | mssql |

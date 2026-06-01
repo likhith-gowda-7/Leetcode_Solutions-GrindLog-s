@@ -74,7 +74,7 @@ Hence, half the customers have immediate first orders.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 599 ms (Beats 84.08%) |
+| ⏱️ Runtime | 599 ms (Beats 85.29%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-24 |
 | 💻 Language | MySQL |

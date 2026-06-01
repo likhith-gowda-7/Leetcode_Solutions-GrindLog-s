@@ -68,7 +68,7 @@ Views table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 861 ms (Beats 42.46%) |
+| ⏱️ Runtime | 861 ms (Beats 42.3%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-15 |
 | 💻 Language | mssql |

@@ -57,7 +57,7 @@ Since not every customer received the correct change, the answer is false.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3 ms (Beats 76.67%) |
+| ⏱️ Runtime | 3 ms (Beats 76.07%) |
 | 💾 Memory | 21.9 MB (Beats 99.97%) |
 | 📅 Solved | 2025-02-13 |
 | 💻 Language | Python |

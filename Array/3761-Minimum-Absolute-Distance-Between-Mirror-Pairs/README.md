@@ -73,7 +73,7 @@ There are no mirror pairs in the array.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 219 ms (Beats 59.49%) |
-| 💾 Memory | 42.7 MB (Beats 13.39%) |
+| ⏱️ Runtime | 219 ms (Beats 59.48%) |
+| 💾 Memory | 42.7 MB (Beats 13.37%) |
 | 📅 Solved | 2026-04-17 |
 | 💻 Language | Python |

@@ -69,7 +69,7 @@ The operations can be performed using valid integers in the order 7, 5, 3, and 1
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 63 ms (Beats 88.78%) |
+| ⏱️ Runtime | 63 ms (Beats 88.94%) |
 | 💾 Memory | 17.7 MB (Beats 100%) |
 | 📅 Solved | 2025-04-09 |
 | 💻 Language | Python |

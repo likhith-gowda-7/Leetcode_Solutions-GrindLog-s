@@ -74,7 +74,7 @@ The city 0 has 1 neighboring city at a distanceThreshold = 2.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 187 ms (Beats 62.98%) |
+| ⏱️ Runtime | 187 ms (Beats 63.09%) |
 | 💾 Memory | 19.1 MB (Beats 100%) |
 | 📅 Solved | 2025-09-13 |
 | 💻 Language | Python |

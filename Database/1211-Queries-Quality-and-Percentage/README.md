@@ -84,7 +84,7 @@ Cat queries poor_ query_percentage is (1 / 3) * 100 = 33.33
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 333 ms (Beats 95.21%) |
+| ⏱️ Runtime | 333 ms (Beats 95.89%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-24 |
 | 💻 Language | MySQL |

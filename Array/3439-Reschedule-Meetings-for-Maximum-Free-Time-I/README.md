@@ -77,7 +77,7 @@ There is no time during the event not occupied by meetings.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 32 ms (Beats 95.73%) |
+| ⏱️ Runtime | 32 ms (Beats 95.98%) |
 | 💾 Memory | 36 MB (Beats 100%) |
 | 📅 Solved | 2025-07-10 |
 | 💻 Language | Python |

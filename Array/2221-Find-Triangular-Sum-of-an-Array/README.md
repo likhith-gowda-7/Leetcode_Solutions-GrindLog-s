@@ -58,7 +58,7 @@ Since there is only one element in nums, the triangular sum is the value of that
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1287 ms (Beats 22.6%) |
+| ⏱️ Runtime | 1287 ms (Beats 22.79%) |
 | 💾 Memory | 18 MB (Beats 100%) |
 | 📅 Solved | 2025-09-30 |
 | 💻 Language | Python |

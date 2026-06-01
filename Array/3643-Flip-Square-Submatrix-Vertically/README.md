@@ -66,6 +66,6 @@ The diagram above shows the grid before and after the transformation.
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.5 MB (Beats 66.09%) |
+| 💾 Memory | 19.5 MB (Beats 67.07%) |
 | 📅 Solved | 2026-03-21 |
 | 💻 Language | Python |

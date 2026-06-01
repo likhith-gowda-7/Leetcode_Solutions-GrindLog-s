@@ -80,6 +80,6 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.1 MB (Beats 87.96%) |
+| 💾 Memory | 19.1 MB (Beats 88%) |
 | 📅 Solved | 2026-03-13 |
 | 💻 Language | Python |

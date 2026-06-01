@@ -56,7 +56,7 @@ As shown below, there are 5 ways you can generate "bag" from s.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 12 ms (Beats 99.14%) |
-| 💾 Memory | 24.8 MB (Beats 69.47%) |
+| ⏱️ Runtime | 12 ms (Beats 99.16%) |
+| 💾 Memory | 24.8 MB (Beats 69.39%) |
 | 📅 Solved | 2026-02-11 |
 | 💻 Language | Python |

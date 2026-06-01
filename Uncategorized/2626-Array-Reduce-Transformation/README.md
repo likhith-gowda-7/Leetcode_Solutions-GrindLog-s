@@ -84,7 +84,7 @@ init = 25
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 65 ms (Beats 5.43%) |
+| ⏱️ Runtime | 65 ms (Beats 5.39%) |
 | 💾 Memory | 49.4 MB (Beats 99.99%) |
 | 📅 Solved | 2024-09-28 |
 | 💻 Language | JavaScript |

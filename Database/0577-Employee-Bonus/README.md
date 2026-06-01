@@ -94,7 +94,7 @@ Bonus table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1021 ms (Beats 40.27%) |
+| ⏱️ Runtime | 1021 ms (Beats 40.88%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-16 |
 | 💻 Language | MySQL |

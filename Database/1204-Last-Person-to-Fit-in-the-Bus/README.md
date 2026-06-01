@@ -81,7 +81,7 @@ Queue table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 737 ms (Beats 92.56%) |
+| ⏱️ Runtime | 737 ms (Beats 93.29%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-30 |
 | 💻 Language | MySQL |

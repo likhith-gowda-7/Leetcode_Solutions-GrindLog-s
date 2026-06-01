@@ -67,7 +67,7 @@ It is also the smallest numerically balanced number strictly greater than 3000.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1919 ms (Beats 53.11%) |
+| ⏱️ Runtime | 1919 ms (Beats 52.84%) |
 | 💾 Memory | 17.7 MB (Beats 100%) |
 | 📅 Solved | 2025-10-25 |
 | 💻 Language | Python |

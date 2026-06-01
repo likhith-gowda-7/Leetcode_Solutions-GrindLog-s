@@ -75,7 +75,7 @@ Sales table:
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 683 ms (Beats 80.88%) |
+| ⏱️ Runtime | 683 ms (Beats 81.67%) |
 | 💾 Memory | 0B (Beats 100%) |
 | 📅 Solved | 2026-01-25 |
 | 💻 Language | MySQL |

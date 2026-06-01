@@ -66,7 +66,7 @@ Since the largest window of s only has one 'a', return empty string.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 75 ms (Beats 49.64%) |
+| ⏱️ Runtime | 75 ms (Beats 49.73%) |
 | 💾 Memory | 18.1 MB (Beats 100%) |
 | 📅 Solved | 2025-03-21 |
 | 💻 Language | Python |

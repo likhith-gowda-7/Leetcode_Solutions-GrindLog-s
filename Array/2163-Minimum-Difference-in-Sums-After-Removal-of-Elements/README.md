@@ -69,7 +69,7 @@ It can be shown that it is not possible to obtain a difference smaller than 1.
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 280 ms (Beats 89.24%) |
-| 💾 Memory | 47.6 MB (Beats 25.32%) |
+| ⏱️ Runtime | 280 ms (Beats 88.31%) |
+| 💾 Memory | 47.6 MB (Beats 25.97%) |
 | 📅 Solved | 2025-07-18 |
 | 💻 Language | Python |

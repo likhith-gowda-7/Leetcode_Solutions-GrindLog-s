@@ -54,7 +54,7 @@ Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 4 ms (Beats 84.19%) |
+| ⏱️ Runtime | 4 ms (Beats 84.04%) |
 | 💾 Memory | 17.8 MB (Beats 100%) |
 | 📅 Solved | 2024-12-07 |
 | 💻 Language | Python |
