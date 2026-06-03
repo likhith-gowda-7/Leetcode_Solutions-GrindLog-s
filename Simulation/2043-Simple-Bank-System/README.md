@@ -67,6 +67,37 @@ bank.withdraw(10, 50);   // return false, it is invalid because account 10 does 
 
 	- At most `10^4` calls will be made to **each** function `transfer`, `deposit`, `withdraw`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a simple array-based data structure to simulate the bank's transactions. By maintaining a balance array, the class can efficiently perform deposit, withdraw, and transfer operations while validating account numbers and balances.
+
+**Approach**
+1. Initialize the `Bank` object with the balance array in the constructor.
+2. In the `transfer` method:
+   - Subtract 1 from the account numbers to convert them to 0-indexed.
+   - Check if the account numbers are valid (within the array bounds).
+   - Verify if the transfer amount is less than or equal to the balance of the source account.
+   - If valid, update the balances of the source and destination accounts.
+3. In the `deposit` method:
+   - Subtract 1 from the account number to convert it to 0-indexed.
+   - Check if the account number is valid (within the array bounds).
+   - Update the balance of the account.
+4. In the `withdraw` method:
+   - Subtract 1 from the account number to convert it to 0-indexed.
+   - Check if the account number is valid (within the array bounds).
+   - Verify if the withdrawal amount is less than or equal to the balance of the account.
+   - If valid, update the balance of the account.
+
+**Time Complexity**
+The time complexity of this solution is O(1) for each operation (transfer, deposit, withdraw), as it involves constant-time array accesses and updates.
+
+**Space Complexity**
+The space complexity is O(n), where n is the number of accounts, as the balance array is stored in memory.
+
+**Key Insight**
+The key insight is to utilize a simple array-based data structure to simulate the bank's transactions, allowing for efficient and constant-time operations. By maintaining a balance array, the class can validate account numbers and balances while updating the account balances accordingly.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -73,6 +73,27 @@ Example 3:**
 
 	- `tokens[i]` is either an operator: `"+"`, `"-"`, `"*"`, or `"/"`, or an integer in the range `[-200, 200]`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing a stack to store operands and then popping them off to perform operations when an operator is encountered. This approach takes advantage of the properties of Reverse Polish Notation, where operators follow their operands. By using a stack, we can efficiently evaluate the expression from left to right.
+
+## Approach
+1. Initialize an empty stack to store operands.
+2. Iterate through each token in the input array.
+3. If the token is an operand (not an operator), convert it to an integer and push it onto the stack.
+4. If the token is an operator, pop the top two operands off the stack, perform the operation, and push the result back onto the stack.
+5. After iterating through all tokens, the final result will be the only element left on the stack.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of tokens in the input array. This is because we make a single pass through the input array, performing a constant amount of work for each token.
+
+## Space Complexity
+The space complexity is O(n), where n is the number of tokens in the input array. In the worst case, we may need to store all tokens on the stack (e.g., if the input array consists only of operands).
+
+## Key Insight
+The key insight is recognizing that Reverse Polish Notation allows us to evaluate expressions using a stack, where operators follow their operands. This enables us to process the expression from left to right, making it efficient to evaluate the expression using a single pass through the input array.
+
 ## 📊 Metrics
 
 | Metric | Value |

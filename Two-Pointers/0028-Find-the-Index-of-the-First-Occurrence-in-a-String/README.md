@@ -42,6 +42,27 @@ Example 2:**
 
 	- `haystack` and `needle` consist of only lowercase English characters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a simple iterative approach to find the first occurrence of the `needle` string within the `haystack` string. It checks each substring of the `haystack` with the same length as the `needle` and returns the index of the first match.
+
+**Approach**
+1. Check if the `needle` is an empty string. If so, return 0 as per the problem constraints.
+2. Iterate over the `haystack` string, considering substrings of the same length as the `needle`.
+3. For each substring, check if it matches the `needle` string.
+4. If a match is found, return the index of the first character of the matched substring.
+5. If no match is found after iterating over the entire `haystack`, return -1.
+
+**Time Complexity**
+O(n*m), where n is the length of the `haystack` and m is the length of the `needle`. This is because in the worst case, we need to check every substring of the `haystack` with the same length as the `needle`.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the indices and the current substring being checked.
+
+**Key Insight**
+The key insight here is that we can efficiently find the first occurrence of the `needle` by checking substrings of the `haystack` with the same length as the `needle`. This approach avoids the need for more complex string matching algorithms, making it suitable for this problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

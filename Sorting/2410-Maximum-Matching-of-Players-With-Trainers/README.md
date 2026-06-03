@@ -57,6 +57,27 @@ Each player can only be matched with one trainer, so the maximum answer is 1.
 
 **Note:** This question is the same as [ 445: Assign Cookies.](https://leetcode.com/problems/assign-cookies/description/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The key insight behind this solution is that we can maximize the number of matchings by pairing the players with the trainers in a sorted order. This is because we want to match the players with the trainers who have the highest training capacity that is still sufficient for the player's ability.
+
+**Approach**
+1. Sort both the `players` and `trainers` arrays in ascending order.
+2. Initialize a counter `c` to keep track of the number of matchings.
+3. Iterate through the `trainers` array. For each trainer's capacity `cap`, check if it is greater than or equal to the current player's ability `players[c]`.
+4. If the capacity is sufficient, increment the counter `c` and move to the next player.
+5. Continue this process until we have matched all players or we have exhausted the trainers.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the number of players (or trainers).
+
+**Space Complexity**
+O(1) since we are only using a constant amount of space to store the counter and indices.
+
+**Key Insight**
+The key insight is that by sorting the players and trainers, we can efficiently find the maximum number of matchings by pairing the players with the trainers in a greedy manner. This approach takes advantage of the fact that the players and trainers are sorted, allowing us to quickly find the best match for each player.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -66,6 +66,28 @@ Example 3:**
 
 Could you solve this problem in O(n) time complexity?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a clever observation to calculate the sum of all odd-length subarrays. It notes that for each element at index `i`, the total number of odd-length subarrays that include `arr[i]` is `(i+1)*(n-i)`, where `n` is the length of the array. This is because there are `i+1` odd-length subarrays starting from the beginning of the array and ending at `arr[i]`, and `n-i` odd-length subarrays starting from `arr[i]` and ending at the end of the array.
+
+**Approach**
+1. Initialize the result `res` to 0 and the length of the array `n` to `len(arr)`.
+2. Iterate over each element `arr[i]` in the array.
+3. For each element, calculate the total number of odd-length subarrays that include `arr[i]` using the formula `(i+1)*(n-i)`.
+4. Calculate the number of odd-length subarrays that include `arr[i]` by taking the ceiling of `(total+1)/2`, which is equivalent to `(total+1)//2`.
+5. Multiply the number of odd-length subarrays by `arr[i]` and add the result to `res`.
+6. Return `res` as the sum of all odd-length subarrays.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we are iterating over each element in the array once.
+
+**Space Complexity**
+O(1), which means the space complexity is constant. We are only using a few variables to store the result and the length of the array, and we are not using any data structures that grow with the size of the input.
+
+**Key Insight**
+The key insight behind this solution is the observation that the total number of odd-length subarrays that include a given element is proportional to the product of the number of elements before and after the given element. This allows us to calculate the sum of all odd-length subarrays in a single pass through the array.
+
 ## 📊 Metrics
 
 | Metric | Value |

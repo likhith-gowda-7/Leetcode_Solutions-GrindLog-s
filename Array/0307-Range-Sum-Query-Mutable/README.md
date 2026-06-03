@@ -59,6 +59,26 @@ numArray.sumRange(0, 2); // return 1 + 2 + 5 = 8
 
 	- At most `3 * 10^4` calls will be made to `update` and `sumRange`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution utilizes a Binary Indexed Tree (BIT) to efficiently store and update cumulative sums of the input array, allowing for fast range sum queries. By maintaining a separate copy of the original array, we can calculate the difference in values when updating an element and propagate this change to the BIT. This approach enables us to balance the trade-off between update and query operations.
+
+## Approach
+1. Initialize the `NumArray` object with the input array, creating a copy of the array and a BIT with the same length plus one.
+2. Populate the BIT by iterating through the input array and adding each element's value to the corresponding indices in the BIT.
+3. When updating an element, calculate the difference between the new and old values, update the copy of the array, and add this difference to the BIT.
+4. To query the sum of a range, use the BIT to calculate the cumulative sum up to the right endpoint and subtract the cumulative sum up to the left endpoint minus one.
+
+## Time Complexity
+The time complexity is O(log n) for both update and query operations, where n is the length of the input array. This is because BIT operations (add and query) involve traversing the tree, which has a height of log n.
+
+## Space Complexity
+The space complexity is O(n), where n is the length of the input array. This is because we need to store the input array, its copy, and the BIT, all of which have a length of n or n+1.
+
+## Key Insight
+The key insight is using the BIT to store cumulative sums, which allows for efficient range sum queries by exploiting the properties of the BIT. By maintaining a separate copy of the original array, we can calculate the difference in values when updating an element and propagate this change to the BIT, enabling fast updates and queries.
+
 ## 📊 Metrics
 
 | Metric | Value |

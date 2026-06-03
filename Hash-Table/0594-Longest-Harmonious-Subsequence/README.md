@@ -55,6 +55,29 @@ No harmonic subsequence exists.
 
 	- `-10^9 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by leveraging the properties of a harmonious array, where the difference between its maximum and minimum value is exactly 1. This insight allows us to focus on pairs of numbers that have a difference of 1, which can be efficiently counted using a hash table.
+
+**Approach**
+1. Create a hash table `h1` to store the frequency of each number in the input array `nums`.
+2. Initialize a variable `res` to store the length of the longest harmonious subsequence found so far.
+3. Iterate over the keys of the hash table `h1`.
+4. For each key `n`, check if `n+1` is also a key in the hash table `h1`.
+5. If `n+1` is a key, calculate the total frequency of the pair `(n, n+1)` by adding the frequencies of `n` and `n+1`.
+6. Update `res` if the total frequency of the pair is greater than the current value of `res`.
+7. Return the value of `res` as the length of the longest harmonious subsequence.
+
+**Time Complexity**
+O(n), where n is the number of unique elements in the input array `nums`. This is because we iterate over the keys of the hash table `h1` once, and each key is visited at most twice (once for `n` and once for `n+1`).
+
+**Space Complexity**
+O(n), where n is the number of unique elements in the input array `nums`. This is because we store the frequency of each unique element in the hash table `h1`.
+
+**Key Insight**
+The key insight behind this solution is that a harmonious array can be formed by pairing numbers that have a difference of 1. By counting the frequency of each number and its successor, we can efficiently identify the longest harmonious subsequence. This insight allows us to simplify the problem and focus on a specific pattern, making the solution more efficient and scalable.
+
 ## 📊 Metrics
 
 | Metric | Value |

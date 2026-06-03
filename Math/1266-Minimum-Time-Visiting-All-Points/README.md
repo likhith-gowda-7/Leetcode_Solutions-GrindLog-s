@@ -67,6 +67,27 @@ Example 2:**
 
 	- `-1000 <= points[i][0], points[i][1] <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the minimum time to visit all points by finding the maximum horizontal or vertical distance between consecutive points, as moving diagonally is not necessary. This approach works because the problem allows moving diagonally, which means the optimal path will always be a straight line between two points.
+
+**Approach**
+1. Initialize a variable `steps` to keep track of the total time taken.
+2. Iterate over the list of points, starting from the second point (index 1).
+3. For each pair of consecutive points, calculate the absolute difference in x-coordinates (`abs(x1-x2)`) and y-coordinates (`abs(y1-y2)`).
+4. Add the maximum of these two differences to `steps`, as this represents the minimum time required to move from one point to the other.
+5. Return the total `steps` after iterating over all points.
+
+**Time Complexity**
+O(n), where n is the number of points. This is because we are iterating over the list of points once, and the operations inside the loop (calculating absolute differences and updating `steps`) take constant time.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the `steps` variable and the indices of the points.
+
+**Key Insight**
+The key insight here is that the optimal path between two points is a straight line, and the minimum time required to move between them is equal to the maximum horizontal or vertical distance between them. This allows us to simplify the problem by only considering the maximum of the two differences, rather than the actual diagonal distance.
+
 ## 📊 Metrics
 
 | Metric | Value |

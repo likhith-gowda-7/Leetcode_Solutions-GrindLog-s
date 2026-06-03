@@ -55,6 +55,27 @@ Example 2:**
 
 	- `-100 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by calculating the rotation function `F(k)` for each possible rotation `k` and keeping track of the maximum value. It uses a clever trick to avoid recalculating the entire sum for each rotation, instead updating the previous sum to get the new sum. This approach takes advantage of the fact that the rotation function has a simple relationship with the previous rotation.
+
+## Approach
+1. Calculate the initial sum of the rotation function `F(0)` by multiplying each element with its index and summing them up.
+2. Initialize the maximum result with the initial sum.
+3. Iterate over each possible rotation from `n-1` to `1`, where `n` is the length of the input array.
+4. For each rotation, update the previous sum by subtracting the contribution of the last element and adding the contribution of the remaining elements.
+5. Update the maximum result if the new sum is larger.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array. This is because we are iterating over the array once to calculate the initial sum and then iterating over the possible rotations, which is also n times.
+
+## Space Complexity
+The space complexity is O(1), which means the space required does not change with the size of the input array. This is because we are only using a constant amount of space to store the sums and the maximum result.
+
+## Key Insight
+The key insight is to recognize that the rotation function has a simple relationship with the previous rotation, allowing us to update the previous sum instead of recalculating the entire sum for each rotation. This insight enables us to solve the problem efficiently in O(n) time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

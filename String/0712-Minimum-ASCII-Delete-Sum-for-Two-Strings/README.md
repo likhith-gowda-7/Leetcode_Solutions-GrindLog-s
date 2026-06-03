@@ -47,6 +47,26 @@ If instead we turned both strings into "lee" or "eet", we would get answers of 4
 
 	- `s1` and `s2` consist of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This problem can be solved using dynamic programming by building a 2D table where each cell represents the minimum ASCII sum of deleted characters to make two substrings equal. The key insight is that we can either delete a character from the first string and add its ASCII value to the sum, or delete a character from the second string and add its ASCII value to the sum.
+
+**Approach**
+1. Initialize a 2D table `dp` with dimensions `(n1+1) x (n2+1)`, where `n1` and `n2` are the lengths of the two input strings. Fill the first row and first column with the ASCII values of the characters in the first and second strings, respectively.
+2. Iterate over the 2D table, starting from the second row and second column. For each cell `dp[i][j]`, check if the characters at positions `i-1` and `j-1` are equal. If they are, set `dp[i][j]` to `dp[i-1][j-1]`, meaning that no characters need to be deleted.
+3. If the characters are not equal, calculate the minimum ASCII sum of deleted characters by considering two options: deleting a character from the first string and adding its ASCII value to the sum, or deleting a character from the second string and adding its ASCII value to the sum. Choose the minimum of these two options and store it in `dp[i][j]`.
+4. After filling the 2D table, return the value in the bottom-right cell, which represents the minimum ASCII sum of deleted characters to make the two input strings equal.
+
+**Time Complexity**
+O(n1 * n2), where n1 and n2 are the lengths of the two input strings. This is because we need to fill a 2D table with dimensions (n1+1) x (n2+1), and each cell requires a constant amount of time to compute.
+
+**Space Complexity**
+O(n1 * n2), which is the size of the 2D table. We need to store the ASCII values of the characters in the first and second strings, as well as the minimum ASCII sum of deleted characters for each cell.
+
+**Key Insight**
+The key insight is that we can use dynamic programming to build a 2D table where each cell represents the minimum ASCII sum of deleted characters to make two substrings equal. By considering two options for each cell (deleting a character from the first string or deleting a character from the second string), we can find the minimum ASCII sum of deleted characters to make the two input strings equal.
+
 ## 📊 Metrics
 
 | Metric | Value |

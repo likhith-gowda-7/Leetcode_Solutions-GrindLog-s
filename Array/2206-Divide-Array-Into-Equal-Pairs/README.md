@@ -54,6 +54,27 @@ There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy 
 
 	- `1 <= nums[i] <= 500`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by utilizing a set to keep track of the elements in the array. Since a set only stores unique elements, if the array can be divided into pairs of equal elements, the set should contain no elements after processing the array. This is because each element will be paired with another instance of the same element, effectively removing it from the set.
+
+**Approach**
+1. Initialize an empty set `check` to store unique elements from the array.
+2. Iterate through each element `val` in the array `nums`.
+3. If `val` is already present in the set `check`, remove it from the set.
+4. If `val` is not present in the set `check`, add it to the set.
+5. After processing all elements in the array, check if the set `check` is empty. If it is, return `True`, indicating that the array can be divided into pairs of equal elements. Otherwise, return `False`.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. This is because we are iterating through each element in the array once.
+
+**Space Complexity**
+O(n), where n is the length of the array `nums`. In the worst-case scenario, all elements in the array are unique, and we need to store them in the set `check`.
+
+**Key Insight**
+The key insight is that a set can be used to efficiently check if all elements in the array can be paired with another instance of the same element. This is because a set automatically removes duplicates, and if the array can be divided into pairs, the set should be empty after processing all elements.
+
 ## 📊 Metrics
 
 | Metric | Value |

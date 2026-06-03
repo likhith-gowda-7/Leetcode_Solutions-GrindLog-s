@@ -57,6 +57,27 @@ Example 3:**
 
 **Follow up:** Could you solve it without loops/recursion?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by continuously dividing the input number `n` by 3 until it reaches 1. If `n` is a power of three, it will eventually reach 1. If `n` is not a power of three, it will reach a number that is not divisible by 3, at which point the function returns `False`.
+
+**Approach**
+1. Check if `n` is less than or equal to 0. If so, return `False` because negative numbers and 0 are not powers of three.
+2. While `n` is greater than 1, check if `n` is divisible by 3.
+   - If `n` is divisible by 3, divide `n` by 3.
+   - If `n` is not divisible by 3, return `False` because `n` is not a power of three.
+3. If `n` is 1, return `True` because `n` is a power of three (specifically, 3^0).
+
+**Time Complexity**
+O(log n) because in the worst case, we divide `n` by 3 until it reaches 1. The number of divisions required is proportional to the logarithm of `n` to the base 3.
+
+**Space Complexity**
+O(1) because we only use a constant amount of space to store the input `n` and the temporary result of the division.
+
+**Key Insight**
+The key insight here is that if `n` is a power of three, it can be written as 3^x for some integer x. This means that `n` can be divided by 3 repeatedly until it reaches 1, and this process will terminate if and only if `n` is a power of three.
+
 ## 📊 Metrics
 
 | Metric | Value |

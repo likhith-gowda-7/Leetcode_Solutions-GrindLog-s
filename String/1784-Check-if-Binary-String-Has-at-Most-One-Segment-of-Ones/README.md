@@ -41,6 +41,25 @@ Example 2:**
 
 	- `s[0]` is `'1'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The key insight here is that we can simply check if the string contains the substring "01", which indicates the presence of two contiguous segments of ones. If it doesn't contain "01", it means there's at most one segment of ones.
+
+**Approach**
+1. The solution checks if the string `s` contains the substring "01".
+2. If "01" is found, it means there are two contiguous segments of ones, so the function returns `False`.
+3. If "01" is not found, it means there's at most one segment of ones, so the function returns `True`.
+
+**Time Complexity**
+O(n), where n is the length of the string `s`. This is because we're using the `in` operator to check if the substring "01" exists in `s`, which has a linear time complexity.
+
+**Space Complexity**
+O(1), which means the space required does not change with the size of the input string `s`. We're only using a constant amount of space to store the substring "01" and the return value.
+
+**Key Insight**
+The key insight here is that the presence of "01" in the string indicates two contiguous segments of ones, and its absence indicates at most one segment of ones. This simple check allows us to solve the problem efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

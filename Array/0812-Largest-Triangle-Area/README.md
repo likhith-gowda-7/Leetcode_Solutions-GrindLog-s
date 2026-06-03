@@ -43,6 +43,27 @@ Example 2:**
 
 	- All the given points are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses the shoelace formula to calculate the area of each triangle formed by three points and keeps track of the maximum area found. This approach works because the shoelace formula can be used to calculate the area of a simple polygon, and a triangle is a special case of a simple polygon.
+
+**Approach**
+1. Initialize the maximum area to 0.
+2. Iterate over all possible combinations of three points from the input array.
+3. For each combination of three points, calculate the area of the triangle formed by these points using the shoelace formula.
+4. Update the maximum area if the calculated area is greater than the current maximum area.
+5. After iterating over all combinations, return the maximum area found.
+
+**Time Complexity**
+O(n^3), where n is the number of points. This is because we have three nested loops, each iterating over the points array.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the maximum area and the temporary variables used in the shoelace formula.
+
+**Key Insight**
+The key insight here is that the shoelace formula can be used to calculate the area of a triangle formed by three points, and by iterating over all possible combinations of three points, we can find the maximum area of the triangle that can be formed. This approach is efficient because it only requires a constant amount of space and has a time complexity that is cubic in the number of points.
+
 ## 📊 Metrics
 
 | Metric | Value |

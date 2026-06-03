@@ -53,6 +53,29 @@ Example 2:**
 
 **Follow-up:** Can you solve the problem in `O(1)` extra memory space?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a recursive approach to reverse the nodes of the linked list in groups of size `k`. It maintains a dummy node to simplify the edge cases and iteratively reverses the nodes in each group.
+
+**Approach**
+1. Define a helper function `has_knodes` to get the `k`-th node from the current node.
+2. Initialize a dummy node and set the `prev_group_end` to the dummy node.
+3. Iterate until the `k`-th node is `None`, indicating the end of the list.
+4. In each iteration, reverse the nodes from the `prev_group_end` to the `k`-th node.
+5. Update the `prev_group_end` to the starting node of the next group.
+6. After reversing the nodes, connect the `prev_group_end` to the `k`-th node.
+7. Return the modified list by returning `dummy.next`.
+
+**Time Complexity**
+O(n) where n is the length of the linked list, since we visit each node once.
+
+**Space Complexity**
+O(1) since we only use a constant amount of space to store the dummy node, `prev_group_end`, and the temporary variables.
+
+**Key Insight**
+The key insight is to use a recursive approach to reverse the nodes in each group, and to maintain a dummy node to simplify the edge cases. This approach allows us to efficiently reverse the nodes in groups of size `k` while handling the remaining nodes at the end of the list.
+
 ## 📊 Metrics
 
 | Metric | Value |

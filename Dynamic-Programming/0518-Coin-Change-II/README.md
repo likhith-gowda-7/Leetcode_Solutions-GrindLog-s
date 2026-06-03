@@ -66,6 +66,27 @@ Example 3:**
 
 	- `0 <= amount <= 5000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved using dynamic programming, where we build up a table of solutions to subproblems. The key insight is that the number of combinations that make up a certain amount is the sum of the number of combinations that make up the amount minus each coin denomination.
+
+**Approach**
+1. Initialize a dynamic programming table `dp` of size `amount + 1` with all elements set to 0, except for `dp[0]` which is set to 1 (since there is exactly one way to make up an amount of 0, which is to not use any coins).
+2. Iterate over each coin denomination `coin` in the `coins` array.
+3. For each coin denomination, iterate over the range from `coin` to `amount` (inclusive).
+4. For each amount `i` in this range, update `dp[i]` by adding the number of combinations that make up `i - coin`, which is stored in `dp[i - coin]`. This represents the number of combinations that make up `i` by using the current coin denomination.
+5. After iterating over all coin denominations and amounts, return `dp[amount]`, which represents the total number of combinations that make up the given amount.
+
+**Time Complexity**
+O(n*amount), where n is the number of coin denominations. This is because we have two nested loops: one that iterates over the coin denominations (O(n)) and another that iterates over the amounts (O(amount)).
+
+**Space Complexity**
+O(amount), which is the size of the dynamic programming table. This is because we need to store the number of combinations that make up each amount up to the given amount.
+
+**Key Insight**
+The key insight is that the number of combinations that make up a certain amount is the sum of the number of combinations that make up the amount minus each coin denomination. This is because we can always add a coin of the current denomination to each combination that makes up the amount minus the coin denomination, resulting in a new combination that makes up the current amount.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -82,6 +82,30 @@ The maximum pair sum is max(3+5, 4+4, 6+2) = max(8, 8, 8) = 8.
 
 	- `1 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by pairing up the smallest and largest numbers in the array, then the second smallest and second largest, and so on. This approach ensures that the maximum pair sum is minimized because we are always pairing up the smallest and largest numbers available.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Initialize two pointers, `l` and `r`, to the start and end of the sorted array, respectively.
+3. Initialize a variable `maxi` to store the maximum pair sum found so far.
+4. While `l` is less than `r`, calculate the pair sum of the elements at indices `l` and `r`.
+5. If the pair sum is greater than the current `maxi`, update `maxi` to the new pair sum.
+6. Move the pointers `l` and `r` towards the center of the array by incrementing `l` and decrementing `r`.
+7. Repeat steps 4-6 until `l` is no longer less than `r`.
+8. Return the final `maxi` value, which represents the minimized maximum pair sum.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the length of the input array. The while loop runs in O(n/2) time, but this is dominated by the sorting step.
+
+**Space Complexity**
+O(1) (excluding the space required for the input array), since we only use a constant amount of extra space to store the pointers and the `maxi` value.
+
+**Key Insight**
+The key insight is that by pairing up the smallest and largest numbers, we are effectively "averaging out" the maximum pair sum. This is because the smallest number is always paired with the largest number, which minimizes the maximum pair sum. This approach is a classic example of the "greedy algorithm" paradigm, where we make locally optimal choices to achieve a global optimum.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -49,6 +49,27 @@ Example 2:**
 
 	- `0 <= height[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by using a two-pointer approach, starting from both ends of the array and moving towards the center. This approach is effective because the area of the container is determined by the shorter line, so moving the pointer of the shorter line towards the center has the potential to increase the area. The key idea is to maximize the area by considering all possible pairs of lines.
+
+## Approach
+1. Initialize two pointers, `L` and `R`, to the start and end of the array, respectively.
+2. Calculate the area of the container formed by the lines at `L` and `R` by multiplying the distance between them (`R - L`) by the height of the shorter line (`min(height[L], height[R])`).
+3. Update the maximum area if the calculated area is greater than the current maximum.
+4. Move the pointer of the shorter line towards the center by incrementing `L` if `height[L] < height[R]`, or decrementing `R` otherwise.
+5. Repeat steps 2-4 until `L` meets or crosses `R`.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array, because each element is visited at most once by the two pointers.
+
+## Space Complexity
+The space complexity is O(1), because only a constant amount of space is used to store the pointers and the maximum area, regardless of the input size.
+
+## Key Insight
+The key insight is that moving the pointer of the shorter line towards the center has the potential to increase the area, because the area is determined by the shorter line. This greedy approach allows us to find the maximum area in a single pass through the array, making the solution efficient and scalable.
+
 ## 📊 Metrics
 
 | Metric | Value |

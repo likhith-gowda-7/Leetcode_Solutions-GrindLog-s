@@ -75,6 +75,28 @@ Example 2:**
 
 	- `1 <= seq.size <= 10000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining two counters, `A` and `B`, which represent the nesting depth of two disjoint subsequences `A` and `B` of the input string `seq`. By iterating through `seq` and updating `A` and `B` accordingly, we can split `seq` into two valid VPS's with maximum nesting depth.
+
+**Approach**
+1. Initialize two counters `A` and `B` to 0, and a result list `res` of the same length as `seq`, filled with 0's.
+2. Iterate through `seq` from left to right.
+3. For each character `c` in `seq`:
+   - If `c` is `(`, increment `A` if `A` is less than or equal to `B`, otherwise increment `B`. Set the corresponding element in `res` to 0.
+   - If `c` is `)`, decrement `A` if `A` is greater than or equal to `B`, otherwise decrement `B`. Set the corresponding element in `res` to 1.
+4. Return the `res` list.
+
+**Time Complexity**
+O(n), where n is the length of `seq`. This is because we iterate through `seq` once.
+
+**Space Complexity**
+O(n), where n is the length of `seq`. This is because we create a result list of the same length as `seq`.
+
+**Key Insight**
+The key insight is that by maintaining two counters `A` and `B`, we can effectively split the input string `seq` into two valid VPS's with maximum nesting depth. This is achieved by carefully updating `A` and `B` based on whether we encounter an opening or closing parenthesis, and using the result list to store the final split.
+
 ## 📊 Metrics
 
 | Metric | Value |

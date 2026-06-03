@@ -61,6 +61,27 @@ Example 3:**
 
 	- `1 <= n <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The mirror distance of an integer `n` is calculated by taking the absolute difference between `n` and its reverse. This can be achieved by first reversing the digits of `n` and then subtracting the reversed number from `n`.
+
+**Approach**
+1. Convert the integer `n` to a string to easily reverse its digits.
+2. Use slicing (`[::-1]`) to reverse the string representation of `n`.
+3. Remove leading zeros from the reversed string using `lstrip('0')`.
+4. Convert the reversed string back to an integer.
+5. Calculate the absolute difference between `n` and the reversed integer.
+
+**Time Complexity**
+O(log(n)) - The time complexity is logarithmic because we are converting the integer `n` to a string and back to an integer, which takes O(log(n)) time. The slicing and lstrip operations also take O(log(n)) time.
+
+**Space Complexity**
+O(log(n)) - The space complexity is logarithmic because we are converting the integer `n` to a string, which takes O(log(n)) space.
+
+**Key Insight**
+The key insight here is that we can easily reverse the digits of an integer by converting it to a string, reversing the string, and then converting it back to an integer. This approach allows us to calculate the mirror distance of an integer in a simple and efficient manner.
+
 ## 📊 Metrics
 
 | Metric | Value |

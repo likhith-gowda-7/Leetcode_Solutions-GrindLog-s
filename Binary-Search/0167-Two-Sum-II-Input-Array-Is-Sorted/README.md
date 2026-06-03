@@ -65,6 +65,27 @@ Example 3:**
 
 	- The tests are generated such that there is **exactly one solution**.
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works because the input array is already sorted in non-decreasing order, allowing us to utilize a two-pointer technique to efficiently find the pair of numbers that add up to the target. By maintaining two pointers, one at the start and one at the end of the array, we can iteratively narrow down the search space. The fact that there is exactly one solution guarantees that the algorithm will terminate with the correct result.
+
+## Approach
+1. Initialize two pointers, `left` and `right`, to the start and end of the array, respectively.
+2. Calculate the sum of the values at the `left` and `right` indices and compare it to the target.
+3. If the sum is equal to the target, return the indices (incremented by 1).
+4. If the sum is greater than the target, decrement the `right` pointer to reduce the sum.
+5. If the sum is less than the target, increment the `left` pointer to increase the sum.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array. This is because in the worst-case scenario, the algorithm may need to traverse the entire array once.
+
+## Space Complexity
+The space complexity is O(1), as the algorithm only uses a constant amount of extra space to store the two pointers and the current sum, regardless of the input size.
+
+## Key Insight
+The key insight behind this solution is the realization that the sorted input array allows us to use a two-pointer technique to efficiently find the pair of numbers that add up to the target, eliminating the need for a brute-force or hash-based approach.
+
 ## 📊 Metrics
 
 | Metric | Value |

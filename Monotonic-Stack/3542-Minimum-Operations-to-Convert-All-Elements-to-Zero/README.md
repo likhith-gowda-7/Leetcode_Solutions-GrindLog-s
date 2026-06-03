@@ -73,6 +73,28 @@ Example 3:**
 
 	- `0 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The key insight behind this solution is to maintain a stack of non-decreasing numbers, where the top of the stack represents the smallest non-zero number that has not been set to zero yet. By continuously popping numbers from the stack that are greater than or equal to the current number, we can ensure that the stack always contains the smallest non-zero number that has not been set to zero.
+
+**Approach**
+1. Initialize a stack to store non-decreasing numbers and a counter `min_ops` to keep track of the minimum number of operations.
+2. Iterate through the input array `nums`. For each number `num`, compare it with the top of the stack `stack[-1]`.
+3. If the stack is not empty and the top of the stack is greater than or equal to `num`, pop the top of the stack if it is not equal to `num`. This ensures that the stack always contains the smallest non-zero number that has not been set to zero.
+4. Push `num` onto the stack.
+5. After iterating through the entire array, pop any remaining numbers from the stack and increment `min_ops` if the number is not zero.
+6. Return `min_ops` as the minimum number of operations required.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we are iterating through the array once and performing constant-time operations for each element.
+
+**Space Complexity**
+O(n), where n is the length of the input array `nums`. This is because in the worst case, we may need to store all elements of the array in the stack.
+
+**Key Insight**
+The key insight behind this solution is to maintain a stack of non-decreasing numbers, which allows us to efficiently keep track of the smallest non-zero number that has not been set to zero. By continuously popping numbers from the stack that are greater than or equal to the current number, we can ensure that the stack always contains the smallest non-zero number that has not been set to zero.
+
 ## 📊 Metrics
 
 | Metric | Value |

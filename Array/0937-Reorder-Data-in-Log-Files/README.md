@@ -62,6 +62,29 @@ Example 2:**
 
 	- `logs[i]` is guaranteed to have an identifier and at least one word after the identifier.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This approach works by first separating the logs into two categories: letter-logs and digit-logs. It then sorts the letter-logs based on their contents and identifiers, while maintaining the relative ordering of the digit-logs. This ensures that the letter-logs come before the digit-logs and are sorted lexicographically.
+
+**Approach**
+1. Initialize two empty lists: `letters` to store the letter-logs and `digits` to store the digit-logs.
+2. Iterate through each log in the input list `logs`.
+3. Split each log into its identifier and content using the space character as a delimiter.
+4. Check if the content starts with a digit. If it does, append the log to the `digits` list. Otherwise, append a tuple containing the content, identifier, and log to the `letters` list.
+5. Sort the `letters` list based on the content and identifier of each log.
+6. Iterate through the sorted `letters` list and replace each tuple with its corresponding log.
+7. Return the sorted list of letter-logs followed by the digit-logs.
+
+**Time Complexity**
+The time complexity of this approach is O(n log n) due to the sorting of the `letters` list. Here, n is the number of logs in the input list.
+
+**Space Complexity**
+The space complexity of this approach is O(n) as we need to store the letter-logs and digit-logs in separate lists.
+
+**Key Insight**
+The key insight here is to separate the logs into two categories and sort the letter-logs based on their contents and identifiers, while maintaining the relative ordering of the digit-logs. This allows us to efficiently reorder the logs while satisfying the given conditions.
+
 ## 📊 Metrics
 
 | Metric | Value |

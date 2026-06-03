@@ -49,6 +49,27 @@ Example 2:**
 
 	- `mat[i][j]` is either `0` or `1`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first counting the number of 1s in each row and column of the matrix. Then, it iterates through the matrix again to count the number of special positions, which are positions where the cell value is 1 and the row and column counts are both 1.
+
+**Approach**
+1. Initialize two arrays, `h1` and `h2`, of size `m` and `n` respectively, to keep track of the count of 1s in each row and column.
+2. Iterate through the matrix, and for each cell with value 1, increment the corresponding count in `h1` and `h2`.
+3. Initialize a counter `cnt` to keep track of the number of special positions.
+4. Iterate through the matrix again, and for each cell with value 1, check if the row and column counts are both 1. If so, increment `cnt`.
+5. Return the total count of special positions.
+
+**Time Complexity**
+O(m*n) because we are iterating through the matrix twice.
+
+**Space Complexity**
+O(m + n) because we are using two arrays of size `m` and `n` to store the row and column counts.
+
+**Key Insight**
+The key insight is that a position is special if and only if the cell value is 1 and the row and column counts are both 1. This allows us to count the special positions efficiently by first counting the row and column counts, and then iterating through the matrix again to count the special positions.
+
 ## 📊 Metrics
 
 | Metric | Value |

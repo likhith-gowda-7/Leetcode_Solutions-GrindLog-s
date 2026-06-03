@@ -79,6 +79,28 @@ Since both Person 1 and Person 2 reach Person 3 at the same time, the output is 
 
 	- `1 <= x, y, z <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by calculating the absolute difference in steps between each person and Person 3. Since both Person 1 and Person 2 move at the same speed, the person with the smaller absolute difference will reach Person 3 first.
+
+**Approach**
+1. Calculate the absolute difference in steps between Person 1 and Person 3 (`time1 = abs(z-x)`).
+2. Calculate the absolute difference in steps between Person 2 and Person 3 (`time2 = abs(y-z)`).
+3. Compare the two times:
+   - If `time1` is less than `time2`, return 1 (Person 1 arrives first).
+   - If `time2` is less than `time1`, return 2 (Person 2 arrives first).
+   - If `time1` is equal to `time2`, return 0 (both arrive at the same time).
+
+**Time Complexity**
+O(1) - The solution involves a constant number of operations, regardless of the input values.
+
+**Space Complexity**
+O(1) - The solution uses a constant amount of space to store the input values and the calculated times.
+
+**Key Insight**
+The key insight is that the absolute difference in steps between two points on a number line is a direct measure of the time it takes to move from one point to the other at a constant speed. By comparing these differences, we can determine which person reaches Person 3 first.
+
 ## 📊 Metrics
 
 | Metric | Value |

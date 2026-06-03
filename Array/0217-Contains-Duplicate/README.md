@@ -47,6 +47,26 @@ Example 3:**
 
 	- `-10^9 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by comparing the length of the original list to the length of a set created from the list. A set in Python is an unordered collection of unique elements, so any duplicates in the original list are automatically removed in the set. If the lengths are not equal, it means there were duplicates in the original list.
+
+## Approach
+1. Create a set from the input list `nums`. This set will contain only unique elements from `nums`.
+2. Compare the length of the original list `nums` to the length of the set.
+3. If the lengths are not equal, return `True` because there are duplicates in `nums`.
+4. If the lengths are equal, return `False` because all elements in `nums` are distinct.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of elements in `nums`. This is because creating a set from a list in Python takes linear time.
+
+## Space Complexity
+The space complexity is also O(n), where n is the number of elements in `nums`. This is because in the worst-case scenario (all elements are unique), the set will contain the same number of elements as the original list.
+
+## Key Insight
+The key insight here is that sets automatically eliminate duplicate values, making them a perfect data structure for this problem. By comparing the lengths of the original list and the set, we can efficiently determine if there are any duplicates in the list.
+
 ## 📊 Metrics
 
 | Metric | Value |

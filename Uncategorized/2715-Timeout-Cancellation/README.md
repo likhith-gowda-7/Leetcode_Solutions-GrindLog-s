@@ -84,6 +84,27 @@ The cancellation was scheduled to occur after a delay of cancelTimeMs (100ms), w
 
 	- `10 <= cancelTimeMs <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a timeout to delay the execution of the function `fn` and a cancel function to cancel the delay if invoked before the specified time. This approach allows for flexible control over the execution of `fn` based on the timeout and cancel operations.
+
+**Approach**
+1. Set a timeout to execute `fn` with the provided `args` after a delay of `t` milliseconds.
+2. Create a cancel function `cancelFn` that clears the timeout when invoked.
+3. Return the cancel function `cancelFn`.
+4. When the cancel function is invoked before the timeout, the execution of `fn` is cancelled.
+5. If the cancel function is not invoked within the specified delay `t`, `fn` is executed with the provided `args` as arguments.
+
+**Time Complexity**
+O(1) - The solution involves a constant number of operations regardless of the input size.
+
+**Space Complexity**
+O(1) - The solution uses a constant amount of space to store the timeout and cancel function.
+
+**Key Insight**
+The key insight is the use of a timeout to delay the execution of `fn` and a cancel function to cancel the delay if invoked before the specified time. This approach allows for flexible control over the execution of `fn` based on the timeout and cancel operations.
+
 ## 📊 Metrics
 
 | Metric | Value |

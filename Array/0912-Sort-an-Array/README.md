@@ -43,6 +43,27 @@ Example 2:**
 
 	- `-5 * 10^4 <= nums[i] <= 5 * 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a heap data structure to sort the array in ascending order. The heap property ensures that the smallest element is always at the root, allowing for efficient extraction and insertion of elements. By repeatedly extracting the smallest element from the heap and adding it to the new sorted array, we can sort the entire array in linear time complexity.
+
+**Approach**
+1. Create an empty list `new_arr` to store the sorted elements.
+2. Convert the input array `nums` into a heap using `heapq.heapify()`.
+3. While the heap is not empty, extract the smallest element from the heap using `heapq.heappop()` and append it to `new_arr`.
+4. Repeat step 3 until the heap is empty.
+5. Return the sorted array `new_arr`.
+
+**Time Complexity**
+O(n log n) - The heapify operation takes O(n) time, and each subsequent heappop operation takes O(log n) time due to the heap property. Since we perform n heappop operations, the overall time complexity is O(n log n).
+
+**Space Complexity**
+O(n) - We create a new array `new_arr` to store the sorted elements, which requires O(n) space. The heapify operation modifies the input array in place, so we don't need additional space for the heap.
+
+**Key Insight**
+The key insight is that the heap data structure allows us to efficiently extract the smallest element from the array, which is essential for sorting. By using a heap, we can achieve linear time complexity while still meeting the O(n log n) time complexity requirement.
+
 ## 📊 Metrics
 
 | Metric | Value |

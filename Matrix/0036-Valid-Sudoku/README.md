@@ -75,6 +75,28 @@ Example 2:**
 
 	- `board[i][j]` is a digit `1-9` or `'.'`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The approach to solving this problem involves checking each row, column, and 3x3 sub-box for duplicate values. This works because a Sudoku board is valid if and only if each row, column, and sub-box contains the digits 1-9 without repetition. By using sets to store the values in each row, column, and sub-box, we can efficiently check for duplicates.
+
+## Approach
+1. Initialize sets for each row, column, and sub-box using a dictionary with default values as sets.
+2. Iterate over each cell in the Sudoku board.
+3. If a cell is not empty, check if its value already exists in the corresponding row, column, or sub-box.
+4. If a duplicate value is found, immediately return False.
+5. Otherwise, add the value to the corresponding row, column, and sub-box sets.
+6. If the entire board is iterated over without finding any duplicate values, return True.
+
+## Time Complexity
+The time complexity is O(1), which may seem counterintuitive, but it's because the size of the input (a 9x9 Sudoku board) is constant. In terms of the number of cells, it's O(81), but since the size of the board is fixed, it's considered constant time.
+
+## Space Complexity
+The space complexity is O(1) as well, because the maximum amount of space used does not grow with the size of the input. The space used is proportional to the number of rows, columns, and sub-boxes, which is constant for a 9x9 Sudoku board.
+
+## Key Insight
+The key insight here is to use sets to store the values in each row, column, and sub-box, allowing for efficient duplicate checking. This approach takes advantage of the constant size of the Sudoku board, making it possible to solve the problem in constant time and space.
+
 ## 📊 Metrics
 
 | Metric | Value |

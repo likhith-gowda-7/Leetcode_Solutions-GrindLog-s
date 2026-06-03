@@ -71,6 +71,27 @@ Example 2:**
 
 **Follow up:** If this function is called many times, how would you optimize it?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires reversing the bits of a 32-bit signed integer. This can be achieved by first converting the integer to a binary string, reversing the string, and then converting it back to an integer. However, since the input integer is not guaranteed to have 32 bits, we need to pad the binary string with zeros to ensure it's always 32 bits long.
+
+**Approach**
+1. Convert the input integer `n` to a binary string using the `bin` function, removing the '0b' prefix.
+2. Reverse the binary string using slicing (`[::-1]`).
+3. Calculate the length of the reversed binary string.
+4. Pad the binary string with zeros to ensure it's 32 bits long by iterating `32 - len(binary)` times and appending '0' to the string.
+5. Convert the padded binary string back to an integer using the `int` function with base 2.
+
+**Time Complexity**
+O(1) - The time complexity is constant because we're performing a fixed number of operations regardless of the input size.
+
+**Space Complexity**
+O(1) - The space complexity is constant because we're only using a fixed amount of space to store the binary string and the padded string.
+
+**Key Insight**
+The key insight here is that we can simply reverse the binary string representation of the input integer to achieve the desired result. This approach works because the binary representation of an integer is a straightforward way to represent its bit-level structure, and reversing this representation is a simple and efficient way to reverse the bits.
+
 ## 📊 Metrics
 
 | Metric | Value |

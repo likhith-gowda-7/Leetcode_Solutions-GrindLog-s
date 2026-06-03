@@ -55,6 +55,28 @@ You need to output 2.
 
 **Note:** This question is the same as [ 2410: Maximum Matching of Players With Trainers.](https://leetcode.com/problems/maximum-matching-of-players-with-trainers/description/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by sorting both the children's greed factors and the cookie sizes, then iterating through the cookies and assigning them to the children with the smallest greed factors that can be satisfied. This greedy approach maximizes the number of content children.
+
+**Approach**
+1. If there are no cookies, return 0 as no children can be satisfied.
+2. Sort the children's greed factors and cookie sizes in ascending order.
+3. Initialize a pointer `i` to 0, which will keep track of the current child being considered.
+4. Iterate through the sorted cookie sizes. For each cookie, check if the current child `i` can be satisfied (i.e., the cookie size is greater than or equal to the child's greed factor).
+5. If the child can be satisfied, increment the pointer `i` to consider the next child.
+6. After iterating through all cookies, return the value of `i`, which represents the maximum number of content children.
+
+**Time Complexity**
+O(n log n) due to the sorting of the children's greed factors and cookie sizes, where n is the number of children.
+
+**Space Complexity**
+O(1) as the sorting is done in-place and the iteration through the cookies only requires a single pointer.
+
+**Key Insight**
+The key insight is that by sorting both the children's greed factors and the cookie sizes, we can efficiently find the maximum number of content children by iterating through the cookies and assigning them to the children with the smallest greed factors that can be satisfied. This greedy approach takes advantage of the fact that the children's greed factors are sorted in ascending order, allowing us to maximize the number of content children.
+
 ## 📊 Metrics
 
 | Metric | Value |

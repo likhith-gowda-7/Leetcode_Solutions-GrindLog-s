@@ -48,6 +48,28 @@ Example 2:**
 
 	- `nums` is sorted in a **strictly increasing** order.
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by utilizing a divide-and-conquer strategy to construct a height-balanced binary search tree from a sorted array. The key idea is to select the middle element of the array as the root of the tree, ensuring that the left and right subtrees are also height-balanced. This process is recursively applied to the left and right halves of the array.
+
+## Approach
+1. Define a recursive function `bst` that takes two parameters, `l` and `r`, representing the left and right indices of the current array segment.
+2. If `l` is greater than `r`, return `None` to indicate an empty subtree.
+3. Calculate the middle index `mid` of the current array segment using the formula `(r + l) // 2`.
+4. Create a new `TreeNode` with the value at the middle index `mid`.
+5. Recursively construct the left and right subtrees by calling `bst` with the updated index ranges `l` to `mid - 1` and `mid + 1` to `r`, respectively.
+6. Assign the recursively constructed subtrees to the `left` and `right` attributes of the current node.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array. This is because each element in the array is visited exactly once during the recursive construction process.
+
+## Space Complexity
+The space complexity is O(log n), which is the maximum depth of the recursive call stack. This is because the recursive function calls are stacked, and the maximum number of simultaneous calls is proportional to the height of the resulting binary search tree, which is logarithmic in the size of the input array.
+
+## Key Insight
+The key insight behind this solution is the realization that selecting the middle element of the array as the root of the tree ensures that the resulting binary search tree is height-balanced, which is a crucial property for efficient search and insertion operations. This approach allows for a simple and efficient construction of a height-balanced BST from a sorted array.
+
 ## 📊 Metrics
 
 | Metric | Value |

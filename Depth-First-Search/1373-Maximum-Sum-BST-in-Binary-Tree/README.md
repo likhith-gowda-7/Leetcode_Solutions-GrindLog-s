@@ -65,6 +65,32 @@ Example 3:**
 
 	- `-4 * 10^4 <= Node.val <= 4 * 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a depth-first search (DFS) approach to traverse the binary tree and find the maximum sum of all keys in any sub-tree that is also a Binary Search Tree (BST). The key insight is to recursively check if the left and right subtrees are BSTs and update the maximum sum accordingly.
+
+**Approach**
+1. Define a helper function `dfs` that takes a node as input and returns a tuple containing four values:
+	* `bst`: a boolean indicating whether the subtree rooted at the current node is a BST
+	* `sum`: the sum of all keys in the subtree rooted at the current node
+	* `min`: the minimum key in the subtree rooted at the current node
+	* `max`: the maximum key in the subtree rooted at the current node
+2. If the current node is `None`, return `(True, 0, float("inf"), float("-inf"))`
+3. Recursively call `dfs` on the left and right children of the current node, storing their results in `l_bst`, `l_sum`, `l_min`, and `l_max`, and `r_bst`, `r_sum`, `r_min`, and `r_max`, respectively
+4. Check if the left and right subtrees are BSTs and if the current node's value is within the valid range (i.e., `l_max < root.val < r_min`). If so, update the maximum sum and return `(True, total, min(l_min, root.val), max(r_max, root.val))`
+5. If the left or right subtree is not a BST, return `(False, 0, 0, 0)`
+6. Call `dfs` on the root node and return the maximum sum found
+
+**Time Complexity**
+O(N), where N is the number of nodes in the binary tree. This is because each node is visited once during the DFS traversal.
+
+**Space Complexity**
+O(H), where H is the height of the binary tree. This is because the maximum depth of the recursion stack is H.
+
+**Key Insight**
+The key insight is to use a recursive DFS approach to check if each subtree is a BST and update the maximum sum accordingly. The use of a tuple to store the results of each recursive call allows us to efficiently keep track of the minimum and maximum keys in each subtree.
+
 ## 📊 Metrics
 
 | Metric | Value |

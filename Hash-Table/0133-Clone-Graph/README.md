@@ -86,6 +86,31 @@ Example 3:**
 
 	- The Graph is connected and all nodes can be visited starting from the given node.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of a hash map and a stack to perform a depth-first search (DFS) traversal of the graph. By mapping each original node to its deep copy, we can efficiently construct the cloned graph.
+
+**Approach**
+1. Initialize a hash map `clone_map` to store the mapping between original nodes and their deep copies.
+2. If the input node is `None`, return `None` immediately.
+3. Create a deep copy of the input node and store it in `clone_map`.
+4. Initialize a stack with the input node.
+5. While the stack is not empty, pop a node `v` from the stack.
+6. For each neighbor `n` of `v`, if `n` is not in `clone_map`, create a new deep copy of `n` and store it in `clone_map`.
+7. Add `n` to the stack.
+8. Add the deep copy of `n` to the neighbors of the deep copy of `v`.
+9. Return the deep copy of the input node.
+
+**Time Complexity**
+O(N + M), where N is the number of nodes and M is the number of edges. We visit each node and edge once during the DFS traversal.
+
+**Space Complexity**
+O(N + M), where N is the number of nodes and M is the number of edges. We store the mapping between original nodes and their deep copies in the hash map, and we use a stack to store nodes during the DFS traversal.
+
+**Key Insight**
+The key insight is to use a hash map to efficiently store and retrieve the mapping between original nodes and their deep copies. This allows us to avoid visiting the same node multiple times during the DFS traversal, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

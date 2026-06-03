@@ -58,6 +58,27 @@ Example 3:**
 
 **Note:** This question is the same as [ 2287: Rearrange Characters to Make Target String.](https://leetcode.com/problems/rearrange-characters-to-make-target-string/description/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by counting the occurrences of each character in the string `text` and comparing it with the count of the same character in the word "balloon". The maximum number of instances that can be formed is the minimum of these counts divided by the count of the character in "balloon".
+
+**Approach**
+1. Check if the character 'b' is present in the string `text`. If not, return 0 as no instances can be formed.
+2. Count the occurrences of each character in the string `text` using a `Counter` object `c1`.
+3. Count the occurrences of each character in the word "balloon" using a `Counter` object `c2`.
+4. Initialize a variable `res` to positive infinity.
+5. Iterate over each character in the word "balloon". For each character, update `res` to be the minimum of its current value and the count of the character in `c1` divided by the count of the character in `c2`.
+
+**Time Complexity**
+O(n + m), where n is the length of the string `text` and m is the length of the word "balloon". This is because we are iterating over the string `text` once to count the occurrences of each character and iterating over the word "balloon" once to compare the counts.
+
+**Space Complexity**
+O(n + m), where n is the length of the string `text` and m is the length of the word "balloon". This is because we are storing the counts of each character in the string `text` and the word "balloon" in two separate `Counter` objects.
+
+**Key Insight**
+The key insight is to realize that the maximum number of instances that can be formed is the minimum of the counts of each character in the string `text` divided by the count of the same character in the word "balloon". This is because we can form at most one instance of "balloon" for each occurrence of each character in the string `text`.
+
 ## 📊 Metrics
 
 | Metric | Value |

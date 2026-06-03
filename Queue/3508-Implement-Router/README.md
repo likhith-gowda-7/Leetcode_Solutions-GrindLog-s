@@ -119,6 +119,30 @@ router.forwardPacket(); // There are no packets left, return `[]`.
 
 	- queries for `addPacket` will be made in non-decreasing order of `timestamp`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of data structures to efficiently manage data packets in a network router. It utilizes a queue to store packets, a set to keep track of unique packets, and a dictionary to store packets by destination. This design allows for efficient addition and removal of packets, as well as counting packets by destination within a time range.
+
+**Approach**
+1. Initialize the Router object with a fixed memory limit and create an empty queue, set, and dictionary.
+2. When adding a packet, check if it already exists in the set. If it does, return False.
+3. If the current size equals the maximum size, remove the oldest packet from the queue, set, and dictionary.
+4. Add the new packet to the queue, set, and dictionary, and increment the current size.
+5. When forwarding a packet, remove it from the queue, set, and dictionary, and decrement the current size.
+6. To count packets by destination within a time range, use binary search to find the indices of the start and end times in the sorted list of timestamps for the given destination.
+
+**Time Complexity**
+- `addPacket`: O(1) for insertion and deletion operations in the queue and set, O(log n) for binary search in the dictionary. Overall, O(1) amortized time complexity.
+- `forwardPacket`: O(1) for removal operations in the queue and set, O(log n) for binary search in the dictionary. Overall, O(1) time complexity.
+- `getCount`: O(log n) for binary search in the dictionary.
+
+**Space Complexity**
+- The solution uses O(n) space for the queue, set, and dictionary, where n is the maximum number of packets the router can store.
+
+**Key Insight**
+The key insight is the use of a combination of data structures to efficiently manage packets. The queue allows for efficient addition and removal of packets, while the set ensures uniqueness of packets. The dictionary enables efficient counting of packets by destination within a time range using binary search. This design allows the solution to achieve O(1) amortized time complexity for adding and forwarding packets, making it efficient for large-scale network routing applications.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -57,6 +57,30 @@ Thus, we return 99.
 
 	- `1 <= num <= 10^8`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by finding the maximum and minimum values that can be obtained by remapping exactly one digit in the given number. The key insight is that we can achieve the maximum value by remapping the smallest digit to the largest digit, and the minimum value by remapping the largest digit to the smallest digit.
+
+**Approach**
+1. Convert the input number to a string to easily access and manipulate its digits.
+2. Define a helper function `check` that takes three parameters: the string representation of the number, the digit to be changed (initially `None`), and the digit to replace with (either "0" or "9").
+3. Iterate through each digit in the string representation of the number.
+4. If the digit to be changed is `None` and the current digit is not the digit to find, update the digit to be changed.
+5. If the digit to be changed is not `None` and the current digit is the digit to be changed, replace it with the digit to replace with.
+6. Return the integer value of the modified string.
+7. Call the `check` function twice: once with "9" as the digit to replace with (to get the maximum value) and once with "0" as the digit to replace with (to get the minimum value).
+8. Return the difference between the maximum and minimum values.
+
+**Time Complexity**
+O(n), where n is the number of digits in the input number. This is because we iterate through each digit in the string representation of the number once.
+
+**Space Complexity**
+O(n), where n is the number of digits in the input number. This is because we create a new string representation of the number for each possible remapping.
+
+**Key Insight**
+The key insight is that we can achieve the maximum value by remapping the smallest digit to the largest digit, and the minimum value by remapping the largest digit to the smallest digit. This allows us to simplify the problem and find the solution efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -72,6 +72,28 @@ Since three subsequences were created, we return 3. It can be shown that 3 is th
 
 	- `0 <= k <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting the unique elements in the array and then iterating through the sorted array to find the minimum number of subsequences needed. The key insight is that we can always start a new subsequence whenever the difference between the current element and the minimum element in the previous subsequence exceeds `k`.
+
+**Approach**
+1. Remove duplicates from the array by converting it to a set and then sorting the set to get the unique elements in ascending order.
+2. Initialize a variable `count` to keep track of the minimum number of subsequences needed, and a variable `mini` to keep track of the minimum element in the previous subsequence.
+3. Iterate through the sorted array starting from the second element (index 1).
+4. For each element, calculate the difference between the current element and the minimum element in the previous subsequence.
+5. If the difference exceeds `k`, increment the `count` variable and update the `mini` variable to the current element.
+6. After iterating through the entire array, return `count + 1`, which represents the minimum number of subsequences needed.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the number of unique elements in the array.
+
+**Space Complexity**
+O(n) for storing the unique elements in the array, where n is the number of unique elements in the array.
+
+**Key Insight**
+The key insight is that we can always start a new subsequence whenever the difference between the current element and the minimum element in the previous subsequence exceeds `k`, which allows us to minimize the number of subsequences needed.
+
 ## 📊 Metrics
 
 | Metric | Value |

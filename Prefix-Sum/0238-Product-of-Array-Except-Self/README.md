@@ -48,6 +48,26 @@ Example 2:**
 
 **Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array **does not** count as extra space for space complexity analysis.)
 
+## 🧠 Solution Explanation
+
+### Intuition
+The solution works by utilizing the concept of prefix and postfix products to calculate the product of all elements except the current one. This approach allows us to avoid using division and achieve a time complexity of O(n). By calculating the prefix and postfix products separately, we can then combine them to obtain the final result.
+
+### Approach
+1. Initialize an array `res` with the same length as the input array `nums`, filled with ones.
+2. Calculate the prefix product for each element in `nums` and store it in the corresponding index in `res`.
+3. Calculate the postfix product for each element in `nums` in reverse order and multiply it with the corresponding prefix product stored in `res`.
+4. Return the `res` array, which now contains the product of all elements except the current one for each index.
+
+### Time Complexity
+The time complexity is O(n), where n is the length of the input array `nums`. This is because we are making two separate passes through the array: one for calculating the prefix products and another for calculating the postfix products.
+
+### Space Complexity
+The space complexity is O(1), excluding the output array. This is because we are only using a constant amount of space to store the prefix and postfix products, and the output array is not included in the space complexity calculation.
+
+### Key Insight
+The key insight behind this solution is the realization that the product of all elements except the current one can be calculated by multiplying the prefix product (product of all elements before the current one) with the postfix product (product of all elements after the current one). This allows us to avoid using division and achieve an efficient solution with a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -102,6 +102,29 @@ Example 2:**
 
 	- `1 <= t <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a frequency array to count the occurrences of each character in the string. It then applies the transformation rules to the frequency array, effectively simulating the transformation process. The final result is the sum of the transformed frequency array, which represents the length of the resulting string.
+
+**Approach**
+1. Initialize a frequency array `freq` of size 26 to store the count of each character in the string.
+2. Iterate through the input string `s` and update the corresponding index in the `freq` array for each character.
+3. Apply the transformation rules to the `freq` array for `t` iterations:
+   a. Remove the count of the last character (index 25) and append it to the front of the array.
+   b. Add the count of the second character (index 1) to the first character (index 0).
+4. Calculate the sum of the transformed `freq` array, which represents the length of the resulting string.
+5. Return the sum modulo `10^9 + 7` to prevent overflow.
+
+**Time Complexity**
+O(n + t), where n is the length of the input string and t is the number of transformations. The initial frequency array creation takes O(n) time, and the transformation process takes O(t) time.
+
+**Space Complexity**
+O(1), excluding the input string, since the size of the frequency array is fixed at 26.
+
+**Key Insight**
+The key insight is to recognize that the transformation process can be simulated by applying the rules to the frequency array, rather than directly modifying the string. This approach allows for efficient calculation of the resulting string length, even for large input strings and numbers of transformations.
+
 ## 📊 Metrics
 
 | Metric | Value |

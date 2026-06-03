@@ -48,6 +48,29 @@ Example 1:**
 
 	- It is **guaranteed** that the input board has only one solution.
 
+## 🧠 Solution Explanation
+
+### Intuition
+The Sudoku solver works by utilizing a backtracking approach to fill in the empty cells of the Sudoku puzzle. It starts by initializing sets to keep track of the numbers present in each row, column, and 3x3 sub-box. The algorithm then sorts the empty spots based on the number of choices available for each spot, which helps in pruning the search space.
+
+### Approach
+1. Initialize sets for rows, columns, and sub-boxes to keep track of the numbers present in each.
+2. Identify and store the empty spots in the Sudoku puzzle.
+3. Sort the empty spots based on the number of choices available for each spot.
+4. Implement a backtracking function that tries to fill in each empty spot with a valid number (1-9).
+5. For each empty spot, check if a number is valid by ensuring it does not already exist in the same row, column, or sub-box.
+6. If a valid number is found, recursively call the backtracking function for the next empty spot.
+7. If no valid number is found, undo the changes made and return False to trigger backtracking.
+
+### Time Complexity
+The time complexity is O(9^(n*n)), where n is the size of the Sudoku puzzle (n=3 for a standard 9x9 puzzle). This is because in the worst-case scenario, the algorithm has to try all possible numbers for each empty spot.
+
+### Space Complexity
+The space complexity is O(n*n), where n is the size of the Sudoku puzzle. This is due to the storage required for the sets of rows, columns, and sub-boxes, as well as the recursive call stack.
+
+### Key Insight
+The key insight behind this solution is the use of backtracking to efficiently explore the vast search space of possible Sudoku solutions. By sorting the empty spots based on the number of choices available, the algorithm can prune the search space and reduce the number of recursive calls, making the solution more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

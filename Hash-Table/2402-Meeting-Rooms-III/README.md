@@ -78,6 +78,31 @@ Room 0 held 1 meeting while rooms 1 and 2 each held 2 meetings, so we return 1.
 
 	- All the values of `start_i` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to allocate meetings to rooms in a way that maximizes the number of meetings held in a single room. We can achieve this by maintaining a priority queue of free rooms and a priority queue of occupied rooms, along with a hash table to keep track of the frequency of each room.
+
+**Approach**
+1. Sort the meetings based on their start time.
+2. Initialize a hash table `room_freq` to keep track of the frequency of each room.
+3. Initialize a priority queue `free_rooms` with all room numbers from 0 to `n-1`.
+4. Initialize an empty priority queue `occupied_rooms` to store occupied rooms along with their end times.
+5. Iterate through the sorted meetings:
+   1. Check if there are any occupied rooms that will be free by the current meeting's start time. If yes, pop them from the `occupied_rooms` queue and add them to the `free_rooms` queue.
+   2. If there are free rooms, pop one from the `free_rooms` queue and assign it to the current meeting. Update the `room_freq` hash table and push the updated occupied room into the `occupied_rooms` queue.
+   3. If there are no free rooms, pop the occupied room with the earliest end time from the `occupied_rooms` queue, delay it, and push it back into the `occupied_rooms` queue.
+6. After iterating through all meetings, find the room with the maximum frequency and return its number.
+
+**Time Complexity**
+The time complexity is O(m log n + m log n), where m is the number of meetings. The first term comes from sorting the meetings, and the second term comes from maintaining the priority queues. Since we perform a constant number of operations for each meeting, the overall time complexity is linear.
+
+**Space Complexity**
+The space complexity is O(n + m), where n is the number of rooms and m is the number of meetings. We need to store the frequency of each room in the `room_freq` hash table, and we also need to store the occupied rooms in the `occupied_rooms` priority queue.
+
+**Key Insight**
+The key insight is to maintain a balance between the priority queue of free rooms and the priority queue of occupied rooms. By doing so, we can ensure that we always assign the meeting to the room with the lowest number that is available, which maximizes the number of meetings held in a single room.
+
 ## 📊 Metrics
 
 | Metric | Value |

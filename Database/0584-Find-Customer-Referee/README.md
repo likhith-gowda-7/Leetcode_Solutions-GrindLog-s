@@ -67,6 +67,27 @@ Customer table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by filtering the customers based on their referee_id. If the referee_id is null, it means the customer was not referred by anyone. If the referee_id is not equal to 2, it means the customer was referred by someone other than the customer with id 2.
+
+**Approach**
+1. The query selects the name column from the Customer table.
+2. It applies a WHERE clause with two conditions:
+   - `referee_id is Null`: This condition checks for customers who were not referred by anyone.
+   - `referee_id != 2`: This condition checks for customers who were referred by someone other than the customer with id 2.
+3. The OR operator is used to combine these two conditions, ensuring that customers who meet either condition are included in the result.
+
+**Time Complexity**
+O(n), where n is the number of rows in the Customer table. This is because the query needs to scan each row in the table to apply the conditions.
+
+**Space Complexity**
+O(1), which means the space complexity is constant. This is because the query only requires a small amount of memory to store the result, regardless of the size of the input table.
+
+**Key Insight**
+The key insight here is that we can use a simple WHERE clause with two conditions to filter the customers based on their referee_id. By combining these conditions with an OR operator, we can efficiently identify the customers who meet the specified criteria.
+
 ## 📊 Metrics
 
 | Metric | Value |

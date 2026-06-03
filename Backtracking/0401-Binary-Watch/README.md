@@ -48,6 +48,30 @@ Example 2:**
 
 	- `0 <= turnedOn <= 10`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over all possible hour and minute combinations, counting the number of set bits in the binary representation of each, and adding the times to the result list if the number of set bits matches the given `turnedOn` value.
+
+**Approach**
+1. Initialize an empty list `res` to store the valid times.
+2. Iterate over all possible hours (0-11) and minutes (0-59).
+3. For each hour and minute, convert them to binary using the `bin()` function.
+4. Count the number of set bits in the binary representation of the hour and minute using the `count("1")` method.
+5. If the total number of set bits matches the given `turnedOn` value, format the time as a string and add it to the result list.
+6. Return the result list.
+
+**Time Complexity**
+O(12 * 60 * 2) = O(1440)
+Justification: We iterate over all possible hour and minute combinations (12 * 60), and for each combination, we perform a constant-time operation to count the number of set bits in the binary representation.
+
+**Space Complexity**
+O(1440)
+Justification: In the worst case, we store all possible times in the result list, which has a maximum size of 1440 (12 hours * 60 minutes * 2 for the colon).
+
+**Key Insight**
+The key insight is that we can count the number of set bits in the binary representation of a number using the `count("1")` method, which makes it easy to check if the number of set bits matches the given `turnedOn` value. This approach avoids the need for complex bit manipulation or recursion.
+
 ## 📊 Metrics
 
 | Metric | Value |

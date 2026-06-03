@@ -53,6 +53,27 @@ Example 3:**
 
 	- `0 <= start_i <= end_i <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The approach to solving this problem involves sorting the intervals based on their start times and then merging any overlapping intervals. This works because once the intervals are sorted, we can easily identify which intervals overlap by comparing the end time of the current interval with the start time of the next interval.
+
+## Approach
+1. Sort the intervals based on their start times.
+2. Initialize an empty list `res` to store the merged intervals and an index `idx` to track the current interval.
+3. Iterate through the sorted intervals, and for each interval, check if it overlaps with the next interval.
+4. If an overlap is found, update the end time of the current interval to be the maximum of its current end time and the end time of the overlapping interval.
+5. Once all overlapping intervals have been merged, add the merged interval to the `res` list and move on to the next interval.
+
+## Time Complexity
+The time complexity is O(n log n) due to the sorting operation, where n is the number of intervals. The subsequent while loop has a total of n iterations across all intervals, resulting in a linear time complexity of O(n). However, this is dominated by the sorting operation.
+
+## Space Complexity
+The space complexity is O(n) for storing the merged intervals in the `res` list, where n is the number of intervals. In the worst-case scenario, if no intervals overlap, the size of the `res` list will be equal to the number of input intervals.
+
+## Key Insight
+The key insight to this solution is recognizing that sorting the intervals by their start times allows for efficient identification of overlapping intervals, enabling a simple iterative approach to merge them. This simplifies the problem and avoids unnecessary complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

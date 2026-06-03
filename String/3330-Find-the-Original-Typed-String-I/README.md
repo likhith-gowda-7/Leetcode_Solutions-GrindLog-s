@@ -53,6 +53,27 @@ Example 3:**
 
 	- `word` consists only of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by treating the entire string as a single typed character and then incrementing the count for each consecutive repeated character. This approach is based on the fact that Alice can press a key at most once, so each repeated character can be considered as a separate typed character.
+
+**Approach**
+1. Initialize a counter `res` to 1, representing the case where the entire string is typed intentionally.
+2. Iterate through the string from the second character to the end (index 1 to `len(word)`).
+3. For each character, check if it is the same as the previous character.
+4. If it is the same, increment the counter `res` by 1.
+5. Return the final count `res`.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we are iterating through the string once.
+
+**Space Complexity**
+O(1), because we are using a constant amount of space to store the counter `res`.
+
+**Key Insight**
+The key insight is that each repeated character can be considered as a separate typed character, allowing us to increment the count for each consecutive repeated character. This approach takes advantage of the fact that Alice can press a key at most once, making it efficient and easy to implement.
+
 ## 📊 Metrics
 
 | Metric | Value |

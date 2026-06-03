@@ -54,6 +54,33 @@ Example 3:**
 
 	- It is guaranteed that the list represents a number that does not have leading zeros.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by iterating over both linked lists simultaneously, adding corresponding nodes together, and handling any carry values that arise from the addition. The key insight is that we can use a dummy node to simplify the code and avoid edge cases.
+
+**Approach**
+1. Initialize a `carry` variable to 0, which will store any carry values from the addition.
+2. Create a dummy node `dummy` and set `curr` to `dummy`. This dummy node will be used to simplify the code and avoid edge cases.
+3. Loop until both linked lists are empty.
+4. In each iteration, get the values of the current nodes in both linked lists (`val1` and `val2`). If a node is `None`, use 0 as its value.
+5. Add the `carry` value to the sum of `val1` and `val2` to get the `addition` value.
+6. Update the `carry` value by taking the integer division of `addition` by 10.
+7. Create a new node `lastdigit` with the last digit of the `addition` value (obtained by taking the modulus of `addition` by 10).
+8. Set `curr.next` to `lastdigit` and update `curr` to `lastdigit`.
+9. Move to the next nodes in both linked lists (`l1` and `l2`).
+10. If there is a remaining `carry` value after the loop, create a new node with this value and set `curr.next` to it.
+11. Return `dummy.next`, which is the head of the resulting linked list.
+
+**Time Complexity**
+O(max(m, n)), where m and n are the lengths of the two linked lists. This is because we iterate over both linked lists simultaneously, and the loop continues until both lists are empty.
+
+**Space Complexity**
+O(max(m, n)), where m and n are the lengths of the two linked lists. This is because we create a new linked list with a maximum of max(m, n) nodes.
+
+**Key Insight**
+The use of a dummy node simplifies the code and avoids edge cases, making it easier to handle the carry value and the last node in the resulting linked list.
+
 ## 📊 Metrics
 
 | Metric | Value |

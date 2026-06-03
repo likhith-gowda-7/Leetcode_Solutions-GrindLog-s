@@ -51,6 +51,31 @@ Example 3:**
 
 	- `-100 <= Node.val <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a level-order traversal approach with a twist to achieve the zigzag effect. By alternating the direction of traversal at each level, we can efficiently collect the node values in the desired order.
+
+**Approach**
+1. Initialize a queue `q` to store nodes at each level, and a flag `rev` to track the direction of traversal.
+2. If the `root` node exists, add it to the queue.
+3. While the queue is not empty:
+   1. Create an empty list `level` to store node values at the current level.
+   2. Dequeue nodes from the queue and add their values to the `level` list.
+   3. Enqueue the left and right child nodes of each dequeued node.
+   4. If `rev` is 1 (i.e., the traversal direction is right-to-left), reverse the `level` list before appending it to the result.
+   5. Toggle the `rev` flag for the next level.
+4. Return the result list containing the zigzag level order traversal of node values.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the binary tree. This is because we visit each node once during the level-order traversal.
+
+**Space Complexity**
+O(W), where W is the maximum width of the binary tree. This is because in the worst case, we need to store all nodes at the widest level in the queue.
+
+**Key Insight**
+The key to this solution is the use of a flag `rev` to alternate the direction of traversal at each level. By toggling this flag and reversing the `level` list when necessary, we can achieve the zigzag effect without modifying the basic level-order traversal algorithm.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -73,6 +73,27 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 	- `nums` is sorted in **non-decreasing** order.
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by iterating through the sorted array and maintaining a count of consecutive duplicates. It utilizes two pointers, `i` and `j`, where `i` keeps track of the position to place the next unique element (or its second occurrence), and `j` is used to traverse the array. By only incrementing `i` when a new element or its second occurrence is found, we effectively remove duplicates while preserving the relative order.
+
+## Approach
+1. Initialize two pointers, `i` and `j`, to 1, and a counter `c` to 1, which tracks the count of consecutive duplicates.
+2. Iterate through the array using `j`, starting from the second element.
+3. If the current element is the same as the previous one, increment `c`. Otherwise, reset `c` to 1.
+4. If `c` is less than or equal to 2, place the current element at the `i-th` position and increment `i`.
+5. After iterating through the entire array, `i` will represent the number of elements in the modified array.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of elements in the array, since we are making a single pass through the array.
+
+## Space Complexity
+The space complexity is O(1), as we are only using a constant amount of space to store the pointers and the counter, and we are modifying the input array in-place.
+
+## Key Insight
+The key insight here is the use of two pointers, `i` and `j`, to separate the concerns of iterating through the array and placing the unique elements (or their second occurrences) in the correct positions, allowing for an efficient and space-effective solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

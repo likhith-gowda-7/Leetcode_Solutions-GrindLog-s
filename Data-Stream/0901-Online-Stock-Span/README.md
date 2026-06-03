@@ -57,6 +57,27 @@ stockSpanner.next(85);  // return 6
 
 	- At most `10^4` calls will be made to `next`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to keep track of the stock prices and their corresponding spans. When a new price is encountered, it checks the stack to find the maximum span by popping elements that are less than or equal to the current price and adding their spans to the current span. This approach takes advantage of the monotonic stack property, where the stack is always sorted in ascending order of prices.
+
+**Approach**
+1. Initialize an empty stack to store the stock prices and their corresponding spans.
+2. When a new price is encountered, initialize the current span to 1.
+3. While the stack is not empty and the top element of the stack has a price less than or equal to the current price, pop the top element and add its span to the current span.
+4. Push the current price and span onto the stack.
+5. Return the current span.
+
+**Time Complexity**
+O(n), where n is the number of days. This is because each day, we may need to pop all elements from the stack that are less than or equal to the current price, resulting in a maximum of n operations.
+
+**Space Complexity**
+O(n), where n is the number of days. This is because in the worst-case scenario, the stack may store all days' prices and spans.
+
+**Key Insight**
+The key insight is to use a monotonic stack to efficiently calculate the span of each day's price. By popping elements that are less than or equal to the current price, we can find the maximum span in O(1) time, resulting in a linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

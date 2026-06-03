@@ -65,6 +65,32 @@ Example 3:**
 
 	- `0 <= digits[i] <= 9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to count the frequency of each digit in the input array. It then iterates over all possible combinations of three digits, ensuring that the resulting integer is even and does not have leading zeros. The unique integers are stored in a result list, which is returned at the end.
+
+**Approach**
+1. Create a hash table `h1` to count the frequency of each digit in the input array `digits`.
+2. Initialize an empty list `res` to store the unique integers that meet the requirements.
+3. Iterate over all possible hundreds digits `i` from 1 to 9.
+4. For each hundreds digit `i`, create a copy of the hash table `check` and decrement its count for the hundreds digit.
+5. Iterate over all possible tens digits `j` from 0 to 9.
+6. For each tens digit `j`, create a copy of the hash table `check` and decrement its count for the tens digit.
+7. Iterate over all possible units digits `k` from 0 to 9, incrementing by 2 to ensure the integer is even.
+8. For each units digit `k`, check if the count in the hash table `check` is greater than 0. If it is, append the integer formed by concatenating the hundreds, tens, and units digits to the result list `res`.
+9. Increment the count for the tens digit `j` in the hash table `check` to backtrack and try other combinations.
+10. Return the sorted result list `res`.
+
+**Time Complexity**
+O(9 * 10 * 5) = O(450), where 9 is the number of possible hundreds digits, 10 is the number of possible tens digits, and 5 is the number of possible units digits (since we only consider even units digits).
+
+**Space Complexity**
+O(10) for the hash table `h1` and O(9 * 10 * 5) = O(450) for the result list `res`, which is dominated by the time complexity.
+
+**Key Insight**
+The key insight is to use a hash table to count the frequency of each digit and then iterate over all possible combinations of three digits, ensuring that the resulting integer meets the requirements. This approach avoids generating all possible integers and then filtering them, which would be more efficient but also more complex.
+
 ## 📊 Metrics
 
 | Metric | Value |

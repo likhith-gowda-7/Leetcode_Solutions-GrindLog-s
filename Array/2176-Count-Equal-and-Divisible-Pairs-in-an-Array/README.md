@@ -45,6 +45,30 @@ Example 2:**
 
 	- `1 <= nums[i], k <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The approach works by utilizing a hash map to store the indices of each number in the array. For each number, it checks all previously encountered numbers to see if their product is divisible by the given number `k`. The key insight is that we only need to consider pairs where `i < j`, so we can use the stored indices to efficiently calculate the number of valid pairs.
+
+**Approach**
+
+1. Check if all elements in the array are unique. If so, return 0 because there are no pairs to consider.
+2. Initialize a hash map `h1` to store the indices of each number in the array.
+3. Iterate through the array, and for each number:
+   - Check if it's already in the hash map `h1`. If so, iterate through the stored indices of this number.
+   - For each stored index `i`, check if the product of `i` and the current index is divisible by `k`. If so, increment the count of valid pairs.
+   - Add the current index to the list of indices for the current number in the hash map `h1`.
+4. Return the total count of valid pairs.
+
+**Time Complexity**
+O(n^2) where n is the length of the array. This is because in the worst case, we might need to check all pairs of numbers in the array.
+
+**Space Complexity**
+O(n) where n is the length of the array. This is because we're using a hash map to store the indices of each number in the array.
+
+**Key Insight**
+The key insight is that we can use the stored indices in the hash map to efficiently calculate the number of valid pairs, avoiding the need to check all pairs of numbers in the array. This makes the solution more efficient than a brute-force approach.
+
 ## 📊 Metrics
 
 | Metric | Value |

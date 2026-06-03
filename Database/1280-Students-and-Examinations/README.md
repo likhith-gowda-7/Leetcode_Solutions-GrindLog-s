@@ -132,6 +132,26 @@ John attended the Math exam 1 time, the Physics exam 1 time, and the Programming
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of joins and aggregation to generate a report showing each student's ID, name, and the number of exams they attended for each subject. The key insight is that we need to count the number of exams each student attended for each subject, which requires joining the three tables and grouping the results.
+
+**Approach**
+1. Perform a cross join between the `Students` and `Subjects` tables to generate a Cartesian product of all possible student-subject combinations.
+2. Left join the `Examinations` table with the result of the cross join to filter out students who did not attend any exams in a particular subject.
+3. Group the results by student ID, name, and subject name to count the number of exams each student attended for each subject.
+4. Order the results by student ID and name for easier reading.
+
+**Time Complexity**
+O(n*m), where n is the number of students and m is the number of subjects. This is because we perform a cross join between the `Students` and `Subjects` tables, which results in n*m rows. The subsequent left join and grouping operations do not change the number of rows, so the time complexity remains O(n*m).
+
+**Space Complexity**
+O(n*m), as we need to store the intermediate results of the cross join and left join operations. The final grouping and ordering operations do not affect the space complexity.
+
+**Key Insight**
+The key insight is that we can use a cross join to generate all possible student-subject combinations, and then filter out the students who did not attend any exams in a particular subject using a left join. This approach allows us to count the number of exams each student attended for each subject efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -58,6 +58,27 @@ Example 3:**
 
 	- `grid[i][j]` is either `0` or `1`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a union-find data structure to group connected `1`s in the grid into separate islands. It then iterates over all `0`s in the grid, considering each one as a potential new island. For each `0`, it calculates the size of the new island by adding the size of the current island to the sizes of all adjacent islands. The maximum size of all new islands is the answer.
+
+**Approach**
+1. Initialize a union-find data structure with `n*n` nodes, where `n` is the size of the grid. Each node represents a cell in the grid.
+2. Iterate over the grid, and for each `1`, perform a union operation with all adjacent `1`s. This groups connected `1`s into separate islands.
+3. Store the size of each island in a dictionary `root_to_size`.
+4. Iterate over all `0`s in the grid, and for each one, calculate the size of the new island by adding the size of the current island to the sizes of all adjacent islands.
+5. Update the maximum size of all new islands.
+
+**Time Complexity**
+The time complexity of this solution is O(n^2), where n is the size of the grid. This is because we iterate over the grid twice: once to group connected `1`s into islands, and once to calculate the size of new islands for each `0`.
+
+**Space Complexity**
+The space complexity of this solution is O(n^2), where n is the size of the grid. This is because we store the union-find data structure and the `root_to_size` dictionary, which require O(n^2) space.
+
+**Key Insight**
+The key insight behind this solution is that we can calculate the size of new islands by adding the size of the current island to the sizes of all adjacent islands. This is possible because the union-find data structure allows us to efficiently group connected `1`s into separate islands.
+
 ## 📊 Metrics
 
 | Metric | Value |

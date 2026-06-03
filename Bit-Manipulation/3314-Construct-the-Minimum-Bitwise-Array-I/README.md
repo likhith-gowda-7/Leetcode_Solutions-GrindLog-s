@@ -61,6 +61,28 @@ Example 2:**
 
 	- `nums[i]` is a prime number.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution relies on the property of bitwise operations, specifically the XOR and left shift operators. It iterates over each number in the input array, checking if it can be represented as the bitwise OR of two consecutive numbers. If not, it tries to find the smallest number that satisfies the condition by flipping the least significant bit that is not set in the original number.
+
+**Approach**
+1. Iterate over each number `val` in the input array `nums`.
+2. If `val` is 2, set `nums[i]` to -1 and continue to the next number.
+3. Iterate from the least significant bit to the most significant bit (32 iterations).
+4. If the current bit is not set in `val`, calculate the XOR of `val` with the bit flipped in the previous position (`1<<j-1`).
+5. If the result is a valid number, set `nums[i]` to the result and break the loop.
+6. If no valid number is found, `nums[i]` remains unchanged.
+
+**Time Complexity**
+O(n * 32) = O(n), where n is the number of elements in the input array. This is because we iterate over each number in the array and perform a constant number of operations for each bit.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the current number `val` and the result `x`.
+
+**Key Insight**
+The key insight is that we can represent any number `val` as the bitwise OR of two consecutive numbers if and only if the least significant bit that is not set in `val` is set in the next higher power of 2. This allows us to find the smallest number that satisfies the condition by flipping the least significant bit that is not set in `val`.
+
 ## 📊 Metrics
 
 | Metric | Value |

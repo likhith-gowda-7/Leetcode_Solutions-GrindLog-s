@@ -65,6 +65,28 @@ All the possible stable binary arrays are `[0,0,1,0,1,1]`, `[0,0,1,1,0,1]`, `[0,
 
 	- `1 <= zero, one, limit <= 200`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the total number of stable binary arrays given certain constraints. The key insight is to use dynamic programming and combinatorics to break down the problem into smaller sub-problems. We can use the concept of combinations to calculate the number of stable arrays for each sub-problem.
+
+**Approach**
+1. Calculate the factorial and inverse factorial of numbers up to `maxN` (the sum of `zero` and `one`) modulo `10^9 + 7` to use in combination calculations.
+2. Define a function `C(n, k)` to calculate the number of combinations of `n` items taken `k` at a time modulo `10^9 + 7`.
+3. Define a function `F(N, K, L)` to calculate the number of stable arrays with `N` elements, `K` zeros, and a limit `L` on the subarray size. This function uses the combination function to calculate the number of ways to choose the positions of zeros and ones.
+4. Initialize an array `fOne` to store the number of stable arrays with `one` ones and varying numbers of zeros.
+5. Iterate over the possible numbers of zeros `k` from 1 to `maxK` (the minimum of `zero` and `one + 1`), and for each `k`, calculate the number of stable arrays with `k` zeros using the function `F`.
+6. Iterate over the possible numbers of zeros `k` from 1 to `maxK`, and for each `k`, calculate the number of stable arrays with `k` zeros by multiplying the number of ways to choose the positions of zeros and ones.
+
+**Time Complexity**
+The time complexity is O(maxN^2) due to the two nested loops in the `F` function, where `maxN` is the sum of `zero` and `one`. The combination calculations also take O(maxN) time.
+
+**Space Complexity**
+The space complexity is O(maxN) due to the arrays `fact`, `invFact`, and `fOne`.
+
+**Key Insight**
+The key insight is to use dynamic programming and combinatorics to break down the problem into smaller sub-problems. By using the concept of combinations, we can calculate the number of stable arrays for each sub-problem efficiently. The use of modular arithmetic also helps to prevent overflow and improve the performance of the algorithm.
+
 ## 📊 Metrics
 
 | Metric | Value |

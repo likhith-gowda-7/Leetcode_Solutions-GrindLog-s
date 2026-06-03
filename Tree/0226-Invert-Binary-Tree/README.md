@@ -50,6 +50,30 @@ Example 3:**
 
 	- `-100 <= Node.val <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack-based approach to traverse the binary tree in a level-order manner. By swapping the left and right child nodes at each level, the tree is effectively inverted.
+
+**Approach**
+1. Initialize an empty stack to store nodes to be processed.
+2. If the root node exists, push it onto the stack.
+3. While the stack is not empty, pop a node from the stack.
+4. If the popped node has a left child, push it onto the stack.
+5. If the popped node has a right child, push it onto the stack.
+6. Swap the left and right child nodes of the popped node.
+7. Repeat steps 3-6 until the stack is empty.
+8. Return the root node of the inverted tree.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the tree. This is because each node is visited once during the traversal.
+
+**Space Complexity**
+O(n), where n is the number of nodes in the tree. This is because in the worst case, the stack will store all nodes at the last level of the tree.
+
+**Key Insight**
+The key insight is that by using a stack to traverse the tree level-order, we can efficiently swap the left and right child nodes at each level, effectively inverting the tree. This approach avoids the need for recursive function calls, making it more efficient in terms of space complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

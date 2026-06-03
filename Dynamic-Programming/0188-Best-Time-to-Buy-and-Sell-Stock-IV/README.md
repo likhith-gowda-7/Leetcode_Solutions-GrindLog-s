@@ -49,6 +49,26 @@ Example 2:**
 
 	- `0 <= prices[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by using dynamic programming to track the maximum profit that can be achieved at each step, considering whether we are currently holding a stock or not, and how many transactions we have made so far. The key idea is to iterate over the prices in reverse order, updating our dynamic programming table with the maximum profit we can get at each step.
+
+## Approach
+1. Initialize a dynamic programming table `dp` with two rows (representing whether we are holding a stock or not) and `k+1` columns (representing the number of transactions made so far).
+2. Iterate over the prices in reverse order, and for each price, iterate over the two possible states (holding or not holding a stock) and the possible number of transactions made so far.
+3. For each state and transaction count, calculate the maximum profit we can get by either buying or selling the stock (if we are not holding it), or by selling or holding the stock (if we are holding it).
+4. Update the dynamic programming table with the maximum profit we can get at each step.
+
+## Time Complexity
+The time complexity of this solution is O(n*k), where n is the number of days and k is the maximum number of transactions. This is because we are iterating over the prices in reverse order, and for each price, we are iterating over the two possible states and the possible number of transactions made so far.
+
+## Space Complexity
+The space complexity of this solution is O(k), as we are using a dynamic programming table with two rows and k+1 columns. However, the given solution has a bug and the space complexity should be O(1) for the variables and O(k) for the dp array, but the array is not correctly implemented.
+
+## Key Insight
+The key insight behind this solution is to use dynamic programming to track the maximum profit we can get at each step, considering the two possible states (holding or not holding a stock) and the possible number of transactions made so far. However, the given solution has a bug and does not correctly implement the dynamic programming approach. A correct implementation would use a 2D array with n rows and k+1 columns, where n is the number of days.
+
 ## 📊 Metrics
 
 | Metric | Value |

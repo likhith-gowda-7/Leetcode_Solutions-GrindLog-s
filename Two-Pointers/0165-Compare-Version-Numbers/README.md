@@ -65,6 +65,29 @@ version1 has less revisions, which means every missing revision are treated as "
 
 	- All the given revisions in `version1` and `version2` can be stored in a **32-bit integer**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by splitting the version strings into their constituent revisions, comparing them as integers, and returning the result based on the comparison. This approach leverages the fact that integers can be directly compared, making it efficient for version comparison.
+
+**Approach**
+1. Split the input version strings into revisions using the dot (`.`) as a delimiter.
+2. Determine the maximum length between the two version strings.
+3. Iterate through the revisions, comparing the integer values of each revision.
+4. If a revision is missing from one of the version strings, treat its value as 0.
+5. Return -1 if the current revision of `version1` is less than the current revision of `version2`.
+6. Return 1 if the current revision of `version2` is less than the current revision of `version1`.
+7. If all revisions are equal, return 0.
+
+**Time Complexity**
+O(max(m, n)), where m and n are the lengths of the input version strings. This is because we iterate through the maximum number of revisions between the two strings.
+
+**Space Complexity**
+O(m + n), where m and n are the lengths of the input version strings. This is because we store the split revisions in two separate lists.
+
+**Key Insight**
+The key insight is to treat missing revisions as 0, allowing us to directly compare the integer values of each revision. This simplifies the comparison logic and makes the solution efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

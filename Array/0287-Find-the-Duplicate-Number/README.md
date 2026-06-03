@@ -63,6 +63,25 @@ Example 3:**
 
 	- Can you solve the problem in linear runtime complexity?
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by utilizing Floyd's Tortoise and Hare algorithm, also known as the "cycle detection" algorithm. The idea is to treat the given array as a linked list where each value is a node that points to the index of its value. Since there is a duplicate in the array, this linked list must have a cycle. The algorithm detects this cycle and then finds the starting point of the cycle, which corresponds to the duplicate number.
+
+## Approach
+1. Initialize two pointers, `slow` and `fast`, to the start of the array.
+2. Move `slow` one step at a time and `fast` two steps at a time until they meet, indicating the presence of a cycle.
+3. Reset `slow` to the start and move both `slow` and `fast` one step at a time until they meet again, which will be at the start of the cycle, i.e., the duplicate number.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of elements in the array. This is because in the worst-case scenario, the algorithm needs to traverse the entire array to detect the cycle and then find the duplicate number.
+
+## Space Complexity
+The space complexity is O(1), which means the space required does not change with the size of the input array, making it constant extra space. This is because the algorithm only uses a fixed amount of space to store the pointers and does not modify the input array.
+
+## Key Insight
+The key insight here is recognizing that the given array can be treated as a linked list with a cycle due to the presence of a duplicate number, and applying Floyd's Tortoise and Hare algorithm to detect and find the start of this cycle, which corresponds to the duplicate number.
+
 ## 📊 Metrics
 
 | Metric | Value |

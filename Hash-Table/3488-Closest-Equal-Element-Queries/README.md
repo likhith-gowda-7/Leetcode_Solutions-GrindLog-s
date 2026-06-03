@@ -55,6 +55,33 @@ Each value in `nums` is unique, so no index shares the same value as the queried
 
 	- `0 <= queries[i] < nums.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a hash table to store the indices of each unique element in the circular array. It then applies binary search to find the minimum distance between the query index and any other index with the same value. The key insight is that the circular array can be treated as a linear array by considering the indices modulo the array length.
+
+**Approach**
+1. Create a hash table `h1` to store the indices of each unique element in the circular array `nums`.
+2. Initialize an empty list `res` to store the results for each query.
+3. Iterate through each query `i` in `queries`.
+4. For each query, find the value `val` at the query index `q`.
+5. Get the list of indices `h1[val]` for the value `val`.
+6. If there are more than one indices for the value `val`, apply binary search to find the index `idx` that is closest to the query index `q`.
+7. Calculate the minimum distance `front` between the query index `q` and the next index with the same value, and the minimum distance `back` between the query index `q` and the previous index with the same value.
+8. If the index `idx` is 0, calculate the minimum distance `back` by considering the indices modulo the array length.
+9. If the index `idx` is the last index, calculate the minimum distance `front` by considering the indices modulo the array length.
+10. Update the result `res[i]` with the minimum distance between the query index `q` and any other index with the same value.
+11. Return the list of results `res`.
+
+**Time Complexity**
+O(n + m * log(m)), where n is the length of the array `nums` and m is the number of unique elements in the array. The binary search operation takes O(log(m)) time, and the hash table operations take O(n) time.
+
+**Space Complexity**
+O(n), where n is the length of the array `nums`. The hash table `h1` stores the indices of each unique element in the array.
+
+**Key Insight**
+The key insight is that the circular array can be treated as a linear array by considering the indices modulo the array length. This allows us to apply binary search to find the minimum distance between the query index and any other index with the same value.
+
 ## 📊 Metrics
 
 | Metric | Value |

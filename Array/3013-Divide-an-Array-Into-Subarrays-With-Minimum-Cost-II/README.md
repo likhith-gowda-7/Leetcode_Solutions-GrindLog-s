@@ -66,6 +66,30 @@ It can be shown that there is no possible way to divide nums into 3 subarrays at
 
 	- `k - 2 <= dist <= n - 2`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with a smart window data structure to efficiently manage the subarrays. The key insight is to maintain a balanced window with a minimum size of `k` elements, where the difference between the starting index of the second subarray and the starting index of the `kth` subarray is less than or equal to `dist`.
+
+**Approach**
+1. Initialize a `SmartWindow` object with `k` as the minimum window size.
+2. Add the first `dist + 1` elements of `nums` to the window.
+3. Initialize the answer `ans` with the query result of the window.
+4. Iterate from `i = 2` to `n - dist`:
+   a. Remove the element at index `i - 1` from the window.
+   b. Add the element at index `i + dist` to the window.
+   c. Update `ans` with the minimum of the current `ans` and the query result of the window.
+5. Return `ans + nums[0]`, which is the minimum possible sum of the cost of the subarrays.
+
+**Time Complexity**
+The time complexity is O(n), where n is the length of `nums`. This is because we iterate over `nums` once, and each operation (add, remove, query) takes constant time.
+
+**Space Complexity**
+The space complexity is O(n), where n is the length of `nums`. This is because we store all elements of `nums` in the `SmartWindow` object.
+
+**Key Insight**
+The key insight is to maintain a balanced window with a minimum size of `k` elements, where the difference between the starting index of the second subarray and the starting index of the `kth` subarray is less than or equal to `dist`. This allows us to efficiently manage the subarrays and find the minimum possible sum of their costs.
+
 ## 📊 Metrics
 
 | Metric | Value |

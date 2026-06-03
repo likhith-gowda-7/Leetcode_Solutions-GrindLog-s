@@ -45,6 +45,26 @@ As we cannot use any three side lengths to form a triangle of non-zero area, we 
 
 	- `1 <= nums[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by sorting the input array in descending order and then checking each triplet of numbers to see if they can form a triangle with a non-zero area. A triangle can be formed if the sum of the lengths of any two sides is greater than the length of the third side.
+
+**Approach**
+1. Sort the input array `nums` in descending order.
+2. Iterate over the sorted array, considering each triplet of numbers `a`, `b`, and `c` where `a` is the largest number and `b` and `c` are the next two largest numbers.
+3. For each triplet, check if `a` is less than the sum of `b` and `c`. If this condition is true, it means that the triplet can form a triangle with a non-zero area, so return the perimeter of the triangle (`a + b + c`).
+4. If no such triplet is found after iterating over the entire array, return 0.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the length of the input array. The subsequent iteration over the sorted array takes O(n) time, but it is dominated by the sorting step.
+
+**Space Complexity**
+O(1) since we only use a constant amount of space to store the indices and values of the triplet being considered.
+
+**Key Insight**
+The key insight is that we can efficiently check if a triplet of numbers can form a triangle by verifying the triangle inequality (`a < b + c`). This allows us to find the largest perimeter of a triangle with a non-zero area in O(n log n) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

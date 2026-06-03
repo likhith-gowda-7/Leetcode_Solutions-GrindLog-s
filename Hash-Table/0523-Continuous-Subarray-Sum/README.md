@@ -69,6 +69,28 @@ Example 3:**
 
 	- `1 <= k <= 2^31 - 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to store the remainders of the prefix sums of the array when divided by `k`. It then checks if the difference between the current remainder and the previous remainder is greater than 1, indicating a good subarray.
+
+**Approach**
+1. Initialize a hash table `remainder` with a key of 0 and a value of -1, representing the starting point of the array.
+2. Initialize a variable `curr` to store the current prefix sum of the array.
+3. Iterate through the array, updating `curr` by adding the current element to it.
+4. Calculate the remainder of `curr` divided by `k` and store it in the `remainder` hash table if it's not already present.
+5. If the remainder is already present in the hash table and the difference between the current index and the previous index of the remainder is greater than 1, return `True`.
+6. If the loop completes without finding a good subarray, return `False`.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we're iterating through the array once, and the operations inside the loop (hash table lookups and updates) take constant time.
+
+**Space Complexity**
+O(n), where n is the length of the array. This is because in the worst case, we might need to store all elements of the array in the hash table.
+
+**Key Insight**
+The key insight is that the remainder of the prefix sum when divided by `k` is a cyclic pattern that repeats every `k` elements. By storing the remainders in a hash table, we can efficiently check if a good subarray exists by looking up the previous remainder and checking if the difference between the current index and the previous index is greater than 1.
+
 ## 📊 Metrics
 
 | Metric | Value |

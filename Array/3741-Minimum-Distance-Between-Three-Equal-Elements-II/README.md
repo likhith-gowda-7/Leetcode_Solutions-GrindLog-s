@@ -61,6 +61,27 @@ There are no good tuples. Therefore, the answer is -1.
 
 	- `1 <= nums[i] <= n`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first grouping the elements of the input array by their values. Then, for each group with at least three elements, it calculates the minimum distance between all possible triplets of indices. The minimum distance is updated accordingly.
+
+**Approach**
+1. Create a hash table `h1` to store the indices of elements with the same value.
+2. Iterate over the input array and populate the hash table `h1`.
+3. Iterate over the hash table `h1`. For each group with at least three elements, calculate the minimum distance between all possible triplets of indices.
+4. Update the minimum distance `res` accordingly.
+5. Return the minimum distance `res` if it is not infinity, otherwise return -1.
+
+**Time Complexity**
+O(n + m), where n is the length of the input array and m is the number of unique elements in the array. This is because we iterate over the array once to populate the hash table, and then iterate over the hash table once to calculate the minimum distance.
+
+**Space Complexity**
+O(m), where m is the number of unique elements in the array. This is because we store the indices of elements with the same value in the hash table.
+
+**Key Insight**
+The key insight is that we only need to consider groups with at least three elements, because for groups with two elements, there is no possible triplet of indices that can form a good tuple. This significantly reduces the number of possible triplets to consider, making the solution more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

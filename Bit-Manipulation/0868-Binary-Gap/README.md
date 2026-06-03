@@ -56,6 +56,31 @@ Example 3:**
 
 	- `1 <= n <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first converting the input number to its binary representation. It then iterates through the binary string, keeping track of the position of the last '1' encountered. Whenever it finds another '1', it calculates the distance between the current '1' and the previous one, updating the maximum distance found so far.
+
+**Approach**
+1. Convert the input number `n` to its binary representation using the `bin()` function and remove the '0b' prefix.
+2. If the binary string contains less than two '1's, return 0 as there are no adjacent '1's.
+3. Initialize `prev` to 100 (a value larger than any possible index) if the first character of the binary string is not '1', otherwise set it to 0.
+4. Initialize `res` to 0 to store the maximum distance found so far.
+5. Iterate through the binary string starting from the second character (index 1).
+6. If the current character is '1', calculate the distance between the current '1' and the previous one by subtracting `prev` from the current index `i`.
+7. Update `res` with the maximum of its current value and the calculated distance.
+8. Update `prev` to the current index `i`.
+9. Return `res` at the end of the iteration.
+
+**Time Complexity**
+O(log(n)) where n is the input number. This is because the binary representation of n has a maximum length of log2(n) + 1, and we iterate through this string once.
+
+**Space Complexity**
+O(log(n)) as we need to store the binary representation of n, which has a maximum length of log2(n) + 1.
+
+**Key Insight**
+The key insight is to keep track of the position of the last '1' encountered, allowing us to efficiently calculate the distance between adjacent '1's. This approach avoids the need to store the positions of all '1's, making it more space-efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

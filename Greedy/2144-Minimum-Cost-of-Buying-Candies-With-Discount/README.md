@@ -68,6 +68,29 @@ Hence, the minimum cost to buy all candies is 5 + 5 = 10.
 
 	- `1 <= cost[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution takes advantage of the discount policy, where for every two candies sold, a third candy is given for free. It sorts the candies in descending order of cost and then iterates through them, buying two candies at a time and taking the cheapest one for free.
+
+**Approach**
+1. Sort the candies in descending order of cost using `cost.sort(reverse=True)`.
+2. Initialize variables `total_cost` to keep track of the total cost and `buyed` to keep track of the number of candies bought.
+3. Iterate through the sorted candies. For each candy:
+   - If `buyed` is 2, reset it to 0 and skip this candy.
+   - Add the current candy's cost to `total_cost`.
+   - Increment `buyed` by 1.
+4. Return `total_cost` as the minimum cost of buying all candies.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the number of candies. The subsequent iteration through the sorted array takes O(n) time, but it's dominated by the sorting step.
+
+**Space Complexity**
+O(1) (excluding the input array) since we only use a constant amount of space to store the `total_cost` and `buyed` variables.
+
+**Key Insight**
+The key insight is that by sorting the candies in descending order, we can always choose the cheapest candy to take for free, ensuring the minimum cost. This greedy approach takes advantage of the discount policy and leads to an efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

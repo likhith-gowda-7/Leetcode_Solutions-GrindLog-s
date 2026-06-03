@@ -67,6 +67,25 @@ Courses table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by grouping the classes together and counting the number of students in each class. It then filters out the classes with less than 5 students, returning only the classes with at least 5 students.
+
+**Approach**
+1. The `GROUP BY` clause groups the rows in the `Courses` table by the `class` column.
+2. The `COUNT(student)` function counts the number of rows in each group, effectively counting the number of students in each class.
+3. The `HAVING` clause filters the results to only include classes with a count of 5 or more students.
+
+**Time Complexity**
+O(n), where n is the number of rows in the `Courses` table. This is because the solution needs to iterate over each row once to perform the grouping and counting.
+
+**Space Complexity**
+O(n), where n is the number of unique classes in the `Courses` table. This is because the solution needs to store the intermediate results of the grouping and counting in memory.
+
+**Key Insight**
+The key insight here is that the `HAVING` clause allows us to filter the results after grouping, which is essential for solving this problem efficiently. By grouping the classes together and then filtering out the classes with less than 5 students, we can avoid having to iterate over each row multiple times, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

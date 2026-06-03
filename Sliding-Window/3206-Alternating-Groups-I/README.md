@@ -57,6 +57,27 @@ Alternating groups:
 
 	- `0 <= colors[i] <= 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to find the number of alternating groups in a circular array of red and blue tiles. An alternating group consists of 3 contiguous tiles with alternating colors. We can solve this problem by iterating through the array and counting the number of times we find a group of 3 tiles with alternating colors.
+
+**Approach**
+1. Initialize variables to keep track of the result (res) and the length of the current group (l).
+2. Iterate through the array using a sliding window approach, where the window size is 3.
+3. For each window, check if the colors of the current tile and the previous tile are the same. If they are, reset the length of the current group (l) to the current index (r).
+4. If the length of the current group (l) plus 1 is equal to 3, it means we have found an alternating group, so increment the result (res) and update the length of the current group (l).
+5. Return the result (res) at the end of the iteration.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we are iterating through the array once, and the operations inside the loop are constant time.
+
+**Space Complexity**
+O(1), because we are using a constant amount of space to store the result and the length of the current group.
+
+**Key Insight**
+The key insight here is to use a sliding window approach with a window size of 3 to efficiently count the number of alternating groups in the array. By resetting the length of the current group whenever we find a group of 3 tiles with the same color, we can accurately count the number of alternating groups.
+
 ## 📊 Metrics
 
 | Metric | Value |

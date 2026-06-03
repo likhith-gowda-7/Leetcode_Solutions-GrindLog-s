@@ -61,6 +61,28 @@ Box 10 has the most number of balls with 2 balls.
 
 	- `1 <= lowLimit <= highLimit <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires counting the number of balls in the box with the most balls. Each ball's number is put in a box based on the sum of its digits. The key insight is to use a hash table to store the count of balls in each box, where the box number is the sum of the digits of the ball's number.
+
+**Approach**
+1. Define a helper function `summing(num)` to calculate the sum of digits of a given number `num`.
+2. Initialize a hash table `h1` to store the count of balls in each box.
+3. Iterate through the range of ball numbers from `lowLimit` to `highLimit` (inclusive).
+4. For each ball number, calculate the sum of its digits using the `summing(num)` function.
+5. Increment the count of the corresponding box in the hash table `h1`.
+6. After iterating through all ball numbers, return the maximum count in the hash table `h1`.
+
+**Time Complexity**
+O(n), where n is the number of balls (highLimit - lowLimit + 1). This is because we are iterating through each ball number once.
+
+**Space Complexity**
+O(max(sum of digits of ball numbers)), which is O(highLimit). This is because in the worst case, the sum of digits of a ball number can be equal to the ball number itself, and we are storing the count of each box in the hash table.
+
+**Key Insight**
+The key insight is to use a hash table to store the count of balls in each box, where the box number is the sum of the digits of the ball's number. This allows us to efficiently count the number of balls in each box and find the box with the most balls.
+
 ## 📊 Metrics
 
 | Metric | Value |

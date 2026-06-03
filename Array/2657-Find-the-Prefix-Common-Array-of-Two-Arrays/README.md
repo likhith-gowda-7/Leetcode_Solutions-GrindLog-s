@@ -54,6 +54,30 @@ At i = 2: 1, 2, and 3 are common in A and B, so C[2] = 3.
 
 	- `It is guaranteed that A and B are both a permutation of n integers.`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining a frequency count of elements from both arrays A and B. It iterates through the arrays, incrementing the frequency count for each element. When the frequency count reaches 2, it means the element is present in both arrays at the current index, so the count of common elements is incremented. This count is then appended to the result array.
+
+**Approach**
+1. Initialize an array `freq` of size `n+1` to store the frequency count of elements from both arrays.
+2. Initialize an empty array `ans` to store the prefix common array.
+3. Initialize a variable `cnt` to keep track of the count of common elements.
+4. Iterate through the arrays A and B simultaneously using a single loop.
+5. For each element at index `i`, increment the frequency count in `freq` for both elements A[i] and B[i].
+6. If the frequency count reaches 2 for either element, increment the count of common elements `cnt`.
+7. Append the current count of common elements `cnt` to the result array `ans`.
+8. Return the result array `ans`.
+
+**Time Complexity**
+O(n), where n is the length of the arrays A and B. This is because we are iterating through the arrays once, and the operations within the loop (incrementing frequency counts and checking for duplicates) take constant time.
+
+**Space Complexity**
+O(n), where n is the length of the arrays A and B. This is because we are using an array `freq` of size `n+1` to store the frequency counts, and an array `ans` of size n to store the prefix common array.
+
+**Key Insight**
+The key insight is to use a frequency count array to efficiently keep track of the elements from both arrays. By incrementing the frequency count for each element and checking for duplicates, we can accurately count the number of common elements at each index. This approach allows us to solve the problem in linear time and space.
+
 ## 📊 Metrics
 
 | Metric | Value |

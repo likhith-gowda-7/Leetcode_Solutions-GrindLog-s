@@ -60,6 +60,29 @@ Example 3:**
 
 	- `1 <= prices[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks for the number of smooth descent periods in a stock's price history. A smooth descent period consists of one or more contiguous days where the price decreases by exactly 1. The approach involves calculating the number of combinations of days that can form a smooth descent period.
+
+**Approach**
+1. Initialize variables to store the result and the length of the current smooth descent period.
+2. Iterate through the price history, starting from the second day.
+3. For each day, calculate the difference in price with the previous day.
+4. If the difference is not 1, it means the current smooth descent period has ended.
+5. Calculate the number of combinations of days in the current period using the formula `length*(length+1)//2`.
+6. Add the combinations to the result and update the length of the current period.
+7. After iterating through the entire price history, calculate the combinations for the last period and add it to the result.
+
+**Time Complexity**
+O(n), where n is the number of days in the price history. This is because we only need to iterate through the price history once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the result and the length of the current period.
+
+**Key Insight**
+The key insight is that the number of combinations of days in a smooth descent period can be calculated using the formula `length*(length+1)//2`. This formula is derived from the fact that the number of combinations of n items taken k at a time is given by `n!/(k!(n-k)!)`, which simplifies to `n*(n-1)*...*(n-k+1)/k!`. In this case, we can simplify the formula to `length*(length+1)//2` because the number of combinations is always an integer and we can ignore the factorial term.
+
 ## 📊 Metrics
 
 | Metric | Value |

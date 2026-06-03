@@ -41,6 +41,29 @@ Example 2:**
 
 	- `1 <= n <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first checking if the given number `n` is already a power of 2. If it is, the function returns `True`. Otherwise, it generates all possible powers of 2 with the same number of digits as `n` and checks if any of them have the same digit order as `n`.
+
+**Approach**
+1. Check if `n` is already a power of 2 by converting it to binary and counting the number of '1's. If there's only one '1', return `True`.
+2. Convert `n` to a string, sort its digits, and store the result in `target`.
+3. Initialize `till` as the largest power of 10 with `l` digits, where `l` is the length of `target`.
+4. Iterate over powers of 2 from 1 to 30 (since 2^30 is the largest power of 2 with 31 digits).
+5. For each power of 2 `p`, convert it to a string, sort its digits, and store the result in `curr`.
+6. If `curr` matches `target`, return `True`.
+7. If `p` exceeds `till`, break the loop since all remaining powers of 2 will have more digits than `n`.
+
+**Time Complexity**
+O(30 * l), where `l` is the number of digits in `n`. This is because we iterate over 30 powers of 2 and for each power, we sort its digits, which takes O(l) time.
+
+**Space Complexity**
+O(l), where `l` is the number of digits in `n`. This is because we store the sorted digits of `n` and each power of 2 in separate variables.
+
+**Key Insight**
+The key insight is that a power of 2 can have at most one '1' in its binary representation. Therefore, we can quickly check if `n` is a power of 2 by counting the number of '1's in its binary representation.
+
 ## 📊 Metrics
 
 | Metric | Value |

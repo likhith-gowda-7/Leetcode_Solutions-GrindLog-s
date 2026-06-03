@@ -49,6 +49,32 @@ Example 2:**
 
 	- `1 <= k <= 10^12`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a binary search approach to find the maximum number of candies each child can get. The idea is to find the largest possible number of candies that can be evenly distributed among the children, given the constraint that each child can only get candies from one pile.
+
+**Approach**
+1. Calculate the total number of candies and check if it's less than the number of children. If so, return 0 as it's impossible to distribute candies evenly.
+2. Initialize the search range `[l, r]` to `[1, total//k]`, where `total//k` is the maximum possible number of candies each child can get if they are evenly distributed.
+3. Perform a binary search within the range `[l, r]` to find the maximum number of candies each child can get.
+   * Calculate the middle value `mid` of the current range.
+   * Initialize a counter `ch` to keep track of the total number of children that can be satisfied with the current `mid` value.
+   * Iterate through each pile of candies and calculate how many children can be satisfied with the current `mid` value.
+   * If the total number of satisfied children `ch` is greater than or equal to the number of children `k`, update the lower bound `l` to `mid + 1`.
+   * Otherwise, update the upper bound `r` to `mid - 1`.
+4. Repeat step 3 until `l` and `r` converge.
+5. Return the final value of `r`, which represents the maximum number of candies each child can get.
+
+**Time Complexity**
+O(n log m), where n is the number of piles of candies and m is the total number of candies. The binary search takes O(log m) time, and the iteration through each pile of candies takes O(n) time.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the variables `l`, `r`, `mid`, and `ch`.
+
+**Key Insight**
+The key insight is to use a binary search approach to find the maximum number of candies each child can get, given the constraint that each child can only get candies from one pile. The solution iterates through each pile of candies and calculates how many children can be satisfied with the current `mid` value, and updates the search range accordingly. This approach allows the solution to efficiently find the maximum number of candies each child can get in O(n log m) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -108,6 +108,29 @@ Since the record is empty, the total sum is 0.
 
 	- For operations `"C"` and `"D"`, there will always be at least one previous score on the record.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by simulating the baseball game operations on a stack data structure, where each score is a stack element. The key insight is to use the stack's append and pop operations to efficiently manage the scores, taking advantage of the problem's constraints to avoid unnecessary computations.
+
+**Approach**
+1. Initialize an empty list `res` to store the scores.
+2. Iterate over each operation `op` in the `operations` list.
+3. If `op` is "+", append the sum of the last two scores to `res`.
+4. If `op` is "D", append twice the last score to `res`.
+5. If `op` is "C", remove the last score from `res` (if it exists).
+6. If `op` is an integer, append it to `res` as a score.
+7. After iterating over all operations, return the sum of all scores in `res`.
+
+**Time Complexity**
+O(n), where n is the number of operations. This is because we iterate over the operations list once, performing a constant-time operation for each element.
+
+**Space Complexity**
+O(n), where n is the number of operations. This is because in the worst case, we store all operations as scores in the `res` list.
+
+**Key Insight**
+The key insight is to use the stack's append and pop operations to efficiently manage the scores, taking advantage of the problem's constraints to avoid unnecessary computations. This approach allows us to simulate the baseball game operations in a straightforward and efficient manner.
+
 ## 📊 Metrics
 
 | Metric | Value |

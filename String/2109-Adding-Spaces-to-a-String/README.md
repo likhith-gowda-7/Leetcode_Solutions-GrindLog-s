@@ -68,6 +68,29 @@ We are also able to place spaces before the first character of the string.
 
 	- All the values of `spaces` are **strictly increasing**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-pointer approach to simulate the insertion of spaces at the given indices. It iterates over the `spaces` array, appending substrings of the original string along with spaces to the result list. This approach leverages the fact that strings in Python are immutable, allowing us to build the modified string incrementally.
+
+**Approach**
+1. Initialize two pointers: `curr` to keep track of the current position in the string and `res` as an empty list to store the modified string.
+2. Iterate over the `spaces` array. For each space index `sp`:
+   1. Append the substring from the current position `curr` to the space index `sp` to the result list `res`.
+   2. Append a space to the result list `res`.
+   3. Update the current position `curr` to the space index `sp`.
+3. After iterating over all space indices, append the remaining substring from the current position `curr` to the end of the string to the result list `res`.
+4. Join the result list `res` into a single string using the `"".join()` method.
+
+**Time Complexity**
+O(n + m), where n is the length of the string `s` and m is the number of space indices. This is because we iterate over the string once and the space indices once.
+
+**Space Complexity**
+O(n + m), where n is the length of the string `s` and m is the number of space indices. This is because we store the modified string in the result list, which can grow up to the length of the original string plus the number of space indices.
+
+**Key Insight**
+The key insight is to use a two-pointer approach to simulate the insertion of spaces, leveraging the immutability of strings in Python to build the modified string incrementally. This approach avoids the need to create a new string with the spaces inserted, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

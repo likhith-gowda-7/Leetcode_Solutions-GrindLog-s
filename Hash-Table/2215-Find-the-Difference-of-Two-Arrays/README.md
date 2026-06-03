@@ -52,6 +52,26 @@ Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
 
 	- `-1000 <= nums1[i], nums2[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the distinct integers in two arrays that are not present in the other array. This can be efficiently solved using set operations, as sets automatically eliminate duplicates and provide efficient membership testing.
+
+**Approach**
+1. Convert the input arrays `nums1` and `nums2` to sets `n1` and `n2`, respectively, to eliminate duplicates and improve lookup efficiency.
+2. Use the `difference` method of sets to find the distinct integers in `n1` that are not present in `n2` and vice versa.
+3. Convert the resulting sets back to lists using the `list` function and store them in the `res` list.
+4. Return the `res` list containing the two lists of distinct integers.
+
+**Time Complexity**
+O(n + m), where n and m are the sizes of `nums1` and `nums2`, respectively. This is because set operations (conversion to sets, difference, and conversion back to lists) take linear time.
+
+**Space Complexity**
+O(n + m), as we need to store the sets `n1` and `n2` and the resulting lists in memory.
+
+**Key Insight**
+The key insight is that sets provide an efficient way to eliminate duplicates and perform membership testing, making them ideal for this problem. By converting the input arrays to sets and using set operations, we can solve the problem in linear time and space.
+
 ## 📊 Metrics
 
 | Metric | Value |

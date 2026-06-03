@@ -69,6 +69,29 @@ Right sum = nums[1] + nums[2] = 1 + -1 = 0
 
 **Note:** This question is the same as 1991: [https://leetcode.com/problems/find-the-middle-index-in-array/](https://leetcode.com/problems/find-the-middle-index-in-array/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution relies on the concept of prefix sums, where we maintain a running total of the elements to the left of the current index. By comparing this sum with the total sum minus the current element and the sum to the right of the current element, we can determine if the current index is a pivot index.
+
+**Approach**
+1. Calculate the total sum of the array `nums`.
+2. Initialize `left_sum` to 0, which represents the sum of elements to the left of the current index.
+3. Iterate through the array `nums` using a for loop.
+4. For each index `i`, calculate the `right_sum` as the total sum minus `left_sum` minus the current element `nums[i]`.
+5. Check if `left_sum` is equal to `right_sum`. If true, return the current index `i` as the pivot index.
+6. If not, increment `left_sum` by the current element `nums[i]` and repeat steps 4-5.
+7. If the loop completes without finding a pivot index, return -1.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. This is because we make a single pass through the array, performing a constant amount of work for each element.
+
+**Space Complexity**
+O(1), which means the space required does not grow with the size of the input array. We only use a few extra variables to store the total sum, left sum, and right sum.
+
+**Key Insight**
+The key insight is that we can calculate the right sum using the total sum minus the left sum and the current element, rather than iterating through the elements to the right of the current index. This allows us to solve the problem in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -65,6 +65,31 @@ Since the areas above and below the line are equal, the output is `7/6 = 1.16667
 
 	- The total area of all the squares will not exceed `10^12`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to find the minimum y-coordinate value of a horizontal line such that the total area of the squares above the line equals the total area of the squares below the line. We can approach this problem by first calculating the total area of all squares and then using binary search to find the optimal y-coordinate.
+
+**Approach**
+1. Initialize variables to store the total area of all squares, the minimum y-coordinate, and the maximum y-coordinate.
+2. Iterate through each square, adding its area to the total area and updating the minimum and maximum y-coordinates.
+3. Calculate the target area, which is half of the total area.
+4. Perform a binary search to find the optimal y-coordinate.
+   a. Initialize the low and high bounds for the binary search.
+   b. In each iteration, calculate the mid-point and the area of the squares below the mid-point.
+   c. If the area below the mid-point is less than the target area, update the low bound to the mid-point.
+   d. Otherwise, update the high bound to the mid-point.
+5. Return the low bound as the optimal y-coordinate.
+
+**Time Complexity**
+O(n log m), where n is the number of squares and m is the maximum y-coordinate. The binary search takes O(log m) time, and the iteration through each square takes O(n) time.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the variables.
+
+**Key Insight**
+The key insight is to use binary search to find the optimal y-coordinate, which allows us to efficiently search for the solution in the given range. The binary search is made possible by the fact that the area of the squares below the mid-point is a monotonic function of the mid-point, which allows us to update the bounds of the search range in each iteration.
+
 ## 📊 Metrics
 
 | Metric | Value |

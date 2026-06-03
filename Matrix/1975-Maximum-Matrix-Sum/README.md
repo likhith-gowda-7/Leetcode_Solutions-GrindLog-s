@@ -56,6 +56,27 @@ Example 2:**
 
 	- `-10^5 <= matrix[i][j] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first calculating the total sum of the matrix's elements and the number of negative elements. Then, it finds the smallest absolute value of a negative element. If there's an odd number of negative elements, it subtracts twice the smallest absolute value from the total sum to maximize the sum of the matrix's elements.
+
+**Approach**
+1. Initialize variables to store the total sum of the matrix's elements, the number of negative elements, and the smallest absolute value of a negative element.
+2. Iterate through each element in the matrix, adding its absolute value to the total sum and incrementing the count of negative elements if it's negative.
+3. Update the smallest absolute value of a negative element if a smaller one is found.
+4. If there's an odd number of negative elements, subtract twice the smallest absolute value from the total sum.
+5. Return the total sum as the maximum sum of the matrix's elements.
+
+**Time Complexity**
+O(n^2) - The solution iterates through each element in the matrix once, resulting in a time complexity of O(n^2), where n is the number of elements in the matrix.
+
+**Space Complexity**
+O(1) - The solution uses a constant amount of space to store the total sum, the number of negative elements, and the smallest absolute value of a negative element, resulting in a space complexity of O(1).
+
+**Key Insight**
+The key insight is that by multiplying two adjacent elements by -1, we can change the sum of the matrix by at most 4 (2 for each element). Therefore, to maximize the sum, we should aim to have an even number of negative elements, and if there's an odd number, we should make the smallest absolute value of a negative element as large as possible.
+
 ## 📊 Metrics
 
 | Metric | Value |

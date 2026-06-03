@@ -47,6 +47,28 @@ Example 2:**
 
 	- `-10^4 <= subRoot.val <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by performing a depth-first search (DFS) on the main tree, and for each node, checking if it matches the structure and values of the sub-root tree. If a match is found, it returns True; otherwise, it continues searching the rest of the tree.
+
+**Approach**
+1. Define a helper function `sub_dfs` to check if two trees are identical.
+2. Initialize a flag `self.is_exists` to False.
+3. Define another helper function `dfs` to perform the DFS on the main tree.
+4. In `dfs`, check if the current node matches the sub-root tree. If it does, set `self.is_exists` to True and return.
+5. Recursively call `dfs` on the left and right children of the current node.
+6. If `self.is_exists` is still False after visiting all nodes, return False.
+
+**Time Complexity**
+O(n * m), where n is the number of nodes in the main tree and m is the number of nodes in the sub-root tree. This is because for each node in the main tree, we potentially perform a DFS on the sub-root tree.
+
+**Space Complexity**
+O(h + m), where h is the height of the main tree and m is the number of nodes in the sub-root tree. This is because the maximum depth of the recursion stack is the height of the main tree plus the height of the sub-root tree.
+
+**Key Insight**
+The key insight is to use a flag to keep track of whether a match is found, and only return True if a match is found. This allows us to avoid unnecessary recursive calls and improves the efficiency of the solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

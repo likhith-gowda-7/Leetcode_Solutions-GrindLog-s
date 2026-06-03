@@ -48,6 +48,26 @@ Example 2:**
 
 	- `0 <= prices[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+### Intuition
+The problem can be solved using dynamic programming, where we maintain a state of whether we are holding a stock or not, and consider the maximum profit we can get by either selling, holding, or buying the stock at each step. The cooldown restriction adds an extra layer of complexity, requiring us to keep track of the previous state to ensure we don't buy immediately after selling.
+
+### Approach
+1. Initialize a deque `dp` with three states: `[0, 0]`, representing the maximum profit when holding and not holding the stock, respectively.
+2. Iterate over the prices in reverse order, updating the `dp` deque at each step.
+3. For each state (holding or not holding), calculate the maximum profit by considering the options to sell, hold, or buy the stock.
+4. Update the `dp` deque with the maximum profit for each state.
+
+### Time Complexity
+The time complexity is O(n), where n is the number of days (i.e., the length of the `prices` array), since we iterate over the prices once.
+
+### Space Complexity
+The space complexity is O(1), as the size of the `dp` deque remains constant (three states), regardless of the input size.
+
+### Key Insight
+The key insight is to use a deque to efficiently keep track of the previous state, allowing us to enforce the cooldown restriction and calculate the maximum profit at each step. This approach enables us to solve the problem in linear time and constant space.
+
 ## 📊 Metrics
 
 | Metric | Value |

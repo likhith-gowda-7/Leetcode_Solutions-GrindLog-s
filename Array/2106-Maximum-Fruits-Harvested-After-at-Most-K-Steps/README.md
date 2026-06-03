@@ -78,6 +78,29 @@ You can move at most k = 2 steps and cannot reach any position with fruits.
 
 	- `0 <= k <= 2 * 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with a twist. It maintains a window of fruits that can be harvested within the given steps `k`. The window is expanded to the right and shrunk from the left based on the minimum steps required to reach the rightmost fruit in the window from the start position.
+
+**Approach**
+1. Initialize variables to keep track of the current total fruits, left and right pointers, and the maximum count of fruits harvested.
+2. Iterate over the fruits array from left to right.
+3. For each right pointer, calculate the total fruits in the current window by adding the fruits at the right position and subtracting the fruits that are out of the window.
+4. While the left pointer is within the window, calculate the minimum steps required to reach the rightmost fruit from the start position.
+5. If the minimum steps are within the given steps `k`, break the loop; otherwise, shrink the window by moving the left pointer to the right.
+6. Update the maximum count of fruits harvested if the current total fruits is greater.
+7. Return the maximum count of fruits harvested.
+
+**Time Complexity**
+O(n * log n), where n is the number of fruits. The while loop inside the for loop has a time complexity of O(log n) due to the binary search-like behavior of the minimum steps calculation.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the variables.
+
+**Key Insight**
+The key insight is to maintain a window of fruits that can be harvested within the given steps `k`. By expanding the window to the right and shrinking it from the left, we can efficiently calculate the maximum total number of fruits that can be harvested. The minimum steps calculation is the crucial part that allows us to determine when to expand or shrink the window.
+
 ## 📊 Metrics
 
 | Metric | Value |

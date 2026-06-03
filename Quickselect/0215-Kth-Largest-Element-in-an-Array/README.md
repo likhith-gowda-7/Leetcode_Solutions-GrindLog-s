@@ -42,6 +42,25 @@ Example 2:**
 
 	- `-10^4 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing a max heap data structure to efficiently find the kth largest element in the array. By maintaining a max heap, we can easily remove the largest element and repeat this process until we find the kth largest element. This approach takes advantage of the heap property, where the parent node is always greater than its child nodes.
+
+## Approach
+1. First, we convert the input array into a max heap using the `heapq._heapify_max` function.
+2. Then, we remove the largest element from the max heap `k-1` times using the `heapq._heappop_max` function.
+3. After removing the largest elements, the root of the max heap will be the kth largest element, which we return as the result.
+
+## Time Complexity
+The time complexity is O(n + k log n), where n is the number of elements in the array. The `heapq._heapify_max` function takes O(n) time, and the `heapq._heappop_max` function takes O(log n) time. Since we call `heapq._heappop_max` k-1 times, the total time complexity is O(n + k log n).
+
+## Space Complexity
+The space complexity is O(n), as we need to store all elements in the max heap.
+
+## Key Insight
+The key insight here is that using a max heap allows us to efficiently find the kth largest element without sorting the entire array, reducing the time complexity from O(n log n) to O(n + k log n). This approach is particularly useful when k is much smaller than n, making it a efficient solution for large arrays.
+
 ## 📊 Metrics
 
 | Metric | Value |

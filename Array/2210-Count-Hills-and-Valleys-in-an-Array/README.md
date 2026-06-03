@@ -59,6 +59,29 @@ There are 0 hills and valleys so we return 0.
 
 	- `1 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the array and checking each element to see if it's a hill or valley. A hill is defined as an element that is greater than its neighbors, and a valley is defined as an element that is less than its neighbors. The solution uses a while loop to skip over duplicate elements and ensure that it's checking the correct neighbors.
+
+**Approach**
+1. Initialize a counter to keep track of the number of hills and valleys.
+2. Iterate through the array, starting from the second element and ending at the second last element.
+3. For each element, check if it's the same as the previous element. If it is, skip to the next element.
+4. If the current element is not the same as the previous element, set the left neighbor to the previous element and the right neighbor to the element after the current element.
+5. Use a while loop to skip over duplicate elements on the right side of the current element.
+6. Check if the current element is a hill or valley by comparing it to its neighbors. If it's a hill or valley, increment the counter.
+7. Return the total count of hills and valleys.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we're iterating through the array once, and the while loop inside the for loop has a maximum of n iterations.
+
+**Space Complexity**
+O(1), because we're using a constant amount of space to store the counter and the left and right neighbors.
+
+**Key Insight**
+The key insight here is to use a while loop to skip over duplicate elements, which allows us to efficiently check the correct neighbors for each element. This is important because we need to ensure that we're checking the correct neighbors to accurately determine whether an element is a hill or valley.
+
 ## 📊 Metrics
 
 | Metric | Value |

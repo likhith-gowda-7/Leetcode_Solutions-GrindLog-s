@@ -66,6 +66,28 @@ Example 2:**
 
 	- `languages[i]` contains only unique values
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The approach is based on the idea that we need to find a language that is known by the most users who don't know it yet. This is because teaching this language to these users will allow them to communicate with each other. We can achieve this by iterating over all languages and counting the number of users who need to learn each language.
+
+**Approach**
+1. Create a hash table `h1` to store the languages known by each user.
+2. Iterate over the friendships and add the users who don't know a common language to the `users` set.
+3. If no users don't know a common language, return 0.
+4. Initialize `min_teaching` to infinity and iterate over all languages.
+5. For each language, count the number of users who already know it and calculate the number of users who need to learn it.
+6. Update `min_teaching` with the minimum number of users who need to learn the current language.
+
+**Time Complexity**
+O(n^2 + m), where n is the number of languages and m is the number of friendships. This is because we iterate over all languages and friendships.
+
+**Space Complexity**
+O(n + m), where n is the number of languages and m is the number of friendships. This is because we store the languages known by each user in the hash table.
+
+**Key Insight**
+The key insight is that we can find the minimum number of users to teach by iterating over all languages and counting the number of users who need to learn each language. This is because teaching a language to the users who don't know it yet will allow them to communicate with each other.
+
 ## 📊 Metrics
 
 | Metric | Value |

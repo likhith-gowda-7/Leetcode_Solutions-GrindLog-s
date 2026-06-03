@@ -69,6 +69,29 @@ Perform second operation four times p="addb", s="", t="".
 
 	- `s` consists of only English lowercase letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to build the lexicographically smallest string that can be written on the paper. It maintains a stack of characters that are greater than or equal to the minimum character in the string `s`. When the minimum character is encountered, it is appended to the result string and the characters in the stack that are less than or equal to the minimum character are popped and appended to the result string.
+
+**Approach**
+1. Initialize the minimum character `min_char` and its count `min_char_count` in the string `s`.
+2. Initialize an empty result string `res` and an empty stack `t`.
+3. Iterate over the characters in the string `s`.
+4. If the current character is the minimum character, append it to the result string, decrement the count of the minimum character, and update the minimum character and its count if necessary.
+5. If the count of the minimum character reaches 0, break the loop if the current index is the last index of the string.
+6. If the current character is not the minimum character, push it onto the stack.
+7. After the loop, append the remaining characters in the stack (in reverse order) to the result string.
+
+**Time Complexity**
+O(n), where n is the length of the string `s`. This is because we iterate over the string `s` once and perform constant-time operations for each character.
+
+**Space Complexity**
+O(n), where n is the length of the string `s`. This is because we use a stack to store characters that are greater than or equal to the minimum character.
+
+**Key Insight**
+The key insight is to maintain a stack of characters that are greater than or equal to the minimum character in the string `s`. By doing so, we can efficiently build the lexicographically smallest string that can be written on the paper. This approach allows us to avoid unnecessary comparisons and operations, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

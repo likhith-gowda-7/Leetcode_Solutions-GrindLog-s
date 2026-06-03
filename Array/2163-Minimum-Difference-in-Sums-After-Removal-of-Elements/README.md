@@ -65,6 +65,30 @@ It can be shown that it is not possible to obtain a difference smaller than 1.
 
 	- `1 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses dynamic programming to build two arrays, `pre_arr` and `suf_arr`, which store the cumulative sums of the left and right parts of the array after removing a subsequence of size `n`. The minimum difference between the sums of the two parts is then calculated by iterating over these arrays and finding the minimum difference at each position.
+
+**Approach**
+1. Calculate the size of the subsequence `n` to be removed from the array `nums`.
+2. Initialize the `left_sum` to the sum of the first `n` elements in `nums`.
+3. Create a max heap `max_heap` containing the first `n` elements of `nums` with their signs flipped.
+4. Build the `pre_arr` array by iterating over the remaining elements in `nums` and updating the `left_sum` by pushing the current element onto the max heap and popping the smallest element from the heap.
+5. Calculate the `right_sum` to be the sum of the last `n` elements in `nums`.
+6. Create a min heap `min_heap` containing the last `n` elements of `nums`.
+7. Build the `suf_arr` array by iterating over the remaining elements in `nums` in reverse order and updating the `right_sum` by pushing the current element onto the min heap and popping the largest element from the heap.
+8. Initialize the `res` to infinity and iterate over the `pre_arr` and `suf_arr` arrays to find the minimum difference between the sums of the two parts at each position.
+
+**Time Complexity**
+O(n log n) due to the heap operations in the `pre_arr` and `suf_arr` arrays, where n is the size of the subsequence to be removed.
+
+**Space Complexity**
+O(n) for the `pre_arr` and `suf_arr` arrays, as well as the max and min heaps.
+
+**Key Insight**
+The key insight is to use dynamic programming to build the `pre_arr` and `suf_arr` arrays, which allows us to efficiently calculate the cumulative sums of the left and right parts of the array after removing a subsequence of size `n`. This approach enables us to find the minimum difference between the sums of the two parts in O(n log n) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

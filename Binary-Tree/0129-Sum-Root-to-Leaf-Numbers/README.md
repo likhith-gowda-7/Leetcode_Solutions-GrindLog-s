@@ -62,6 +62,29 @@ Therefore, sum = 495 + 491 + 40 = `1026`.
 
 	- The depth of the tree will not exceed `10`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a Depth-First Search (DFS) approach to traverse the binary tree and calculate the sum of all root-to-leaf numbers. The key insight is that we can represent each root-to-leaf path as a number by multiplying the current node's value by 10 and adding it to the current number.
+
+**Approach**
+1. Define a helper function `dfs` that takes a node and the current number as arguments.
+2. If the node is `None`, return immediately.
+3. Multiply the current number by 10 and add the node's value to get the new current number.
+4. If the node is a leaf node (i.e., it has no children), add the current number to the total sum.
+5. Recursively call `dfs` on the node's left and right children with the updated current number.
+6. Call `dfs` on the root node with an initial current number of 0.
+7. Return the total sum.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the tree. This is because we visit each node once during the DFS traversal.
+
+**Space Complexity**
+O(H), where H is the height of the tree. This is because the maximum depth of the recursive call stack is equal to the height of the tree.
+
+**Key Insight**
+The key to this solution is representing each root-to-leaf path as a number by multiplying the current node's value by 10 and adding it to the current number. This allows us to easily calculate the sum of all root-to-leaf numbers.
+
 ## 📊 Metrics
 
 | Metric | Value |

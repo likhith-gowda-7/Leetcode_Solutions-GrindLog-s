@@ -70,6 +70,27 @@ The city 0 has 1 neighboring city at a distanceThreshold = 2.
 
 	- All pairs `(from_i, to_i)` are distinct.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses Dijkstra's algorithm to find the shortest distance from each city to all other cities. It then iterates through each city and counts the number of cities that are reachable within the given distance threshold. The city with the smallest count is returned.
+
+**Approach**
+1. Create an adjacency list representation of the graph from the given edges.
+2. Initialize a distance matrix with infinite values, except for the diagonal which is 0 (since the distance from a city to itself is 0).
+3. For each city, use Dijkstra's algorithm to find the shortest distance to all other cities. This is done by maintaining a priority queue of cities to visit, where the priority is the minimum distance from the current city to the visited city.
+4. For each city, count the number of cities that are reachable within the given distance threshold.
+5. Keep track of the city with the smallest count of reachable cities. If there are multiple such cities, keep track of the city with the greatest number.
+
+**Time Complexity**
+The time complexity of the solution is O(n^2 log n), where n is the number of cities. This is because for each city, we use Dijkstra's algorithm to find the shortest distance to all other cities, which takes O(n log n) time. We do this for n cities, resulting in a total time complexity of O(n^2 log n).
+
+**Space Complexity**
+The space complexity of the solution is O(n^2), where n is the number of cities. This is because we need to store the distance matrix, which has n^2 entries.
+
+**Key Insight**
+The key insight is to use Dijkstra's algorithm to find the shortest distance from each city to all other cities, and then iterate through each city to count the number of cities that are reachable within the given distance threshold. This approach allows us to efficiently find the city with the smallest number of neighbors at a threshold distance.
+
 ## 📊 Metrics
 
 | Metric | Value |

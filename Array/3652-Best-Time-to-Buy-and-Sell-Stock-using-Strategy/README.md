@@ -132,6 +132,28 @@ Thus, the maximum possible profit is 9, which is achieved without any modificati
 
 	- `k` is even
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the maximum possible profit by considering all possible modifications to the `strategy` array. It uses a prefix sum approach to efficiently calculate the sum of profits for any given subarray. The key insight is to find the optimal subarray where the first half is modified to hold and the last half is modified to sell.
+
+**Approach**
+1. Calculate the prefix sum of profits and the base profit array.
+2. Initialize variables to keep track of the current window and the maximum profit.
+3. Iterate over the `strategy` array, considering each window of size `k`.
+4. For each window, calculate the sum of profits for the first half and the last half.
+5. Update the maximum profit if the current profit is higher.
+6. Move the window to the right by incrementing the `l` variable.
+
+**Time Complexity**
+O(n), where n is the length of the `prices` array. This is because we need to iterate over the array once to calculate the prefix sum and once to consider all possible windows.
+
+**Space Complexity**
+O(n), where n is the length of the `prices` array. This is because we need to store the prefix sum and base profit arrays.
+
+**Key Insight**
+The key insight is to use the prefix sum to efficiently calculate the sum of profits for any given subarray. By doing so, we can avoid recalculating the sum for each subarray, which would result in a time complexity of O(n^2).
+
 ## 📊 Metrics
 
 | Metric | Value |

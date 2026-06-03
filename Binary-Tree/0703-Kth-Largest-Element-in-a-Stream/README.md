@@ -83,6 +83,26 @@ kthLargest.add(9); // return 8
 
 	- At most `10^4` calls will be made to `add`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a min-heap to efficiently maintain the kth largest element in the stream of test scores. By storing the k largest elements in the heap, we can quickly determine the kth largest score after adding a new score.
+
+**Approach**
+1. Initialize the min-heap with the given stream of test scores `nums`.
+2. If the length of the heap exceeds `k`, remove the smallest element (the root of the heap) until the heap contains `k` elements.
+3. When adding a new score `val`, check if the heap has less than `k` elements. If so, push `val` onto the heap.
+4. If the heap has `k` elements and `val` is greater than the smallest element in the heap (the root), replace the smallest element with `val` using `heapq.heappushpop`.
+
+**Time Complexity**
+O(k + log(k)) for the initialization step, where k is the number of elements in the heap. For the `add` method, the time complexity is O(log(k)) because we perform a single heap operation (either push or push-pop).
+
+**Space Complexity**
+O(k) for storing the k largest elements in the heap.
+
+**Key Insight**
+The key to this solution is using a min-heap to efficiently maintain the k largest elements. By storing the k largest elements in the heap, we can quickly determine the kth largest score after adding a new score. This approach allows us to achieve a time complexity of O(log(k)) for the `add` method.
+
 ## 📊 Metrics
 
 | Metric | Value |

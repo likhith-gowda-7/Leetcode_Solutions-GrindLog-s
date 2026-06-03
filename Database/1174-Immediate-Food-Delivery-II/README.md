@@ -70,6 +70,26 @@ Hence, half the customers have immediate first orders.
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Common Table Expression (CTE) to find the minimum order date for each customer, and then calculates the percentage of immediate orders by dividing the count of immediate orders by the total count of orders for each customer.
+
+**Approach**
+1. Create a CTE `Customer_min_orderDate` that selects the minimum `order_date` for each `customer_id` from the `Delivery` table.
+2. Use a subquery to select the `customer_id` and `order_date` pairs from `Customer_min_orderDate`.
+3. In the main query, calculate the percentage of immediate orders by summing the count of orders where `order_date` equals `customer_pref_delivery_date` and dividing by the total count of orders for each customer.
+4. Use the `round` function to format the result to two decimal places.
+
+**Time Complexity**
+O(n log n) due to the grouping operation in the CTE, where n is the number of rows in the `Delivery` table.
+
+**Space Complexity**
+O(n) for storing the intermediate results of the CTE.
+
+**Key Insight**
+The key insight is to use a CTE to find the minimum order date for each customer, which allows us to efficiently calculate the percentage of immediate orders for each customer by filtering the orders based on the minimum order date. This approach avoids the need to join the `Delivery` table with itself, which would increase the time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

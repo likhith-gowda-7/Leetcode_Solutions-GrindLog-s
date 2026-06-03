@@ -43,6 +43,26 @@ A DataFrame was created on top of student_data, with two columns named `student_
 
 ```
 
+## 🧠 Solution Explanation
+
+### **Intuition**
+This problem asks us to create a pandas DataFrame from a 2D list where each inner list represents a row. It tests basic pandas DataFrame construction.
+
+### **Approach**
+1. Import the pandas library
+2. Use `pd.DataFrame()` constructor with the input 2D list
+3. Specify the column names as the second argument
+4. Return the resulting DataFrame
+
+### **Time Complexity**
+**O(n × m)** — Where n is the number of rows and m is the number of columns, as pandas needs to process each element.
+
+### **Space Complexity**
+**O(n × m)** — The DataFrame stores all elements from the input list.
+
+### **Key Insight**
+The pandas DataFrame constructor directly accepts a 2D list as input, making this a straightforward one-liner. The key is knowing the constructor's signature: `pd.DataFrame(data, columns)`.
+
 ## 📊 Metrics
 
 | Metric | Value |

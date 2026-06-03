@@ -49,6 +49,29 @@ Example 2:**
 
 	- `nums[i] != nums[i + 1]` for all valid `i`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing a modified binary search algorithm to find a peak element in the given array. This approach takes advantage of the fact that a peak element must exist in the array, given the constraints that `nums[-1] = nums[n] = -∞`. By repeatedly dividing the search space in half, we can efficiently locate a peak element.
+
+## Approach
+1. Initialize two pointers, `l` and `r`, to the start and end of the array, respectively.
+2. Loop until `l` and `r` converge.
+3. Calculate the midpoint `mid` of the current search space.
+4. Compare the value of `nums[mid]` with `nums[mid+1]`.
+5. If `nums[mid]` is greater than `nums[mid+1]`, update `r` to `mid`, as the peak element must be in the left half.
+6. Otherwise, update `l` to `mid+1`, as the peak element must be in the right half.
+7. Once `l` and `r` converge, return `l` as the index of a peak element.
+
+## Time Complexity
+The time complexity is O(log n), where n is the number of elements in the array. This is because the algorithm divides the search space in half at each iteration, resulting in a logarithmic number of steps.
+
+## Space Complexity
+The space complexity is O(1), as the algorithm only uses a constant amount of space to store the pointers and midpoint.
+
+## Key Insight
+The key insight behind this solution is the realization that a peak element must exist in the array, and that by comparing adjacent elements, we can determine which half of the search space to focus on. This allows us to efficiently locate a peak element using a modified binary search algorithm.
+
 ## 📊 Metrics
 
 | Metric | Value |

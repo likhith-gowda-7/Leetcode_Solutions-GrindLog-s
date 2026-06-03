@@ -84,6 +84,25 @@ The customers who bought all the products (5 and 6) are customers with IDs 1 and
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by grouping customers by their IDs and checking if each group has a count of distinct products equal to the total number of products in the `Product` table. This implies that the customer in each group has bought all the products.
+
+**Approach**
+1. The query selects the `customer_id` column from the `Customer` table.
+2. It groups the results by `customer_id` using the `GROUP BY` clause.
+3. The `HAVING` clause is used to filter the groups where the count of distinct `product_key` values is equal to the total number of products in the `Product` table. This is achieved by comparing the count of distinct `product_key` values in each group to the result of a subquery that counts the total number of products in the `Product` table.
+
+**Time Complexity**
+O(n log n) due to the grouping operation, where n is the number of rows in the `Customer` table. The subquery in the `HAVING` clause is executed only once, so it doesn't affect the overall time complexity.
+
+**Space Complexity**
+O(n) for storing the intermediate results of the grouping operation, where n is the number of rows in the `Customer` table.
+
+**Key Insight**
+The key insight is to use the `HAVING` clause to filter the groups based on the count of distinct products, rather than trying to join the `Customer` table with the `Product` table. This approach is more efficient and scalable, especially for large datasets.
+
 ## 📊 Metrics
 
 | Metric | Value |

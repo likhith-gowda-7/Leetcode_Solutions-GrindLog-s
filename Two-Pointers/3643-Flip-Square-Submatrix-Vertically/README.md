@@ -63,6 +63,27 @@ The diagram above shows the grid before and after the transformation.
 
 	- `1 <= k <= min(m - x, n - y)`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the rows of the square submatrix and swapping the elements at the top and bottom row indices for each column. This effectively reverses the order of the rows vertically.
+
+**Approach**
+1. Calculate the row indices of the top and bottom row of the square submatrix (`l` and `r`).
+2. Iterate through the columns of the square submatrix, swapping the elements at the top and bottom row indices for each column.
+3. Move the row indices towards the center of the submatrix (`l` increments and `r` decrements).
+4. Repeat steps 2-3 until the top and bottom row indices meet or cross.
+5. Return the updated matrix.
+
+**Time Complexity**
+O(n*k), where n is the number of columns in the matrix and k is the size of the square submatrix. This is because we iterate through each column of the submatrix once.
+
+**Space Complexity**
+O(1), as we only modify the existing matrix in-place and do not allocate any additional space.
+
+**Key Insight**
+The key insight is to recognize that we only need to swap the elements at the top and bottom row indices for each column, rather than reversing the entire row. This allows us to iterate through the columns in a single pass, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

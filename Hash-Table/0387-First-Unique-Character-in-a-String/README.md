@@ -43,6 +43,26 @@ Example 3:**
 
 	- `s` consists of only lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table (implemented as a Counter object) to count the frequency of each character in the string. It then iterates through the hash table to find the first character that appears only once. This approach works because it takes advantage of the fact that the string is relatively small and can be processed in a single pass.
+
+**Approach**
+1. Create a hash table (Counter object) to count the frequency of each character in the string.
+2. Iterate through the hash table to find the first character that has a count of 1.
+3. If such a character is found, return its index in the string using the `find()` method.
+4. If no such character is found, return -1.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we are iterating through the string twice: once to count the frequency of each character, and once to find the first unique character.
+
+**Space Complexity**
+O(n), where n is the length of the string. This is because we are storing the frequency of each character in the hash table, which requires O(n) space.
+
+**Key Insight**
+The key insight here is that we can use a single pass through the string to count the frequency of each character, and then use another pass to find the first unique character. This approach avoids the need for multiple passes through the string, making it efficient for large inputs.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -47,6 +47,26 @@ Example 2:**
 
 	- `0 <= grid[i][j] <= 200`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by breaking down the problem into smaller sub-problems and storing the results of these sub-problems to avoid redundant computation. This approach is known as dynamic programming, which is particularly useful for problems that have overlapping sub-problems. By filling up a 2D table (`dp`) in a bottom-up manner, we can efficiently compute the minimum path sum.
+
+## Approach
+1. Initialize the first cell of the `dp` table with the value of the top-left cell of the `grid`.
+2. Fill up the first row and first column of the `dp` table by adding the corresponding cell values from the `grid` to the previous cell values in the `dp` table.
+3. For each remaining cell in the `dp` table, calculate the minimum path sum by adding the current cell value from the `grid` to the minimum of the cell values above and to the left in the `dp` table.
+4. The minimum path sum is stored in the bottom-right cell of the `dp` table.
+
+## Time Complexity
+The time complexity is O(m*n), where m and n are the number of rows and columns in the `grid`, respectively. This is because we need to fill up the entire `dp` table, which has the same dimensions as the `grid`.
+
+## Space Complexity
+The space complexity is O(m*n), as we need to store the `dp` table, which has the same dimensions as the `grid`.
+
+## Key Insight
+The key insight is to recognize that the minimum path sum to a cell can be computed by considering only the minimum path sums to the cells above and to the left, which allows us to break down the problem into smaller sub-problems and solve them efficiently using dynamic programming.
+
 ## 📊 Metrics
 
 | Metric | Value |

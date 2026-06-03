@@ -61,6 +61,28 @@ fancy.getIndex(2); // return 20
 
 	- At most `10^5` calls total will be made to `append`, `addAll`, `multAll`, and `getIndex`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The Fancy class uses a combination of modular arithmetic and exponentiation by squaring to efficiently handle the `append`, `addAll`, and `multAll` operations. By storing the intermediate results and using modular arithmetic, we can avoid dealing with large numbers and achieve a constant time complexity for these operations.
+
+**Approach**
+1. Initialize an empty list `nums` to store the sequence values, and two variables `adds` and `multi` to track the cumulative sum and product of the sequence, respectively.
+2. Implement the `power` function to efficiently compute the modular exponentiation using exponentiation by squaring.
+3. In the `append` method, calculate the new value by applying the modular arithmetic formula: `(val - adds) % mod + mod`, then multiply the result by `multi` using the `power` function, and append the result to `nums`.
+4. In the `addAll` method, simply update `adds` by adding `inc` modulo `mod`.
+5. In the `multAll` method, update both `adds` and `multi` by multiplying them with `m` modulo `mod`.
+6. In the `getIndex` method, return the value at index `idx` by multiplying the corresponding value in `nums` with `multi`, adding `adds`, and taking the result modulo `mod`. If `idx` is out of bounds, return `-1`.
+
+**Time Complexity**
+The time complexity of the `append`, `addAll`, and `multAll` operations is O(1), as they involve constant-time modular arithmetic and exponentiation by squaring. The `getIndex` method also has a time complexity of O(1), as it simply accesses the corresponding value in `nums` and performs some constant-time calculations.
+
+**Space Complexity**
+The space complexity is O(n), where n is the number of `append` operations, as we store the sequence values in the `nums` list.
+
+**Key Insight**
+The key insight is to use modular arithmetic to avoid dealing with large numbers, and to use exponentiation by squaring to efficiently compute the modular exponentiation. By storing the intermediate results and using these techniques, we can achieve a constant time complexity for the `append`, `addAll`, and `multAll` operations.
+
 ## 📊 Metrics
 
 | Metric | Value |

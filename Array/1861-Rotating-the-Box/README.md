@@ -83,6 +83,30 @@ Example 3:**
 
 	- `boxGrid[i][j]` is either `'#'`, `'*'`, or `'.'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the input grid from bottom to top and from right to left. It maintains a pointer `p` to keep track of the current position where a stone should be placed. When it encounters an obstacle or a stone, it places it at the current position and updates the pointer.
+
+**Approach**
+1. Initialize an empty result grid `res` with dimensions `n x m`, where `n` and `m` are the number of columns and rows in the input grid, respectively.
+2. Iterate through each row `r` in the input grid from bottom to top.
+3. Initialize a pointer `p` to the last column `cols - 1`.
+4. Iterate through each column `c` in the row from right to left.
+5. If the current cell is an obstacle `'*'`, place it at the corresponding position in the result grid and update the pointer `p` to the previous column.
+6. If the current cell is a stone `'#'`, place it at the current position in the result grid and decrement the pointer `p`.
+7. Repeat steps 4-6 until all columns in the row have been processed.
+8. Return the result grid.
+
+**Time Complexity**
+O(m \* n), where m and n are the number of rows and columns in the input grid. This is because we iterate through each cell in the grid once.
+
+**Space Complexity**
+O(m \* n), where m and n are the number of rows and columns in the input grid. This is because we create a new grid of the same dimensions to store the result.
+
+**Key Insight**
+The key insight is to iterate through the input grid from bottom to top and from right to left, which allows us to take advantage of the fact that the stones fall due to gravity. By maintaining a pointer `p` to keep track of the current position where a stone should be placed, we can efficiently place each stone at its correct position in the result grid.
+
 ## 📊 Metrics
 
 | Metric | Value |

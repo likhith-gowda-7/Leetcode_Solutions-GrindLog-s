@@ -69,6 +69,28 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 **Follow up: **Can you come up with an algorithm that runs in `O(m + n)` time?
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by utilizing two pointers to compare elements from both arrays and placing the larger element at the end of the `nums1` array. This process continues until all elements from both arrays are merged and sorted in non-decreasing order. By starting from the end of both arrays, we can avoid shifting elements in `nums1` to make space for elements from `nums2`.
+
+## Approach
+1. Initialize pointers `i` and `j` to the last elements of the valid parts of `nums1` and `nums2`, respectively.
+2. Initialize a pointer `idx` to the last element of `nums1`.
+3. Compare the elements at `nums1[i]` and `nums2[j]`, and place the larger one at `nums1[idx]`.
+4. Decrement the corresponding pointer (`i` or `j`) and `idx`.
+5. Repeat steps 3-4 until one of the arrays is exhausted.
+6. Copy any remaining elements from the non-exhausted array to `nums1`.
+
+## Time Complexity
+The time complexity is O(m + n), where m and n are the lengths of the valid parts of `nums1` and `nums2`, respectively. This is because we are scanning both arrays once.
+
+## Space Complexity
+The space complexity is O(1), as we are modifying the input array `nums1` in-place and using a constant amount of space to store the pointers.
+
+## Key Insight
+The key insight here is to start from the end of both arrays and work backwards, allowing us to avoid shifting elements in `nums1` and making the merge process more efficient. This approach takes advantage of the fact that `nums1` has enough space to hold all elements from both arrays.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -70,6 +70,27 @@ Example 3:**
 
 	- `customers` consists only of characters `'Y'` and `'N'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a prefix sum approach to efficiently calculate the minimum penalty for a shop. By maintaining a running count of customers and non-customers, we can quickly compute the penalty for each possible closing hour. The key insight is to recognize that the penalty is determined by the difference between the total number of customers and the number of customers that arrive during the shop's operating hours.
+
+**Approach**
+1. Initialize variables to store the total number of customers, the minimum penalty, and the corresponding closing hour.
+2. Iterate through the customer visit log, maintaining a running count of customers (`curr`) and non-customers (`No`).
+3. For each hour, compute the penalty as the sum of non-customers (`No`) and the difference between the total number of customers and the current count of customers (`Yes`).
+4. Update the minimum penalty and corresponding closing hour if a lower penalty is found.
+5. Return the closing hour with the minimum penalty.
+
+**Time Complexity**
+O(n), where n is the length of the customer visit log. This is because we iterate through the log once, performing a constant amount of work for each hour.
+
+**Space Complexity**
+O(1), since we only use a few variables to store the necessary information, regardless of the input size.
+
+**Key Insight**
+The solution relies on the fact that the penalty is determined by the difference between the total number of customers and the number of customers that arrive during the shop's operating hours. By maintaining a running count of customers and non-customers, we can efficiently compute the penalty for each possible closing hour, allowing us to find the minimum penalty in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

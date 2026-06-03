@@ -67,6 +67,26 @@ findSumPairs.count(7);  // return 11; pairs (2,1), (2,2), (2,4), (3,1), (3,2), (
 
 	- At most `1000` calls are made to `add` and `count` **each**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a combination of a hash map and a list to efficiently store and update the elements of `nums2`. By maintaining a count of each element in `nums2` using a hash map, we can quickly determine the number of pairs that sum up to a given value. The list is used to update the value at a specific index in `nums2`.
+
+**Approach**
+1. In the constructor, initialize two hash maps `h1` and `h2` to store the frequency of elements in `nums1` and `nums2`, respectively. Also, store the original `nums2` list in `self.nums2`.
+2. In the `add` method, update the value at the specified index in `nums2` by adding the given value `val`. Decrement the count of the old value in `h2` and increment the count of the new value.
+3. In the `count` method, iterate through the elements of `nums1` and for each element, check if its complement (i.e., the value we need to get by adding it to `nums2[j]`) exists in `h2`. If it does, multiply the frequency of the complement in `h2` by the frequency of the current element in `h1` and add the result to the total count of pairs.
+
+**Time Complexity**
+- `add` method: O(1) because hash map operations (decrement, increment) take constant time.
+- `count` method: O(n) where n is the number of unique elements in `nums1`, because we iterate through all elements in `nums1` and perform a hash map lookup for each element.
+
+**Space Complexity**
+- The space complexity is O(n) where n is the number of unique elements in `nums2`, because we store the frequency of each element in `h2`.
+
+**Key Insight**
+The key insight is to maintain a count of each element in `nums2` using a hash map, which allows us to quickly determine the number of pairs that sum up to a given value. This approach enables us to efficiently handle the `count` method, which would be O(n^2) if we had to iterate through all elements in `nums2` for each element in `nums1`.
+
 ## 📊 Metrics
 
 | Metric | Value |

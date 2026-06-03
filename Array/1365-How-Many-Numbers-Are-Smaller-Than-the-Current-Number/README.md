@@ -56,6 +56,28 @@ Example 3:**
 
 	- `0 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by first creating a hash table to store the indices of each number in the input array. Then, it sorts the array and iterates through it, updating the result array with the count of smaller numbers for each number.
+
+**Approach**
+1. Create a hash table `h1` to store the indices of each number in the input array `nums`.
+2. Sort the array `nums` in ascending order.
+3. Initialize a result array `res` of the same length as `nums` with all elements set to 0.
+4. Iterate through the sorted array `nums`. For each number, if it is different from the previous number, it means that all numbers less than it have been counted. So, we set the count of smaller numbers for each of these numbers to the current index `i`.
+5. Remove the indices of the current number from the hash table `h1` to avoid counting it again.
+6. Return the result array `res`.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the length of the input array. The subsequent steps have a linear time complexity.
+
+**Space Complexity**
+O(n) for the hash table and the result array, where n is the length of the input array.
+
+**Key Insight**
+The key insight is to take advantage of the fact that the array is sorted, which allows us to count the smaller numbers for each number in a single pass through the array. This approach avoids the need to compare each number with every other number, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

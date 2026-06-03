@@ -58,6 +58,30 @@ Example 3:**
 
 	- `words[i]` consists of English letters (both lowercase and uppercase).
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over each word in the input list and checking if it can be typed on a single row of the American keyboard. We achieve this by converting each word to lowercase and checking if all its characters are present in one of the keyboard rows.
+
+**Approach**
+1. Create a set of keyboard rows for easy lookup.
+2. Initialize an empty list to store the result.
+3. Iterate over each word in the input list.
+4. Convert the word to lowercase for case-insensitive comparison.
+5. Iterate over each keyboard row.
+6. Check if all characters in the word are present in the current keyboard row.
+7. If a match is found, add the original word to the result list and break the loop.
+8. Return the result list.
+
+**Time Complexity**
+O(n * m * k), where n is the number of words, m is the maximum length of a word, and k is the number of keyboard rows. This is because we iterate over each word, then over each character in the word, and finally over each keyboard row.
+
+**Space Complexity**
+O(n + k), where n is the number of words and k is the number of keyboard rows. This is because we store the result list and the set of keyboard rows.
+
+**Key Insight**
+The key insight is to use a set of keyboard rows for efficient lookup, allowing us to check if a word can be typed on a single row in O(k) time, where k is the number of rows. This optimization is crucial for achieving a reasonable time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -62,6 +62,26 @@ Hence, answer = [10,25]
 
 	- `1 <= seats_i <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a technique called "prefix sum" to efficiently calculate the total number of seats reserved for each flight. By maintaining a running sum of the seats reserved for each flight, we can easily calculate the total seats reserved for any given flight.
+
+**Approach**
+1. Initialize an array `seats` of size `n+1` with all elements set to 0. This array will store the total number of seats reserved for each flight.
+2. Iterate through each booking in the `bookings` array. For each booking, add the number of seats reserved to the `seats` array at the index corresponding to the first flight in the booking, and subtract the number of seats reserved from the `seats` array at the index corresponding to the last flight in the booking.
+3. Iterate through the `seats` array, starting from the second element. For each element, add the value of the previous element to it. This effectively calculates the running sum of the seats reserved for each flight.
+4. Return all elements of the `seats` array except the last one, which represents the total number of seats reserved for the `n+1`-th flight (which is out of bounds).
+
+**Time Complexity**
+O(n + m), where n is the number of flights and m is the number of bookings. The first loop iterates through each booking, and the second loop iterates through the `seats` array, which has a size of n+1.
+
+**Space Complexity**
+O(n), where n is the number of flights. The `seats` array has a size of n+1, which is the dominant space complexity term.
+
+**Key Insight**
+The key insight behind this solution is that by maintaining a running sum of the seats reserved for each flight, we can efficiently calculate the total seats reserved for any given flight. This is achieved by adding and subtracting the number of seats reserved for each booking from the corresponding indices in the `seats` array.
+
 ## 📊 Metrics
 
 | Metric | Value |

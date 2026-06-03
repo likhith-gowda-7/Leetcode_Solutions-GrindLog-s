@@ -78,6 +78,29 @@ Note that it does not matter if the fence encloses any area, the first and secon
 
 	- All `points[i]` are distinct.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by sorting the points based on their x-coordinates and then iterating through the sorted points to find pairs of points that can form a valid rectangular fence for Alice and Bob. The key insight is to find the maximum y-coordinate for each pair of points to ensure that the rectangular fence is valid.
+
+**Approach**
+1. Sort the points based on their x-coordinates and then by their y-coordinates in descending order.
+2. Initialize a counter `count` to store the number of valid pairs of points.
+3. Iterate through the sorted points, starting from the first point.
+4. For each point, iterate through the remaining points to find a point that can form a valid pair.
+5. Check if the current point's y-coordinate is greater than or equal to the y-coordinate of the next point and also greater than the maximum y-coordinate found so far.
+6. If the condition is met, increment the `count` and update the maximum y-coordinate.
+7. Return the total count of valid pairs.
+
+**Time Complexity**
+O(n^2) - The solution has a nested loop structure, where the outer loop iterates through the points and the inner loop also iterates through the points. This results in a quadratic time complexity.
+
+**Space Complexity**
+O(n log n) - The solution sorts the points using the `sort` method, which has a time complexity of O(n log n) in Python. This results in a space complexity of O(n log n) due to the sorting operation.
+
+**Key Insight**
+The key insight is to find the maximum y-coordinate for each pair of points to ensure that the rectangular fence is valid. This is achieved by iterating through the points and keeping track of the maximum y-coordinate found so far.
+
 ## 📊 Metrics
 
 | Metric | Value |

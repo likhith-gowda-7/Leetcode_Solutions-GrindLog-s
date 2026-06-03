@@ -51,6 +51,29 @@ There is no `'*'` in the string.
 
 	- The input is generated such that it is possible to delete all `'*'` characters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by maintaining a hash table (dictionary in Python) to track the positions of each character in the string. When a '*' is encountered, it finds the smallest character in the hash table, removes it from the hash table and the string, and continues. This approach ensures that the resulting string is lexicographically smallest.
+
+**Approach**
+1. Initialize an empty hash table `h1` to store the positions of each character in the string.
+2. Iterate through the string `s` from left to right.
+3. If the current character is not '*', add it to the hash table with its position.
+4. If the current character is '*', find the smallest character in the hash table (i.e., the key with the smallest ASCII value).
+5. Remove the smallest character from the hash table and the string.
+6. Repeat steps 3-5 until the end of the string is reached.
+7. Iterate through the hash table and add the characters with their positions to the result string `res`, in lexicographically smallest order.
+
+**Time Complexity**
+O(n), where n is the length of the string `s`. This is because we iterate through the string once to populate the hash table, and then iterate through the hash table once to construct the result string.
+
+**Space Complexity**
+O(n), where n is the length of the string `s`. This is because in the worst case, we need to store all characters in the hash table.
+
+**Key Insight**
+The key insight is to use a hash table to efficiently track the positions of each character in the string, and to remove the smallest character when a '*' is encountered. This approach ensures that the resulting string is lexicographically smallest.
+
 ## 📊 Metrics
 
 | Metric | Value |

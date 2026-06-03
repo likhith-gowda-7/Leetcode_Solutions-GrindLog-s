@@ -71,6 +71,26 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10^3`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires rearranging the input array `nums` consisting of `2n` elements into a new array where elements from the first `n` elements are interleaved with elements from the second `n` elements. This can be achieved by iterating over the input array and placing elements at specific indices in the result array.
+
+**Approach**
+1. Initialize an empty result array `res` with the same length as the input array `nums`.
+2. Initialize an index `idx` to 0, which will be used to keep track of the current element in the input array.
+3. Iterate over the input array in steps of 2, starting from index 0. For each pair of elements, place the first element at the current index `i` in the result array and increment `idx` by 1.
+4. Iterate over the input array in steps of 2, starting from index 1. For each pair of elements, place the second element at the current index `j` in the result array and increment `idx` by 1.
+
+**Time Complexity**
+O(n) - The algorithm iterates over the input array twice, each time in steps of 2, resulting in a total of n iterations.
+
+**Space Complexity**
+O(n) - The algorithm creates a new result array of the same length as the input array, which requires additional space proportional to the size of the input array.
+
+**Key Insight**
+The key insight is to recognize that the input array can be divided into two interleaved subarrays, and by iterating over the array in steps of 2, we can efficiently construct the desired output array. This approach takes advantage of the fact that the input array has a fixed length of 2n, allowing us to use a simple iterative solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

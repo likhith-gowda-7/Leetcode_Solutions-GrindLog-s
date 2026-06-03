@@ -86,6 +86,29 @@ The answers that read integer 3 from the stream are not accepted.
 
 	- `target` is strictly increasing.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to simulate the stack operations. It iterates through the range of integers from 1 to `n` and decides whether to push or pop an integer from the stack based on whether it matches the current target integer. This approach ensures that the stack elements match the target array as soon as possible.
+
+**Approach**
+1. Initialize an empty list `ops` to store the stack operations and an index `idx` to track the current target integer.
+2. Iterate through the range of integers from 1 to `n`.
+3. For each integer `i`, append "Push" to `ops` to simulate pushing `i` onto the stack.
+4. If `i` does not match the current target integer `target[idx]`, append "Pop" to `ops` to simulate popping the top element from the stack.
+5. If `i` matches the current target integer, increment `idx` to move to the next target integer.
+6. If the current target integer index `idx` reaches the length of the target array, break the loop.
+7. Return the list of stack operations `ops`.
+
+**Time Complexity**
+O(n), where n is the length of the range of integers from 1 to `n`. This is because we iterate through the range once.
+
+**Space Complexity**
+O(n), where n is the length of the range of integers from 1 to `n`. This is because we store the stack operations in a list of length up to n.
+
+**Key Insight**
+The key insight is to use a greedy approach to simulate the stack operations. By always pushing the current integer onto the stack and popping it if it doesn't match the target, we ensure that the stack elements match the target array as soon as possible. This approach avoids unnecessary operations and minimizes the number of stack operations required.
+
 ## 📊 Metrics
 
 | Metric | Value |

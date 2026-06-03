@@ -52,6 +52,26 @@ The third child gets 1 candy because it satisfies the above two conditions.
 
 	- `0 <= ratings[i] <= 2 * 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The problem can be solved using a greedy approach by iterating through the ratings array twice. The first pass ensures that children with higher ratings than their left neighbor get more candies, and the second pass ensures that children with higher ratings than their right neighbor get more candies. This approach works because it satisfies the condition that children with higher ratings get more candies than their neighbors.
+
+## Approach
+1. Initialize an array `candy` with the same length as the `ratings` array, where each child is initially assigned one candy.
+2. Iterate through the `ratings` array from left to right, and for each child, if their rating is higher than their left neighbor's rating, assign them one more candy than their left neighbor.
+3. Iterate through the `ratings` array from right to left, and for each child, if their rating is higher than their right neighbor's rating, update their candy count to be the maximum of their current candy count and one more than their right neighbor's candy count.
+4. Return the sum of the `candy` array, which represents the minimum number of candies needed.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of children, because we are making two passes through the `ratings` array.
+
+## Space Complexity
+The space complexity is O(n), where n is the number of children, because we are using an additional array `candy` to store the candy count for each child.
+
+## Key Insight
+The key insight is to use two passes to ensure that the conditions are met from both the left and right neighbors, and to use the `max` function to update the candy count in the second pass to avoid overwriting previously assigned candies.
+
 ## 📊 Metrics
 
 | Metric | Value |

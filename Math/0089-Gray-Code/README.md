@@ -60,6 +60,27 @@ Example 2:**
 
 	- `1 <= n <= 16`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes the property of gray code sequences, where each integer differs from its adjacent integer by exactly one bit. This can be achieved by performing a bitwise XOR operation between the integer and its right-shifted version, effectively flipping the bits from the rightmost position to the left.
+
+**Approach**
+1. Initialize an empty list `res` to store the gray code sequence.
+2. Iterate over the range of integers from 0 to 2^n - 1.
+3. For each integer `i`, perform a bitwise XOR operation between `i` and its right-shifted version `i >> 1`.
+4. Append the result of the XOR operation to the `res` list.
+5. Return the `res` list containing the gray code sequence.
+
+**Time Complexity**
+O(2^n) - The time complexity is linear with respect to the number of integers in the sequence, as we are iterating over the range of integers from 0 to 2^n - 1.
+
+**Space Complexity**
+O(2^n) - The space complexity is also linear with respect to the number of integers in the sequence, as we are storing the gray code sequence in the `res` list.
+
+**Key Insight**
+The key insight behind this solution is the property of gray code sequences, where each integer differs from its adjacent integer by exactly one bit. By performing a bitwise XOR operation between the integer and its right-shifted version, we can effectively flip the bits from the rightmost position to the left, resulting in a valid gray code sequence.
+
 ## 📊 Metrics
 
 | Metric | Value |

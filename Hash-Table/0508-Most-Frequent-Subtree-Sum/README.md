@@ -43,6 +43,35 @@ Example 2:**
 
 	- `-10^5 <= Node.val <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a depth-first search (DFS) approach to traverse the binary tree, calculating the subtree sum for each node. It then uses a hash table to count the frequency of each subtree sum. The most frequent subtree sums are stored in a list, which is returned as the result.
+
+**Approach**
+1. Define a hash table `h1` to store the frequency of each subtree sum.
+2. Define a list `res` to store the most frequent subtree sums.
+3. Initialize a variable `maxi` to store the maximum frequency found so far.
+4. Define a recursive DFS function `dfs` that takes a node `root` as input.
+5. If the node is `None`, return 0 (base case).
+6. Recursively call `dfs` on the left and right children of the node.
+7. Calculate the subtree sum of the current node by adding the sums of its left and right children to its own value.
+8. Increment the count of the subtree sum in the hash table `h1`.
+9. If the count of the subtree sum is equal to `maxi`, append it to the list `res`.
+10. If the count of the subtree sum is greater than `maxi`, update `maxi` and reset `res` to contain only the current subtree sum.
+11. Return the subtree sum of the current node.
+12. Call `dfs` on the root node to start the traversal.
+13. Return the list `res` containing the most frequent subtree sums.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the tree. This is because each node is visited once during the DFS traversal.
+
+**Space Complexity**
+O(N), where N is the number of nodes in the tree. This is because in the worst case, the hash table `h1` will store the subtree sum of each node, resulting in a space complexity of O(N).
+
+**Key Insight**
+The key insight is to use a hash table to count the frequency of each subtree sum, allowing us to efficiently identify the most frequent subtree sums. The recursive DFS approach enables us to traverse the tree in a bottom-up manner, calculating the subtree sum for each node and updating the frequency count in the hash table.
+
 ## 📊 Metrics
 
 | Metric | Value |

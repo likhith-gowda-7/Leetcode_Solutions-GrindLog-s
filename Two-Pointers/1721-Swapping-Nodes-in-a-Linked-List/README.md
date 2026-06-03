@@ -46,6 +46,28 @@ Example 2:**
 
 	- `0 <= Node.val <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses two pointers, `left` and `right`, to traverse the linked list. The `left` pointer is used to reach the `k^th` node from the beginning, while the `right` pointer is used to reach the `k^th` node from the end. The values of these two nodes are then swapped.
+
+**Approach**
+1. Initialize two pointers, `left` and `right`, to the head of the linked list.
+2. Move the `left` pointer `k-1` steps ahead to reach the node before the `k^th` node from the beginning.
+3. Create a dummy node `dummy` and set it to the node after the `left` pointer. This dummy node will be used to traverse the linked list from the end.
+4. Move the `right` pointer to the end of the linked list by traversing through the nodes after the `dummy` node.
+5. Swap the values of the `left` and `right` nodes.
+6. Return the head of the linked list.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the linked list. This is because we traverse the linked list twice: once to move the `left` pointer `k-1` steps ahead, and once to move the `right` pointer to the end of the linked list.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the `left`, `right`, and `dummy` pointers.
+
+**Key Insight**
+The key insight is to use two pointers to traverse the linked list in a way that allows us to reach the `k^th` node from both the beginning and the end. This is achieved by moving the `left` pointer `k-1` steps ahead and creating a dummy node to traverse the linked list from the end.
+
 ## 📊 Metrics
 
 | Metric | Value |

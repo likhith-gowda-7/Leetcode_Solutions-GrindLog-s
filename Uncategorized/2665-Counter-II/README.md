@@ -61,6 +61,28 @@ counter.reset(); // 0
 
 	- `calls[i]` is one of "increment", "decrement" and "reset"
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a closure to create a counter object with three functions: increment, decrement, and reset. The key insight is to use a mutable variable (`currentCount`) to store the initial value, and then use a non-mutable variable (`init`) to store the current count. This allows the functions to modify the current count without affecting the initial value.
+
+**Approach**
+1. Initialize a mutable variable `currentCount` with the input `init`.
+2. Return an object with three functions:
+   1. `increment()`: increments the current count by 1 and returns it.
+   2. `reset()`: sets the current count to the initial value (`currentCount`) and returns it.
+   3. `decrement()`: decrements the current count by 1 and returns it.
+3. In the `increment()` and `decrement()` functions, use the non-mutable variable `init` to store the current count.
+
+**Time Complexity**
+O(1) for each function call, as the operations are constant-time.
+
+**Space Complexity**
+O(1) as the space required does not change with the size of the input, only the number of function calls.
+
+**Key Insight**
+The key insight is to use a mutable variable to store the initial value and a non-mutable variable to store the current count, allowing the functions to modify the current count without affecting the initial value. This is a common technique in functional programming to achieve mutable behavior while still using immutable data structures.
+
 ## 📊 Metrics
 
 | Metric | Value |

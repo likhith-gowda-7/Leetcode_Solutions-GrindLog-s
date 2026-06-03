@@ -57,6 +57,27 @@ One of the longest balanced substrings is `"ab"` because both distinct character
 
 	- `s` contains only the characters `'a'`, `'b'`, and `'c'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by breaking down the problem into three cases: when all characters are the same, when two characters are the same, and when three characters are the same. For each case, it uses a hash table to store the count of characters and their positions, and then finds the maximum length of the balanced substring.
+
+**Approach**
+
+1. The `mono` function handles the case when all characters are the same. It initializes a counter `cnt` to 1 and iterates through the string, incrementing `cnt` if the current character is the same as the previous one, and resetting `cnt` to 1 otherwise. It keeps track of the maximum value of `cnt` and returns it.
+2. The `duo` function handles the case when two characters are the same. It uses a hash table `pos` to store the count of characters and their positions. It iterates through the string, updating the count of characters and their positions, and checks if the current count is in the hash table. If it is, it updates the maximum length of the balanced substring. If not, it adds the current count to the hash table.
+3. The `trio` function handles the case when three characters are the same. It uses a hash table `pos` to store the count of characters and their positions. It iterates through the string, updating the count of characters and their positions, and checks if the current count is in the hash table. If it is, it updates the maximum length of the balanced substring. If not, it adds the current count to the hash table.
+4. The `longestBalanced` function calls the `mono`, `duo`, and `trio` functions for each case and returns the maximum length of the balanced substring.
+
+**Time Complexity**
+The time complexity of the solution is O(n), where n is the length of the string. This is because each function iterates through the string once, and the hash table operations take constant time.
+
+**Space Complexity**
+The space complexity of the solution is O(n), where n is the length of the string. This is because the hash table can store up to n elements in the worst case.
+
+**Key Insight**
+The key insight behind the solution is to break down the problem into three cases and use a hash table to store the count of characters and their positions. This allows us to efficiently find the maximum length of the balanced substring for each case.
+
 ## 📊 Metrics
 
 | Metric | Value |

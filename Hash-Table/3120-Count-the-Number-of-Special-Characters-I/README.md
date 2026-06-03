@@ -53,6 +53,27 @@ The only special character in `word` is `'b'`.
 
 	- `word` consists of only lowercase and uppercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires counting the number of special characters in a given string, where a special character appears both in lowercase and uppercase. This can be achieved by creating a hash table to store the frequency of each character and then iterating through the hash table to count the special characters.
+
+**Approach**
+1. Create a hash table `h1` to store the frequency of each character in the string `word` using the `Counter` class from the `collections` module.
+2. Initialize a variable `count` to store the number of special characters.
+3. Iterate through the keys of the hash table `h1`.
+4. For each key, check if the character is uppercase and its lowercase version is also present in the hash table, or if the character is lowercase and its uppercase version is present in the hash table. If either condition is true, increment the `count` variable.
+5. Return the `count` variable divided by 2, as each special character is counted twice.
+
+**Time Complexity**
+O(n), where n is the length of the string `word`. This is because we are iterating through the string once to create the hash table and then iterating through the hash table once to count the special characters.
+
+**Space Complexity**
+O(n), where n is the length of the string `word`. This is because we are storing the frequency of each character in the hash table, which requires O(n) space.
+
+**Key Insight**
+The key insight is to use a hash table to efficiently store and count the frequency of each character, and then iterate through the hash table to count the special characters. This approach allows us to solve the problem in linear time and space complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

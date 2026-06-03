@@ -52,6 +52,29 @@ snapshotArr.get(0,0);  // Get the value of array[0] with snap_id = 0, return 5
 
 	- At most `5 * 10^4` calls will be made to `set`, `snap`, and `get`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The SnapshotArray solution uses a combination of a hash table and binary search to efficiently store and retrieve array values at specific snapshots. The key insight is to store the history of updates for each index in the hash table, allowing for fast retrieval of values at specific snapshots.
+
+**Approach**
+1. Initialize a hash table `arr` to store the history of updates for each index, where each key is an index and the value is a list of tuples containing the snapshot ID and the updated value.
+2. Initialize a counter `call` to keep track of the number of snapshots taken.
+3. In the `set` method, check if the latest update for the given index is from the current snapshot. If not, append a new tuple to the list of updates for that index.
+4. In the `snap` method, increment the `call` counter and return the current snapshot ID minus 1.
+5. In the `get` method, use binary search to find the latest update for the given index that is from a snapshot with an ID less than or equal to the given `snap_id`. Return the value associated with that update.
+
+**Time Complexity**
+- `set`: O(1) amortized, since we only append to the list of updates for an index if the latest update is not from the current snapshot.
+- `snap`: O(1), since we simply increment the `call` counter.
+- `get`: O(log n), where n is the number of updates for the given index, since we use binary search to find the latest update from a snapshot with an ID less than or equal to the given `snap_id`.
+
+**Space Complexity**
+- O(n), where n is the total number of updates across all indices, since we store the history of updates for each index in the hash table.
+
+**Key Insight**
+The key insight is to use a hash table to store the history of updates for each index, allowing for fast retrieval of values at specific snapshots. This approach enables efficient implementation of the SnapshotArray interface.
+
 ## 📊 Metrics
 
 | Metric | Value |

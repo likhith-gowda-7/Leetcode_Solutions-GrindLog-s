@@ -47,6 +47,27 @@ Example 2:**
 
 **Note:** This question is the same as 530: [https://leetcode.com/problems/minimum-absolute-difference-in-bst/](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution takes advantage of the property of Binary Search Trees (BSTs) where all nodes to the left of a node have values less than the node, and all nodes to the right have values greater. This property allows us to perform an in-order traversal of the tree, which visits nodes in ascending order. By storing the node values in a list, we can then find the minimum difference between any two adjacent nodes in the list.
+
+**Approach**
+1. Define an in-order traversal function `inorder` that recursively visits nodes in ascending order.
+2. Store the node values in a list `res` during the in-order traversal.
+3. Initialize a variable `mini` to store the minimum difference found so far, set to infinity.
+4. Iterate through the list `res` starting from the second element (index 1), and for each pair of adjacent elements, update `mini` with the minimum of its current value and the absolute difference between the current element and the previous element.
+5. Return the minimum difference `mini` found.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the tree. This is because we visit each node once during the in-order traversal.
+
+**Space Complexity**
+O(N), where N is the number of nodes in the tree. This is because we store the node values in a list of size N.
+
+**Key Insight**
+The key insight is to leverage the property of BSTs to perform an in-order traversal, which allows us to find the minimum difference between any two adjacent nodes in the list. This approach is efficient because it only requires a single pass through the tree, resulting in a linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

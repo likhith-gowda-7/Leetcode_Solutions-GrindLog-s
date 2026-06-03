@@ -58,6 +58,27 @@ Example 3:**
 
 	- `0 <= n <= 30`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones. This problem asks us to calculate the nth Fibonacci number efficiently. We can use dynamic programming to store and reuse previously computed values, avoiding redundant calculations.
+
+**Approach**
+1. Handle the base cases where n is less than 2, returning n directly.
+2. Initialize two variables a and b to store the last two Fibonacci numbers (0 and 1).
+3. Iterate from n = 2 to n (inclusive) using a for loop.
+4. In each iteration, update a and b to the next two Fibonacci numbers by swapping their values and adding a to b.
+5. After the loop, return the last calculated Fibonacci number b.
+
+**Time Complexity**
+O(n) - The loop runs n-1 times, and each iteration performs a constant amount of work.
+
+**Space Complexity**
+O(1) - We only use a constant amount of space to store the last two Fibonacci numbers, regardless of the input size.
+
+**Key Insight**
+The key insight is that we only need to keep track of the last two Fibonacci numbers to calculate the next one. This allows us to optimize the space complexity to O(1) and still achieve a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

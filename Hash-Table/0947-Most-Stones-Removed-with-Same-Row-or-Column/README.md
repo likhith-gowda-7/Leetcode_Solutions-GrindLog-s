@@ -67,6 +67,29 @@ Example 3:**
 
 	- No two stones are at the same coordinate point.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Union-Find data structure to group stones that share the same row or column. By treating each row and column as a separate node, we can efficiently identify connected components and remove stones that are part of the same group.
+
+**Approach**
+1. Find the maximum row and column indices to determine the number of nodes needed.
+2. Initialize a Union-Find data structure with `n+1` nodes, where `n` is the number of stones.
+3. Define a `find` function to find the root of a node and a `union` function to merge two nodes.
+4. Iterate through each stone and create two nodes: one for the row and one for the column.
+5. Use the `union` function to merge the row and column nodes if they share the same stone.
+6. Keep track of used nodes to avoid duplicate merges.
+7. Find the roots of all used nodes and return the difference between the total number of stones and the number of roots.
+
+**Time Complexity**
+The time complexity is O(n log n) due to the `union` operation, which takes O(log n) time in the worst case. The `find` operation takes O(1) time on average.
+
+**Space Complexity**
+The space complexity is O(n) for storing the Union-Find data structure and used nodes.
+
+**Key Insight**
+The key insight is to treat each row and column as a separate node, allowing us to efficiently identify connected components using the Union-Find data structure. This approach enables us to remove stones that share the same row or column in a single pass, resulting in a efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

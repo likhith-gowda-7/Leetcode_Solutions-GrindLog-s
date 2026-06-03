@@ -56,6 +56,27 @@ There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
 
 	- `s[i]` is either `'a'` or `'b'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by maintaining a counter for the number of 'b's encountered so far. If an 'a' is encountered after any 'b's have been seen, it immediately returns False, as this means 'b's have appeared before 'a's. If it iterates through the entire string without returning False, it returns True, indicating that all 'a's appear before all 'b's.
+
+**Approach**
+1. Initialize a counter `b` to 0, which will keep track of the number of 'b's encountered so far.
+2. Iterate through each character `val` in the input string `s`.
+3. If `val` is 'b', increment the counter `b`.
+4. If `val` is 'a' and `b` is greater than 0, return False, as this means 'b's have appeared before 'a's.
+5. If the iteration completes without returning False, return True.
+
+**Time Complexity**
+O(n), where n is the length of the input string `s`. This is because we make a single pass through the string, performing constant-time operations for each character.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the counter `b`, regardless of the size of the input string.
+
+**Key Insight**
+The key insight here is that we don't actually need to keep track of the indices of the 'a's and 'b's, but rather just the relative order in which they appear. By maintaining a counter for the number of 'b's seen so far, we can efficiently determine whether all 'a's appear before all 'b's.
+
 ## 📊 Metrics
 
 | Metric | Value |

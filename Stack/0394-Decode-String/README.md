@@ -60,6 +60,29 @@ Example 3:**
 
 	- All the integers in `s` are in the range `[1, 300]`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by using a stack to keep track of the characters and the repeat numbers. When it encounters a ']', it pops characters from the stack until it finds the corresponding '[', and then it pops the repeat number from the stack and multiplies it with the popped characters.
+
+**Approach**
+1. Initialize an empty stack `st` and an empty result string `res`.
+2. Iterate over each character `i` in the input string `s`.
+3. If `i` is ']', pop characters from the stack until it finds the corresponding '['.
+4. Pop the repeat number from the stack and multiply it with the popped characters to get the repeated string.
+5. Push the repeated string onto the stack.
+6. If `i` is not ']', push it onto the stack.
+7. After iterating over the entire string, join the characters in the stack to get the final result.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we are iterating over the string once.
+
+**Space Complexity**
+O(n), where n is the length of the input string. This is because in the worst case, we need to store all characters in the stack.
+
+**Key Insight**
+The key insight here is to use a stack to keep track of the characters and the repeat numbers. By popping characters from the stack when we encounter a ']', we can correctly repeat the characters according to the given encoding rule.
+
 ## 📊 Metrics
 
 | Metric | Value |

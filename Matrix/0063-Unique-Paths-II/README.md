@@ -57,6 +57,28 @@ Example 2:**
 
 	- `obstacleGrid[i][j]` is `0` or `1`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by using a top-down dynamic programming (DP) approach to calculate the number of unique paths to the bottom-right corner. The key idea is to break down the problem into smaller sub-problems and store the results of these sub-problems to avoid redundant calculations. The presence of obstacles in the grid is handled by checking if the current cell is an obstacle and returning 0 if it is.
+
+## Approach
+1. Check if the goal cell (bottom-right corner) is an obstacle. If it is, return 0 because there's no way to reach it.
+2. Initialize a memoization dictionary with the base case, which is the goal cell itself.
+3. Define a recursive function `dfs` that takes the current row and column as parameters.
+4. In the `dfs` function, check if the current cell is out of bounds or an obstacle. If it is, return 0.
+5. If the current cell is not in the memoization dictionary, calculate the number of unique paths to it by recursively calling `dfs` for the cell below and the cell to the right, and store the result in the dictionary.
+6. Return the number of unique paths to the current cell.
+
+## Time Complexity
+The time complexity is O(m*n), where m and n are the number of rows and columns in the grid, respectively. This is because each cell is visited at most once and the recursive function calls are memoized to avoid redundant calculations.
+
+## Space Complexity
+The space complexity is also O(m*n), which is used to store the memoization dictionary. In the worst-case scenario, the dictionary will store a value for each cell in the grid.
+
+## Key Insight
+The key insight here is to use memoization to store the results of sub-problems and avoid redundant calculations. This approach allows the solution to efficiently handle grids with obstacles and calculate the number of unique paths to the bottom-right corner.
+
 ## 📊 Metrics
 
 | Metric | Value |

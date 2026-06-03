@@ -45,6 +45,28 @@ Example 2:**
 
 	- `1 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with a set to keep track of unique elements within the window. The key insight is that we can efficiently remove elements from the window by checking if the current element is already in the set, and if so, we remove the leftmost element from the window.
+
+**Approach**
+1. Initialize variables to keep track of the maximum sum (`maxi`), the left pointer of the window (`l`), a set to store unique elements within the window (`uni`), and the current sum within the window (`curr`).
+2. Iterate over the array with the right pointer (`r`).
+3. For each element, add it to the current sum and the set of unique elements.
+4. If the current element is already in the set, remove the leftmost element from the set and subtract its value from the current sum, and move the left pointer to the right.
+5. Update the maximum sum if the current sum is greater.
+6. Return the maximum sum after iterating over the entire array.
+
+**Time Complexity**
+O(n), where n is the length of the array, because we make a single pass over the array.
+
+**Space Complexity**
+O(n), where n is the length of the array, because in the worst case, we store all unique elements within the window in the set.
+
+**Key Insight**
+The key to this solution is the efficient removal of elements from the window using a set, which allows us to maintain a sliding window of unique elements and update the maximum sum in O(1) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

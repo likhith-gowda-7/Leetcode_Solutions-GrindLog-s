@@ -54,6 +54,27 @@ Example 2:**
 
 **Follow-up:** Could you solve it in `O(n log(k))` time and `O(n)` extra space?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of a hash map (Counter) to count the frequency of each word, and a frequency array to store the words with the same frequency. By sorting the hash map and iterating through the frequency array in reverse order, we can efficiently find the k most frequent words.
+
+**Approach**
+1. Use a hash map (Counter) to count the frequency of each word in the input array.
+2. Sort the hash map by value (frequency) and then by key (word).
+3. Create a frequency array with the maximum frequency as the size.
+4. Iterate through the sorted hash map and append each word to the corresponding frequency array.
+5. Iterate through the frequency array in reverse order, appending each word to the result array until we have k words.
+
+**Time Complexity**
+O(n log n) due to the sorting of the hash map, where n is the number of unique words.
+
+**Space Complexity**
+O(n) for the hash map and frequency array, where n is the number of unique words.
+
+**Key Insight**
+The key insight is to use a frequency array to store the words with the same frequency, allowing us to efficiently iterate through the words in reverse order of frequency and lexicographical order. This approach avoids the need for a complex sorting algorithm and makes the solution more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

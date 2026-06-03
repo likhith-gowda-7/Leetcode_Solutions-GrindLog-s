@@ -63,6 +63,27 @@ Example 3:**
 
 **Follow up:** Can you solve the problem in `O(log(n))` time complexity?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes two binary search functions to find the last index of a negative number and the first index of a positive number in the sorted array. This allows us to count the number of negative and positive integers separately and return the maximum count.
+
+**Approach**
+1. Define two helper functions `pos` and `neg` to perform binary search for the last negative and first positive numbers respectively.
+2. In `pos`, initialize two pointers `l` and `r` to the start and end of the array. Perform binary search to find the last negative number by checking the middle element. If the middle element is negative, move `l` to `mid + 1`. Otherwise, move `r` to `mid - 1`.
+3. In `neg`, perform binary search to find the first positive number by checking the middle element. If the middle element is positive, move `r` to `mid - 1`. Otherwise, move `l` to `mid + 1`.
+4. Call `pos` and `neg` functions to get the last index of a negative number and the first index of a positive number.
+5. Return the maximum count between the number of negative integers (`len(nums[:neg])`) and the number of positive integers (`len(nums[pos:])`).
+
+**Time Complexity**
+O(log n + log n) = O(log n), where n is the length of the array. This is because each binary search function takes O(log n) time.
+
+**Space Complexity**
+O(1), as the space complexity is constant and does not depend on the input size.
+
+**Key Insight**
+The key insight is to use binary search to find the last negative and first positive numbers in the sorted array, which allows us to count the number of negative and positive integers separately and return the maximum count. This approach takes advantage of the fact that the array is sorted in non-decreasing order.
+
 ## 📊 Metrics
 
 | Metric | Value |

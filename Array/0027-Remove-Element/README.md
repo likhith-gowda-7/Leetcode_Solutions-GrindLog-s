@@ -75,6 +75,26 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 	- `0 <= val <= 100`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by utilizing a two-pointer technique to iterate through the array and replace elements that are not equal to the target value. The intuition behind this is to maintain a separate index that keeps track of the position where the next non-target element should be placed. By doing so, we can efficiently remove all occurrences of the target value in-place.
+
+## Approach
+1. Initialize an index `ind` to 0, which will keep track of the position where the next non-target element should be placed.
+2. Iterate through the array using a for loop, checking each element to see if it's not equal to the target value `val`.
+3. If an element is not equal to `val`, place it at the current `ind` position and increment `ind`.
+4. After iterating through the entire array, `ind` will represent the number of elements that are not equal to `val`, and the first `ind` elements of the array will contain these non-target elements.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of elements in the array, because we are iterating through the array once.
+
+## Space Complexity
+The space complexity is O(1), because we are only using a constant amount of space to store the index `ind` and are modifying the input array in-place.
+
+## Key Insight
+The key insight behind this solution is the use of a separate index `ind` to keep track of the position where the next non-target element should be placed, allowing us to efficiently remove all occurrences of the target value in-place without using any additional space that scales with the input size.
+
 ## 📊 Metrics
 
 | Metric | Value |

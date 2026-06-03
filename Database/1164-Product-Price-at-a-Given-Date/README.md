@@ -61,6 +61,26 @@ Products table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by first identifying the latest price change for each product before the target date, and then filling in the products that haven't had a price change.
+
+**Approach**
+
+1. Create a temporary table `details` that includes all price changes for products up to the target date, along with a ranking of the most recent change for each product.
+2. Select the product ID and new price from `details` where the ranking is 1, indicating the most recent price change.
+3. Use a UNION to include products that haven't had a price change, with a default price of 10.
+
+**Time Complexity**
+The time complexity of this solution is O(n log n) due to the use of the `RANK()` function with `ORDER BY` and `PARTITION BY` clauses, which requires a sort operation.
+
+**Space Complexity**
+The space complexity of this solution is O(n) for storing the temporary table `details`.
+
+**Key Insight**
+The key insight here is the use of the `RANK()` function to identify the most recent price change for each product, allowing us to easily fill in the products that haven't had a price change.
+
 ## 📊 Metrics
 
 | Metric | Value |

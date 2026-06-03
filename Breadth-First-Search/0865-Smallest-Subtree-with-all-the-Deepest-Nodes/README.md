@@ -68,6 +68,34 @@ Example 3:**
 
 **Note:** This question is the same as 1123: [https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-step approach to find the smallest subtree containing all the deepest nodes in the binary tree. First, it calculates the maximum depth of the tree using a breadth-first search (BFS) traversal. Then, it performs a depth-first search (DFS) traversal to find the smallest subtree that contains all nodes at the maximum depth.
+
+**Approach**
+1. The `find` function calculates the maximum depth of the tree using a BFS traversal:
+	* Initialize a queue with the root node.
+	* Perform a BFS traversal, level by level, until the queue is empty.
+	* For each level, add the right and left children of each node to the queue.
+	* Increment the level counter after processing each level.
+2. The `subtreeWithAllDeepest` function performs a DFS traversal to find the smallest subtree containing all nodes at the maximum depth:
+	* Define a helper function `dfs` that takes a node and its level as arguments.
+	* If the node is `None`, return `None`.
+	* If the level is equal to the maximum depth, return the node.
+	* Recursively call `dfs` on the left and right children of the node, incrementing the level counter.
+	* If both left and right children are not `None`, return the current node (since it contains both).
+	* Otherwise, return the non-`None` child.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the tree. The BFS traversal in the `find` function visits each node once, and the DFS traversal in the `subtreeWithAllDeepest` function also visits each node once.
+
+**Space Complexity**
+O(n), where n is the number of nodes in the tree. The BFS traversal in the `find` function uses a queue to store nodes at each level, and the DFS traversal in the `subtreeWithAllDeepest` function uses recursive function calls to store nodes on the call stack.
+
+**Key Insight**
+The key insight is to use a two-step approach to find the smallest subtree containing all the deepest nodes. First, calculate the maximum depth of the tree using a BFS traversal. Then, perform a DFS traversal to find the smallest subtree that contains all nodes at the maximum depth. This approach ensures that we find the smallest subtree that contains all the deepest nodes.
+
 ## 📊 Metrics
 
 | Metric | Value |

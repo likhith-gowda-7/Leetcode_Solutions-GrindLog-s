@@ -67,6 +67,28 @@ Example 3:**
 
 	- `-(n - 1) <= k <= n - 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to decrypt a circular array `code` based on a given key `k`. The decryption process involves replacing each number with the sum of the next `k` numbers (if `k > 0`) or the previous `-k` numbers (if `k < 0`). The key insight is to use a sliding window approach to efficiently calculate the sum of the required numbers.
+
+**Approach**
+1. If `k` is 0, return an array of zeros with the same length as `code`.
+2. Initialize an array `res` to store the decrypted code and a variable `window` to store the sum of the numbers in the sliding window.
+3. If `k` is negative, adjust the start and end indices of the sliding window accordingly.
+4. Calculate the initial sum of the numbers in the sliding window.
+5. Iterate through the `code` array, updating the `res` array with the current sum of the sliding window and adjusting the `window` by adding the next number and subtracting the previous number (wrapping around to the beginning of the array if necessary).
+6. Return the decrypted code stored in the `res` array.
+
+**Time Complexity**
+O(n), where n is the length of the `code` array. This is because we are iterating through the array once to calculate the initial sum and once to update the `res` array.
+
+**Space Complexity**
+O(n), where n is the length of the `code` array. This is because we are creating an array `res` to store the decrypted code, which has the same length as the input array.
+
+**Key Insight**
+The key to this solution is the use of a sliding window approach to efficiently calculate the sum of the required numbers. By maintaining a running sum of the numbers in the window, we can update the `res` array in O(1) time, resulting in a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

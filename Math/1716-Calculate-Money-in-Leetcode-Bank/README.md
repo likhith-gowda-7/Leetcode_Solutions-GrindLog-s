@@ -53,6 +53,29 @@ Example 3:**
 
 	- `1 <= n <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the total money in the LeetCode bank by breaking down the problem into two parts: the total money earned from the full weeks and the additional money earned from the remaining days. This approach takes advantage of the fact that the money earned per week increases by $1 each week.
+
+**Approach**
+1. Calculate the total number of full weeks (`total_weeks`) by integer dividing `n` by 7.
+2. Calculate the number of remaining days (`pay_days`) by finding the remainder of `n` divided by 7.
+3. Initialize `inc` to 1, which represents the increment of money earned per week.
+4. For each full week, calculate the total money earned by adding `28 + (inc * 7)` to `total_money` and increment `inc` by 1.
+5. After the full weeks, increment `inc` by 1 to account for the additional increment on the next Monday.
+6. For each remaining day, add `inc` to `total_money` and increment `inc` by 1.
+7. Return `total_money` as the total amount of money earned.
+
+**Time Complexity**
+O(n), where n is the input number of days. This is because the solution iterates over the full weeks and remaining days, which is proportional to the input size.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the variables `total_weeks`, `pay_days`, `inc`, and `total_money`.
+
+**Key Insight**
+The key insight is to break down the problem into two parts: the total money earned from the full weeks and the additional money earned from the remaining days. This allows us to take advantage of the fact that the money earned per week increases by $1 each week, making the solution more efficient and easier to understand.
+
 ## 📊 Metrics
 
 | Metric | Value |

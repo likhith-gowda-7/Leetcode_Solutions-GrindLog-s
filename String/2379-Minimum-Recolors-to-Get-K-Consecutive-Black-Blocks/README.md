@@ -57,6 +57,28 @@ Therefore, we return 0.
 
 	- `1 <= k <= n`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach to track the minimum number of operations needed to achieve `k` consecutive black blocks. It maintains a count of white blocks within the current window and updates this count as the window moves.
+
+**Approach**
+1. Initialize the minimum count of white blocks (`mini`) and the current count of white blocks (`sl`) within the first window of size `k`.
+2. Iterate through the string `blocks` from the `k`-th character to the end.
+3. For each character, if it is a white block, increment the current count `sl`.
+4. If the character `k` positions before is a white block, decrement the current count `sl`.
+5. Update the minimum count `mini` if the current count `sl` is smaller.
+6. Return the minimum count `mini` as the minimum number of operations needed.
+
+**Time Complexity**
+O(n), where n is the length of the string `blocks`. This is because we iterate through the string once.
+
+**Space Complexity**
+O(1), since we only use a constant amount of space to store the minimum count and the current count.
+
+**Key Insight**
+The key insight is that we only need to keep track of the minimum count of white blocks within the current window, which allows us to efficiently update the count as the window moves. This is made possible by the fact that we only need to consider the characters within the current window, which are at most `k` positions apart.
+
 ## 📊 Metrics
 
 | Metric | Value |

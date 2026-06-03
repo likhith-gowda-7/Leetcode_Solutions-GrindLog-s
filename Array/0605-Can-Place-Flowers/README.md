@@ -42,6 +42,28 @@ Example 2:**
 
 	- `0 <= n <= flowerbed.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the flowerbed and planting a new flower in each empty plot that is not adjacent to another flower. The key insight is that we can plant a new flower in an empty plot if and only if it is not adjacent to any other flower.
+
+**Approach**
+1. Initialize two variables `prev` and `nex` to keep track of the previous and next plot in the flowerbed.
+2. Iterate through the flowerbed from left to right.
+3. For each empty plot (i.e., `flowerbed[i] == 0`), check if it is not adjacent to any other flower by verifying that `prev` and `nex` are both 0.
+4. If the plot is not adjacent to any other flower and we still have flowers to plant (`n > 0`), plant a new flower in the plot by setting `flowerbed[i] = 1` and decrementing `n`.
+5. If we have planted all the required flowers (`n == 0`), return `True`.
+6. If we have iterated through the entire flowerbed and still have flowers to plant, return `False`.
+
+**Time Complexity**
+The time complexity of this solution is O(n), where n is the length of the flowerbed. This is because we are iterating through the flowerbed once.
+
+**Space Complexity**
+The space complexity of this solution is O(1), which means the space required does not grow with the size of the input. This is because we are only using a constant amount of space to store the variables `prev`, `nex`, and `n`.
+
+**Key Insight**
+The key insight is that we can plant a new flower in an empty plot if and only if it is not adjacent to any other flower. This allows us to efficiently iterate through the flowerbed and determine whether we can plant all the required flowers.
+
 ## 📊 Metrics
 
 | Metric | Value |

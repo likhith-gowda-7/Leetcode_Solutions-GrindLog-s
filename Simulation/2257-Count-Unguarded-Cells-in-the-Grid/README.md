@@ -63,6 +63,28 @@ There are a total of 4 unguarded cells, so we return 4.
 
 	- All the positions in `guards` and `walls` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a grid-based approach to simulate the guards' vision. It first initializes a grid with all cells marked as unguarded (0), then marks the walls (1) and guards (2) on the grid. The solution then iterates over each guard, simulating its vision in all four directions (up, down, left, right) and marking the cells it can see as guarded (3). Finally, it returns the count of unguarded cells.
+
+**Approach**
+1. Initialize a grid of size `m x n` with all cells marked as unguarded (0).
+2. Mark the walls (1) and guards (2) on the grid.
+3. Define a function `guards_vision(row, col)` to simulate a guard's vision from a given position.
+4. Iterate over each guard and call `guards_vision(row, col)` to simulate its vision.
+5. In `guards_vision(row, col)`, iterate over the four directions (up, down, left, right) and mark the cells that can be seen by the guard as guarded (3).
+6. Return the count of unguarded cells.
+
+**Time Complexity**
+O(m*n), where m is the number of rows and n is the number of columns in the grid. This is because we iterate over each cell in the grid once to simulate the guards' vision.
+
+**Space Complexity**
+O(m*n), where m is the number of rows and n is the number of columns in the grid. This is because we need to store the grid with all cells marked as unguarded, walls, or guards.
+
+**Key Insight**
+The key insight is to use a grid-based approach to simulate the guards' vision, which allows us to efficiently mark the cells that can be seen by each guard. By iterating over each guard and simulating its vision, we can accurately count the number of unguarded cells.
+
 ## 📊 Metrics
 
 | Metric | Value |

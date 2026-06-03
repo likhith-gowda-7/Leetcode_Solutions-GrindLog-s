@@ -62,6 +62,31 @@ spreadsheet.getValue("=A1+B2"); // returns 15 (0+15)
 
 	- At most `10^4` calls will be made in **total** to `setCell`, `resetCell`, and `getValue`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table (dictionary in Python) to store the spreadsheet data, where each key is a cell reference and the value is the cell's integer value. The `getValue` method parses the formula, extracts the cell references, and evaluates the expression using the stored values.
+
+**Approach**
+1. Initialize the spreadsheet with a hash table and a set of column letters.
+2. In the `setCell` method, store the cell value in the hash table.
+3. In the `resetCell` method, reset the cell value to 0 in the hash table.
+4. In the `getValue` method:
+   1. Remove the leading "=" from the formula.
+   2. Find the "+" operator in the formula.
+   3. Extract the two cell references on either side of the "+" operator.
+   4. If a cell reference is a letter (column), retrieve the stored value from the hash table.
+   5. Evaluate the expression by adding the two values and return the result.
+
+**Time Complexity**
+The time complexity is O(n), where n is the length of the formula. This is because we iterate through the formula to find the "+" operator and extract the cell references.
+
+**Space Complexity**
+The space complexity is O(m), where m is the number of cells in the spreadsheet. This is because we store the cell values in a hash table.
+
+**Key Insight**
+The key insight is to use a hash table to store the cell values, allowing for efficient lookup and update of cell values. This enables the `getValue` method to quickly retrieve the values of the cell references in the formula and evaluate the expression.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -72,6 +72,25 @@ Activity table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by grouping the activities by date and counting the distinct users for each day. This approach is effective because it directly addresses the problem's requirement of finding the daily active user count.
+
+**Approach**
+1. The query selects the `activity_date` as the day and counts the distinct `user_id` for each day.
+2. The `group by` clause groups the activities by date.
+3. The `having` clause filters the results to include only the days between '2019-06-28' and '2019-07-28'.
+
+**Time Complexity**
+O(n), where n is the number of activities. This is because the query needs to iterate over all activities to group them by date and count the distinct users.
+
+**Space Complexity**
+O(n), where n is the number of unique days. This is because the query needs to store the count of distinct users for each day in the result set.
+
+**Key Insight**
+The key insight here is that we can directly count the distinct users for each day by grouping the activities by date. This approach avoids the need to iterate over all users and dates, making it efficient for large datasets.
+
 ## 📊 Metrics
 
 | Metric | Value |

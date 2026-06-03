@@ -55,6 +55,30 @@ Example 3:**
 
 	- `-10^4 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a deque to efficiently maintain a sliding window of indices that satisfy the condition `j - i <= k`. By keeping track of the maximum sum of the subsequence ending at each index, we can find the maximum sum of a subsequence that meets the constraint.
+
+**Approach**
+1. Initialize `res` to negative infinity and a deque `maxi` to store indices of maximum sum subsequence.
+2. Iterate over the array `nums` with index `r`.
+3. Update the sum at index `r` by adding the maximum sum of the subsequence ending at the index of the first element in `maxi` (or 0 if `maxi` is empty).
+4. Update `res` with the maximum sum found so far.
+5. Remove indices from `maxi` if the sum at the corresponding index is less than the sum at index `r`.
+6. Add index `r` to `maxi` if the sum at index `r` is positive.
+7. Remove the first element from `maxi` if it is outside the sliding window (i.e., `maxi[0] == r - k`).
+8. Repeat steps 2-7 until the end of the array.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. This is because we make a single pass over the array, and each operation (deque insertion, deletion, and lookup) takes constant time.
+
+**Space Complexity**
+O(n), where n is the length of the array `nums`. This is because in the worst case, we need to store all indices in the deque `maxi`.
+
+**Key Insight**
+The key insight is to use a deque to efficiently maintain a sliding window of indices that satisfy the condition `j - i <= k`. By keeping track of the maximum sum of the subsequence ending at each index, we can find the maximum sum of a subsequence that meets the constraint. This approach allows us to solve the problem in linear time and space.
+
 ## 📊 Metrics
 
 | Metric | Value |

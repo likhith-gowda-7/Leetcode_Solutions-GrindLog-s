@@ -60,6 +60,31 @@ We need to wait until time 16 so that (0, 0) and (4, 4) are connected.
 
 	- Each value `grid[i][j]` is **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved by using a modified Dijkstra's algorithm to find the minimum time it takes to reach the bottom right square from the top left square. The key insight is to use a priority queue (min heap) to efficiently find the minimum cost path.
+
+**Approach**
+1. Initialize a min heap with the starting point (0, 0) and its corresponding maximum elevation value.
+2. While the min heap is not empty, pop the node with the minimum cost (maximum elevation value) from the heap.
+3. If the popped node is the bottom right square, return its cost as the minimum time.
+4. For each of the four adjacent squares (up, down, left, right) of the popped node, check if it is within the grid boundaries and not visited before.
+5. If the adjacent square is valid, calculate its maximum elevation value by taking the maximum of its current elevation value and the cost of the popped node.
+6. Push the adjacent square into the min heap with its updated maximum elevation value.
+7. Mark the adjacent square as visited by setting its elevation value to -1.
+
+**Time Complexity**
+O(n^2 * log(n^2)) = O(n^4)
+The time complexity is dominated by the heap operations (push and pop) which take log(n^2) time each. Since we perform these operations for each cell in the grid, the total time complexity is O(n^2 * log(n^2)).
+
+**Space Complexity**
+O(n^2)
+We use a min heap to store the nodes to be processed, which requires O(n^2) space. We also use a 2D grid to mark the visited nodes, which requires O(n^2) space.
+
+**Key Insight**
+The key insight is to use a priority queue (min heap) to efficiently find the minimum cost path. By using the maximum elevation value as the cost, we can ensure that the node with the minimum cost (maximum elevation value) is always popped from the heap, allowing us to find the minimum time it takes to reach the bottom right square.
+
 ## 📊 Metrics
 
 | Metric | Value |

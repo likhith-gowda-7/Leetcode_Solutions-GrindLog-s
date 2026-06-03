@@ -73,6 +73,27 @@ Example 3:**
 
 	- `s[0] == '1'`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by simulating the process of reducing the binary number to 1 by iteratively applying the given rules. It keeps track of the number of steps taken and the carry value, which represents the result of the previous operation.
+
+**Approach**
+1. Initialize variables `steps` to count the number of steps and `carry` to store the carry value.
+2. Iterate over the binary string from right to left (from least significant bit to most significant bit).
+3. For each bit, check if the current bit and the carry value are different. If they are different, it means the current number is odd, so add 1 to the carry value and increment the steps by 2.
+4. If the current bit and the carry value are the same, it means the current number is even, so increment the steps by 1.
+5. After iterating over all bits, add the final carry value to the steps.
+
+**Time Complexity**
+O(n), where n is the length of the binary string. This is because we are iterating over the string once.
+
+**Space Complexity**
+O(1), since we are using a constant amount of space to store the steps and carry values.
+
+**Key Insight**
+The key insight is that when the current number is odd, we need to add 1 to it, which effectively increments the steps by 2 (1 for the addition and 1 for the next operation). This is why we increment the steps by 2 when the current bit and the carry value are different.
+
 ## 📊 Metrics
 
 | Metric | Value |

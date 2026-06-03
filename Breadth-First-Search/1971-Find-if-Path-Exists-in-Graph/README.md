@@ -63,6 +63,26 @@ Example 2:**
 
 	- There are no self edges.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes the concept of Union Find (Disjoint-set) to determine if a valid path exists between two vertices in a bi-directional graph. By treating each vertex as a separate set, we can merge sets when an edge is found between two vertices, effectively creating a connected component. If the source and destination vertices belong to the same connected component, a valid path exists.
+
+**Approach**
+1. Initialize a list `parent` of size `n` with each element set to its index, representing the root of each set.
+2. Define a helper function `find(node)` to determine the root of the set containing the given node. If the node is not its own root, recursively find its root and update the node's parent.
+3. Iterate through each edge in the graph, find the roots of the sets containing the edge's vertices, and merge the sets by updating the parent of the root of one set to the root of the other set.
+4. Find the root of the set containing the source vertex and compare it with the root of the set containing the destination vertex. If they are the same, a valid path exists.
+
+**Time Complexity**
+O(n + m), where n is the number of vertices and m is the number of edges. The find operation takes O(log n) time, but since we perform it n times, the total time complexity is O(n log n). However, since the find operation is dominated by the merge operation, which takes O(1) time, the overall time complexity is O(n + m).
+
+**Space Complexity**
+O(n), as we need to store the parent array of size n to keep track of the sets.
+
+**Key Insight**
+The key insight is to use the Union Find data structure to efficiently merge sets when edges are found, allowing us to determine if the source and destination vertices belong to the same connected component. This approach takes advantage of the fact that each vertex is connected to at most one other vertex, making the merge operation simple and efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

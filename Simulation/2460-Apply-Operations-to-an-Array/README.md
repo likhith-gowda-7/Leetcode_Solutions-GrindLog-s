@@ -61,6 +61,29 @@ Example 2:**
 
 	- `0 <= nums[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution involves two main steps: first, we apply the operations to the array by multiplying adjacent equal elements and shifting zeros to the end, and second, we shift all zeros to the end of the array. This approach works because we can iterate through the array once to apply the operations and then another pass to shift the zeros.
+
+**Approach**
+1. Iterate through the array from the first element to the second last element (`range(len(nums)-1)`).
+2. For each pair of adjacent elements, check if they are equal.
+3. If they are equal, multiply the first element by 2 and set the second element to 0.
+4. Initialize a pointer `l` to 0, which will keep track of the position where the next non-zero element should be placed.
+5. Iterate through the array again and for each non-zero element, place it at the current position `l` and increment `l`.
+6. Fill the remaining positions with zeros.
+7. Return the modified array.
+
+**Time Complexity**
+The time complexity of this solution is O(n), where n is the size of the array. This is because we make two passes through the array: one to apply the operations and another to shift the zeros.
+
+**Space Complexity**
+The space complexity of this solution is O(1), excluding the space needed for the output array. This is because we only use a constant amount of space to store the pointer `l` and the temporary variables.
+
+**Key Insight**
+The key insight here is that we can apply the operations and shift the zeros in two separate passes, which simplifies the solution and reduces the time complexity. By using a pointer to keep track of the position where the next non-zero element should be placed, we can efficiently shift the zeros to the end of the array.
+
 ## 📊 Metrics
 
 | Metric | Value |

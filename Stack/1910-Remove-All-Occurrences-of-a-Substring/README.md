@@ -60,6 +60,28 @@ Now s has no occurrences of "xy".
 
 	- `s`​​​​​​ and `part` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to simulate the removal of the substring `part` from the string `s`. It continuously appends characters from `s` to the stack and checks if the last `len(part)` characters match `part`. If they do, it removes these characters from the stack.
+
+**Approach**
+1. Initialize an empty stack to store characters from `s`.
+2. Iterate over each character `s[i]` in `s`.
+3. Append `s[i]` to the stack.
+4. If the stack has at least `len(part)` characters, check if the last `len(part)` characters match `part`.
+5. If they match, remove the last `len(part)` characters from the stack.
+6. After iterating over all characters in `s`, return the remaining characters in the stack as a string.
+
+**Time Complexity**
+O(n * m), where n is the length of `s` and m is the length of `part`. This is because in the worst case, we might need to iterate over all characters in `s` and check all possible substrings of length `m`.
+
+**Space Complexity**
+O(n), where n is the length of `s`. This is because in the worst case, we might need to store all characters from `s` in the stack.
+
+**Key Insight**
+The key insight is to use a stack to simulate the removal of the substring `part` from the string `s`. By continuously checking if the last `len(part)` characters match `part`, we can efficiently remove all occurrences of `part` from `s`.
+
 ## 📊 Metrics
 
 | Metric | Value |

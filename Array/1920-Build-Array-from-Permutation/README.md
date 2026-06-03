@@ -53,6 +53,26 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
 
 **Follow-up:** Can you solve it without using an extra space (i.e., `O(1)` memory)?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to build an array `ans` where each element `ans[i]` is equal to `nums[nums[i]]`. This can be achieved by iterating over the input array `nums` and using the value at each index `nums[i]` as the index to access the corresponding value in `nums`.
+
+**Approach**
+1. Initialize an array `ans` of the same length as `nums` with all elements set to 0.
+2. Iterate over the indices of `nums` using a for loop.
+3. For each index `i`, calculate the value of `nums[nums[i]]` and assign it to the corresponding index `i` in `ans`.
+4. Return the constructed array `ans`.
+
+**Time Complexity**
+O(n), where n is the length of `nums`. This is because we are iterating over the indices of `nums` once.
+
+**Space Complexity**
+O(n), where n is the length of `nums`. This is because we are creating a new array `ans` of the same length as `nums`.
+
+**Key Insight**
+The key insight here is that we can use the value at each index `nums[i]` as the index to access the corresponding value in `nums`. This allows us to build the array `ans` in a single pass through the input array `nums`.
+
 ## 📊 Metrics
 
 | Metric | Value |

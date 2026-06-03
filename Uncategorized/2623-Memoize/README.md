@@ -95,6 +95,28 @@ values = [[5],[]]
 
 	- `fnName` is one of "sum", "factorial" and "fib"
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The `memoize` function takes another function `fn` as input and returns a new function that caches the results of `fn` for repeated inputs. This way, if `fn` is called again with the same inputs, the cached result is returned instead of recalculating it.
+
+**Approach**
+1. Create a cache object to store the results of `fn` for different inputs.
+2. Define a new function that takes any number of arguments `args`.
+3. Convert the `args` array to a string key using `JSON.stringify`.
+4. Check if the key is already in the cache. If it is, return the cached result.
+5. Otherwise, call `fn` with the original `args` and store the result in the cache.
+6. Return the result of `fn`.
+
+**Time Complexity**
+O(1) amortized, because we're checking if a key is in the cache and updating it only when necessary. In the worst case, we might need to calculate the result of `fn` and store it in the cache, but this happens only once per unique input.
+
+**Space Complexity**
+O(n), where n is the number of unique input combinations, because we're storing the results of `fn` in a cache. In the worst case, the cache could grow indefinitely as we call `fn` with different inputs.
+
+**Key Insight**
+The key insight here is that we're using a cache to avoid recalculating the result of `fn` for repeated inputs. By converting the input arguments to a string key, we can efficiently check if the result is already cached and update it only when necessary. This approach allows us to memoize any function, regardless of its input signature or behavior.
+
 ## 📊 Metrics
 
 | Metric | Value |

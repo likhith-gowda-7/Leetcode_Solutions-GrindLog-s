@@ -59,6 +59,28 @@ exection -> execution (insert 'u')
 
 	- `word1` and `word2` consist of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses dynamic programming to build a 2D table where each cell represents the minimum edit distance between the substrings of `word1` and `word2` up to that point. The key insight is that the minimum edit distance between two strings is the minimum of the edit distances between the substrings without the last characters, plus 1 for the operation required to align the last characters.
+
+**Approach**
+1. Initialize a 1D table `dp` of size `n2+1` to store the minimum edit distances between `word1` and the substrings of `word2`.
+2. For each character in `word1`, create a new 1D table `curr` of size `n2+1` to store the minimum edit distances between the current substring of `word1` and the substrings of `word2`.
+3. For each character in `word2`, calculate the minimum edit distance by considering the minimum of the edit distances between the substrings without the last characters, plus 1 for the operation required to align the last characters.
+4. Update the `dp` table with the `curr` table.
+5. Repeat steps 2-4 until all characters in `word1` have been processed.
+6. The minimum edit distance is stored in the last cell of the `dp` table.
+
+**Time Complexity**
+O(n1 \* n2), where n1 and n2 are the lengths of `word1` and `word2`, respectively. This is because we need to iterate over all characters in both strings to fill up the 2D table.
+
+**Space Complexity**
+O(n2), where n2 is the length of `word2`. This is because we need to store the minimum edit distances between `word1` and the substrings of `word2` up to the current point.
+
+**Key Insight**
+The key insight is that the minimum edit distance between two strings is the minimum of the edit distances between the substrings without the last characters, plus 1 for the operation required to align the last characters. This allows us to build up the 2D table efficiently using dynamic programming.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -57,6 +57,26 @@ Example 2:**
 
 	- `0 <= fee < 5 * 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a greedy approach to maximize profit by buying and selling stocks at optimal times, considering the transaction fee. The key insight is to maintain a running balance of the maximum profit that can be achieved, taking into account the transaction fee for each trade.
+
+**Approach**
+1. Initialize `profit` to 0 and `buy` to the price of the first stock.
+2. Iterate through the prices array starting from the second price.
+3. If the current price is less than the `buy` price, update `buy` to the current price.
+4. If the current price is greater than the `buy` price plus the transaction fee, calculate the profit for this trade and add it to the total profit. Update `buy` to the current price minus the transaction fee.
+
+**Time Complexity**
+O(n), where n is the number of prices. This is because we only iterate through the prices array once.
+
+**Space Complexity**
+O(1), since we only use a constant amount of space to store the `profit` and `buy` variables.
+
+**Key Insight**
+The key to this solution is to recognize that we can always buy the stock at the current price if it's lower than the previous buy price, and sell the stock at the current price if it's higher than the previous buy price plus the transaction fee. This greedy approach ensures that we maximize the profit while considering the transaction fee.
+
 ## 📊 Metrics
 
 | Metric | Value |

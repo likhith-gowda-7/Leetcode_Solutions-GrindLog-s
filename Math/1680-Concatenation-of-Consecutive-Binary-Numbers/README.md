@@ -52,6 +52,28 @@ After modulo 10^9 + 7, the result is 505379714.
 
 	- `1 <= n <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to find the decimal value of the binary string formed by concatenating the binary representations of numbers from 1 to `n` in order, modulo `10^9 + 7`. The key insight is to recognize that the number of digits in the binary representation of a number is equal to the number of bits required to represent it, which is equivalent to the number of times the number can be divided by 2 before reaching 1.
+
+**Approach**
+1. Initialize the modulo value `mod` as `10^9 + 7` and the result `res` to 0.
+2. Initialize the number of digits `digits` to 0.
+3. Iterate over the numbers from 1 to `n` (inclusive).
+4. For each number, check if it is a power of 2 by using the bitwise AND operator (`&`) with the number minus 1. If the result is 0, it means the number is a power of 2, and we increment the number of digits `digits` by 1.
+5. Shift the result `res` to the left by `digits` bits using the left shift operator (`<<`), add the current number `num` to the result, and take the modulo `mod` to prevent overflow.
+6. Return the final result `res`.
+
+**Time Complexity**
+O(n log n) - The time complexity is dominated by the loop that iterates over the numbers from 1 to `n`. In the worst case, the number of digits `digits` can grow up to log n, resulting in a time complexity of O(n log n).
+
+**Space Complexity**
+O(1) - The space complexity is constant, as we only use a few variables to store the result, modulo value, and number of digits.
+
+**Key Insight**
+The key insight is to recognize that the number of digits in the binary representation of a number is equal to the number of bits required to represent it, which is equivalent to the number of times the number can be divided by 2 before reaching 1. This allows us to efficiently calculate the number of digits for each number and update the result accordingly.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -97,6 +97,25 @@ As we can see, users with IDs 30 and 96 visited the mall one time without making
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by identifying customers who have a visit but no corresponding transaction. This is achieved by performing a left join between the `Visits` and `Transactions` tables, and then filtering for rows where there is no matching transaction.
+
+**Approach**
+1. Perform a left join between the `Visits` and `Transactions` tables on the `visit_id` column.
+2. Filter the result to include only rows where the `visit_id` in the `Transactions` table is `NULL`, indicating that there is no matching transaction.
+3. Group the remaining rows by `customer_id` to count the number of visits without transactions for each customer.
+
+**Time Complexity**
+The time complexity of this solution is O(n), where n is the total number of rows in the `Visits` and `Transactions` tables combined. This is because we are performing a single pass through both tables.
+
+**Space Complexity**
+The space complexity of this solution is O(n), where n is the total number of rows in the `Visits` and `Transactions` tables combined. This is because we are storing the result of the join in memory.
+
+**Key Insight**
+The key insight here is that a left join allows us to include all rows from the `Visits` table, even if there is no matching row in the `Transactions` table. By filtering for `NULL` values in the `Transactions` table, we can identify the customers who have visited but made no transactions.
+
 ## 📊 Metrics
 
 | Metric | Value |

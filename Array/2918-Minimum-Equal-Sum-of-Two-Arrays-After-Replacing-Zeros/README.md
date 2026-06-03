@@ -48,6 +48,27 @@ Example 2:**
 
 	- `0 <= nums1[i], nums2[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution involves calculating the total sum of each array, counting the number of zeros in each array, and then replacing the zeros with the minimum positive integer (1) to make the sums equal. The key insight is that we can always replace zeros with 1 to increase the sum, and we need to find the minimum sum that makes the two arrays equal.
+
+**Approach**
+1. Calculate the total sum of each array using the `sum()` function.
+2. Count the number of zeros in each array using the `count()` method.
+3. Replace each zero in both arrays with 1, effectively increasing the sum of each array by the number of zeros.
+4. Compare the sums of the two arrays and determine the minimum sum that makes them equal.
+5. If it's impossible to make the sums equal, return -1.
+
+**Time Complexity**
+O(n + m), where n and m are the lengths of the input arrays. This is because we need to iterate over each element in the arrays to calculate the sum and count the zeros.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the sums and counts, regardless of the input size.
+
+**Key Insight**
+The key insight is that we can always replace zeros with 1 to increase the sum, and we need to find the minimum sum that makes the two arrays equal. This is a classic example of a greedy algorithm, where we make the locally optimal choice (replacing zeros with 1) to achieve the globally optimal solution (making the sums equal).
+
 ## 📊 Metrics
 
 | Metric | Value |

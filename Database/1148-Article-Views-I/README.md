@@ -64,6 +64,26 @@ Views table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by identifying rows in the `Views` table where the `author_id` matches the `viewer_id`, indicating that the author viewed their own article. This is a simple filtering operation that can be performed efficiently using a SQL query.
+
+**Approach**
+1. Select the `author_id` column from the `Views` table.
+2. Apply a filter to include only rows where `author_id` equals `viewer_id`.
+3. Use the `distinct` keyword to remove duplicate `author_id` values.
+4. Order the result by `id` in ascending order.
+
+**Time Complexity**
+O(n), where n is the number of rows in the `Views` table. This is because we need to scan the entire table to find the matching rows.
+
+**Space Complexity**
+O(n), where n is the number of rows in the `Views` table. This is because we need to store the filtered results in memory.
+
+**Key Insight**
+The key insight here is that we can use a simple equality filter to identify the authors who viewed their own articles. This is a common pattern in database queries, where we use a condition to narrow down the data to the desired subset. In this case, the condition is `author_id = viewer_id`, which is a straightforward and efficient way to solve the problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -51,6 +51,29 @@ Example 2:**
 
 	- `s` consists only of uppercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by simulating the removal of substrings "AB" and "CD" from the input string. It uses a stack to keep track of the characters that cannot be removed due to the presence of the other character. By iterating through the string in reverse order, it ensures that the removal of substrings is done in a way that minimizes the final string length.
+
+**Approach**
+1. Initialize an empty stack to store the characters that cannot be removed.
+2. Define a dictionary `h` that maps each character to its corresponding character in the substring "AB" or "CD".
+3. Iterate through the input string `s` in reverse order. For each character `i`:
+   1. Check if the stack is not empty and the top of the stack is equal to the character that `i` maps to in the dictionary `h`.
+   2. If the condition is true, pop the top character from the stack.
+   3. Otherwise, push the character `i` onto the stack.
+4. Return the length of the stack, which represents the minimum possible length of the resulting string.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we only iterate through the string once in reverse order.
+
+**Space Complexity**
+O(n), where n is the length of the input string. In the worst case, we might need to store all characters in the stack.
+
+**Key Insight**
+The key insight here is that by iterating through the string in reverse order and using a stack to keep track of the characters that cannot be removed, we can simulate the removal of substrings "AB" and "CD" in a way that minimizes the final string length. This approach takes advantage of the fact that the removal of substrings is done in a way that creates new substrings, which can be further removed.
+
 ## 📊 Metrics
 
 | Metric | Value |

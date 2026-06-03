@@ -51,6 +51,28 @@ Example 2:**
 
 	- `1 <= basket1[i], basket2[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first identifying the minimum value in both baskets and maintaining a frequency count of each value. It then checks if it's possible to make both baskets equal by checking if the frequency count of each value is even. If not, it returns -1 as it's impossible to make both baskets equal. If it's possible, it finds the minimum cost by sorting the swapable values and swapping the minimum value with the second minimum value in the sorted list.
+
+**Approach**
+1. Initialize a dictionary `freq` to store the frequency count of each value in both baskets.
+2. Iterate through both baskets and update the minimum value `min_val` and the frequency count in `freq`.
+3. Check if it's possible to make both baskets equal by checking if the frequency count of each value is even. If not, return -1.
+4. If it's possible, find the swapable values by iterating through `freq` and adding the value to the list `swapable_values` if its frequency count is even.
+5. Sort `swapable_values` in ascending order.
+6. Calculate the minimum cost by iterating through the first half of `swapable_values` and swapping the minimum value with the second minimum value in the sorted list.
+
+**Time Complexity**
+O(n log n) due to the sorting of `swapable_values` where n is the number of unique values in both baskets.
+
+**Space Complexity**
+O(n) where n is the number of unique values in both baskets due to the use of the dictionary `freq` to store the frequency count of each value.
+
+**Key Insight**
+The key insight is that if the frequency count of each value is even, it's possible to make both baskets equal by swapping the minimum value with the second minimum value in the sorted list. This is because swapping the minimum value with the second minimum value will not change the sorted order of the values, and since the frequency count of each value is even, we can swap the minimum value with the second minimum value as many times as needed to make both baskets equal.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -71,6 +71,35 @@ The last day where it is possible to cross from top to bottom is on day 3.
 
 	- All the values of `cells` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to find the last day when it's possible to walk from the top to the bottom of a binary matrix by only walking on land cells. The key insight is that we can use binary search to find this last day. We'll simulate the flooding process for each day and check if it's possible to reach the bottom row from the top row.
+
+**Approach**
+1. First, we adjust the coordinates of the cells array to 0-based indexing for easier processing.
+2. We define a helper function `find(mid)` that simulates the flooding process up to the `mid-th` day and checks if it's possible to reach the bottom row from the top row.
+3. In the `find(mid)` function, we create a 2D matrix `mat` to represent the state of the binary matrix after the `mid-th` day.
+4. We use a queue `q` to perform a breadth-first search (BFS) from the top row to the bottom row.
+5. In the BFS, we explore all the neighboring cells of the current cell and mark them as visited by setting their value to 1 in the matrix.
+6. We repeat the BFS process until we reach the bottom row or the queue becomes empty.
+7. If we reach the bottom row, it means it's possible to walk from the top to the bottom, and we return `True`. Otherwise, we return `False`.
+8. In the main function, we use binary search to find the last day when it's possible to walk from the top to the bottom.
+9. We initialize the left and right pointers to the first and last days, respectively.
+10. We iterate until the left pointer is less than or equal to the right pointer.
+11. In each iteration, we calculate the mid day and call the `find(mid)` function to check if it's possible to walk from the top to the bottom.
+12. If it's possible, we move the left pointer to the mid day + 1. Otherwise, we move the right pointer to the mid day - 1.
+13. We repeat the process until we find the last day when it's possible to walk from the top to the bottom.
+
+**Time Complexity**
+The time complexity of the solution is O(n log m), where n is the number of days and m is the number of cells in the matrix. This is because we use binary search to find the last day, and for each day, we perform a BFS that takes O(m) time.
+
+**Space Complexity**
+The space complexity of the solution is O(m), where m is the number of cells in the matrix. This is because we use a 2D matrix to represent the state of the binary matrix and a queue to perform the BFS.
+
+**Key Insight**
+The key insight is that we can use binary search to find the last day when it's possible to walk from the top to the bottom. By simulating the flooding process for each day and checking if it's possible to reach the bottom row from the top row, we can efficiently find the last day when it's possible to walk from the top to the bottom.
+
 ## 📊 Metrics
 
 | Metric | Value |

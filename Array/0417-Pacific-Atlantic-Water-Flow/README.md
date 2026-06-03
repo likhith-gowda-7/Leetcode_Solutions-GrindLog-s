@@ -67,6 +67,28 @@ Example 2:**
 
 	- `0 <= heights[r][c] <= 10^5`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The Pacific Atlantic Water Flow problem can be solved by identifying the cells that can flow to both the Pacific and Atlantic oceans. This approach works by simulating the flow of water from the edges of the oceans and finding the common cells that can be reached by both oceans. The key idea is to use a two-phase approach, where we first identify the cells that can flow to the Pacific ocean and then the cells that can flow to the Atlantic ocean.
+
+## Approach
+1. Initialize two queues, `pacific_nodes` and `atlantic_nodes`, to store the cells at the edges of the Pacific and Atlantic oceans, respectively.
+2. Add the cells at the edges of the oceans to their respective queues and mark them as visited in the `pacific_seen` and `atlantic_seen` sets.
+3. Define a helper function `check` to validate if a cell is within the grid boundaries and not visited before.
+4. Define another helper function `get_coordinates` to perform a breadth-first search (BFS) from the cells in the queues and mark the reachable cells as visited.
+5. Perform BFS from the Pacific and Atlantic oceans to find the cells that can flow to each ocean.
+6. Find the intersection of the `pacific_seen` and `atlantic_seen` sets to get the cells that can flow to both oceans.
+
+## Time Complexity
+The time complexity is O(m*n), where m and n are the number of rows and columns in the grid, respectively. This is because in the worst case, we need to visit every cell in the grid.
+
+## Space Complexity
+The space complexity is O(m*n), where m and n are the number of rows and columns in the grid, respectively. This is because we need to store the visited cells in the `pacific_seen` and `atlantic_seen` sets.
+
+## Key Insight
+The key insight is to use a two-phase approach with BFS to simulate the flow of water from the edges of the oceans and find the common cells that can be reached by both oceans. This approach allows us to efficiently identify the cells that can flow to both the Pacific and Atlantic oceans.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -50,6 +50,31 @@ Example 2:**
 
 	- `-2^31 <= Node.val <= 2^31 - 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses an in-order traversal of the binary tree to check if it's a valid binary search tree (BST). This approach works because an in-order traversal visits nodes in ascending order, which is a key property of a BST. By checking if each node's value is greater than the previous node's value, we can determine if the tree is a valid BST.
+
+**Approach**
+1. Initialize a `prev` variable to store the previous node's value and a `bst` flag to track if the tree is a BST.
+2. Define an in-order traversal function `inorder` that takes a node as input and recursively visits its left subtree, then the current node, and finally the right subtree.
+3. In the `inorder` function, if the current node is `None` or the tree is not a BST (`bst` is `False`), return immediately.
+4. Recursively call `inorder` on the left subtree.
+5. If the previous node's value is not `None` and it's greater than or equal to the current node's value, set `bst` to `False` and return.
+6. Update the `prev` variable with the current node's value.
+7. Recursively call `inorder` on the right subtree.
+8. Call the `inorder` function on the root node.
+9. Return the `bst` flag.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the tree. This is because we visit each node once during the in-order traversal.
+
+**Space Complexity**
+O(H), where H is the height of the tree. This is because the maximum depth of the recursion call stack is the height of the tree.
+
+**Key Insight**
+The key insight is that an in-order traversal visits nodes in ascending order, which allows us to check if each node's value is greater than the previous node's value, ensuring that the tree is a valid BST. This approach takes advantage of the property that a valid BST has nodes with keys strictly less than the node's key in the left subtree and strictly greater than the node's key in the right subtree.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -64,6 +64,28 @@ Example 3:**
 
 	- `num` only consists of digits.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through the input string, maintaining a count of consecutive identical digits. When a sequence of three identical digits is found, it updates the maximum good integer if necessary. This approach works because a good integer must be a substring of length 3 with only one unique digit.
+
+**Approach**
+1. Initialize `max_good` to -1, which will store the maximum good integer, and `c` to 1, which will count consecutive identical digits.
+2. Iterate through the input string `num` starting from the second character (index 1).
+3. If the current character is the same as the previous one, increment `c`.
+4. If `c` becomes 3, update `max_good` with the maximum of its current value and the current digit.
+5. If the current character is different from the previous one, reset `c` to 1.
+6. After iterating through the entire string, return the maximum good integer as a string if it exists, or an empty string otherwise.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we iterate through the string once.
+
+**Space Complexity**
+O(1), which means the space complexity is constant. We only use a few variables to store the maximum good integer and the count of consecutive identical digits, regardless of the input size.
+
+**Key Insight**
+The key insight is that a good integer must be a substring of length 3 with only one unique digit. By maintaining a count of consecutive identical digits, we can efficiently identify and update the maximum good integer as we iterate through the input string.
+
 ## 📊 Metrics
 
 | Metric | Value |

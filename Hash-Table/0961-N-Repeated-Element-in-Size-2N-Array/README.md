@@ -57,6 +57,27 @@ Example 3:**
 
 	- `nums` contains `n + 1` **unique** elements and one of them is repeated exactly `n` times.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a set to keep track of the elements it has seen so far. Since a set in Python has an average time complexity of O(1) for insert and search operations, we can use it to efficiently find the repeated element.
+
+**Approach**
+1. Initialize an empty set `ele` to store the elements we have seen.
+2. Iterate through the `nums` array. For each element `val`, check if it is already in the set `ele`.
+3. If `val` is in `ele`, it means we have seen it before, so return `val` as the repeated element.
+4. If `val` is not in `ele`, add it to the set `ele`.
+5. Repeat steps 2-4 until we find the repeated element.
+
+**Time Complexity**
+O(n), where n is the length of the `nums` array. This is because we are iterating through the array once, and each operation (insert and search) on the set takes constant time.
+
+**Space Complexity**
+O(n), where n is the length of the `nums` array. This is because in the worst-case scenario, we might need to store all elements in the set.
+
+**Key Insight**
+The key insight here is that since there is only one repeated element, we can use a set to efficiently find it. By checking if an element is already in the set, we can avoid unnecessary iterations and find the repeated element in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

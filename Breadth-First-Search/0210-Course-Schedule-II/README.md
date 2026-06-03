@@ -65,6 +65,33 @@ Example 3:**
 
 	- All the pairs `[a_i, b_i]` are **distinct**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a topological sort to find the ordering of courses. The idea is to visit each course in a way that ensures we complete all prerequisites before taking a course. This is possible if and only if the graph of courses and prerequisites is a directed acyclic graph (DAG), which is the case here.
+
+**Approach**
+1. Create an adjacency list representation of the graph using the prerequisites.
+2. Initialize a state array to keep track of the state of each course (unvisited, visiting, visited).
+3. Define a depth-first search (DFS) function that takes a course node as input.
+4. In the DFS function:
+   - If the course is being visited (state[node] == 1), it means we have a cycle, so return False.
+   - If the course has been visited (state[node] == 2), it means we can continue, so return True.
+   - Mark the course as visiting (state[node] = 1) and recursively visit all its prerequisites.
+   - If any prerequisite has a cycle, return False.
+   - Otherwise, mark the course as visited (state[node] = 2) and add it to the order list.
+5. Iterate over all courses and call the DFS function for each unvisited course.
+6. If any course has a cycle, return an empty list. Otherwise, return the order list.
+
+**Time Complexity**
+O(n + m), where n is the number of courses and m is the number of prerequisites. We visit each course and prerequisite once.
+
+**Space Complexity**
+O(n + m), where n is the number of courses and m is the number of prerequisites. We store the adjacency list and the state array.
+
+**Key Insight**
+The key insight is to use a topological sort to find the ordering of courses. By visiting each course in a way that ensures we complete all prerequisites before taking a course, we can find a valid ordering if and only if the graph is a DAG. The DFS function is used to detect cycles and ensure that we visit each course in a valid order.
+
 ## 📊 Metrics
 
 | Metric | Value |

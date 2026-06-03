@@ -66,6 +66,27 @@ Joziah's manager is employee 6, who left the company because there is no row for
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a self-join to find employees whose manager left the company. By joining the `Employees` table with itself, we can identify employees whose manager's ID no longer exists in the table, indicating that the manager has left.
+
+**Approach**
+1. Perform a self-join on the `Employees` table, joining `e1` with `e2` on `e1.manager_id = e2.employee_id`. This allows us to compare each employee with their manager.
+2. Filter the results to include only employees with a salary less than $30000 (`e1.salary < 30000`).
+3. Filter the results to include only employees whose manager ID is not null (`e1.manager_id IS NOT NULL`), as employees without a manager will not have a valid manager ID.
+4. Filter the results to include only employees whose manager's ID is null in the joined table (`e2.employee_id IS NULL`), indicating that the manager has left the company.
+5. Order the results by `employee_id` to ensure the output is sorted correctly.
+
+**Time Complexity**
+O(n^2) due to the self-join operation, where n is the number of employees in the table. This is because each employee is compared with every other employee to find their manager.
+
+**Space Complexity**
+O(n) for storing the joined result set, where n is the number of employees in the table.
+
+**Key Insight**
+The key insight is that by joining the `Employees` table with itself, we can identify employees whose manager's ID no longer exists in the table, indicating that the manager has left. This allows us to find the IDs of employees whose manager left the company, even if their manager's information has been deleted from the table.
+
 ## 📊 Metrics
 
 | Metric | Value |

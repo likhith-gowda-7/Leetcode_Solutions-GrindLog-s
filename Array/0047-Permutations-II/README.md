@@ -42,6 +42,30 @@ Example 2:**
 
 	- `-10 <= nums[i] <= 10`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by utilizing a backtracking approach to generate all unique permutations of the input array. The key to handling duplicates lies in sorting the array and skipping over identical elements that have not been used yet. This ensures that each permutation is unique and avoids unnecessary computation.
+
+## Approach
+1. Sort the input array `nums` to group identical elements together.
+2. Initialize an empty result list `res`, a temporary solution list `sol`, and a boolean array `used` to track used elements.
+3. Define a recursive `backtrack` function that:
+   - Checks if the length of `sol` is equal to the length of `nums`, indicating a complete permutation.
+   - Iterates over `nums`, skipping over identical elements that have not been used yet.
+   - Marks the current element as used, adds it to `sol`, and recursively calls `backtrack`.
+   - Backtracks by removing the last element from `sol` and marking it as unused.
+4. Call the `backtrack` function and return the result list `res`.
+
+## Time Complexity
+The time complexity is O(N! / (k1! * k2! * ... * km!)), where N is the length of `nums` and k1, k2, ..., km are the frequencies of each distinct element. This is because there are N! permutations in total, but many of them are duplicates due to the presence of identical elements.
+
+## Space Complexity
+The space complexity is O(N), where N is the length of `nums`. This is because the maximum recursion depth is N, and we need to store the `used` array and the temporary solution list `sol`.
+
+## Key Insight
+The key insight here is to sort the input array and skip over identical elements that have not been used yet, which allows us to efficiently generate all unique permutations while avoiding duplicates. This approach takes advantage of the fact that identical elements are grouped together after sorting, making it easy to identify and skip over duplicates.
+
 ## 📊 Metrics
 
 | Metric | Value |

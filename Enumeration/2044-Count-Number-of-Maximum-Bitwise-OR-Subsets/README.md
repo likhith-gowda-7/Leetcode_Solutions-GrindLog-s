@@ -64,6 +64,27 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the maximum possible bitwise OR of a subset of the given array `nums` and returning the number of different non-empty subsets with this maximum bitwise OR. The key insight is that the maximum bitwise OR can be achieved by including the maximum element in the subset, and the number of subsets with this maximum bitwise OR can be found by considering all possible combinations of including or excluding each element.
+
+**Approach**
+1. Calculate the maximum possible bitwise OR of the entire array `nums` using a helper function `bit_or`.
+2. Initialize a counter `count` to store the number of subsets with the maximum bitwise OR.
+3. Define a recursive helper function `backtrack` that takes the current index `idx` and the current bitwise OR `curr_or` as parameters.
+4. In the `backtrack` function, if the current index `idx` is equal to the length of the array `n`, check if the current bitwise OR `curr_or` is equal to the maximum bitwise OR `t`. If it is, increment the counter `count`.
+5. Recursively call the `backtrack` function with the next index `idx+1` and the current bitwise OR `curr_or|nums[idx]` (including the current element) and with the next index `idx+1` and the current bitwise OR `curr_or` (excluding the current element).
+
+**Time Complexity**
+The time complexity of this solution is O(2^n * n), where n is the length of the array `nums`. This is because in the worst case, the `backtrack` function is called 2^n times (once for each possible subset), and in each call, we perform a constant amount of work.
+
+**Space Complexity**
+The space complexity of this solution is O(n), which is the space required to store the recursive call stack of the `backtrack` function.
+
+**Key Insight**
+The key insight is that the maximum bitwise OR can be achieved by including the maximum element in the subset, and the number of subsets with this maximum bitwise OR can be found by considering all possible combinations of including or excluding each element. This is achieved by using a recursive backtracking approach to explore all possible subsets of the array.
+
 ## 📊 Metrics
 
 | Metric | Value |

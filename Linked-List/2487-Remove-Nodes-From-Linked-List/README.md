@@ -49,6 +49,27 @@ Example 2:**
 
 	- `1 <= Node.val <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-pass approach to remove nodes from the linked list. In the first pass, it reverses the linked list to simplify the problem. Then, in the second pass, it iterates through the reversed list and removes nodes with values less than the maximum value seen so far.
+
+**Approach**
+1. Reverse the linked list by iterating through it and updating the `next` pointers of each node to point to the previous node.
+2. Initialize a `maxi` node with a value of 0 to keep track of the maximum value seen so far.
+3. Iterate through the reversed linked list. For each node, check if its value is greater than or equal to the `maxi` value.
+4. If the node's value is greater than or equal to the `maxi` value, update the `maxi` value and remove the node by updating its `next` pointer to point to the previous node.
+5. Return the new head of the modified linked list.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the linked list. This is because we are iterating through the linked list twice.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the `prev` and `maxi` nodes.
+
+**Key Insight**
+The key insight here is that by reversing the linked list, we can simplify the problem and make it easier to remove nodes with values less than the maximum value seen so far. This is a common technique used in linked list problems to make the solution more efficient and easier to understand.
+
 ## 📊 Metrics
 
 | Metric | Value |

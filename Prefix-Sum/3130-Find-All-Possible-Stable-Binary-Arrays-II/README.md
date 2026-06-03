@@ -63,6 +63,29 @@ All the possible stable binary arrays are `[0,0,1,0,1,1]`, `[0,0,1,1,0,1]`, `[0,
 
 	- `1 <= zero, one, limit <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses dynamic programming and combinatorics to count the number of stable binary arrays. The key insight is to break down the problem into smaller subproblems and use the concept of combinations to calculate the number of stable arrays for each subproblem.
+
+**Approach**
+
+1.  Calculate the factorial and modular inverse of the factorial up to the maximum possible number of elements in the binary array.
+2.  Define a function `C(n, k)` to calculate the number of combinations of `n` items taken `k` at a time, using the precomputed factorial and modular inverse.
+3.  Define a function `F(N, K, L)` to calculate the number of stable arrays of length `N` with `K` zeros and `L` as the limit for each subarray.
+4.  Initialize an array `fOne` to store the number of stable arrays for each possible number of ones from 1 to `maxK`.
+5.  Iterate over each possible number of ones `k` from 1 to `maxK`, and calculate the number of stable arrays for each `k` using the `F` function.
+6.  For each `k`, calculate the number of stable arrays with `k` ones and the corresponding number of zeros, and add it to the total count.
+
+**Time Complexity**
+The time complexity of this solution is O(maxN^2), where maxN is the maximum possible number of elements in the binary array. This is because we need to iterate over each possible number of ones and zeros, and for each pair, we need to calculate the number of stable arrays using the `F` function.
+
+**Space Complexity**
+The space complexity of this solution is O(maxN), which is the space required to store the precomputed factorial and modular inverse, as well as the `fOne` array.
+
+**Key Insight**
+The key insight in this solution is to use the concept of combinations to calculate the number of stable arrays for each subproblem. By breaking down the problem into smaller subproblems and using the precomputed factorial and modular inverse, we can efficiently calculate the number of stable arrays for each subproblem.
+
 ## 📊 Metrics
 
 | Metric | Value |

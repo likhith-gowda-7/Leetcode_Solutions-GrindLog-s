@@ -60,6 +60,28 @@ Example 3:**
 
 	- `s` consists only of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the input string and keeping track of the current character and its consecutive count. If the current character is different from the previous one, it resets the count and adds the character to the result string. If the count is less than 3, it adds the character to the result string regardless of whether it's the same as the previous one.
+
+**Approach**
+1. Initialize variables `c` (consecutive count) to 1, `prev` (previous character) to the first character of the string, and `res` (result string) to the first character of the string.
+2. Iterate through the string starting from the second character.
+3. If the current character is different from the previous one, reset `c` to 1 and update `prev` to the current character.
+4. If the current character is the same as the previous one, increment `c`.
+5. If `c` is less than 3, add the current character to `res`.
+6. After iterating through the entire string, return `res`.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we're iterating through the string once.
+
+**Space Complexity**
+O(n), where n is the length of the input string. This is because in the worst case, we might need to store the entire string in `res`.
+
+**Key Insight**
+The key insight is that we only need to keep track of the previous character and its consecutive count to determine whether to add the current character to the result string. This allows us to solve the problem efficiently with a single pass through the string.
+
 ## 📊 Metrics
 
 | Metric | Value |

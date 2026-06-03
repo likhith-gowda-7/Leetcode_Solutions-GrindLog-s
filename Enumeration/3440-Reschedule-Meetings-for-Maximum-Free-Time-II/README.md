@@ -85,6 +85,27 @@ There is no time during the event not occupied by meetings.
 
 	- `endTime[i] <= startTime[i + 1]` where `i` lies in the range `[0, n - 2]`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to find the maximum free time possible after rearranging the meetings. The key idea is to maintain a priority queue of free times and try to find a meeting that can be rescheduled to maximize the continuous period of free time.
+
+**Approach**
+1. First, calculate the free time between each pair of consecutive meetings and store them in a list.
+2. Initialize a priority queue (min heap) to store the free times. The priority queue will store tuples of (free time, index of the free time).
+3. Iterate through the free times and push them into the priority queue. If the priority queue size exceeds 3, remove the smallest free time (the one at the top of the heap) if it is smaller than the current free time.
+4. Define a helper function `find_pos` to check if a meeting can be rescheduled to a certain position. This function iterates through the priority queue and checks if there is a free time that is greater than or equal to the required length and is not adjacent to the current meeting.
+5. Iterate through the meetings and calculate the maximum free time possible by trying to reschedule each meeting to a position where it does not overlap with the previous or next meeting.
+
+**Time Complexity**
+O(n log n) due to the priority queue operations (push and pop). The priority queue size is at most 3, so the time complexity is dominated by the iteration through the free times.
+
+**Space Complexity**
+O(n) for storing the free times and the priority queue.
+
+**Key Insight**
+The key insight is to maintain a priority queue of free times and use it to efficiently find a meeting that can be rescheduled to maximize the continuous period of free time. By using a priority queue, we can quickly find the smallest free time that can be used to reschedule a meeting, which is essential for achieving the optimal solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

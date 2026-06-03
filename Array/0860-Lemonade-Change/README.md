@@ -53,6 +53,29 @@ Since not every customer received the correct change, the answer is false.
 
 	- `bills[i]` is either `5`, `10`, or `20`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to manage the available bills. It keeps track of the number of $5 and $10 bills to determine if it can provide the correct change for each customer. The key insight is that we can always make change for a $10 bill with a $5 bill, and we can make change for a $20 bill with a $10 bill and a $5 bill, or three $5 bills.
+
+**Approach**
+1. Initialize counters for $5 and $10 bills.
+2. Iterate through each bill in the input array.
+3. If the bill is $5, increment the $5 counter.
+4. If the bill is $10 and there are available $5 bills, decrement the $5 counter and increment the $10 counter.
+5. If the bill is $20, check if there are available $10 and $5 bills. If so, decrement both counters. Otherwise, check if there are at least three $5 bills available. If not, return False.
+6. If the bill is not $5, $10, or $20, return False.
+7. After iterating through all bills, return True if all customers can be served.
+
+**Time Complexity**
+O(n), where n is the number of bills. We iterate through each bill once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the counters.
+
+**Key Insight**
+The solution relies on the fact that we can always make change for a $10 bill with a $5 bill, and we can make change for a $20 bill with a $10 bill and a $5 bill, or three $5 bills. This allows us to use a greedy approach to manage the available bills.
+
 ## 📊 Metrics
 
 | Metric | Value |

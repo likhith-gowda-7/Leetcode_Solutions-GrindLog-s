@@ -42,6 +42,27 @@ promise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))
 
 	- `promise1` and `promise2` are promises that resolve with a number
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes the `async/await` syntax to wait for the resolution of both promises and then returns their sum. This approach leverages the fact that `async/await` can be used to write asynchronous code that looks and feels like synchronous code.
+
+**Approach**
+1. The `addTwoPromises` function is defined with the `async` keyword, allowing it to contain `await` expressions.
+2. The function takes two promises, `promise1` and `promise2`, as input.
+3. The function uses the `await` keyword to wait for the resolution of `promise1`, which returns its resolved value.
+4. The function then uses the `await` keyword to wait for the resolution of `promise2`, which returns its resolved value.
+5. The function returns the sum of the resolved values of `promise1` and `promise2`.
+
+**Time Complexity**
+O(n + m), where n and m are the times it takes for `promise1` and `promise2` to resolve, respectively. This is because the function waits for both promises to resolve before returning their sum.
+
+**Space Complexity**
+O(1), as the function only uses a constant amount of space to store the resolved values of the promises.
+
+**Key Insight**
+The key insight here is that `async/await` can be used to write asynchronous code that looks synchronous, making it easier to reason about and write asynchronous code. This allows us to write a simple and intuitive function that adds the values of two promises, without having to deal with the complexities of promise chaining.
+
 ## 📊 Metrics
 
 | Metric | Value |

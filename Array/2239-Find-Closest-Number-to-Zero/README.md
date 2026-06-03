@@ -47,6 +47,29 @@ Example 2:**
 
 	- `-10^5 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through the input array, keeping track of the number with the smallest absolute difference to zero. If there are multiple numbers with the same smallest absolute difference, it keeps track of the largest one.
+
+**Approach**
+1. Initialize a list `mini` with two elements: the smallest absolute difference found so far (`mini[0]`) and the corresponding number (`mini[1]`).
+2. Iterate through the input array `nums`.
+3. For each number, calculate its absolute difference to zero (`diff`).
+4. If `diff` is less than or equal to `mini[0]`, update `mini` accordingly:
+   - If `diff` is equal to `mini[0]`, update `mini[1]` to be the maximum of its current value and the current number.
+   - Otherwise, update `mini` to be `[diff, current number]`.
+5. After iterating through the entire array, return `mini[1]`, which is the number with the smallest absolute difference to zero (or the largest one if there are multiple).
+
+**Time Complexity**
+O(n), where n is the length of the input array. This is because we iterate through the array once.
+
+**Space Complexity**
+O(1), excluding the input array. We use a constant amount of space to store the `mini` list, regardless of the input size.
+
+**Key Insight**
+The key insight is to use a single pass through the array to find the number with the smallest absolute difference to zero, and to keep track of the largest number in case of a tie. This approach avoids the need for sorting or using additional data structures, making it efficient and simple.
+
 ## 📊 Metrics
 
 | Metric | Value |

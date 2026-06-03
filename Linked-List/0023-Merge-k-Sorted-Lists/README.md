@@ -66,6 +66,29 @@ Example 3:**
 
 	- The sum of `lists[i].length` will not exceed `10^4`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a min heap to efficiently merge the k sorted linked lists into one sorted linked list. The key insight is to first flatten the linked lists into a min heap, and then pop the smallest element from the heap to construct the sorted linked list.
+
+**Approach**
+1. Check if the input list is empty, if so return None.
+2. Initialize a min heap to store the node values from the linked lists.
+3. Iterate through each linked list and append its node values to the min heap.
+4. Heapify the min heap to maintain the heap property.
+5. Create a new linked list with the smallest node value (popped from the min heap) as the root node.
+6. While the min heap is not empty, pop the smallest node value, create a new node with this value, and append it to the current node's next pointer.
+7. Return the root node of the merged linked list.
+
+**Time Complexity**
+O(N log k), where N is the total number of nodes across all linked lists and k is the number of linked lists. The time complexity is dominated by the heapify operation (O(k)) and the while loop (O(N log k)).
+
+**Space Complexity**
+O(N), where N is the total number of nodes across all linked lists. The space complexity is dominated by the min heap, which stores all node values from the linked lists.
+
+**Key Insight**
+The key insight is to use a min heap to efficiently merge the k sorted linked lists into one sorted linked list. By first flattening the linked lists into a min heap, we can then pop the smallest element from the heap to construct the sorted linked list in O(N log k) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

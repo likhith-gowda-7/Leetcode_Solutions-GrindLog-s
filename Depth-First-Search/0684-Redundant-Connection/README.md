@@ -55,6 +55,26 @@ Example 2:**
 
 	- The given graph is connected.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a Union-Find (also known as Disjoint-Set) data structure to detect cycles in the graph. The key insight is that if a cycle exists, it means that there's an edge that connects two nodes that are already connected through another path. The Union-Find data structure allows us to efficiently check if two nodes are already connected.
+
+**Approach**
+1. Initialize the parent array to contain each node as its own parent, and the rank array to contain all nodes with a rank of 1.
+2. Define a `find` function to find the root of a node using path compression.
+3. Define a `union` function to merge two nodes. If the two nodes are already connected (i.e., they have the same root), return `False` to indicate a cycle. Otherwise, merge the two nodes and update the rank of the new root.
+4. Iterate through the edges and use the `union` function to merge the nodes. If a cycle is detected, return the edge that caused the cycle.
+
+**Time Complexity**
+The time complexity of this solution is O(n + m), where n is the number of nodes and m is the number of edges. This is because we're iterating through each edge once, and each `union` operation takes constant time.
+
+**Space Complexity**
+The space complexity of this solution is O(n), where n is the number of nodes. This is because we're storing the parent and rank arrays, which require O(n) space.
+
+**Key Insight**
+The key insight is that if a cycle exists, it means that there's an edge that connects two nodes that are already connected through another path. The Union-Find data structure allows us to efficiently check if two nodes are already connected, and the `union` function helps us detect cycles by checking if the two nodes have the same root.
+
 ## 📊 Metrics
 
 | Metric | Value |

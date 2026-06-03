@@ -52,6 +52,29 @@ Example 2:**
 
 	- `1 <= minJump <= maxJump < s.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved using a dynamic programming approach with a sliding window. The idea is to maintain a count of reachable indices at each position, and update this count based on the minimum and maximum jump constraints. The solution checks if the last index is reachable by checking the count at the last position.
+
+**Approach**
+1. Initialize a list `reachable_count` of size `n` to store the count of reachable indices at each position.
+2. Set `reachable_count[0]` to 1, since the starting index is always reachable.
+3. Iterate from the second index to the last index, and for each index `i`:
+   1. Calculate the left and right bounds of the sliding window based on the minimum and maximum jump constraints.
+   2. Update the count of reachable indices by adding the count at the left bound and subtracting the count at the right bound.
+   3. If the count is greater than 0 and the current index is 0, set `reachable_count[i]` to 1.
+4. Return True if the last index is reachable (i.e., `reachable_count[-1]` is 1), and False otherwise.
+
+**Time Complexity**
+O(n), where n is the length of the string `s`. This is because we are iterating over the string once, and the operations inside the loop take constant time.
+
+**Space Complexity**
+O(n), where n is the length of the string `s`. This is because we are using a list of size `n` to store the count of reachable indices at each position.
+
+**Key Insight**
+The key insight is to use a sliding window approach to update the count of reachable indices at each position, based on the minimum and maximum jump constraints. This allows us to efficiently determine whether the last index is reachable or not.
+
 ## 📊 Metrics
 
 | Metric | Value |

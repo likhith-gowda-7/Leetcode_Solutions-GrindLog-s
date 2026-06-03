@@ -59,6 +59,26 @@ Example 3:**
 
 	- `target` is in `nums`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by iterating through the array and keeping track of the minimum distance found so far between the target element and the start index. The key insight is that we only need to find the first occurrence of the target element, as it is guaranteed to exist in the array.
+
+**Approach**
+1. Initialize `mini` to the length of the array, which will store the minimum distance found so far.
+2. Iterate through the array using `enumerate`, which provides both the index `i` and the value `val` at each position.
+3. Check if the current value `val` is equal to the target element. If it is, update `mini` to be the minimum of its current value and the absolute difference between the current index `i` and the start index.
+4. After iterating through the entire array, return the value of `mini`, which represents the minimum distance found.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we are iterating through the array once.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the minimum distance `mini` and the start index.
+
+**Key Insight**
+The key insight is that we only need to find the first occurrence of the target element, as it is guaranteed to exist in the array. This allows us to stop iterating as soon as we find the target element, making the solution efficient even for large arrays.
+
 ## 📊 Metrics
 
 | Metric | Value |

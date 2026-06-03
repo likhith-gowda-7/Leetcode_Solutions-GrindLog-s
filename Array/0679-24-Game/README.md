@@ -66,6 +66,30 @@ Example 2:**
 
 	- `1 <= cards[i] <= 9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a backtracking approach to generate all possible mathematical expressions using the given cards and operators. It recursively tries all possible combinations of operations between the cards, and checks if any of them evaluate to 24.
+
+**Approach**
+1. Define a list of operators (`ops`) that can be used to combine the numbers.
+2. Define a recursive function (`dfs`) that takes a list of numbers as input.
+3. If the list contains only one number, check if it is equal to 24 (with some tolerance for floating-point errors).
+4. Otherwise, iterate over all pairs of numbers in the list, and for each pair:
+   a. Create a new list containing the remaining numbers.
+   b. For each operator, apply it to the current pair of numbers, and recursively call `dfs` on the new list.
+   c. If the recursive call returns `True`, return `True`.
+5. If no combination of operations evaluates to 24, return `False`.
+
+**Time Complexity**
+O(4^n * n!), where n is the number of cards. This is because there are 4 possible operations for each pair of numbers, and there are n choose 2 possible pairs of numbers.
+
+**Space Complexity**
+O(n), for the recursive call stack.
+
+**Key Insight**
+The key insight here is that the problem can be solved using a backtracking approach, where we recursively try all possible combinations of operations between the cards. This allows us to explore the entire search space and find a solution if one exists. The use of a recursive function also makes the code concise and easy to understand.
+
 ## 📊 Metrics
 
 | Metric | Value |

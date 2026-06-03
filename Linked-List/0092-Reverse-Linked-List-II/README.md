@@ -48,6 +48,30 @@ Example 2:**
 
 **Follow up:** Could you do it in one pass?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a dummy node to simplify the reversal process. It iterates through the linked list, reversing the nodes between the specified `left` and `right` positions in a single pass.
+
+**Approach**
+1. Create a dummy node to simplify the reversal process and set its `next` pointer to the head of the linked list.
+2. Initialize `prev` to `None` and `curr` to the head of the linked list.
+3. Initialize `st` to the dummy node and `pos` to 0.
+4. Iterate through the linked list:
+   - If `pos` is greater than or equal to `left`, reverse the current node by updating `curr.next` to `prev`, `prev` to `curr`, and `curr` to the next node.
+   - If `pos` is less than `left`, move the `st` pointer to the next node and update `curr` to the next node.
+   - If `pos` equals `right`, break the loop.
+5. After the loop, connect the tail of the reversed nodes to the start of the reversed section by updating `tail.next` to `curr` and `st.next` to `prev`.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the linked list. This is because we iterate through the linked list once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the dummy node, `prev`, `curr`, `st`, and `pos`.
+
+**Key Insight**
+The key insight is to use a dummy node to simplify the reversal process and handle the edge cases where the reversed section starts at the head of the linked list. This allows us to reverse the nodes in a single pass, making the solution efficient and easy to implement.
+
 ## 📊 Metrics
 
 | Metric | Value |

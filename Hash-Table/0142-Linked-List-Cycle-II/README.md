@@ -64,6 +64,27 @@ Example 3:**
 
 **Follow up:** Can you solve it using `O(1)` (i.e. constant) memory?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a trick to detect the cycle in the linked list by marking visited nodes. Since we cannot modify the linked list, we mark the visited nodes by changing their values. If a node has already been visited, it means we have found the cycle.
+
+**Approach**
+1. Initialize a pointer `curr` to the head of the linked list.
+2. While `curr` is not `None`, check if its value is `"#"`. If it is, return `curr` as it is the node where the cycle begins.
+3. If `curr`'s value is not `"#"`, mark it by changing its value to `"#"`.
+4. Move `curr` to the next node in the linked list.
+5. If `curr` becomes `None`, return `None` as there is no cycle.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the linked list. We visit each node at most once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the pointer `curr` and do not use any additional data structures.
+
+**Key Insight**
+The key insight is that we can mark visited nodes by changing their values, which allows us to detect the cycle without modifying the linked list. This trick is possible because we are not required to return the cycle, but only the node where it begins.
+
 ## 📊 Metrics
 
 | Metric | Value |

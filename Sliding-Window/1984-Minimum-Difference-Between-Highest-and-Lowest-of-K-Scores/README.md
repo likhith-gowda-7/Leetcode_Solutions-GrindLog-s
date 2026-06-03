@@ -55,6 +55,29 @@ The minimum possible difference is 2.
 
 	- `0 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to find the minimum difference between the highest and lowest scores of k students. To achieve this, we can sort the scores in ascending order and then slide a window of size k over the sorted array. The minimum difference will be the difference between the highest and lowest scores within each window.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Subtract 1 from `k` to adjust the window size.
+3. Initialize `mini` to positive infinity to store the minimum difference found so far.
+4. Iterate over the sorted array starting from the k-th element (inclusive) to the end.
+5. For each element, calculate the difference between the current element and the element k positions before it.
+6. If the calculated difference is less than the current minimum difference, update `mini` with the new difference.
+7. Return the minimum difference found.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the length of the input array `nums`. The subsequent iteration and calculations take O(n) time, but the sorting dominates the overall time complexity.
+
+**Space Complexity**
+O(1) since we only use a constant amount of space to store the minimum difference and other variables, regardless of the input size.
+
+**Key Insight**
+The key insight here is that by sorting the scores and sliding a window of size k over the sorted array, we can efficiently find the minimum difference between the highest and lowest scores of k students. This approach takes advantage of the fact that the sorted array allows us to quickly identify the highest and lowest scores within each window.
+
 ## 📊 Metrics
 
 | Metric | Value |

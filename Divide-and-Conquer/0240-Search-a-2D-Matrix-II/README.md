@@ -57,6 +57,28 @@ Example 2:**
 
 	- `-10^9 <= target <= 10^9`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by taking advantage of the fact that the matrix is sorted both row-wise and column-wise. By starting from the top-right corner, we can effectively use a combination of row and column comparisons to narrow down the search space. This allows us to efficiently search for the target value in the matrix.
+
+## Approach
+1. Initialize the row index to 0 (top row) and the column index to the last column (rightmost column).
+2. Compare the value at the current row and column index with the target value.
+3. If the values match, return True.
+4. If the current value is greater than the target, move left in the current row by decrementing the column index.
+5. If the current value is less than the target, move down in the current column by incrementing the row index.
+6. Repeat steps 2-5 until the target is found or the search space is exhausted.
+
+## Time Complexity
+The time complexity is O(m + n), where m is the number of rows and n is the number of columns. This is because in the worst-case scenario, we might need to traverse the entire matrix, either by moving down all rows or left across all columns.
+
+## Space Complexity
+The space complexity is O(1), as we only use a constant amount of space to store the row and column indices, regardless of the size of the input matrix.
+
+## Key Insight
+The key insight here is to start from the top-right corner and use a combination of row and column comparisons to efficiently search for the target value. This approach allows us to take advantage of the sorted nature of the matrix, reducing the search space and resulting in a more efficient algorithm.
+
 ## 📊 Metrics
 
 | Metric | Value |

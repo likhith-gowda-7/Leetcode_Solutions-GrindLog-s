@@ -62,6 +62,32 @@ Example 3:**
 
 	- `1 <= n <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to count the number of integers in the range `[1, n]` that are "good" according to a specific definition. A number is "good" if it can be rotated by 180 degrees to form a different valid number. The solution uses a dynamic programming approach to efficiently calculate the number of good integers.
+
+**Approach**
+1. Define a set `valid` containing the digits that rotate to themselves or to a different valid digit (2, 5, 6, 9).
+2. Create a helper function `rev(num)` that checks if a given number can be rotated to form a good integer.
+   - If the last digit of the number is 3, 4, or 7, return 0 because these digits cannot be rotated to form a valid number.
+   - If the last digit is in the `valid` set, increment a `change` counter.
+   - Remove the last digit from the number and repeat the process until the number is exhausted.
+   - Return the `change` counter, which indicates the number of valid rotations.
+3. Initialize a `total` counter to store the number of good integers.
+4. Iterate over the range `[1, n]` and call the `rev(number)` function for each number.
+5. Increment the `total` counter by the result of `rev(number)` for each number.
+6. Return the final value of `total`.
+
+**Time Complexity**
+O(n log n) because the `rev(num)` function iterates over the digits of each number, and the loop iterates over the range `[1, n]`.
+
+**Space Complexity**
+O(1) because the `valid` set and the `total` counter are constant-sized variables.
+
+**Key Insight**
+The key insight is to recognize that the problem can be solved by iterating over the range `[1, n]` and checking each number individually. The dynamic programming approach used in the solution allows us to efficiently calculate the number of good integers by counting the valid rotations for each number.
+
 ## 📊 Metrics
 
 | Metric | Value |

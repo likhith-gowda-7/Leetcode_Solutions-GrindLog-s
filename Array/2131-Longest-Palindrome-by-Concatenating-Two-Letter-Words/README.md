@@ -62,6 +62,30 @@ Note that "ll" is another longest palindrome that can be created, and so is "xx"
 
 	- `words[i]` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by counting the occurrences of each word in the input array and then constructing the longest possible palindrome by selecting words that can be paired together to form a palindrome. Words that are the same when reversed are counted as pairs, while words that are not the same when reversed are counted as pairs if their reversed versions have a higher count.
+
+**Approach**
+1. Count the occurrences of each word in the input array using a hash table (Counter).
+2. Initialize the result (res) to 0 and a flag (is_exits) to False.
+3. Iterate over each word in the hash table:
+   - If the word is the same when reversed (e.g., "ab" and "ba"), count the number of pairs by dividing the count by 2 and multiply by 4 (since each pair contributes 4 characters to the palindrome).
+   - If the word is not the same when reversed, count the minimum number of pairs between the word and its reversed version.
+   - If the count of the word is odd and no word has been counted as a single character yet, set the flag to True.
+4. If the flag is True, add 2 to the result (since the single character can be added to the palindrome).
+5. Return the result.
+
+**Time Complexity**
+O(n), where n is the number of words in the input array. This is because we iterate over each word in the hash table once.
+
+**Space Complexity**
+O(n), where n is the number of words in the input array. This is because we store the count of each word in the hash table.
+
+**Key Insight**
+The key insight is that words that are the same when reversed can be paired together to form a palindrome, while words that are not the same when reversed can be paired with their reversed versions if available. This allows us to construct the longest possible palindrome by selecting words that can be paired together.
+
 ## 📊 Metrics
 
 | Metric | Value |

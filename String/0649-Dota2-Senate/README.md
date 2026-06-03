@@ -62,6 +62,29 @@ And in round 2, the third senator can just announce the victory since he is the 
 
 	- `senate[i]` is either `'R'` or `'D'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to simulate the voting process. By maintaining two queues for the Radiant and Dire parties, it efficiently determines the outcome of the voting process.
+
+**Approach**
+1. Initialize two queues, `r` and `d`, to store the indices of senators from the Radiant and Dire parties, respectively.
+2. Iterate through the `senate` string to populate the queues with the indices of senators from each party.
+3. While both queues are not empty, compare the indices of the first senators in each queue.
+4. If the Radiant senator's index is smaller, add the Radiant senator's index to the end of the Radiant queue and remove the Dire senator from the Dire queue.
+5. Otherwise, add the Dire senator's index to the end of the Dire queue and remove the Radiant senator from the Radiant queue.
+6. Repeat steps 3-5 until one of the queues is empty.
+7. If the Radiant queue is not empty, return "Radiant" as the winning party; otherwise, return "Dire".
+
+**Time Complexity**
+O(n), where n is the length of the `senate` string. This is because each senator is processed at most twice (once when added to the queue and once when removed).
+
+**Space Complexity**
+O(n), where n is the length of the `senate` string. This is because in the worst case, all senators are added to their respective queues.
+
+**Key Insight**
+The key insight is that the outcome of the voting process depends only on the relative order of the senators' indices. By maintaining the queues in this way, we can efficiently determine the winning party without having to simulate the entire voting process.
+
 ## 📊 Metrics
 
 | Metric | Value |

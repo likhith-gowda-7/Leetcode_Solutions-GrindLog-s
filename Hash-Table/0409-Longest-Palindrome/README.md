@@ -43,6 +43,28 @@ Example 2:**
 
 	- `s` consists of lowercase **and/or** uppercase English letters only.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table (implemented as a set in Python) to count the frequency of each character in the string. Since a palindrome can have at most one character that appears an odd number of times, we can count the number of pairs of characters and add 1 if there is a character that appears an odd number of times.
+
+**Approach**
+1. Initialize an empty set `pair` to store the characters that appear an even number of times.
+2. Iterate through the string `s`. For each character `i`:
+   1. If `i` is already in `pair`, it means we have found a pair of `i`. Remove `i` from `pair` and increment `max_len` by 2.
+   2. If `i` is not in `pair`, add it to `pair`.
+3. If `pair` is not empty after iterating through the string, it means there is a character that appears an odd number of times. Add 1 to `max_len`.
+4. Return `max_len`.
+
+**Time Complexity**
+O(n), where n is the length of the string `s`. We only need to iterate through the string once to count the frequency of each character.
+
+**Space Complexity**
+O(n), where n is the length of the string `s`. In the worst case, all characters in the string appear an even number of times, and we need to store all of them in the set `pair`.
+
+**Key Insight**
+The key insight is that a palindrome can have at most one character that appears an odd number of times. By counting the frequency of each character and storing the characters that appear an even number of times in a set, we can efficiently calculate the length of the longest palindrome that can be built with the given letters.
+
 ## 📊 Metrics
 
 | Metric | Value |

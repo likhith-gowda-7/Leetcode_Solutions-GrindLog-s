@@ -47,6 +47,28 @@ Example 2:**
 
 	- `Node.val` is `0` or `1`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a depth-first search (DFS) approach to traverse the binary tree and calculate the sum of all root-to-leaf binary numbers. The key insight is to represent each node's value as a binary digit and combine it with the parent node's value to form a new binary number.
+
+**Approach**
+1. Initialize a variable `self.res` to store the sum of all root-to-leaf binary numbers.
+2. Define a helper function `dfs` that takes a node and a binary number as arguments.
+3. If the node is a leaf node (i.e., it has no children), add the binary number to `self.res` and return `None`.
+4. If the node has a left child, recursively call `dfs` on the left child with the binary number shifted left by one bit and the left child's value appended to it.
+5. If the node has a right child, recursively call `dfs` on the right child with the binary number shifted left by one bit and the right child's value appended to it.
+6. Call `dfs` on the root node with its value as the initial binary number.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the binary tree. This is because each node is visited once during the DFS traversal.
+
+**Space Complexity**
+O(H), where H is the height of the binary tree. This is because the maximum depth of the recursive call stack is equal to the height of the tree.
+
+**Key Insight**
+The key insight is to represent each node's value as a binary digit and combine it with the parent node's value to form a new binary number. This allows us to efficiently calculate the sum of all root-to-leaf binary numbers using a DFS approach.
+
 ## 📊 Metrics
 
 | Metric | Value |

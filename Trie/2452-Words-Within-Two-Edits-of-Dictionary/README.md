@@ -57,6 +57,30 @@ Applying any two edits to "yes" cannot make it equal to "not". Thus, we return a
 
 	- All `queries[i]` and `dictionary[j]` are composed of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through each query word and dictionary word, counting the number of differences between them. If the number of differences is less than 3, it adds the query word to the result list. This approach works because it checks all possible edits within two steps.
+
+**Approach**
+1. Initialize an empty result list `res`.
+2. Iterate through each query word `q` in `queries`.
+3. For each query word `q`, iterate through each dictionary word `word` in `dictionary`.
+4. Initialize a difference counter `diff` to 0.
+5. Iterate through each character in the dictionary word `word` and query word `q`.
+6. If the characters at the current position are different, increment the difference counter `diff`.
+7. If the difference counter `diff` is less than 3, add the query word `q` to the result list `res` and break the inner loop.
+8. Return the result list `res`.
+
+**Time Complexity**
+O(n * m * len(word)), where n is the number of query words, m is the number of dictionary words, and len(word) is the length of each word. This is because we iterate through each query word, each dictionary word, and each character in each word.
+
+**Space Complexity**
+O(n), where n is the number of query words. This is because we store the result list of query words.
+
+**Key Insight**
+The key insight is that we only need to check if the difference between the query word and the dictionary word is less than 3, which allows us to avoid unnecessary comparisons and improve efficiency.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -73,6 +73,30 @@ Example 2:**
 
 	- `1 <= queries[i][1] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution utilizes two hash tables, `h1` and `h2`, to efficiently track the colors of the balls and the count of each color. The key insight is to maintain a separate hash table `h2` to store the count of each color, allowing for constant-time lookups and updates.
+
+**Approach**
+1. Initialize two empty hash tables `h1` and `h2`, and an empty result list `res`.
+2. Iterate through each query in the `queries` list.
+3. For each query, check if the ball at position `pos` is already colored (i.e., present in `h1`).
+4. If the ball is colored, decrement the count of its current color in `h2` and remove it if the count reaches zero.
+5. Update the color of the ball at position `pos` in `h1` to `col`.
+6. Increment the count of the new color `col` in `h2`.
+7. Append the current count of colors in `h2` to the result list `res`.
+8. Return the result list `res`.
+
+**Time Complexity**
+O(n * m), where n is the number of queries and m is the maximum value in the `limit` parameter. This is because each query involves a constant-time update of the hash tables, and we iterate through each query once.
+
+**Space Complexity**
+O(limit), where limit is the maximum value in the `limit` parameter. This is because we store the count of each color in the `h2` hash table, which can have at most `limit + 1` entries.
+
+**Key Insight**
+The key to this solution is maintaining a separate hash table `h2` to store the count of each color, allowing for constant-time lookups and updates. This enables us to efficiently track the number of colors among the balls after each query.
+
 ## 📊 Metrics
 
 | Metric | Value |

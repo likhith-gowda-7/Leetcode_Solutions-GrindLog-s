@@ -53,6 +53,27 @@ Example 2:**
 
 	- `k <= nums1.length * nums2.length`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by utilizing a min-heap to store pairs of elements from the two input arrays, where the heap is ordered by the sum of the pair elements. The heap allows us to efficiently extract the pair with the smallest sum at each step. By maintaining a set of visited pairs, we avoid duplicates and ensure that we return the k pairs with the smallest sums.
+
+## Approach
+1. Initialize a min-heap with the first pair of elements from the two input arrays.
+2. While the heap is not empty and we have not yet found k pairs, extract the pair with the smallest sum from the heap.
+3. Add the extracted pair to the result list and mark it as visited.
+4. Push the next possible pairs (i.e., the pair with the next element from the first array and the current element from the second array, and the pair with the current element from the first array and the next element from the second array) into the heap.
+5. Repeat steps 2-4 until we have found k pairs or the heap is empty.
+
+## Time Complexity
+The time complexity is O(k * log(min(n, m))), where n and m are the lengths of the two input arrays. This is because we perform a heap operation (either push or pop) for each of the k pairs, and each heap operation takes O(log(min(n, m))) time.
+
+## Space Complexity
+The space complexity is O(k + min(n, m)), where n and m are the lengths of the two input arrays. This is because we store the k pairs in the result list and at most min(n, m) pairs in the heap at any given time.
+
+## Key Insight
+The key insight behind this solution is the use of a min-heap to efficiently find the pair with the smallest sum at each step, allowing us to avoid comparing all possible pairs and reducing the time complexity. By maintaining a set of visited pairs, we also avoid duplicates and ensure that we return the correct k pairs.
+
 ## 📊 Metrics
 
 | Metric | Value |

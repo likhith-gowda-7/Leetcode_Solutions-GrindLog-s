@@ -72,6 +72,27 @@ Example 3:**
 
 	- All the characters that occur in `votes[0]` **also occur** in `votes[j]` where `1 <= j < votes.length`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash map to count the occurrences of each team at each position in the votes. Then, it sorts the teams based on their counts and team letters. This approach works because the ranking system is based on the number of votes for each position, and if there's a tie, it considers the next position until the tie is resolved.
+
+**Approach**
+1. Check if there's only one vote, in which case return the team.
+2. Initialize a hash map `h1` with default values of 0 for each team at each position.
+3. Iterate over each vote and update the count of each team at each position in the hash map.
+4. Sort the teams based on their counts and team letters using the `sorted` function with a custom key function.
+5. Join the sorted teams into a string using the `join` function.
+
+**Time Complexity**
+O(n*m*log(m)), where n is the number of votes and m is the number of teams. The time complexity comes from iterating over the votes (n*m) and sorting the teams (m*log(m)).
+
+**Space Complexity**
+O(m), where m is the number of teams. The space complexity comes from storing the counts of each team at each position in the hash map.
+
+**Key Insight**
+The key insight is to use a hash map to count the occurrences of each team at each position, which allows us to efficiently sort the teams based on their counts and team letters. This approach is more efficient than iterating over the votes multiple times to count the occurrences of each team.
+
 ## 📊 Metrics
 
 | Metric | Value |

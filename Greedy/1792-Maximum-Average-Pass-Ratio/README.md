@@ -52,6 +52,26 @@ Example 2:**
 
 	- `1 <= extraStudents <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach with a priority queue (max-heap) to maximize the average pass ratio. It iteratively assigns the extra brilliant students to the class with the highest gain in pass ratio, calculated by the difference in pass ratio before and after adding one student.
+
+**Approach**
+1. Initialize a max-heap `heap` to store classes with their gain in pass ratio.
+2. For each class, calculate the gain in pass ratio by adding one student and push it into the heap.
+3. While there are still extra brilliant students, pop the class with the highest gain from the heap, add one student to it, and push it back into the heap.
+4. After all extra students are assigned, calculate the average pass ratio by summing the pass ratio of each class and dividing by the total number of classes.
+
+**Time Complexity**
+O(n log n) due to the heap operations (push, pop, and heapify). The heap size is initially n (number of classes), and each operation takes O(log n) time.
+
+**Space Complexity**
+O(n) for storing the classes in the heap.
+
+**Key Insight**
+The key insight is that by maximizing the gain in pass ratio for each class, we effectively maximize the overall average pass ratio. This is because the gain in pass ratio is a measure of how much the pass ratio increases when adding one student to a class, and by choosing the class with the highest gain, we ensure that we are making the most efficient use of the extra brilliant students.
+
 ## 📊 Metrics
 
 | Metric | Value |

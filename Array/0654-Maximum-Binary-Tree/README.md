@@ -61,6 +61,29 @@ Example 2:**
 
 	- All integers in `nums` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a divide-and-conquer approach to recursively build the maximum binary tree from the input array. The key insight is to identify the maximum value in the array and recursively build the left and right subtrees from the subarray prefixes and suffixes, respectively.
+
+**Approach**
+1. Define a helper function `dfs` that takes an array as input and returns the root node of the maximum binary tree.
+2. If the input array is empty, return `None`.
+3. Find the maximum value `maxi` in the array and its index `idx`.
+4. Create a new root node with value `maxi`.
+5. Recursively call `dfs` on the subarray prefix `arr[:idx]` to build the left subtree and assign it to `root.left`.
+6. Recursively call `dfs` on the subarray suffix `arr[idx+1:]` to build the right subtree and assign it to `root.right`.
+7. Return the root node of the maximum binary tree.
+
+**Time Complexity**
+O(n^2) due to the `max` function and the `index` method, which have a time complexity of O(n) each. The recursive calls also have a time complexity of O(n) each.
+
+**Space Complexity**
+O(n) due to the recursive call stack, which can grow up to a maximum depth of n.
+
+**Key Insight**
+The key to this solution is to identify the maximum value in the array and recursively build the left and right subtrees from the subarray prefixes and suffixes, respectively. This divide-and-conquer approach allows us to efficiently build the maximum binary tree from the input array.
+
 ## 📊 Metrics
 
 | Metric | Value |

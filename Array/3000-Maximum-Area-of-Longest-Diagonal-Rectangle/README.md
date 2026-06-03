@@ -50,6 +50,28 @@ Example 2:**
 
 	- `1 <= dimensions[i][0], dimensions[i][1] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through each rectangle's dimensions, calculates its diagonal length, and keeps track of the maximum diagonal length and the corresponding rectangle's area. When a rectangle with a longer diagonal is found, its area is updated as the maximum area.
+
+**Approach**
+1. Initialize variables to store the maximum diagonal length and the maximum area of the rectangle with the longest diagonal.
+2. Iterate through each rectangle's dimensions (length and width).
+3. Calculate the diagonal length of the current rectangle using the Pythagorean theorem.
+4. If the current rectangle's diagonal length is greater than the maximum diagonal length found so far, update the maximum diagonal length and the maximum area of the rectangle with the longest diagonal.
+5. If the current rectangle's diagonal length is equal to the maximum diagonal length found so far, update the maximum area of the rectangle with the longest diagonal if the current rectangle's area is greater.
+6. Return the maximum area of the rectangle with the longest diagonal.
+
+**Time Complexity**
+O(n), where n is the number of rectangles. This is because we are iterating through each rectangle once.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the maximum diagonal length and the maximum area of the rectangle with the longest diagonal.
+
+**Key Insight**
+The key insight is that we only need to keep track of the maximum diagonal length and the corresponding rectangle's area, as the problem asks for the area of the rectangle with the longest diagonal. This simplifies the solution and reduces the space complexity to O(1).
+
 ## 📊 Metrics
 
 | Metric | Value |

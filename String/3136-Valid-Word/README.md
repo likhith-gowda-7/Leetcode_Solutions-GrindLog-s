@@ -69,6 +69,30 @@ This word contains a `'$'` character and does not have a consonant.
 
 	- `word` consists of English uppercase and lowercase letters, digits, `'@'`, `'#'`, and `'$'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution checks if a given word is valid by verifying its length, character set, and presence of vowels and consonants. It iterates through each character in the word, tracking the count of vowels, consonants, and digits. The solution returns `True` if the word meets all conditions and `False` otherwise.
+
+**Approach**
+1. Check if the word's length is less than 3 or if it contains non-alphanumeric characters. If either condition is true, return `False`.
+2. Initialize sets for vowels and consonants.
+3. Initialize counters for vowels (`v`), consonants (`conso`), and digits (`d`).
+4. Iterate through each character in the word:
+   1. If the character is a letter, check if it's a vowel. If it is, increment the vowel counter (`v`).
+   2. If the character is not a vowel, increment the consonant counter (`conso`).
+   3. If the character is a digit, increment the digit counter (`d`).
+5. Return `True` if the word has at least one consonant and one vowel, and `False` otherwise.
+
+**Time Complexity**
+O(n), where n is the length of the word. This is because the solution iterates through each character in the word once.
+
+**Space Complexity**
+O(1), as the solution uses a constant amount of space to store the counters and sets, regardless of the input size.
+
+**Key Insight**
+The key insight is that the solution can be optimized by tracking the presence of vowels and consonants separately, rather than checking for each condition individually. This allows for a more efficient solution with a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

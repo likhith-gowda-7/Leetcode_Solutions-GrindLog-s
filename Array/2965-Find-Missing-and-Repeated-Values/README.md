@@ -49,6 +49,27 @@ Example 2:**
 
 	- For all `x` that `1 <= x <= n * n` except two of them there is exactly one pair of `i, j` that `0 <= i, j <= n - 1` and `grid[i][j] == x`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by utilizing the properties of a hash set to keep track of the numbers in the grid and the sum of numbers from 1 to n^2. The missing number can be found by subtracting the sum of the numbers in the grid from the total sum of numbers from 1 to n^2. The repeating number is the one that exists in the hash set.
+
+**Approach**
+1. Initialize a hash set `h` to store unique numbers from the grid and a variable `a` to store the repeating number.
+2. Calculate the total sum of numbers from 1 to n^2 using the formula `b = n * (n + 1) // 2 * n`.
+3. Iterate through the grid, checking each number if it exists in the hash set `h`. If a number exists, update `a` to store the repeating number.
+4. If a number does not exist in the hash set, add it to `h` and subtract it from `b` to find the missing number.
+5. Return the repeating number `a` and the missing number `b`.
+
+**Time Complexity**
+O(n^2) - The solution iterates through the grid once, which has n^2 elements.
+
+**Space Complexity**
+O(n^2) - The solution uses a hash set to store unique numbers from the grid, which can have up to n^2 elements.
+
+**Key Insight**
+The key insight is to use the properties of a hash set to efficiently find the repeating and missing numbers. By subtracting the sum of numbers in the grid from the total sum of numbers from 1 to n^2, we can find the missing number in constant time.
+
 ## 📊 Metrics
 
 | Metric | Value |

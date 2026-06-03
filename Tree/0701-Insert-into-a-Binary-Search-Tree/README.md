@@ -59,6 +59,28 @@ Example 3:**
 
 	- It's **guaranteed** that `val` does not exist in the original BST.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a depth-first search (DFS) approach to find the correct location to insert the new value into the binary search tree (BST). The key insight is that we can always find the correct location by comparing the new value with the current node's value, and then recursively searching the left or right subtree.
+
+**Approach**
+1. Create a new node with the given value.
+2. If the tree is empty (i.e., the root is `None`), return the new node as the root.
+3. Perform a DFS traversal of the tree, keeping track of the previous node (`prev`) visited.
+4. If the current node's value is greater than the new value, recursively search the left subtree.
+5. If the current node's value is less than the new value, recursively search the right subtree.
+6. Once the correct location is found, insert the new node as the left or right child of the previous node.
+
+**Time Complexity**
+O(h), where h is the height of the tree. In the worst case, the tree is skewed to one side, and the DFS traversal has to go down the entire height of the tree.
+
+**Space Complexity**
+O(h), where h is the height of the tree. The recursive call stack can go up to the height of the tree in the worst case.
+
+**Key Insight**
+The key insight is that we can always find the correct location to insert the new value by comparing it with the current node's value and recursively searching the left or right subtree. This approach ensures that the tree remains a BST after insertion.
+
 ## 📊 Metrics
 
 | Metric | Value |

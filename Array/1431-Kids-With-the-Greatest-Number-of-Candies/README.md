@@ -64,6 +64,27 @@ Example 3:**
 
 	- `1 <= extraCandies <= 50`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through each kid's candies and checks if giving them the extra candies would make them have the greatest number of candies among all kids. This is done by comparing the kid's candies plus the extra candies to the maximum number of candies any kid has.
+
+**Approach**
+1. Find the maximum number of candies any kid has.
+2. Iterate through each kid's candies.
+3. For each kid, check if giving them the extra candies would make them have the greatest number of candies (i.e., if their candies plus extra candies is greater than or equal to the maximum number of candies).
+4. If it would, mark their candies as `True` in the result array; otherwise, mark it as `False`.
+5. Return the result array.
+
+**Time Complexity**
+O(n), where n is the number of kids. This is because we only need to iterate through each kid's candies once.
+
+**Space Complexity**
+O(1), excluding the space needed for the input and output arrays. We only use a constant amount of space to store the maximum number of candies and the result array.
+
+**Key Insight**
+The key insight is that we only need to compare each kid's candies to the maximum number of candies, rather than comparing each kid's candies to every other kid's candies. This makes the solution efficient and scalable for large inputs.
+
 ## 📊 Metrics
 
 | Metric | Value |

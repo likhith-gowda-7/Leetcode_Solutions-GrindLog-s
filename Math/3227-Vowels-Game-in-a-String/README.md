@@ -61,6 +61,26 @@ There is no valid play for Alice in her first turn, so Alice loses the game.
 
 	- `s` consists only of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution is based on a simple observation: Bob can only win if there are no vowels in the string. If there are any vowels, Alice can always make a move, and therefore, she wins.
+
+**Approach**
+1. Initialize a string of vowels.
+2. Iterate through each character in the input string.
+3. If the character is a vowel, immediately return True, indicating that Alice wins.
+4. If the loop completes without finding any vowels, return False, indicating that Bob wins.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we only need to iterate through the string once to determine if there are any vowels.
+
+**Space Complexity**
+O(1), which means the space required does not grow with the size of the input string. We only need a constant amount of space to store the string of vowels.
+
+**Key Insight**
+The key insight is that Bob can only win if there are no vowels in the string. If there are any vowels, Alice can always make a move, and therefore, she wins. This simplifies the problem and allows for a straightforward solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

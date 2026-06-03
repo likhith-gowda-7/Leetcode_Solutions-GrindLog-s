@@ -59,6 +59,28 @@ server.longest();                    // The prefix [1,2,3] is the longest upload
 
 	- At least one call will be made to `longest`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a binary search-like approach to track the longest uploaded prefix by maintaining a counter that increments whenever a video is uploaded and all previous videos are also uploaded. This allows for efficient calculation of the longest uploaded prefix at any point in the upload process.
+
+**Approach**
+1. Initialize a boolean array `arr` of size `n` to track whether each video has been uploaded or not. Set all elements to `False`.
+2. Initialize a counter `ind_count` to 0, which will keep track of the longest uploaded prefix.
+3. In the `upload` method:
+   a. Set the corresponding element in `arr` to `True` to indicate that the video has been uploaded.
+   b. While `ind_count` is less than `n` and the element at `ind_count` in `arr` is `True`, increment `ind_count`. This effectively moves the counter forward as long as all videos up to `ind_count` have been uploaded.
+4. In the `longest` method, return the current value of `ind_count`, which represents the length of the longest uploaded prefix.
+
+**Time Complexity**
+O(1) amortized. The `upload` method performs a constant number of operations, and the `longest` method simply returns the current value of `ind_count`, which is also constant. However, the while loop in the `upload` method can potentially execute `n` times in the worst case, but this is amortized over multiple `upload` calls.
+
+**Space Complexity**
+O(n) for the boolean array `arr`.
+
+**Key Insight**
+The key insight is that we only need to keep track of the longest uploaded prefix, which allows us to use a simple counter to efficiently calculate the longest uploaded prefix at any point in the upload process. This approach avoids the need for explicit binary search or other more complex data structures.
+
 ## 📊 Metrics
 
 | Metric | Value |

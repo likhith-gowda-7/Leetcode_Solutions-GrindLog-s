@@ -59,6 +59,29 @@ Meetings are scheduled for all working days.
 
 	- `1 <= meetings[i][0] <= meetings[i][1] <= days`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the sorted meetings array and subtracting the number of days each meeting occupies from the total available days. The key insight is to consider the days when a meeting starts after the previous meeting ends, in which case we can simply subtract the duration of the current meeting. However, when a meeting starts before the previous meeting ends, we need to subtract the remaining days of the current meeting, ensuring we don't double-count the days.
+
+**Approach**
+1. Initialize `prev_end` to 0, representing the end of the previous meeting.
+2. Sort the meetings array based on the start time of each meeting.
+3. Iterate through the sorted meetings array:
+   1. If the start time of the current meeting is greater than `prev_end`, subtract the duration of the current meeting from the total available days.
+   2. If the start time of the current meeting is less than or equal to `prev_end`, subtract the remaining days of the current meeting from the total available days.
+   3. Update `prev_end` to the maximum of its current value and the end time of the current meeting.
+4. Return the total available days.
+
+**Time Complexity**
+O(n log n) due to the sorting of the meetings array, where n is the number of meetings.
+
+**Space Complexity**
+O(1) as we only use a constant amount of space to store the `prev_end` variable and the iteration variables.
+
+**Key Insight**
+The solution relies on the observation that the days when no meetings are scheduled are the days when a meeting starts after the previous meeting ends. By iterating through the sorted meetings array and subtracting the duration of each meeting, we can efficiently count the available days.
+
 ## 📊 Metrics
 
 | Metric | Value |

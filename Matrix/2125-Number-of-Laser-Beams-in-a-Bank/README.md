@@ -69,6 +69,28 @@ Example 2:**
 
 	- `bank[i][j]` is either `'0'` or `'1'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first counting the number of security devices (represented by '1's) in each row of the bank. Then, it iterates over the counts, multiplying each count with the previous one to calculate the number of laser beams that can be formed between the devices in the current and previous rows.
+
+**Approach**
+1. Initialize an empty list `cams` to store the counts of security devices in each row.
+2. Iterate over each row `floor` in the bank, counting the number of security devices using `floor.count("1")`.
+3. If the count is greater than 0, append it to the `cams` list.
+4. Initialize a variable `total` to 0, which will store the total number of laser beams.
+5. Iterate over the `cams` list, starting from the second element (index 1). For each element `cams[i]`, multiply it with the previous element `cams[i-1]` and add the result to `total`.
+6. Return the total number of laser beams.
+
+**Time Complexity**
+O(m + n), where m is the number of rows and n is the maximum number of security devices in a row. This is because we iterate over each row once and count the security devices in each row.
+
+**Space Complexity**
+O(m), where m is the number of rows. This is because we store the counts of security devices in each row in the `cams` list.
+
+**Key Insight**
+The key insight is that the number of laser beams between two rows is equal to the product of the number of security devices in those two rows. This is because each security device in the first row can form a laser beam with each security device in the second row, resulting in a total of `cams[i-1] * cams[i]` laser beams.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -63,6 +63,28 @@ Thus, the 4 groups formed are "abc", "def", "ghi", and "jxx".
 
 	- `fill` is a lowercase English letter.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by iterating over the input string `s` and grouping its characters into chunks of size `k`. If the string does not have `k` characters remaining, it uses the `fill` character to complete the last group. The solution returns an array of strings, where each string represents a group in the partitioned string.
+
+**Approach**
+1. Initialize an empty list `res` to store the groups and a counter `c` to keep track of the current group size.
+2. Initialize an empty string `val` to build the current group.
+3. Iterate over each character `ch` in the input string `s`.
+4. Increment the counter `c` and append the character `ch` to the current group `val`.
+5. If the counter `c` reaches `k`, append the current group `val` to the result list `res`, reset the counter `c` and the current group `val`.
+6. After iterating over the entire string, if there are remaining characters, use the `fill` character to complete the last group and append it to the result list `res`.
+
+**Time Complexity**
+O(n), where n is the length of the input string `s`. This is because we iterate over each character in the string once.
+
+**Space Complexity**
+O(n), where n is the length of the input string `s`. This is because we store the partitioned groups in the result list `res`, which can have up to n/k elements.
+
+**Key Insight**
+The key insight here is to use a counter `c` to keep track of the current group size and a string `val` to build the current group. This allows us to efficiently partition the string into groups of size `k` and handle the case where the string does not have `k` characters remaining.
+
 ## 📊 Metrics
 
 | Metric | Value |

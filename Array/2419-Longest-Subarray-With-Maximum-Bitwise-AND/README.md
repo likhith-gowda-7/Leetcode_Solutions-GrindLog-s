@@ -55,6 +55,29 @@ The longest subarray with that value is [4], so we return 1.
 
 	- `1 <= nums[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by tracking the maximum possible bitwise AND value and its count in the array. It iterates through the array, maintaining a counter `c` for the maximum value. Whenever it encounters the maximum value, it increments the counter; otherwise, it resets the counter to 0. The maximum count of the maximum value is the length of the longest subarray with the maximum bitwise AND.
+
+**Approach**
+1. Initialize `maxi` as the maximum value in the array `nums`.
+2. Initialize `max_value_count` to 0, which will store the maximum count of the maximum value.
+3. Initialize `c` to 0, which will store the current count of the maximum value.
+4. Iterate through each number `n` in the array `nums`.
+5. If `n` is equal to `maxi`, increment `c` by 1 and update `max_value_count` if `c` is greater than `max_value_count`.
+6. If `n` is not equal to `maxi` and `c` is not 0, reset `c` to 0.
+7. Return `max_value_count` as the length of the longest subarray with the maximum bitwise AND.
+
+**Time Complexity**
+O(n), where n is the size of the array `nums`. This is because we are iterating through the array once.
+
+**Space Complexity**
+O(1), which means the space complexity is constant. We are using a constant amount of space to store the maximum value, count, and other variables.
+
+**Key Insight**
+The key insight is that we only need to consider the maximum value in the array, as any subarray with a bitwise AND less than the maximum value cannot be the longest subarray with the maximum bitwise AND. By tracking the count of the maximum value, we can efficiently find the length of the longest subarray with the maximum bitwise AND.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -69,6 +69,26 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 	- `nums` is sorted in **non-decreasing** order.
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by utilizing the fact that the input array is sorted in non-decreasing order, allowing us to easily identify and remove duplicates. We maintain a pointer to keep track of the position where the next unique element should be placed. By iterating through the array and comparing adjacent elements, we can efficiently remove duplicates in-place.
+
+## Approach
+1. Initialize a pointer `ind` to 1, which will keep track of the position where the next unique element should be placed.
+2. Iterate through the array starting from the second element (index 1).
+3. For each element, check if it is different from the previous one. If it is, place it at the current `ind` position and increment `ind`.
+4. After iterating through the entire array, `ind` will represent the number of unique elements, which is the desired output.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array. This is because we are iterating through the array once, performing a constant amount of work for each element.
+
+## Space Complexity
+The space complexity is O(1), as we are only using a constant amount of space to store the `ind` pointer and are modifying the input array in-place.
+
+## Key Insight
+The key insight behind this solution is the use of the `ind` pointer to keep track of the position where the next unique element should be placed, allowing us to efficiently remove duplicates in-place while maintaining the relative order of the elements. This approach takes advantage of the fact that the input array is sorted, making it possible to solve the problem in linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

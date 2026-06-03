@@ -57,6 +57,28 @@ Example 3:**
 
 	- `-10^9 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack-based approach to find the 132 pattern in the given array. The key insight is to maintain a "mini" value, which represents the minimum value seen so far that is greater than the current element. This allows us to efficiently check for the 132 pattern.
+
+**Approach**
+1. Initialize an empty stack and set the "mini" value to negative infinity.
+2. Iterate through the array in reverse order.
+3. For each element, check if it's less than the current "mini" value. If so, return True, as we've found a 132 pattern.
+4. While the stack is not empty and the top element of the stack is less than the current element, pop the stack and update the "mini" value to the popped element. This ensures that the "mini" value is always the minimum value seen so far that is greater than the current element.
+5. Push the current element onto the stack.
+6. If the iteration completes without finding a 132 pattern, return False.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we're iterating through the array once in reverse order.
+
+**Space Complexity**
+O(n), where n is the length of the array. This is because in the worst case, we might need to push all elements onto the stack.
+
+**Key Insight**
+The key to this solution is maintaining the "mini" value, which allows us to efficiently check for the 132 pattern. By updating the "mini" value whenever we pop an element from the stack, we ensure that it always represents the minimum value seen so far that is greater than the current element. This insight enables us to solve the problem in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

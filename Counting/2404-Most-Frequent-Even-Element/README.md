@@ -56,6 +56,27 @@ Example 3:**
 
 	- `0 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to count the frequency of each even element in the array. It then iterates through the hash table to find the smallest even element with the maximum frequency.
+
+**Approach**
+1. Create a hash table `c` to store the frequency of each element.
+2. Iterate through the input array `nums`. For each element `n`, check if it's even by using the modulo operator (`n % 2 == 0`). If it's even, increment its count in the hash table `c`.
+3. Check if the hash table `c` is not empty. If it's not empty, find the maximum frequency `h` by getting the maximum value from the hash table.
+4. Initialize a variable `ans` to infinity. Iterate through the hash table `c` to find the smallest even element with the maximum frequency `h`. If an element's frequency is equal to `h` and its value is smaller than `ans`, update `ans` with its value.
+5. Return `ans` if it's not infinity (i.e., an even element with the maximum frequency was found), otherwise return -1.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we iterate through the array once to count the frequency of each element, and then iterate through the hash table once to find the smallest even element with the maximum frequency.
+
+**Space Complexity**
+O(n), where n is the length of the input array `nums`. This is because in the worst case, we might need to store all elements in the hash table.
+
+**Key Insight**
+The key insight is to use a hash table to efficiently count the frequency of each element, and then iterate through the hash table to find the smallest even element with the maximum frequency. This approach allows us to solve the problem in linear time and space complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

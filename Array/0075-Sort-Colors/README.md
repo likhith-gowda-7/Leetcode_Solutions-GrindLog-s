@@ -49,6 +49,25 @@ Example 2:**
 
 **Follow up:** Could you come up with a one-pass algorithm using only constant extra space?
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by first counting the frequency of each color in the array, and then reconstructing the array in the correct order based on these counts. By using a separate count array, we can efficiently keep track of the number of each color and place them in the correct positions.
+
+## Approach
+1. Initialize a count array of size 3 to store the frequency of each color (0, 1, and 2).
+2. Iterate through the input array and increment the corresponding count in the count array for each color encountered.
+3. Iterate through the count array and for each non-zero count, place the corresponding color in the input array, decrementing the count and incrementing the index.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of elements in the input array. This is because we make two passes through the input array: one to count the frequencies and another to reconstruct the array.
+
+## Space Complexity
+The space complexity is O(1), as we use a fixed-size count array of size 3, regardless of the size of the input array.
+
+## Key Insight
+The key insight here is that we can solve this problem in linear time and constant extra space by using a count array to keep track of the frequency of each color, allowing us to efficiently reconstruct the array in the correct order. This approach avoids the need for explicit sorting or swapping of elements.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -47,6 +47,27 @@ So the number of elements in the array with maximum frequency is 5.
 
 	- `1 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first counting the frequency of each element in the array using a hash table (Counter in Python). It then finds the maximum frequency and sums up the frequencies of all elements that have this maximum frequency.
+
+**Approach**
+1. Create a hash table (Counter) to count the frequency of each element in the array.
+2. Find the maximum frequency by getting the maximum value from the hash table.
+3. Initialize a variable `total` to store the sum of frequencies of elements with the maximum frequency.
+4. Iterate over the values in the hash table. For each value, if it equals the maximum frequency, add it to `total`.
+5. Return `total` as the result.
+
+**Time Complexity**
+O(n), where n is the number of elements in the array. This is because we iterate over the array once to count the frequencies and then iterate over the hash table values once to sum up the frequencies.
+
+**Space Complexity**
+O(n), where n is the number of elements in the array. This is because in the worst case, we need to store all elements in the hash table.
+
+**Key Insight**
+The key insight is to recognize that we only need to count the frequencies of elements that have the maximum frequency, which simplifies the problem and allows us to solve it efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -70,6 +70,31 @@ Example 3:**
 
 	- `1 <= x, grid[i][j] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first checking if it's possible to make all elements in the grid equal by subtracting or adding `x`. If not, it returns -1. Then, it finds the median of the grid elements, which will be the target value to make all elements equal to. The solution calculates the minimum number of operations required to make all elements equal to the median by dividing the absolute difference between each element and the median by `x`.
+
+**Approach**
+1. Initialize an empty list `arr` to store all elements from the grid.
+2. Iterate through the grid and append each element to `arr`.
+3. Check if all elements in `arr` can be made equal by subtracting or adding `x`. If not, return -1.
+4. Sort `arr` in ascending order.
+5. Find the median of `arr` (middle element) and store it in `mid`.
+6. Initialize `res` to 0, which will store the minimum number of operations required.
+7. Iterate through `arr` and for each element, calculate the absolute difference with `mid`.
+8. Divide the absolute difference by `x` and add it to `res`.
+9. Return `res`.
+
+**Time Complexity**
+O(n*m*log(n*m)) where n and m are the dimensions of the grid. This is because we first need to iterate through the grid to store all elements in `arr` (O(n*m)), then sort `arr` (O(n*m*log(n*m))).
+
+**Space Complexity**
+O(n*m) where n and m are the dimensions of the grid. This is because we store all elements from the grid in `arr`.
+
+**Key Insight**
+The key insight here is that we can make all elements in the grid equal by making them equal to the median of the grid elements. This is because the median is the middle value in the sorted array, and any element that is not equal to the median can be made equal to it by adding or subtracting a certain value.
+
 ## 📊 Metrics
 
 | Metric | Value |

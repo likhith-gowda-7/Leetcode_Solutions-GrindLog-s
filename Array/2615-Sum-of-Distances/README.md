@@ -52,6 +52,27 @@ Example 2:**
 
 **Note:** This question is the same as [ 2121: Intervals Between Identical Elements.](https://leetcode.com/problems/intervals-between-identical-elements/description/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a hash table to group indices with the same value, then calculates the sum of distances for each group. This approach simplifies the problem by reducing it to a series of prefix sum calculations.
+
+**Approach**
+1. Create a hash table `mp` to store the indices of each unique value in the input array `nums`.
+2. For each group of indices in `mp`, calculate the total sum of indices and the prefix sum of indices.
+3. For each index in the group, calculate the sum of distances by considering the left and right distances separately.
+4. Update the answer array `ans` with the calculated sum of distances for each index.
+5. Return the completed answer array `ans`.
+
+**Time Complexity**
+O(n^2) where n is the length of the input array `nums`. This is because for each group of indices, we iterate over the indices to calculate the sum of distances.
+
+**Space Complexity**
+O(n) where n is the length of the input array `nums`. This is because we use a hash table to store the indices of each unique value.
+
+**Key Insight**
+The key insight is to break down the problem into smaller sub-problems by grouping indices with the same value, and then using prefix sum calculations to efficiently compute the sum of distances for each group. This approach allows us to avoid redundant calculations and achieve a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

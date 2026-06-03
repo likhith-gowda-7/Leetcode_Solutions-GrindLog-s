@@ -69,6 +69,28 @@ As all the values are equal in the matrix, even after performing cyclic shifts t
 
 	- `1 <= k <= 50`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution checks if the final modified matrix after `k` steps is identical to the original matrix by comparing each element in the original matrix with the corresponding element in the modified matrix. The key insight is that the cyclic shifts can be simulated by adding or subtracting the shift amount `k` to the column index, taking into account whether the row index is even or odd.
+
+**Approach**
+1. Initialize variables `n` and `m` to store the number of rows and columns in the matrix, respectively.
+2. Iterate over each row `i` in the matrix.
+3. For each row `i`, iterate over each column `j`.
+4. If `i` is even, check if the element at `(i, j)` in the original matrix is equal to the element at `(i, (j + k) % m)` in the modified matrix. If not, return `False`.
+5. If `i` is odd, check if the element at `(i, j)` in the original matrix is equal to the element at `(i, (j - k) % m)` in the modified matrix. If not, return `False`.
+6. If all elements match, return `True`.
+
+**Time Complexity**
+O(n*m), where n is the number of rows and m is the number of columns in the matrix. This is because we iterate over each element in the matrix once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the variables `n`, `m`, and `k`.
+
+**Key Insight**
+The key insight is that we can simulate the cyclic shifts by adding or subtracting `k` to the column index, taking into account whether the row index is even or odd. This allows us to avoid actually performing the shifts and instead just compare the elements directly.
+
 ## 📊 Metrics
 
 | Metric | Value |

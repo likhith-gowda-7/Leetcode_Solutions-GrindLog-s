@@ -61,6 +61,29 @@ Total continuous subarrays = 3 + 2 + 1 = 6.
 
 	- `1 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with the help of two deques (maxi and mini) to track the maximum and minimum elements within the current window. The key insight is that we can efficiently update the window boundaries by maintaining the maximum and minimum elements.
+
+**Approach**
+1. Initialize two deques (maxi and mini) to store the indices of the maximum and minimum elements within the current window.
+2. Initialize two pointers, l and r, to represent the left and right boundaries of the window.
+3. Iterate through the array from left to right (r = 0 to n-1).
+4. For each element at index r, update the maxi and mini deques by removing elements that are smaller or larger than the current element.
+5. While the difference between the maximum and minimum elements within the window is greater than 2, increment the count of continuous subarrays and update the window boundaries by removing elements from the left.
+6. Increment the count of continuous subarrays by the size of the current window (r - l + 1).
+7. Return the total count of continuous subarrays.
+
+**Time Complexity**
+O(n), where n is the length of the input array. This is because we iterate through the array once and perform constant-time operations for each element.
+
+**Space Complexity**
+O(n), where n is the length of the input array. This is because in the worst case, we need to store all elements in the maxi and mini deques.
+
+**Key Insight**
+The key insight is that we can efficiently update the window boundaries by maintaining the maximum and minimum elements within the window. This allows us to avoid recalculating the size of the window for each element, resulting in a linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -59,6 +59,25 @@ Tweet 2 has length = 33. It is an invalid tweet.
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by filtering the tweets table to include only the rows where the length of the content is greater than 15. This effectively identifies the invalid tweets based on the given condition.
+
+**Approach**
+1. The `len(content)` function is used to get the length of the content string in each row.
+2. The `where` clause is used to filter the rows where the length of the content is greater than 15.
+3. The `select` statement is used to retrieve the `tweet_id` column from the filtered rows.
+
+**Time Complexity**
+O(n), where n is the number of rows in the tweets table. This is because we are scanning each row once to check the length of the content.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the filtered results. The input table is not modified, and we are not creating any additional data structures that scale with the input size.
+
+**Key Insight**
+The key insight here is that we can use a simple filtering condition to identify the invalid tweets. By leveraging the `len` function, we can efficiently scan the table and retrieve the IDs of the invalid tweets. This approach highlights the importance of using the right database functions to simplify complex queries.
+
 ## 📊 Metrics
 
 | Metric | Value |

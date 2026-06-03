@@ -65,6 +65,27 @@ Note that if the number of students is odd, there is no need to change the last 
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of mathematical operations and SQL features to swap the seat IDs of every two consecutive students. The key insight is to use the modulo operator to identify even and odd IDs, and then adjust the ID accordingly.
+
+**Approach**
+1. The `mod(id, 2) = 0` condition checks if the ID is even, and if so, subtracts 1 from it to swap the ID with the previous one.
+2. The `id = count(*) over ()` condition checks if the ID is the last one, and if so, leaves it unchanged since the last student's ID is not swapped.
+3. The `else id + 1` condition checks if the ID is odd, and if so, adds 1 to it to swap the ID with the next one.
+4. The `from Seat` clause selects the data from the `Seat` table.
+5. The `order by id` clause sorts the result by the adjusted ID in ascending order.
+
+**Time Complexity**
+O(n), where n is the number of students, since we are scanning the table once.
+
+**Space Complexity**
+O(1), since we are not using any additional space that scales with the input size.
+
+**Key Insight**
+The key insight is to use the modulo operator to identify even and odd IDs, and then adjust the ID accordingly. This approach allows us to swap the IDs of every two consecutive students in a single pass through the table.
+
 ## 📊 Metrics
 
 | Metric | Value |

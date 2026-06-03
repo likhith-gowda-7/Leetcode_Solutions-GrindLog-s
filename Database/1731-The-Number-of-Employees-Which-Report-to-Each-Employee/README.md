@@ -91,6 +91,27 @@ Employees table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by joining the `Employees` table with itself on the `reports_to` column, which represents the manager-employee relationship. This allows us to group employees by their manager and calculate the desired statistics.
+
+**Approach**
+1. Perform an inner join on the `Employees` table with itself, matching rows based on the `reports_to` column.
+2. Group the resulting table by the `employee_id` of the manager (i.e., the `reports_to` column).
+3. For each group, calculate the count of employees reporting directly to the manager using `count(a.employee_id)`.
+4. Calculate the average age of the reports by summing the `age` column and dividing by the count of employees, then rounding to the nearest integer using `round(sum(a.age)/count(*),0)`.
+5. Order the result table by the `employee_id` of the manager.
+
+**Time Complexity**
+O(n), where n is the number of employees. This is because the join and grouping operations are performed in a single pass through the data.
+
+**Space Complexity**
+O(n), as the join operation creates a temporary table that can grow up to the size of the original table.
+
+**Key Insight**
+The key insight is that by joining the table with itself, we can establish the manager-employee relationship and perform the necessary calculations in a single query. This approach avoids the need for recursive queries or subqueries, making it efficient and scalable.
+
 ## 📊 Metrics
 
 | Metric | Value |

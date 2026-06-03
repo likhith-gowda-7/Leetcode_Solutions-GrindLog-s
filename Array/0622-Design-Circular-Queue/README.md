@@ -67,6 +67,30 @@ myCircularQueue.Rear();     // return 4
 
 	- At most `3000` calls will be made to `enQueue`, `deQueue`, `Front`, `Rear`, `isEmpty`, and `isFull`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The circular queue is a data structure that uses a fixed-size array to store elements in a circular manner, allowing for efficient insertion and deletion of elements from both ends. The key insight is to use modular arithmetic to handle the circular nature of the queue, ensuring that the front and rear indices wrap around to the beginning of the array when necessary.
+
+**Approach**
+1. Initialize the queue with a fixed size `k` and an empty array of size `k`.
+2. Use two indices, `front` and `rear`, to keep track of the front and rear of the queue.
+3. In `enQueue(value)`, check if the queue is full. If not, increment `rear` modulo `k` and store the value at the new `rear` index.
+4. In `deQueue()`, check if the queue is empty. If not, increment `front` modulo `k` and update `rear` if necessary.
+5. In `Front()` and `Rear()`, return the value at the `front` and `rear` indices, respectively, or -1 if the queue is empty.
+6. In `isEmpty()` and `isFull()`, check if the queue is empty or full based on the values of `rear` and `front`.
+
+**Time Complexity**
+- `enQueue(value)`: O(1) because we only perform a constant number of operations (incrementing `rear` and storing the value).
+- `deQueue()`: O(1) because we only perform a constant number of operations (incrementing `front` and updating `rear` if necessary).
+- `Front()`, `Rear()`, `isEmpty()`, and `isFull()`: O(1) because we only access or update a constant number of indices.
+
+**Space Complexity**
+O(k) because we need to store the queue elements in an array of size `k`.
+
+**Key Insight**
+The key insight is to use modular arithmetic to handle the circular nature of the queue, ensuring that the front and rear indices wrap around to the beginning of the array when necessary. This allows us to efficiently insert and delete elements from both ends of the queue.
+
 ## 📊 Metrics
 
 | Metric | Value |

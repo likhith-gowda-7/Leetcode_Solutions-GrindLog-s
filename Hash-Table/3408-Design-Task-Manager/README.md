@@ -88,6 +88,29 @@ taskManager.execTop(); // return 5. Executes task 105 for User 5.
 
 	- The input is generated such that `taskId` will be valid.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a combination of hash tables and heaps to efficiently manage tasks with varying priorities. The hash table stores tasks with their corresponding priorities and users, while the heap maintains a sorted list of tasks across all users. This design allows for efficient addition, modification, and removal of tasks, as well as execution of the highest-priority task.
+
+**Approach**
+1. In the `__init__` method, initialize the task map and tasks heap. Iterate through the input tasks, adding each task to the task map and the tasks heap.
+2. In the `add` method, add the new task to the task map and the tasks heap.
+3. In the `edit` method, update the priority of the existing task in the task map and push the updated task to the tasks heap.
+4. In the `rmv` method, remove the task from the task map.
+5. In the `execTop` method, pop tasks from the tasks heap until the highest-priority task is found. Return the user ID associated with the task.
+
+**Time Complexity**
+- `__init__`: O(n log n) due to heapification of the tasks heap.
+- `add`, `edit`, `rmv`: O(log n) due to heap operations.
+- `execTop`: O(n log n) in the worst case, where n is the number of tasks.
+
+**Space Complexity**
+O(n), where n is the number of tasks, to store the task map and tasks heap.
+
+**Key Insight**
+The key insight is the use of a single heap to maintain a sorted list of tasks across all users, allowing for efficient execution of the highest-priority task. This design choice enables the solution to handle addition, modification, and removal of tasks efficiently, while also supporting the execution of the highest-priority task.
+
 ## 📊 Metrics
 
 | Metric | Value |

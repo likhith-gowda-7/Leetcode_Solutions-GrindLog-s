@@ -40,6 +40,26 @@ Example 2:**
 
 	- `s[i]` is a [printable ascii character](https://en.wikipedia.org/wiki/ASCII#Printable_characters).
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-pointer approach to reverse the string in-place, taking advantage of the fact that we can swap elements without using extra memory.
+
+**Approach**
+1. Initialize two pointers, `l` and `r`, to the start and end of the string, respectively.
+2. While `l` is less than `r`, swap the elements at indices `l` and `r`.
+3. Increment `l` and decrement `r` to move the pointers towards the center of the string.
+4. Repeat steps 2-3 until `l` meets or crosses `r`, at which point the string is reversed.
+
+**Time Complexity**
+O(n/2) = O(n), where n is the length of the string. This is because we're swapping elements in a single pass through the string.
+
+**Space Complexity**
+O(1), as we're modifying the input array in-place without using any extra memory.
+
+**Key Insight**
+The key insight is that we can use two pointers to swap elements in a single pass, taking advantage of the fact that we're working in-place. This approach avoids the need for extra memory and makes the solution efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -49,6 +49,30 @@ Example 2:**
 
 	- `s` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to partition the string into parts where each letter appears in at most one part. It keeps track of the maximum index of each character in the string and uses this information to determine when to start a new part.
+
+**Approach**
+1. Create a hash table `h1` that maps each character in the string to its index.
+2. Initialize `maxi` to 0, which will store the maximum index of the current character.
+3. Initialize `st` to 0, which will store the start index of the current part.
+4. Initialize an empty list `res` to store the sizes of the parts.
+5. Iterate over the string `s` from left to right.
+6. For each character, update `maxi` to be the maximum of its current value and the index of the current character in the hash table.
+7. If the current index `i` is equal to `maxi`, it means we have reached the end of the current part, so append the size of the part (i.e., `i - st + 1`) to the `res` list and update `st` to be `i + 1`.
+8. Repeat steps 5-7 until the end of the string is reached.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we are iterating over the string once.
+
+**Space Complexity**
+O(n), where n is the length of the string. This is because we are creating a hash table that stores the index of each character in the string.
+
+**Key Insight**
+The key insight is to use the maximum index of each character to determine when to start a new part. This allows us to partition the string in a greedy manner, ensuring that each letter appears in at most one part.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -99,6 +99,28 @@ User 2 made 2 requests where one was confirmed and the other timed out. The conf
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the confirmation rate for each user by averaging the number of confirmed actions over the total number of actions. This is done by joining the `Signups` and `Confirmations` tables on the `user_id` column and then grouping the results by user.
+
+**Approach**
+
+1. Perform a LEFT JOIN between the `Signups` and `Confirmations` tables on the `user_id` column to match each signup with its corresponding confirmations.
+2. Use the `IFNULL` function to handle cases where a user has no confirmations, in which case the `AVG` function would return `NULL`.
+3. Calculate the average number of confirmed actions using the `AVG` function with a conditional expression `c.action = 'confirmed'`.
+4. Round the result to 2 decimal places using the `ROUND` function.
+5. Group the results by user ID using the `GROUP BY` clause.
+
+**Time Complexity**
+The time complexity of this solution is O(n), where n is the total number of rows in the `Signups` and `Confirmations` tables. This is because we are performing a single pass through the data to join the tables and calculate the confirmation rate.
+
+**Space Complexity**
+The space complexity of this solution is O(n), where n is the total number of unique user IDs in the `Signups` table. This is because we are storing the results in a temporary table or result set.
+
+**Key Insight**
+The key insight here is to use a LEFT JOIN to match each signup with its corresponding confirmations, and then use the `IFNULL` function to handle cases where a user has no confirmations. This allows us to calculate the confirmation rate accurately even for users with no confirmations.
+
 ## 📊 Metrics
 
 | Metric | Value |

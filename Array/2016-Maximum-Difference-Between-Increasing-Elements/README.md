@@ -59,6 +59,28 @@ The maximum difference occurs with i = 0 and j = 3, nums[j] - nums[i] = 10 - 1 =
 
 	- `1 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining a running minimum value (`take`) and a maximum difference (`maxi`). As we iterate through the array, we update `take` to be the minimum of its current value and the current element, and we update `maxi` to be the maximum of its current value and the difference between the current element and `take`. This way, we ensure that `take` is always less than or equal to the current element, and `maxi` is the maximum difference between the current element and any previous element that was smaller.
+
+**Approach**
+1. Initialize `take` to the first element of the array and `maxi` to -1.
+2. Iterate through the array from the second element to the end.
+3. For each element, calculate the difference between the current element and `take`.
+4. Update `take` to be the minimum of its current value and the current element.
+5. Update `maxi` to be the maximum of its current value and the difference calculated in step 3.
+6. After iterating through the entire array, return `maxi` if it is not -1, otherwise return -1.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we are iterating through the array once.
+
+**Space Complexity**
+O(1), because we are using a constant amount of space to store `take` and `maxi`.
+
+**Key Insight**
+The key insight is that by maintaining a running minimum value (`take`), we can ensure that we are always considering the maximum difference between the current element and any previous element that was smaller. This allows us to efficiently find the maximum difference in a single pass through the array.
+
 ## 📊 Metrics
 
 | Metric | Value |

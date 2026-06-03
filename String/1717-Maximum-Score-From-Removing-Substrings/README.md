@@ -63,6 +63,30 @@ Example 2:**
 
 	- `s` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to maximize the points gained by removing substrings "ab" and "ba" from the given string. The key insight is to identify the optimal order in which to remove these substrings to achieve the maximum score.
+
+**Approach**
+1. Define a helper function `remove` that takes an array of characters, two characters to remove (`c1` and `c2`), and the points to gain (`points`).
+2. Initialize an empty stack to keep track of the characters.
+3. Iterate through the array of characters. If the current character matches `c1` and the top of the stack matches `c2`, pop the top character from the stack and increment the count by `points`.
+4. Otherwise, push the current character onto the stack.
+5. Return the modified stack.
+6. Determine the optimal order of removal by comparing the values of `x` and `y`. If `x` is greater, set `find` to ["b", "a", x, y]. Otherwise, set `find` to ["a", "b", y, x].
+7. Call the `remove` function with the original string, the first and second characters of `find`, and the second and third elements of `find`.
+8. Return the total count of points gained.
+
+**Time Complexity**
+O(n), where n is the length of the string. The `remove` function iterates through the string once, and the main function calls `remove` twice.
+
+**Space Complexity**
+O(n), where n is the length of the string. In the worst case, the stack will store all characters from the string.
+
+**Key Insight**
+The key to this solution is to identify the optimal order of removal by comparing the values of `x` and `y`. By always removing the substring with the higher point value first, we can maximize the points gained.
+
 ## 📊 Metrics
 
 | Metric | Value |

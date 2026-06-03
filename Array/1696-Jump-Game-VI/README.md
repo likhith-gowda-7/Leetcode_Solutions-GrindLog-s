@@ -56,6 +56,30 @@ Example 3:**
 
 	- `-10^4 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem is a variation of the classic "Jump Game" problem, but with a twist: we need to maximize the sum of visited indices. The key insight is to use a priority queue (deque in Python) to keep track of the indices with the maximum sum. By maintaining a sliding window of the maximum sum, we can efficiently explore all possible jumps and find the optimal solution.
+
+**Approach**
+1. Initialize a deque `maxi` with the starting index `0` and a variable `res` to store the maximum sum.
+2. Iterate through the array `nums` from index `1` to `n-1`.
+3. For each index `r`, update the maximum sum `res` by adding the sum of the current index and the maximum sum at the previous index `maxi[0]`.
+4. Update the value at index `r` in `nums` to store the maximum sum `res`.
+5. Use a while loop to remove indices from the end of `maxi` if their sum is less than the sum at index `r`.
+6. Add index `r` to the end of `maxi`.
+7. If the index at the front of `maxi` is out of the sliding window, remove it from the front of `maxi`.
+8. Return the maximum sum `res` after iterating through all indices.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. This is because we iterate through the array once and perform constant-time operations for each index.
+
+**Space Complexity**
+O(n), where n is the length of the array `nums`. This is because in the worst case, we need to store all indices in the deque `maxi`.
+
+**Key Insight**
+The key insight is to use a priority queue (deque) to maintain a sliding window of the maximum sum. By efficiently exploring all possible jumps and keeping track of the maximum sum, we can find the optimal solution in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

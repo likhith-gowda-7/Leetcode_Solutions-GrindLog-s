@@ -63,6 +63,28 @@ Example 3:**
 
 	- `1 <= k <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a backtracking approach to generate all happy strings of length `n` in lexicographical order. It keeps track of the current string being built and the number of happy strings found so far. When it reaches the desired length `n` or finds the `kth` string, it adds the string to the result list.
+
+**Approach**
+1. Initialize an empty list `res` to store the happy strings and a string `s` containing the characters 'a', 'b', 'c'.
+2. Define a recursive function `backtrack` that takes the current length `c` as an argument.
+3. If the current length `c` is equal to `n`, increment the counter `self.reach` and check if it's equal to `k`. If so, add the current string to the result list `res`.
+4. For each character `curr` in `s`, check if it's the same as the last character in the current string `sol`. If not, add `curr` to `sol` and recursively call `backtrack` with `c+1`.
+5. After the recursive call returns, remove the last character from `sol` to backtrack.
+6. Call `backtrack` with `c=0` to start building the happy strings.
+
+**Time Complexity**
+O(3^n / n) due to the backtracking approach, where n is the length of the happy string. The number of happy strings of length n is approximately 3^n / n, and each string is generated in O(n) time.
+
+**Space Complexity**
+O(n) for the recursive call stack, as the maximum depth of the recursion tree is n.
+
+**Key Insight**
+The key insight is to use a backtracking approach to generate all happy strings of length n in lexicographical order. By keeping track of the current string and the number of happy strings found so far, we can efficiently find the kth string without generating all strings.
+
 ## 📊 Metrics
 
 | Metric | Value |

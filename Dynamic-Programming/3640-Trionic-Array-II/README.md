@@ -71,6 +71,30 @@ Pick l = 0`, p = 1`, q = 2`, r = 3`:
 
 	It is guaranteed that at least one trionic subarray exists.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses dynamic programming to track the maximum sum of three subarrays: `nums[l...p]`, `nums[p...q]`, and `nums[q...r]`. It iterates through the array, maintaining three variables `a`, `b`, and `c` to store the maximum sum of these subarrays. The key insight is to update these variables based on the current element's relationship with the previous element.
+
+**Approach**
+1. Initialize variables `result`, `a`, `b`, `c`, and `INF` (negative infinity) to keep track of the maximum sum and the maximum sum of the three subarrays.
+2. Iterate through the array starting from the second element (index 1).
+3. For each element, check if it's greater than the previous element. If so, update `na` (the maximum sum of `nums[l...p]`) to be the maximum of the current `a` and the previous element, plus the current element.
+4. Update `nc` (the maximum sum of `nums[q...r]`) to be the maximum of the current `c` and `na`, plus the current element.
+5. If the current element is less than the previous element, update `nb` (the maximum sum of `nums[p...q]`) to be the maximum of the current `a` and `b`, plus the current element.
+6. Update `a`, `b`, and `c` to be `na`, `nb`, and `nc`, respectively.
+7. Update `result` to be the maximum of the current `result` and `c`.
+8. Repeat steps 3-7 until the end of the array.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we're iterating through the array once, and each operation within the loop takes constant time.
+
+**Space Complexity**
+O(1), as we're using a constant amount of space to store the variables `result`, `a`, `b`, `c`, and `INF`.
+
+**Key Insight**
+The key insight is to update the variables `a`, `b`, and `c` based on the current element's relationship with the previous element. This allows us to efficiently track the maximum sum of the three subarrays and find the maximum sum of any trionic subarray.
+
 ## 📊 Metrics
 
 | Metric | Value |

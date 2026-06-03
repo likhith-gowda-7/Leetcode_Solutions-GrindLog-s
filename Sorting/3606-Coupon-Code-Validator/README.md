@@ -75,6 +75,32 @@ Example 2:**
 
 	- `isActive[i]` is either `true` or `false`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to group coupons by business category and then filters out invalid coupons. It leverages a helper function to check the validity of each coupon's code.
+
+**Approach**
+1. Initialize a hash table `fields` with four keys representing the business categories and empty lists as values.
+2. Define a helper function `check(s)` to verify if a string `s` consists only of alphanumeric characters and underscores.
+3. Iterate through the input arrays `code`, `businessLine`, and `isActive` simultaneously using their indices.
+4. For each coupon, check if it's valid by verifying the following conditions:
+	* The coupon code is non-empty.
+	* The business category is one of the four allowed categories.
+	* The coupon is active.
+5. If the coupon is valid, add its code to the corresponding list in the `fields` hash table.
+6. After processing all coupons, iterate through the `fields` hash table and extract the valid coupon codes from the non-empty lists.
+7. Sort the valid coupon codes for each business category and concatenate them into a single list.
+
+**Time Complexity**
+O(n), where n is the number of coupons, since we iterate through the input arrays once and perform constant-time operations for each coupon.
+
+**Space Complexity**
+O(n), as in the worst case, we might need to store all coupon codes in the `fields` hash table.
+
+**Key Insight**
+The key insight is to use a hash table to group coupons by business category, which allows us to efficiently filter out invalid coupons and extract the valid ones. This approach avoids the need for multiple iterations and conditional checks, making it more efficient than a naive solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

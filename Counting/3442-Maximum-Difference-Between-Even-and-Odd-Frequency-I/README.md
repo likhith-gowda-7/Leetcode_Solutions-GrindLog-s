@@ -57,6 +57,28 @@ Example 2:**
 
 	- `s` contains at least one character with an odd frequency and one with an even frequency.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by utilizing a hash table (Counter in Python) to efficiently count the frequency of each character in the string. It then iterates through the hash table to find the maximum odd frequency and the minimum even frequency, and returns their difference.
+
+**Approach**
+1. Create a hash table (Counter) to count the frequency of each character in the string.
+2. Initialize variables `even` and `odd` to store the minimum even frequency and the maximum odd frequency, respectively.
+3. Iterate through the hash table. For each character:
+   - If the frequency is odd, update `odd` to be the maximum of its current value and the current frequency.
+   - If the frequency is even, update `even` to be the minimum of its current value and the current frequency.
+4. Return the difference between `odd` and `even`.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we iterate through the string once to count the frequency of each character, and then iterate through the hash table once to find the maximum odd frequency and the minimum even frequency.
+
+**Space Complexity**
+O(n), where n is the length of the string. This is because we use a hash table to store the frequency of each character, which requires O(n) space in the worst case.
+
+**Key Insight**
+The key insight is that we can use a single pass through the hash table to find both the maximum odd frequency and the minimum even frequency, which allows us to solve the problem efficiently with a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

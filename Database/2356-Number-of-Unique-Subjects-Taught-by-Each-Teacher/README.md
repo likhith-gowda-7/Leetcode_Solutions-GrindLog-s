@@ -71,6 +71,26 @@ Teacher 2:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by grouping the teachers by their IDs and counting the number of unique subjects each teacher teaches. This approach is based on the idea that we can use the `GROUP BY` clause to aggregate the data by teacher ID and then use the `COUNT(DISTINCT)` function to count the number of unique subjects for each teacher.
+
+**Approach**
+1. The query starts by selecting the `teacher_id` column, which will be used to group the data.
+2. The `COUNT(DISTINCT subject_id)` function is used to count the number of unique subjects for each teacher.
+3. The `GROUP BY` clause is used to group the data by `teacher_id`, ensuring that the count is performed for each teacher separately.
+4. The result is a table with two columns: `teacher_id` and `cnt`, where `cnt` represents the number of unique subjects taught by each teacher.
+
+**Time Complexity**
+O(n), where n is the number of rows in the `Teacher` table. This is because the query needs to scan each row in the table to perform the grouping and counting.
+
+**Space Complexity**
+O(n), where n is the number of rows in the `Teacher` table. This is because the query needs to store the intermediate results of the grouping and counting in memory.
+
+**Key Insight**
+The key insight here is that we can use the `GROUP BY` clause to aggregate the data by teacher ID, which allows us to count the number of unique subjects for each teacher efficiently. This approach is a common technique in SQL for solving problems that involve grouping and counting data.
+
 ## 📊 Metrics
 
 | Metric | Value |

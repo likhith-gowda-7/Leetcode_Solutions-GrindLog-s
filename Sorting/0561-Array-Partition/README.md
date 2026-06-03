@@ -48,6 +48,27 @@ Example 2:**
 
 	- `-10^4 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to maximize the sum of the minimum values in each pair of integers. To achieve this, we can sort the array and then select every other element, starting from the smallest one. This approach ensures that we always choose the smallest possible value for each pair, thereby maximizing the sum.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Initialize a variable `total` to store the sum of the minimum values in each pair.
+3. Iterate over the sorted array, selecting every other element starting from the first one (at index 0).
+4. For each selected element, add its value to the `total` variable.
+5. Return the final value of `total` as the maximized sum.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the number of elements in the input array.
+
+**Space Complexity**
+O(1) since we only use a constant amount of space to store the `total` variable and do not allocate any additional space that scales with the input size.
+
+**Key Insight**
+The key to this solution is to recognize that sorting the array allows us to easily select the smallest possible value for each pair, which maximizes the sum. By iterating over the sorted array and selecting every other element, we ensure that we always choose the smallest value for each pair, resulting in the maximum possible sum.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -63,6 +63,27 @@ Thus, `ans = [3, 3, 3]`.
 
 	- `1 <= nums[i] <= 10^9​​​​​​​`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the maximum value that can be reached by following valid jumps from each index in the array. The key insight is to use dynamic programming to build two arrays, prefix max and suffix min, which represent the maximum value that can be reached by jumping to the left and right of each index, respectively. By merging these two arrays, we can find the maximum value that can be reached from each index.
+
+**Approach**
+1. Initialize three arrays: `pre`, `suf`, and `res`, where `pre` and `suf` store the prefix max and suffix min values, respectively, and `res` stores the maximum value that can be reached from each index.
+2. Build the `pre` array by iterating from left to right and updating each element with the maximum of the previous element and the current element.
+3. Build the `suf` array by iterating from right to left and updating each element with the minimum of the next element and the current element.
+4. Initialize the last element of `res` with the last element of `pre`.
+5. Iterate from right to left and update each element of `res` by merging the corresponding elements of `pre` and `suf`. If the prefix max value is greater than the suffix min value, use the prefix max value; otherwise, use the suffix min value.
+
+**Time Complexity**
+O(n), where n is the length of the input array, since we iterate through the array twice to build the `pre` and `suf` arrays and once to build the `res` array.
+
+**Space Complexity**
+O(n), where n is the length of the input array, since we need to store the `pre`, `suf`, and `res` arrays, each of length n.
+
+**Key Insight**
+The key insight is to use dynamic programming to build the `pre` and `suf` arrays, which represent the maximum value that can be reached by jumping to the left and right of each index, respectively. By merging these two arrays, we can find the maximum value that can be reached from each index.
+
 ## 📊 Metrics
 
 | Metric | Value |

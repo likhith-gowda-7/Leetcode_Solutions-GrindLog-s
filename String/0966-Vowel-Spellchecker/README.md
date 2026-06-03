@@ -77,6 +77,26 @@ Example 2:**
 
 	- `wordlist[i]` and `queries[i]` consist only of only English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of two hash maps to store the wordlist: one for exact word matches and another for case-insensitive and vowel-replaced word matches. This approach allows for efficient lookups and handling of both capitalization and vowel errors.
+
+**Approach**
+1. Initialize two hash maps: `exact_word` to store the wordlist for exact matches and `case_map` to store case-insensitive and vowel-replaced word matches.
+2. Iterate through the wordlist, adding each word to `exact_word` and checking if its lowercase version is already in `case_map`. If not, add the word to `case_map` with its original case.
+3. For each word in the wordlist, replace its vowels with '*' and add the result to `case_map` if it's not already present.
+4. Iterate through the queries, replacing vowels in each query word and checking if it matches a word in `exact_word` or `case_map`. Return the original query word if it's an exact match, the word from `case_map` if it's a case-insensitive match, or the word from `case_map` if it's a vowel-replaced match.
+
+**Time Complexity**
+O(n + m), where n is the number of queries and m is the number of words in the wordlist. This is because we iterate through the wordlist once to populate the hash maps and then iterate through the queries once to find the matches.
+
+**Space Complexity**
+O(n + m), where n is the number of queries and m is the number of words in the wordlist. This is because we store the wordlist in two hash maps, each with a size of O(m), and the results in an array of size O(n).
+
+**Key Insight**
+The key to this solution is the use of two hash maps to store the wordlist, allowing for efficient lookups and handling of both capitalization and vowel errors. By replacing vowels with '*' and storing the result in a separate hash map, we can efficiently handle vowel errors.
+
 ## 📊 Metrics
 
 | Metric | Value |

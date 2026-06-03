@@ -53,6 +53,31 @@ Example 3:**
 
 	- `1 <= k <= 20`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a rolling hash to efficiently check if all binary codes of size `k` are present in the string `s`. The idea is to maintain a hash table where each index represents a binary code of length `k`, and we update the hash table as we iterate through the string.
+
+**Approach**
+1. Calculate the total number of unique binary codes of length `k`, which is `2^k`.
+2. Initialize a hash table `seen` of size `2^k` with all elements set to `False`.
+3. Initialize a mask `mask` to `2^k - 1` to perform bitwise operations.
+4. Initialize a hash value `h` to 0.
+5. Iterate through the string `s` character by character.
+6. For each character, update the hash value `h` by shifting it left by 1 bit and performing a bitwise AND with the mask, then perform a bitwise OR with the ASCII value of the current character modulo 2.
+7. If the current index `i` is greater than or equal to `k - 1` and the corresponding binary code in the hash table `seen` is not set, set it to `True` and decrement the count of unique binary codes.
+8. If the count of unique binary codes reaches 0, return `True`.
+9. After iterating through the entire string, return `False` if not all binary codes are found.
+
+**Time Complexity**
+O(n), where n is the length of the string `s`. This is because we iterate through the string once, and each operation inside the loop takes constant time.
+
+**Space Complexity**
+O(2^k), where k is the length of the binary code. This is because we need to store the hash table of size `2^k` to keep track of the unique binary codes.
+
+**Key Insight**
+The key insight here is the use of a rolling hash to efficiently update the hash value as we iterate through the string. By performing bitwise operations, we can avoid explicit string manipulation and achieve a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

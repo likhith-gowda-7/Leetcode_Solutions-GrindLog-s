@@ -53,6 +53,29 @@ The array `nums` is already sorted.
 
 	- `-1000 <= nums[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iteratively removing the minimum pair in the array and replacing it with their sum, until the array becomes non-decreasing. This approach is based on the observation that removing the minimum pair will always result in a non-decreasing array if the remaining elements are already non-decreasing.
+
+**Approach**
+1. Define a helper function `check(arr)` to verify if the array is non-decreasing.
+2. Initialize variables to keep track of the minimum sum, index, and count of operations.
+3. Enter a loop that continues until the array is non-decreasing.
+4. Inside the loop, find the minimum sum of adjacent pairs and update the minimum sum, index, and count of operations.
+5. Replace the minimum pair with their sum and remove the right element from the array.
+6. Repeat steps 4-5 until the array is non-decreasing.
+7. Return the count of operations.
+
+**Time Complexity**
+O(n^2) because in the worst case, we need to iterate over the array to find the minimum sum of adjacent pairs in each iteration, and there are n iterations in total.
+
+**Space Complexity**
+O(1) because we only use a constant amount of space to store the variables, regardless of the size of the input array.
+
+**Key Insight**
+The key insight is that removing the minimum pair will always result in a non-decreasing array if the remaining elements are already non-decreasing. This allows us to use a simple iterative approach to solve the problem, without the need for more complex data structures or algorithms.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -56,6 +56,29 @@ Example 3:**
 
 	- `1 <= piles[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a binary search approach to find the minimum eating speed `k` that allows Koko to eat all the bananas within `h` hours. The idea is to find the smallest `k` such that the total hours required to eat all the bananas is less than or equal to `h`.
+
+**Approach**
+1. Initialize the search range `[l, r]` to `[1, maxi]`, where `maxi` is the maximum number of bananas in any pile.
+2. While the search range is not empty, perform the following steps:
+   1. Calculate the middle value `k` of the search range.
+   2. Initialize a variable `hours` to 0.
+   3. Iterate over each pile of bananas. For each pile, calculate the number of hours required to eat it by dividing the number of bananas by `k` and rounding up to the nearest integer. Add this value to `hours`.
+   4. If `hours` is greater than `h`, update the search range to `[k+1, r]`. Otherwise, update the search range to `[l, k-1]`.
+3. Return the minimum value `k` that satisfies the condition.
+
+**Time Complexity**
+O(n log maxi), where n is the number of piles and maxi is the maximum number of bananas in any pile. The binary search takes O(log maxi) time, and the iteration over each pile takes O(n) time.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the search range and the `hours` variable.
+
+**Key Insight**
+The key insight is to use a binary search approach to find the minimum eating speed `k`. By iteratively dividing the search range in half and checking if the total hours required to eat all the bananas is less than or equal to `h`, we can efficiently find the smallest `k` that satisfies the condition.
+
 ## 📊 Metrics
 
 | Metric | Value |

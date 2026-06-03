@@ -65,6 +65,30 @@ Example 2:**
 
 	- Both arrays are in strictly ascending order by id.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by utilizing two pointers to iterate through both arrays simultaneously, comparing the ids of the current elements. When an id match is found, the values are summed and the id is added to the result array. If no match is found, the smaller id is added to the result array. After the two arrays are fully traversed, any remaining elements are appended to the result array.
+
+**Approach**
+1. Initialize two pointers `i` and `j` to the start of `nums1` and `nums2` respectively, and an empty result array `res`.
+2. Enter a while loop that continues until either `i` or `j` reaches the end of its array.
+3. Inside the loop, compare the ids of the current elements at `nums1[i]` and `nums2[j]`.
+   - If the ids match, append the id and the sum of the values to `res`, increment both `i` and `j`.
+   - If `nums1[i][0]` is less than `nums2[j][0]`, append `nums1[i]` to `res` and increment `i`.
+   - Otherwise, append `nums2[j]` to `res` and increment `j`.
+4. After the loop, append any remaining elements from `nums1` and `nums2` to `res`.
+5. Return the result array `res`.
+
+**Time Complexity**
+O(n + m), where n and m are the lengths of `nums1` and `nums2` respectively. This is because we are iterating through both arrays once.
+
+**Space Complexity**
+O(n + m), where n and m are the lengths of `nums1` and `nums2` respectively. This is because we are creating a new array of the same size as the combined input arrays.
+
+**Key Insight**
+The key insight here is to use two pointers to take advantage of the sorted order of the input arrays. By comparing the ids of the current elements, we can efficiently merge the two arrays while respecting the conditions of the problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

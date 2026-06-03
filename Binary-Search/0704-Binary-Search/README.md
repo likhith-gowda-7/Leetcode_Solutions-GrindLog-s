@@ -49,6 +49,30 @@ Example 2:**
 
 	- `nums` is sorted in ascending order.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a binary search approach, which is a divide-and-conquer strategy that takes advantage of the sorted array to find the target element in logarithmic time. By repeatedly dividing the search space in half, we can find the target element efficiently.
+
+**Approach**
+1. Initialize two pointers, `l` and `r`, to the start and end of the array, respectively.
+2. Calculate the middle index `mid` using the formula `(r + l) // 2`.
+3. Compare the middle element `n` with the target `target`.
+   - If `target` is greater than `n`, move the left pointer `l` to `mid + 1` to search in the right half.
+   - If `target` is less than `n`, move the right pointer `r` to `mid - 1` to search in the left half.
+   - If `target` is equal to `n`, return the middle index `mid`.
+4. Repeat steps 2-3 until `l` is greater than `r`.
+5. If the target is not found, return -1.
+
+**Time Complexity**
+O(log n), where n is the length of the array. This is because we divide the search space in half at each step, resulting in a logarithmic number of iterations.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the pointers and the middle index.
+
+**Key Insight**
+The key insight is that by repeatedly dividing the search space in half, we can find the target element in logarithmic time. This is because each iteration reduces the search space by half, resulting in a binary search tree-like structure where each node represents a possible location of the target element.
+
 ## 📊 Metrics
 
 | Metric | Value |

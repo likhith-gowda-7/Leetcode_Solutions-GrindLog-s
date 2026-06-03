@@ -73,6 +73,25 @@ Employee table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a Common Table Expression (CTE) to count the number of departments each employee belongs to, then joins this result with the original table to identify the primary department for each employee.
+
+**Approach**
+1. Create a CTE `cust_details` that groups the `Employee` table by `employee_id` and counts the number of departments each employee belongs to.
+2. Join the `Employee` table with the `cust_details` CTE on `employee_id`.
+3. In the joined table, select rows where the employee has only one department (`cnt = 1`) or has multiple departments and the current department is marked as primary (`cnt > 1` and `primary_flag = 'Y'`).
+
+**Time Complexity**
+O(n log n) due to the grouping operation in the CTE, where n is the number of employees.
+
+**Space Complexity**
+O(n) for storing the intermediate result of the CTE.
+
+**Key Insight**
+The key insight here is to use a CTE to count the number of departments each employee belongs to, which allows us to efficiently identify the primary department for each employee. This approach avoids the need for self-joins or complex subqueries, making it more scalable and efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -56,6 +56,27 @@ The total cost is 6.
 
 	- `0 <= cost[i] <= 999`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved using dynamic programming, where we maintain two variables `prev1` and `prev2` to store the minimum cost to reach the previous two steps. We can choose to climb one or two steps, and the minimum cost to reach the current step is the minimum cost to reach the previous two steps plus the cost of the current step.
+
+**Approach**
+1. Initialize `n` as the length of the `cost` array.
+2. Initialize `prev1` and `prev2` as the cost of the first two steps.
+3. Iterate from the third step to the last step.
+4. In each iteration, update `prev1` and `prev2` by setting `prev1` to `prev2` and `prev2` to the minimum cost to reach the current step, which is the cost of the current step plus the minimum of `prev1` and `prev2`.
+5. After the iteration, return the minimum of `prev1` and `prev2`, which is the minimum cost to reach the top of the floor.
+
+**Time Complexity**
+O(n), where n is the length of the `cost` array, because we only need to iterate through the array once.
+
+**Space Complexity**
+O(1), because we only use a constant amount of space to store `prev1` and `prev2`, regardless of the size of the input array.
+
+**Key Insight**
+The key insight is that we can break down the problem into smaller subproblems and solve them recursively, but in this case, we can use dynamic programming to store the solutions to the subproblems and avoid redundant computation.
+
 ## 📊 Metrics
 
 | Metric | Value |

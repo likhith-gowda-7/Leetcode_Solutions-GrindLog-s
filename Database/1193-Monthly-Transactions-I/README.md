@@ -63,6 +63,27 @@ Transactions table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by extracting the month from the `trans_date` column, grouping the transactions by month and country, and then calculating the required metrics (transaction count, total amount, approved transaction count, and approved total amount) for each group.
+
+**Approach**
+1. Extract the month from the `trans_date` column using the `SUBSTRING` function, which returns the first 7 characters (i.e., the month and year).
+2. Group the transactions by the extracted month and country using the `GROUP BY` clause.
+3. For each group, calculate the transaction count using the `COUNT(*)` function.
+4. Calculate the total amount for each group using the `SUM` function.
+5. Calculate the approved transaction count and approved total amount for each group using conditional `SUM` functions with `CASE` statements.
+
+**Time Complexity**
+O(n), where n is the number of transactions. This is because we are scanning the transactions table once to extract the month and group the transactions.
+
+**Space Complexity**
+O(n), where n is the number of groups (i.e., the number of unique month-country combinations). This is because we are storing the intermediate results for each group in the result table.
+
+**Key Insight**
+The key insight is to extract the month from the `trans_date` column and group the transactions by month and country, which allows us to calculate the required metrics for each group efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

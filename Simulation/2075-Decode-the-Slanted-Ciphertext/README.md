@@ -81,6 +81,28 @@ Example 3:**
 
 	- The testcases are generated such that there is **only one** possible `originalText`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first reconstructing the original matrix used for encoding the text. Then, it reads the matrix in a column-wise manner to obtain the decoded text. This approach is possible because the matrix is filled in a specific order, allowing us to determine the original text by reading the matrix in a different order.
+
+**Approach**
+1. Calculate the number of columns in the matrix (`cols`) based on the total length of the encoded text and the number of rows.
+2. Initialize an empty matrix with the specified number of rows and columns.
+3. Fill the matrix with characters from the encoded text, following the slanted transposition cipher pattern.
+4. Read the matrix in a column-wise manner, appending characters to a result list.
+5. Remove trailing spaces from the result list.
+6. Join the characters in the result list to form the decoded text.
+
+**Time Complexity**
+O(n), where n is the length of the encoded text. This is because we are iterating over the encoded text once to fill the matrix and once to read the matrix in a column-wise manner.
+
+**Space Complexity**
+O(n), where n is the length of the encoded text. This is because we are storing the encoded text in the matrix and the result list.
+
+**Key Insight**
+The key insight is that the matrix is filled in a specific order, allowing us to determine the original text by reading the matrix in a different order. This is made possible by the fact that the rightmost column is not empty after filling in the original text.
+
 ## 📊 Metrics
 
 | Metric | Value |

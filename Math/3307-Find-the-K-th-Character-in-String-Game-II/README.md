@@ -71,6 +71,28 @@ Initially, `word == "a"`. Alice performs the four operations as follows:
 
 	- The input is generated such that `word` has **at least** `k` characters after all operations.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution exploits the fact that the number of operations required to reach a certain position in the string is related to the binary representation of the position. By analyzing the binary representation, we can determine the type of operation that needs to be performed to reach that position.
+
+**Approach**
+1. Initialize `c` to 0 and `val` to `k`.
+2. While `val` is greater than 1, perform the following steps:
+   1. Calculate the jump size `jump` as the ceiling of the base-2 logarithm of `val`.
+   2. Subtract `2^(jump-1)` from `val` to move to the next position.
+   3. If the operation at index `jump-1` is 1, increment `c` by 1.
+3. Return the character corresponding to `c` in the alphabet.
+
+**Time Complexity**
+O(log k) because we are performing a constant amount of work for each bit in the binary representation of `k`.
+
+**Space Complexity**
+O(1) because we are only using a constant amount of space to store the variables `c` and `val`.
+
+**Key Insight**
+The key insight is that the number of operations required to reach a certain position in the string is related to the binary representation of the position. By analyzing the binary representation, we can determine the type of operation that needs to be performed to reach that position, allowing us to efficiently calculate the k-th character.
+
 ## 📊 Metrics
 
 | Metric | Value |

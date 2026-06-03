@@ -44,6 +44,29 @@ Example 2:**
 
 	- `1 <= k <= n`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a backtracking approach to generate all possible combinations of `k` numbers chosen from the range `[1, n]`. The key insight is to use a recursive function that adds elements to the current combination and then recursively generates all combinations of the remaining elements.
+
+**Approach**
+1. Initialize an empty list `res` to store all combinations and a temporary list `sol` to store the current combination.
+2. Define a recursive function `backtrack` that takes a `start` index as an argument.
+3. If the length of the current combination `sol` is equal to `k`, append a copy of `sol` to `res` and return.
+4. Calculate the number of elements still needed for the current combination (`still_need`) and the number of choices available from the `start` index to `n` (`choices`).
+5. If there are enough choices available, iterate from `start` to `n` and recursively call `backtrack` with the next index (`i+1`) after adding each element to the current combination.
+6. After each recursive call, remove the last element from the current combination to backtrack and explore other branches.
+7. Call `backtrack` with the initial `start` index of 1.
+
+**Time Complexity**
+The time complexity is O(n choose k) = O(n! / (k!(n-k)!)), which is the number of possible combinations. This is because each combination is generated exactly once, and the recursive function explores all possible branches.
+
+**Space Complexity**
+The space complexity is O(n choose k) = O(n! / (k!(n-k)!)), which is the maximum depth of the recursion tree. This is because each recursive call adds a new branch to the tree, and the maximum depth is equal to the number of combinations.
+
+**Key Insight**
+The key insight is to use a recursive function that adds elements to the current combination and then recursively generates all combinations of the remaining elements. This approach allows us to explore all possible branches of the combination tree and generate all possible combinations of `k` numbers chosen from the range `[1, n]`.
+
 ## 📊 Metrics
 
 | Metric | Value |

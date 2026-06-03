@@ -42,6 +42,27 @@ Example 2:**
 
 	- `s1` and `s2` consist of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first comparing the frequency of characters in `s1` and `s2` within the first `len(s1)` characters of `s2`. If they match, it means `s1` is a permutation of the substring in `s2`. Then, it uses a sliding window approach to compare the frequency of characters in `s1` and `s2` as it moves the window to the right.
+
+**Approach**
+1. Initialize two arrays `c1` and `c2` to store the frequency of characters in `s1` and `s2` respectively.
+2. Compare the frequency of characters in `s1` and `s2` within the first `len(s1)` characters of `s2`. If they match, return `True`.
+3. If the frequency of characters in `s1` and `s2` do not match, move the window to the right by incrementing `r` and decrementing `l`.
+4. Update the frequency of characters in `c2` by adding the character at `r` and subtracting the character at `l`.
+5. Repeat step 3 until the end of `s2` is reached.
+
+**Time Complexity**
+O(n), where n is the length of `s2`. This is because we are scanning `s2` once and using a constant amount of time to update the frequency of characters in `c2`.
+
+**Space Complexity**
+O(1), because the size of `c1` and `c2` is constant (26 for lowercase English letters).
+
+**Key Insight**
+The key insight is that if the frequency of characters in `s1` and `s2` match at any point, it means `s1` is a permutation of the substring in `s2`. This is because the frequency of characters in a string is a unique identifier of the string.
+
 ## 📊 Metrics
 
 | Metric | Value |

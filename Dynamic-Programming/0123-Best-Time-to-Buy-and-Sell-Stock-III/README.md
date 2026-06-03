@@ -58,6 +58,29 @@ Example 3:**
 
 	- `0 <= prices[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by maintaining four variables to track the maximum profit after the first buy, first sell, second buy, and second sell. The key idea is to update these variables iteratively based on the current price, ensuring that we consider all possible transactions. By doing so, we can find the maximum profit achievable with at most two transactions.
+
+## Approach
+1. Initialize `buy1` and `buy2` to negative infinity, representing the maximum profit after the first and second buy, respectively.
+2. Initialize `sell1` and `sell2` to 0, representing the maximum profit after the first and second sell, respectively.
+3. Iterate through the `prices` array, updating `buy1`, `sell1`, `buy2`, and `sell2` at each step based on the current price.
+4. For `buy1`, choose the maximum between the current `buy1` and `-price`, representing the decision to buy or not.
+5. For `sell1`, choose the maximum between the current `sell1` and `buy1 + price`, representing the decision to sell or not after the first buy.
+6. For `buy2`, choose the maximum between the current `buy2` and `sell1 - price`, representing the decision to buy or not after the first sell.
+7. For `sell2`, choose the maximum between the current `sell2` and `buy2 + price`, representing the decision to sell or not after the second buy.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of days (i.e., the length of the `prices` array), since we make a single pass through the array.
+
+## Space Complexity
+The space complexity is O(1), as we use a constant amount of space to store the `buy1`, `sell1`, `buy2`, and `sell2` variables, regardless of the input size.
+
+## Key Insight
+The key insight is to recognize that we can update the `buy` and `sell` variables iteratively, considering the current price and the previous maximum profits, to find the optimal solution. This approach allows us to avoid explicit recursion and memoization, resulting in an efficient and scalable solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

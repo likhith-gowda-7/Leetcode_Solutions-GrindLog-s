@@ -49,6 +49,34 @@ Example 2:**
 
 	- `-10^5 <= Node.val <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This approach works by performing a level-order traversal of the binary tree and keeping track of the sum of node values at each level. The level with the maximum sum is then returned. This is a common technique for solving problems involving tree traversals.
+
+**Approach**
+1. Initialize a queue `q` to store nodes and their corresponding levels.
+2. If the `root` node exists, add it to the queue with level 1.
+3. Initialize a dictionary `level_sum` to store the sum of node values at each level.
+4. Perform a level-order traversal of the tree:
+   - Dequeue a node and its level from the queue.
+   - Add the node's value to the sum of its level in the `level_sum` dictionary.
+   - If the node has a left child, add it to the queue with its level incremented by 1.
+   - If the node has a right child, add it to the queue with its level incremented by 1.
+5. Initialize `maxi` to negative infinity and `max_level` to 0.
+6. Iterate through the `level_sum` dictionary:
+   - If the sum of a level is greater than `maxi`, update `maxi` and `max_level`.
+7. Return `max_level`.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the tree. This is because each node is visited once during the level-order traversal.
+
+**Space Complexity**
+O(N), where N is the number of nodes in the tree. This is because in the worst case, the queue will store all nodes at the last level of the tree.
+
+**Key Insight**
+The key insight here is that by performing a level-order traversal, we can efficiently compute the sum of node values at each level without having to recursively traverse the tree. This approach allows us to solve the problem in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

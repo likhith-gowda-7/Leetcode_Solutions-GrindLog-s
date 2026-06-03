@@ -41,6 +41,27 @@ Example 2:**
 
 	- `1 <= n <= 250`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a brute-force approach to find all possible square triples within the given range. It first generates a set of squares from 1 to n, then iterates over each pair of squares to check if their sum is also a square.
+
+**Approach**
+1. Create a set `squares` to store the squares of numbers from 1 to n.
+2. Iterate over each pair of distinct squares `val1` and `val2` in `squares`.
+3. Calculate the sum `s` of `val1` and `val2`.
+4. Check if `s` is also a square in `squares`. If it is, increment the result counter `res`.
+5. Return the total count of square triples.
+
+**Time Complexity**
+O(n^2 * sqrt(n)) - The outer loop iterates over n squares, and for each square, the inner loop also iterates over n squares. However, we only need to consider squares up to sqrt(n) because a larger square would have a corresponding smaller square that has already been counted.
+
+**Space Complexity**
+O(n) - We store all squares from 1 to n in a set, which requires O(n) space.
+
+**Key Insight**
+The key insight is that we only need to consider pairs of squares, and we can use a set to efficiently store and look up squares. This allows us to avoid redundant calculations and reduce the time complexity of the solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

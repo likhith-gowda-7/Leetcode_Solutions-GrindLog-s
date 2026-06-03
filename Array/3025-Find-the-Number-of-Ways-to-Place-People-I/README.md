@@ -77,6 +77,27 @@ Example 3:**
 
 	- All `points[i]` are distinct.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by sorting the points based on their x-coordinates in descending order and then iterating through each pair of points. For each pair, it checks if there are any other points to the right of the current point and below the current point. If such a point exists, it increments the count of valid pairs.
+
+**Approach**
+1. Sort the points based on their x-coordinates in descending order.
+2. Initialize a variable `max_y` to store the maximum y-coordinate of the points to the right of the current point.
+3. Iterate through each pair of points. For each pair, check if there are any other points to the right of the current point and below the current point.
+4. If such a point exists, increment the count of valid pairs and update `max_y` to store the maximum y-coordinate of the points to the right of the current point.
+5. Return the count of valid pairs.
+
+**Time Complexity**
+O(n^2) - The solution has a nested loop structure, where the outer loop iterates through each point and the inner loop checks for other points to the right and below the current point. This results in a quadratic time complexity.
+
+**Space Complexity**
+O(1) - The solution only uses a constant amount of space to store the `count` variable and the `max_y` variable, regardless of the input size.
+
+**Key Insight**
+The key insight behind this solution is to take advantage of the sorted order of the points based on their x-coordinates. By iterating through each pair of points and checking for other points to the right and below the current point, we can efficiently count the number of valid pairs. This approach avoids the need to check all possible pairs of points, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

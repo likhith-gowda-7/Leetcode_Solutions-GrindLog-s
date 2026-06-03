@@ -82,6 +82,27 @@ All 3 columns are not sorted, so you will delete all 3.
 
 	- `strs[i]` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over the columns of the grid, checking if each column is sorted lexicographically. If a column is not sorted, it increments the count of columns to be deleted.
+
+**Approach**
+1. Use the `zip(*strs)` function to transpose the grid, resulting in an iterator over the columns.
+2. Iterate over each column `s` in the iterator.
+3. Check if the column `s` is sorted by comparing it to its sorted version using `sorted(s)`. If the sorted version is not equal to the original column, it means the column is not sorted.
+4. If the column is not sorted, increment the count of columns to be deleted.
+5. Return the count of columns to be deleted.
+
+**Time Complexity**
+O(n*m*log(m)), where n is the number of strings and m is the length of each string. This is because for each column, we are sorting the characters, which takes O(m*log(m)) time. We do this for each of the n columns, resulting in a total time complexity of O(n*m*log(m)).
+
+**Space Complexity**
+O(m), where m is the length of each string. This is because we are storing the characters of each column in the `s` variable, which takes O(m) space.
+
+**Key Insight**
+The key insight is that we can check if a column is sorted by comparing it to its sorted version. This is a common technique in competitive programming, where we can often solve problems by transforming the input data in a way that makes it easier to analyze. In this case, sorting the column makes it easy to check if it is sorted lexicographically.
+
 ## 📊 Metrics
 
 | Metric | Value |

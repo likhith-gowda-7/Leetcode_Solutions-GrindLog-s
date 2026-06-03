@@ -52,6 +52,27 @@ Example 2:**
 
 	- `inorder` is **guaranteed** to be the inorder traversal of the tree.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing the properties of preorder and inorder traversals to construct the binary tree. Preorder traversal visits the root node first, then recursively traverses the left and right subtrees, while inorder traversal visits the left subtree, the root node, and then the right subtree. By combining these two traversals, we can determine the structure of the binary tree.
+
+## Approach
+1. Create a hash map to store the indices of the inorder traversal for efficient lookup.
+2. Define a recursive depth-first search (DFS) function that takes the left and right boundaries of the current subtree as parameters.
+3. Within the DFS function, create a new root node using the current preorder element and find its index in the inorder traversal.
+4. Recursively call the DFS function for the left and right subtrees, updating the preorder index accordingly.
+5. Return the constructed binary tree.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of nodes in the tree. This is because each node is visited once during the construction process, and the hash map lookup operations take constant time.
+
+## Space Complexity
+The space complexity is O(n), where n is the number of nodes in the tree. This is due to the recursive call stack and the hash map used to store the indices of the inorder traversal.
+
+## Key Insight
+The key insight is to use the hash map to efficiently find the index of the current preorder element in the inorder traversal, allowing us to determine the boundaries of the left and right subtrees and recursively construct the binary tree. This approach enables us to avoid unnecessary iterations and achieve a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

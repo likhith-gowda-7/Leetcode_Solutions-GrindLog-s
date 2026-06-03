@@ -55,6 +55,27 @@ Example 3:**
 
 	- `num` only consists of digits and does not contain any leading zeros.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through the input string from right to left, checking each character to see if it's an odd digit. If an odd digit is found, the solution returns the substring from the start of the string to the current odd digit. If no odd digits are found, the solution returns an empty string.
+
+**Approach**
+1. Initialize a pointer `i` to the last index of the input string `num`.
+2. Iterate through the string from right to left using a for loop with `range(len(num)-1,-1,-1)`.
+3. For each character at index `i`, check if it's an odd digit by using the modulo operator (`int(num[i]) % 2 != 0`).
+4. If an odd digit is found, return the substring from the start of the string to the current odd digit (`num[:i+1]`).
+5. If no odd digits are found after iterating through the entire string, return an empty string (`""`).
+
+**Time Complexity**
+O(n), where n is the length of the input string `num`. This is because the solution iterates through the string once from right to left.
+
+**Space Complexity**
+O(n), where n is the length of the input string `num`. This is because the solution creates a new substring (`num[:i+1]`) for each odd digit found.
+
+**Key Insight**
+The key insight is to iterate through the string from right to left, checking each character for odd digits. This approach ensures that the solution finds the largest odd number in the string, as it starts with the rightmost digit and works its way left.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -57,6 +57,28 @@ This is less than 23, so a collision would not destroy the last asteroid.
 
 	- `1 <= asteroids[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by sorting the asteroids in ascending order and then iterating through them. If the current asteroid's mass is greater than the planet's mass, the function immediately returns `False` because the planet cannot destroy the asteroid. If the planet's mass is sufficient to destroy the asteroid, the function updates the planet's mass and continues to the next asteroid.
+
+**Approach**
+1. Sort the asteroids array in ascending order.
+2. Iterate through the sorted asteroids array.
+3. For each asteroid, check if the planet's mass is less than the asteroid's mass.
+4. If the planet's mass is less than the asteroid's mass, return `False`.
+5. If the planet's mass is greater than or equal to the asteroid's mass, add the asteroid's mass to the planet's mass.
+6. After iterating through all asteroids, return `True`.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the number of asteroids.
+
+**Space Complexity**
+O(1) because the sorting operation is done in-place, and the iteration through the asteroids array only requires a constant amount of extra space.
+
+**Key Insight**
+The key insight is that if the planet's mass is sufficient to destroy an asteroid, it will also be sufficient to destroy all smaller asteroids. Therefore, we can sort the asteroids in ascending order and iterate through them, checking if the planet's mass is sufficient to destroy each one. This greedy approach allows us to efficiently determine if all asteroids can be destroyed.
+
 ## 📊 Metrics
 
 | Metric | Value |

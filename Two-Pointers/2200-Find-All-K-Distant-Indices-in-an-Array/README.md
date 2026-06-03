@@ -58,6 +58,28 @@ Hence, we return [0,1,2,3,4].
 
 	- `1 <= k <= nums.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-pointer approach to find all k-distant indices in the given array. It iterates through the array and keeps track of the nearest index of the target key. When it encounters the target key, it expands the window to the left and right to find all k-distant indices.
+
+**Approach**
+1. Initialize two pointers, `i` and `idx`, to 0. `i` is used to iterate through the array, and `idx` is used to expand the window.
+2. Iterate through the array using `i`. When `nums[i] == key`, expand the window to the left and right using `idx`.
+3. For each `idx` in the window, check if `nums[idx] == key` and if the distance between `i` and `idx` is less than or equal to `k`. If both conditions are true, add `idx` to the result list.
+4. If the distance between `i` and `idx` is greater than `k` and `idx` is greater than `i`, break the inner loop.
+5. If `near_key_idx` is not `None` and `near_key_idx` is greater than `i`, set `i` to `near_key_idx`. Otherwise, set `i` to the maximum of `idx` and `i + 1`.
+6. Repeat steps 2-5 until `i` reaches the end of the array.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we iterate through the array at most twice: once using `i` and once using `idx`.
+
+**Space Complexity**
+O(n), where n is the length of the array. This is because we store all k-distant indices in the result list.
+
+**Key Insight**
+The key insight is to use two pointers, `i` and `idx`, to expand the window to the left and right when we encounter the target key. This allows us to find all k-distant indices efficiently without having to iterate through the entire array multiple times.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -70,6 +70,29 @@ Example 3:**
 
 **Follow up:** Could you solve it with time complexity `O(height of tree)`?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution to this problem involves a recursive approach to search for the node to be deleted in the Binary Search Tree (BST). Once found, the node is deleted by replacing its value with the minimum value in its right subtree, which maintains the BST property.
+
+**Approach**
+1. If the tree is empty (i.e., `root` is `None`), return `None`.
+2. If the value of the current node (`root.val`) is less than the key, recursively call `deleteNode` on the right subtree of `root`.
+3. If the value of the current node (`root.val`) is greater than the key, recursively call `deleteNode` on the left subtree of `root`.
+4. If the value of the current node (`root.val`) matches the key, there are three cases:
+   - If the node has no right child, return the left child of `root`.
+   - If the node has no left child, return the right child of `root`.
+   - If the node has both left and right children, find the minimum value in the right subtree (by traversing down to the leftmost node), replace the value of the node to be deleted with this minimum value, and then recursively call `deleteNode` on the right subtree with the new value.
+
+**Time Complexity**
+The time complexity of this solution is O(h), where h is the height of the BST. In the worst case, the tree is skewed to one side, making h equal to the number of nodes in the tree (n). However, for a balanced BST, h is log(n). Therefore, the time complexity is O(log n) in the average case and O(n) in the worst case.
+
+**Space Complexity**
+The space complexity of this solution is O(h), which is the maximum depth of the recursive call stack. In the worst case, this is O(n) when the tree is skewed to one side. However, for a balanced BST, it is O(log n).
+
+**Key Insight**
+The key insight here is that when deleting a node with both left and right children, we can replace its value with the minimum value in its right subtree, which maintains the BST property. This allows us to avoid the need to rebalance the tree, making the deletion process more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

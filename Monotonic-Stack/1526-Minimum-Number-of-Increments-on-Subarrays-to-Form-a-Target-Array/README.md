@@ -65,6 +65,26 @@ Example 3:**
 
 	- ​​​​​​​The input is generated such that the answer fits inside a 32 bit integer.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution takes advantage of the fact that the target array is formed by incrementing subarrays of the initial array. If a subarray is incremented, all elements in that subarray will be equal. Therefore, we can focus on finding the minimum number of increments needed to make each element in the target array equal to the next element.
+
+**Approach**
+1. Initialize the result `res` with the first element of the target array.
+2. Iterate through the target array starting from the second element.
+3. For each element, if it is greater than the previous element, increment the result by the difference between the current element and the previous element.
+4. Return the result.
+
+**Time Complexity**
+O(n), where n is the length of the target array. This is because we only need to iterate through the target array once to find the minimum number of increments.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the result and the previous element.
+
+**Key Insight**
+The key insight is that we can focus on making each element in the target array equal to the next element by incrementing subarrays, which allows us to simplify the problem and find a linear-time solution. This insight is crucial in solving this problem efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

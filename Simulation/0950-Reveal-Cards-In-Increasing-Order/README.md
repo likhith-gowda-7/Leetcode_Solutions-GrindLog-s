@@ -68,6 +68,29 @@ Example 2:**
 
 	- All the values of `deck` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to simulate the process of revealing cards in increasing order. We can achieve this by maintaining a queue of indices and popping elements from the queue to place them in the result array in the correct order. The key insight is to use a deque to efficiently remove and insert elements at the front and back of the queue.
+
+**Approach**
+1. Sort the deck in ascending order.
+2. Initialize a queue `dq` with indices from 0 to `n-1`, where `n` is the length of the deck.
+3. Initialize a result array `q` of size `n` with all elements set to 0.
+4. Iterate through the sorted deck. For each card value `val`:
+   1. Dequeue an index `i` from the front of `dq`.
+   2. Place the card value `val` at the index `i` in the result array `q`.
+   3. If there are still elements in `dq`, dequeue another index and append it to the back of `dq` to maintain the correct order.
+
+**Time Complexity**
+The time complexity is O(n log n) due to the sorting operation, where n is the length of the deck. The subsequent deque operations take O(n) time, but this is dominated by the sorting time.
+
+**Space Complexity**
+The space complexity is O(n) for the result array `q` and the deque `dq`, both of which require additional space proportional to the length of the deck.
+
+**Key Insight**
+The key insight is to use a deque to maintain the correct order of indices, allowing us to efficiently remove and insert elements at the front and back of the queue. This approach enables us to simulate the process of revealing cards in increasing order in a efficient and elegant manner.
+
 ## 📊 Metrics
 
 | Metric | Value |

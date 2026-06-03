@@ -92,6 +92,25 @@ From sale_id = 7, we can conclude that Apple was sold for 9000 in the year 2011.
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The given SQL query is designed to retrieve the product name, year of sale, and price for each sale in the `Sales` table, joining it with the `Product` table based on the product ID.
+
+**Approach**
+1. The query uses an implicit join between the `Sales` and `Product` tables, which is equivalent to an inner join. This is done by specifying both tables in the `FROM` clause and the join condition in the `WHERE` clause.
+2. The `SELECT` statement retrieves the desired columns: `product_name` from the `Product` table, `year` and `price` from the `Sales` table.
+3. The `WHERE` clause filters the results to include only rows where the `product_id` in the `Sales` table matches the `product_id` in the `Product` table.
+
+**Time Complexity**
+O(n), where n is the number of rows in the `Sales` table. This is because the query scans each row in the `Sales` table once to perform the join.
+
+**Space Complexity**
+O(n), where n is the number of rows in the `Sales` table. This is because the query returns a result set with one row for each matching row in the `Sales` table.
+
+**Key Insight**
+The key insight here is that implicit joins can be less readable and more prone to errors than explicit joins, but they can also be more concise and efficient. However, in modern SQL, explicit joins are generally preferred for their clarity and maintainability.
+
 ## 📊 Metrics
 
 | Metric | Value |

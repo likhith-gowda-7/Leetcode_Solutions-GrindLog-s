@@ -56,6 +56,29 @@ Example 2:**
 
 	- `1 <= stones[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The key insight here is to use a priority queue (heap) to efficiently find and remove the heaviest stones. By negating the weights, we can use the built-in min-heap functionality of Python's `heapq` module to simulate a max-heap.
+
+**Approach**
+1. Negate all stone weights to simulate a max-heap using Python's `heapq` module.
+2. Heapify the list of stones to create a valid max-heap.
+3. While there are more than one stone left:
+   1. Pop the two heaviest stones from the heap.
+   2. Calculate the difference in weights between the two stones.
+   3. If the difference is non-zero, push the result back into the heap.
+4. Return the weight of the last remaining stone, or 0 if the heap is empty.
+
+**Time Complexity**
+O(n log n) due to the heapify operation and the repeated heap operations (heappop and heappush). The heap operations themselves take O(log n) time, and we perform them n times in the worst case.
+
+**Space Complexity**
+O(n) for storing the stones in the heap.
+
+**Key Insight**
+The key to this solution is the clever use of a min-heap to simulate a max-heap, allowing us to efficiently find and remove the heaviest stones. By negating the weights, we can take advantage of the built-in min-heap functionality of Python's `heapq` module, making the solution much more efficient than a naive approach.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -60,6 +60,29 @@ Another possible subsequence is [4, 3].
 
 	- `1 <= k <= nums.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting the input array in descending order, which ensures that the largest numbers are at the beginning of the array. Then, it uses a hash table (Counter) to keep track of the frequency of each number in the last `k` elements of the sorted array. Finally, it iterates through the original array and appends the numbers that are present in the hash table and have a non-zero frequency.
+
+**Approach**
+1. Create a copy of the input array `nums` and sort it in descending order.
+2. Calculate the index `last` which is `len(nums) - k`.
+3. Create a hash table `h1` using the Counter class from the collections module, and populate it with the frequency of each number in the last `k` elements of the sorted array.
+4. Initialize an empty list `res` to store the result.
+5. Iterate through the original array `nums`. For each number, check if it is present in the hash table `h1` and has a non-zero frequency. If both conditions are true, append the number to the result list `res` and decrement its frequency in the hash table.
+6. If the length of the result list `res` reaches `k`, break the loop.
+7. Return the result list `res`.
+
+**Time Complexity**
+The time complexity of this solution is O(n log n) due to the sorting operation, where n is the length of the input array `nums`. The subsequent operations (creating the hash table, iterating through the array) take O(n) time, but they are dominated by the sorting operation.
+
+**Space Complexity**
+The space complexity of this solution is O(n) due to the creation of the sorted array and the hash table.
+
+**Key Insight**
+The key insight behind this solution is that the largest subsequence of length `k` must contain the `k` largest numbers from the input array. By sorting the array in descending order and using a hash table to keep track of the frequency of each number, we can efficiently construct the largest subsequence.
+
 ## 📊 Metrics
 
 | Metric | Value |

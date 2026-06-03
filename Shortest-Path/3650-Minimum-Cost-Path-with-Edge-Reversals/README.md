@@ -63,6 +63,28 @@ Example 2:**
 
 	- `1 <= w_i <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a priority queue (heap) to efficiently explore the graph and find the shortest path from node 0 to node n-1. By maintaining a distance array, it keeps track of the minimum cost to reach each node. The key insight is that we can use the edge reversal operation to reduce the cost of traversing certain edges.
+
+**Approach**
+1. Create an adjacency list representation of the graph, where each node has a list of its neighbors and their corresponding costs.
+2. Initialize a priority queue (heap) with the starting node (0) and its distance (0).
+3. While the heap is not empty, pop the node with the minimum distance and explore its neighbors.
+4. For each neighbor, calculate the new distance by adding the cost of the edge to the current node's distance.
+5. If the new distance is less than the previously known distance to the neighbor, update the distance array and push the neighbor into the heap.
+6. If the final node (n-1) is reached, return its distance; otherwise, return -1 if the heap is empty.
+
+**Time Complexity**
+O(n log n), where n is the number of nodes. The priority queue operations (heappush and heappop) take O(log n) time, and we perform these operations for each node, resulting in a total time complexity of O(n log n).
+
+**Space Complexity**
+O(n + m), where n is the number of nodes and m is the number of edges. We need to store the adjacency list, distance array, and priority queue, which require O(n + m) space.
+
+**Key Insight**
+The key insight is that we can use the edge reversal operation to reduce the cost of traversing certain edges. By maintaining a distance array and using a priority queue to efficiently explore the graph, we can find the minimum cost path from node 0 to node n-1.
+
 ## 📊 Metrics
 
 | Metric | Value |

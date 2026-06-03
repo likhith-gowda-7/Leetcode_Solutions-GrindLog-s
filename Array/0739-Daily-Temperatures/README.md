@@ -43,6 +43,30 @@ Example 3:**
 
 	- `30 <= temperatures[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to keep track of the days with temperatures that are yet to be surpassed by a warmer temperature. By iterating through the temperatures array, we can pop elements from the stack whenever we encounter a temperature that is higher than the one at the top of the stack, and update the corresponding answer array with the number of days to wait.
+
+**Approach**
+1. Initialize an answer array `res` of the same length as the input temperatures array, filled with zeros.
+2. Initialize an empty stack `stack` to store tuples of (day, temperature).
+3. Iterate through the temperatures array using `enumerate` to get both the index `curr_day` and the temperature `curr_temp`.
+4. While the stack is not empty and the temperature at the top of the stack is less than the current temperature:
+   - Pop the top element from the stack, which represents a day with a temperature that has been surpassed.
+   - Update the answer array at the popped day's index with the difference between the current day and the popped day.
+5. Push the current day and temperature onto the stack.
+6. Return the answer array.
+
+**Time Complexity**
+O(n), where n is the length of the temperatures array. This is because we make a single pass through the array, and each operation (push, pop, comparison) takes constant time.
+
+**Space Complexity**
+O(n), where n is the length of the temperatures array. This is because in the worst case, we might need to store all elements in the stack.
+
+**Key Insight**
+The key insight is to use a stack to keep track of the days with temperatures that are yet to be surpassed, allowing us to efficiently pop elements and update the answer array whenever we encounter a warmer temperature. This approach takes advantage of the fact that the temperatures array is monotonic, meaning that once a temperature is surpassed, it will not be surpassed again.
+
 ## 📊 Metrics
 
 | Metric | Value |

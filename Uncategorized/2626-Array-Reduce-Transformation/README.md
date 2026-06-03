@@ -80,6 +80,26 @@ init = 25
 
 	- `0 <= init <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by iteratively applying the reducer function `fn` to the initial value `init` and each element of the input array `nums`, accumulating the result in a variable `sum`. This process continues until all elements in the array have been processed, at which point the final value of `sum` is returned.
+
+**Approach**
+1. Initialize a variable `sum` to the initial value `init`.
+2. Iterate over each element in the input array `nums` using a `for` loop.
+3. For each element, apply the reducer function `fn` to the current value of `sum` and the current element, and assign the result back to `sum`.
+4. After iterating over all elements, return the final value of `sum`.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we are iterating over each element in the array once.
+
+**Space Complexity**
+O(1), excluding the input array and function. We are only using a constant amount of space to store the `sum` variable, regardless of the size of the input array.
+
+**Key Insight**
+The key insight here is that we can achieve the same result as the `Array.reduce` method by simply iterating over the input array and applying the reducer function to each element, accumulating the result in a variable. This approach is straightforward and efficient, making it a good solution for this problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

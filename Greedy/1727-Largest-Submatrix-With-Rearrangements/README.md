@@ -63,6 +63,29 @@ Example 3:**
 
 	- `matrix[i][j]` is either `0` or `1`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first rearranging the columns of the binary matrix to maximize the height of each column of 1s. This is done by adding the height of each column to the next column, effectively "carrying over" the height of the previous column. Then, for each row, the columns are sorted in descending order, and the area of the largest rectangle that can be formed by the current row is calculated.
+
+**Approach**
+1. Initialize variables to store the maximum area `res` and the dimensions of the matrix `m` and `n`.
+2. Iterate over each row in the matrix, starting from the second row.
+3. For each column in the current row, if the value is 1, add the height of the previous row's column to the current column's height.
+4. Iterate over each row in the matrix again.
+5. For each row, sort the columns in descending order.
+6. For each column in the sorted row, calculate the area of the largest rectangle that can be formed by the current column and the previous columns.
+7. Update the maximum area `res` if the calculated area is larger.
+
+**Time Complexity**
+O(m*n log n) due to the sorting step in the second iteration over the matrix. The first iteration has a time complexity of O(m*n) as we are iterating over each element in the matrix once.
+
+**Space Complexity**
+O(1) as we are only using a constant amount of space to store the maximum area and the dimensions of the matrix.
+
+**Key Insight**
+The key insight is that by rearranging the columns to maximize the height of each column of 1s, we can effectively transform the problem into finding the area of the largest rectangle in a histogram, which can be solved efficiently using a sorting-based approach.
+
 ## 📊 Metrics
 
 | Metric | Value |

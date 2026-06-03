@@ -47,6 +47,25 @@ Example 3:**
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by creating a function `expect` that returns an object with two methods: `toBe` and `notToBe`. These methods take in a value and compare it to the original value passed to the `expect` function. If the values are equal, `toBe` returns true, while `notToBe` throws an error. Conversely, if the values are not equal, `notToBe` returns true, while `toBe` throws an error.
+
+**Approach**
+1. The `expect` function takes in a value `val` and returns an object with two methods: `toBe` and `notToBe`.
+2. The `toBe` method checks if the input value `no` is equal to the original value `val`. If they are equal, it returns true; otherwise, it throws a "Not Equal" error.
+3. The `notToBe` method checks if the input value `no` is not equal to the original value `val`. If they are not equal, it returns true; otherwise, it throws an "Equal" error.
+
+**Time Complexity**
+The time complexity of this solution is O(1), as it involves a constant number of operations regardless of the input size.
+
+**Space Complexity**
+The space complexity of this solution is O(1), as it only uses a fixed amount of space to store the object returned by the `expect` function.
+
+**Key Insight**
+The key insight here is that the `expect` function returns an object with methods that can be used to perform comparisons. This allows for a more functional programming style, where the focus is on the behavior of the functions rather than the data they operate on.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -64,6 +64,27 @@ The third distinct maximum is 1.
 
 **Follow up:** Can you find an `O(n)` solution?
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by first removing duplicates from the input array, then sorting the unique numbers in ascending order. The third maximum number can be found by checking if there are at least three unique numbers, and if so, returning the third last number in the sorted list. If there are less than three unique numbers, the maximum number is returned instead.
+
+## Approach
+1. Convert the input list to a set to remove duplicates, then convert it back to a list.
+2. Sort the list of unique numbers in ascending order.
+3. Check if the length of the sorted list is less than 3.
+4. If the length is less than 3, return the last number in the list (the maximum number).
+5. If the length is 3 or more, return the third last number in the list (the third maximum number).
+
+## Time Complexity
+The time complexity is O(n log n) due to the sorting operation, where n is the number of unique elements in the input array. The set conversion and list indexing operations take linear time, but are dominated by the sorting operation.
+
+## Space Complexity
+The space complexity is O(n) because we are storing the unique elements from the input array in a set and then converting it back to a list. In the worst case, if all elements in the input array are unique, the space used will be proportional to the size of the input array.
+
+## Key Insight
+The key insight here is to remove duplicates before sorting, which simplifies the problem and allows us to find the third maximum number in a straightforward manner. By checking the length of the sorted list, we can handle cases where the third maximum number does not exist and return the maximum number instead.
+
 ## 📊 Metrics
 
 | Metric | Value |

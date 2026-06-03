@@ -64,6 +64,26 @@ So the result is customer_number 3.
 
 **Follow up:** What if more than one customer has the largest number of orders, can you find all the `customer_number` in this case?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the customer who has placed the largest number of orders. We can achieve this by grouping the orders by customer number, counting the number of orders for each customer, and then selecting the customer with the maximum count.
+
+**Approach**
+1. Group the orders by customer number using the `group by` clause.
+2. Count the number of orders for each customer using the `count(*)` function.
+3. Order the customers by the count of orders in descending order using the `order by` clause.
+4. Select the customer with the maximum count using the `limit 1` clause.
+
+**Time Complexity**
+O(n log n), where n is the number of orders. The `group by` and `order by` clauses have a time complexity of O(n), and the `limit 1` clause has a time complexity of O(log n) due to the sorting.
+
+**Space Complexity**
+O(n), where n is the number of orders. The `group by` clause requires storing the intermediate results, which can grow up to the size of the input data.
+
+**Key Insight**
+The key insight is that we can solve this problem using a single SQL query by leveraging the `group by` and `order by` clauses to efficiently count and sort the orders. This approach avoids the need for multiple queries or complex subqueries.
+
 ## 📊 Metrics
 
 | Metric | Value |

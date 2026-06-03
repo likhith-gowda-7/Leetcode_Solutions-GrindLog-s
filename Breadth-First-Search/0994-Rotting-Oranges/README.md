@@ -67,6 +67,28 @@ Example 3:**
 
 	- `grid[i][j]` is `0`, `1`, or `2`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a multi-source Breadth-First Search (BFS) approach to find the minimum number of minutes required for all fresh oranges to rot. The idea is to simulate the process of oranges rotting by exploring all possible directions (up, down, left, right) from each rotten orange.
+
+**Approach**
+1. Initialize a queue to store the coordinates of rotten oranges and a counter to store the number of fresh oranges.
+2. Iterate through the grid to find all rotten oranges and add them to the queue. Also, update the grid by marking the rotten oranges as visited (0).
+3. Define a helper function `add_item` to add fresh oranges adjacent to the current rotten orange to the queue and update the grid.
+4. Perform a BFS traversal by iterating through the queue. For each rotten orange, add its adjacent fresh oranges to the queue and update the grid.
+5. Increment the `min_time` counter after each BFS traversal.
+6. If there are still fresh oranges left after the BFS traversal, return -1. Otherwise, return the `min_time` counter.
+
+**Time Complexity**
+O(m*n), where m and n are the dimensions of the grid. This is because we need to iterate through each cell in the grid to find all rotten oranges and perform the BFS traversal.
+
+**Space Complexity**
+O(m*n), where m and n are the dimensions of the grid. This is because we need to store the coordinates of all rotten oranges in the queue and the updated grid.
+
+**Key Insight**
+The key insight is to use a multi-source BFS approach to simulate the process of oranges rotting. By exploring all possible directions from each rotten orange, we can find the minimum number of minutes required for all fresh oranges to rot. The solution also handles the case where it's impossible for all fresh oranges to rot by returning -1.
+
 ## 📊 Metrics
 
 | Metric | Value |

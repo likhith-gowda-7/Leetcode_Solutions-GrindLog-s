@@ -45,6 +45,30 @@ Example 2:**
 
 	- `-10^5 <= k <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution leverages the properties of a binary search tree (BST) to efficiently find two elements with a sum equal to `k`. The key insight is that in a BST, all elements to the left of a node have values less than the node's value, and all elements to the right have values greater. This allows us to use a single traversal to find a pair of elements with a sum equal to `k`.
+
+**Approach**
+1. Initialize an empty set `values` to store the node values we've seen so far.
+2. Initialize a stack with the root node of the BST.
+3. While the stack is not empty, pop a node from the stack and perform the following steps:
+   1. Calculate the complement of the current node's value with respect to `k`.
+   2. Check if the complement is in the `values` set. If it is, return `True`.
+   3. Add the current node's value to the `values` set.
+   4. Push the right and left children of the current node onto the stack (if they exist).
+4. If the stack is empty and no pair of elements with a sum equal to `k` was found, return `False`.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the BST. This is because we visit each node at most once.
+
+**Space Complexity**
+O(n), where n is the number of nodes in the BST. This is because in the worst case, we store all node values in the `values` set.
+
+**Key Insight**
+The key to this solution is recognizing that the BST's property allows us to use a single traversal to find a pair of elements with a sum equal to `k`. By using a set to store the node values we've seen, we can efficiently check if a complement exists for each node's value. This approach avoids the need for a separate traversal or sorting the BST's elements, making it more efficient than other possible solutions.
+
 ## 📊 Metrics
 
 | Metric | Value |

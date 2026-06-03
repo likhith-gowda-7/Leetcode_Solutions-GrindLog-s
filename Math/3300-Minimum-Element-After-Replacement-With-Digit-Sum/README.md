@@ -57,6 +57,27 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through each number in the input array, replacing it with the sum of its digits, and keeping track of the minimum element seen so far. This approach takes advantage of the fact that the minimum element after replacement is the minimum of the sum of digits of all elements.
+
+**Approach**
+1. Initialize `mini` to the first element of the input array `nums`.
+2. Iterate through each element `num` in `nums`.
+3. For each `num`, calculate the sum of its digits by repeatedly taking the remainder when divided by 10 (to get the last digit) and adding it to a running total `curr`.
+4. Update `mini` to be the minimum of its current value and `curr`.
+5. After iterating through all elements, return `mini` as the minimum element after replacement.
+
+**Time Complexity**
+O(n * k), where n is the length of the input array and k is the maximum number of digits in any element. This is because we iterate through each element once, and for each element, we perform a constant amount of work to calculate the sum of its digits.
+
+**Space Complexity**
+O(1), excluding the space required for the input array. We only use a constant amount of space to store the `mini` variable and the `curr` variable.
+
+**Key Insight**
+The key insight is that the minimum element after replacement is the minimum of the sum of digits of all elements. This allows us to simply iterate through each element, calculate the sum of its digits, and keep track of the minimum seen so far.
+
 ## 📊 Metrics
 
 | Metric | Value |

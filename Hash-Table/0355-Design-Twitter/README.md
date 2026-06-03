@@ -61,6 +61,32 @@ twitter.getNewsFeed(1);  // User 1's news feed should return a list with 1 tweet
 
 	- A user cannot follow himself.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of hash tables and a min heap to efficiently manage user tweets and news feeds. The key insight is to store tweets in a hash table and use a min heap to keep track of the most recent tweets for each user.
+
+**Approach**
+1. Initialize a hash table `self.map` to store user followings, a hash table `self.tweets` to store user tweets, and a counter `self.count` to keep track of the most recent tweet ID.
+2. In `postTweet`, append the new tweet to the user's tweet list and decrement the counter.
+3. In `getNewsFeed`, add the user's ID to their following list and iterate through their followings to collect their tweets.
+4. For each following user, add their most recent tweet to a min heap, along with their ID and tweet index.
+5. Pop tweets from the min heap and add them to the news feed until it reaches the 10-tweet limit.
+6. In `follow`, add the followee ID to the follower's following list.
+7. In `unfollow`, remove the followee ID from the follower's following list.
+
+**Time Complexity**
+- `postTweet`: O(1) since it's a simple append operation.
+- `getNewsFeed`: O(n log n) where n is the number of followings, since we're iterating through followings and pushing/popping from the min heap.
+- `follow` and `unfollow`: O(1) since it's a simple set operation.
+
+**Space Complexity**
+- O(n) for the hash tables to store user followings and tweets, where n is the number of users.
+- O(n log n) for the min heap to store the most recent tweets for each user.
+
+**Key Insight**
+The key insight is to use a min heap to efficiently keep track of the most recent tweets for each user, allowing us to retrieve the 10 most recent tweets in the user's news feed in O(n log n) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

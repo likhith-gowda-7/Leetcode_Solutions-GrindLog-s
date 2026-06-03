@@ -55,6 +55,26 @@ Example 1:**
 Only the first 3 rows are displayed.
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The `head()` function in pandas is used to select the first `n` rows of a DataFrame. In this case, we want to display the first 3 rows, so we pass `3` as an argument to `head()`.
+
+**Approach**
+1. Import the pandas library to work with DataFrames.
+2. Define a function `selectFirstRows()` that takes a DataFrame `employees` as input and returns a new DataFrame.
+3. Use the `head()` function to select the first 3 rows of the `employees` DataFrame.
+4. Return the resulting DataFrame.
+
+**Time Complexity**
+O(1) - The `head()` function operates in constant time, as it simply returns a slice of the existing DataFrame without modifying it.
+
+**Space Complexity**
+O(n) - The `head()` function creates a new DataFrame containing the first 3 rows, which requires additional memory proportional to the number of rows in the original DataFrame.
+
+**Key Insight**
+The key insight here is that the `head()` function is a convenient and efficient way to select a subset of rows from a DataFrame, making it a useful tool for data analysis and manipulation.
+
 ## 📊 Metrics
 
 | Metric | Value |

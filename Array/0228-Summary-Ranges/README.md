@@ -62,6 +62,27 @@ Example 2:**
 
 	- `nums` is sorted in ascending order.
 
+## 🧠 Solution Explanation
+
+### Intuition
+The solution works by iterating through the sorted array and identifying continuous ranges of numbers. It checks if the current number is consecutive to the next number, and if so, it continues to the next number. This approach takes advantage of the fact that the input array is sorted and unique. By doing so, it can efficiently group consecutive numbers into ranges.
+
+### Approach
+1. Initialize an empty list `res` to store the result and a pointer `i` to traverse the array.
+2. Iterate through the array, and for each number, check if it is the start of a new range.
+3. If the current number is consecutive to the next number, move the pointer `i` forward until it reaches a number that is not consecutive.
+4. Once the end of a range is found, append the range to the result list in the required format.
+5. Move the pointer `i` forward to start the next range.
+
+### Time Complexity
+The time complexity is O(n), where n is the length of the input array. This is because the solution iterates through the array once, and each operation within the loop takes constant time.
+
+### Space Complexity
+The space complexity is O(n), where n is the length of the input array. This is because in the worst-case scenario (when all numbers are non-consecutive), the solution will store each number as a separate range in the result list.
+
+### Key Insight
+The key insight is to take advantage of the fact that the input array is sorted and unique, allowing for efficient identification of continuous ranges by simply checking if the current number is consecutive to the next number. This simplifies the problem and enables a straightforward iterative solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

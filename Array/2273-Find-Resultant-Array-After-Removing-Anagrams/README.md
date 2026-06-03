@@ -56,6 +56,29 @@ No two adjacent strings in words are anagrams of each other, so no operations ar
 
 	- `words[i]` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to keep track of the words that are not anagrams of the previous word. It counts the frequency of each character in the current word and checks if it's an anagram of the previous word by comparing their character counts. If they're anagrams, it removes the current word from the stack.
+
+**Approach**
+1. Initialize an empty stack to store the words and a dictionary `h1` to store the character counts of each word.
+2. Define a helper function `char_count` to count the frequency of each character in a word.
+3. Iterate over each word in the input list. For each word:
+   1. Count the frequency of each character in the word using `char_count`.
+   2. Push the word onto the stack.
+   3. While the stack has more than one word and the current word's character count is equal to the previous word's character count, pop the previous word from the stack.
+4. Return the stack, which contains the words after removing anagrams.
+
+**Time Complexity**
+O(n*m), where n is the number of words and m is the maximum length of a word. This is because we're iterating over each word and counting its characters.
+
+**Space Complexity**
+O(n*m), where n is the number of words and m is the maximum length of a word. This is because we're storing the character counts of each word in the dictionary `h1`.
+
+**Key Insight**
+The key insight is to use a stack to keep track of the words that are not anagrams of the previous word. By comparing the character counts of each word, we can efficiently identify and remove anagrams from the stack. This approach allows us to solve the problem in linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

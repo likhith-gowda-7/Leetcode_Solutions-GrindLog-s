@@ -53,6 +53,31 @@ Example 2:**
 
 	- `1 <= startDay_i <= endDay_i <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires attending the maximum number of events given their start and end days. The key insight is to attend events in order of their start day, and for each day, attend the event with the earliest end day. This approach ensures that we attend as many events as possible without violating the constraints.
+
+**Approach**
+1. Sort the events by their start day.
+2. Initialize a min-heap to store the end days of events that can be attended on the current day.
+3. Initialize a counter to keep track of the maximum number of events attended.
+4. Iterate through the sorted events:
+   - For each event, if its start day matches the current day, add its end day to the min-heap.
+   - If the min-heap is not empty and its top element is less than the current day, remove it from the heap (since it's no longer valid).
+   - If the min-heap is not empty, pop its top element (the earliest end day) and increment the counter.
+   - Increment the current day.
+5. Repeat step 4 until all events have been processed.
+
+**Time Complexity**
+O(n log n) due to the sorting of events and the use of a min-heap to store end days. The while loop iterates through the events once, and each insertion and deletion operation in the min-heap takes O(log n) time.
+
+**Space Complexity**
+O(n) for storing the events in the min-heap, where n is the number of events.
+
+**Key Insight**
+The key to this solution is attending events in order of their start day and selecting the event with the earliest end day for each day. This greedy approach ensures that we attend as many events as possible without violating the constraints.
+
 ## 📊 Metrics
 
 | Metric | Value |

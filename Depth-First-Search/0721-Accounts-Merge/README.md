@@ -56,6 +56,27 @@ Example 2:**
 
 	- `accounts[i][j] (for j > 0)` is a valid email.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a Union-Find data structure to group accounts with common emails together. By treating each account as a node in a graph and merging nodes with common emails, we can efficiently group accounts belonging to the same person.
+
+**Approach**
+1. Initialize a Union-Find data structure with `n` nodes, where `n` is the number of accounts. Each node represents an account, and the `parent` array stores the parent of each node.
+2. Iterate through each account and its emails. For each email, check if it's already in the `details` dictionary. If it is, merge the current account with the account associated with the email using the `union` function.
+3. After iterating through all accounts, iterate through the `parent` array and merge any nodes that have the same parent (i.e., belong to the same group).
+4. Create a new list `user_accounts` to store the merged emails for each group. Iterate through the `user_accounts` dictionary and create a new list for each group, sorting the emails in each list.
+5. Return the list of merged accounts, where each account is a list containing the name and sorted emails.
+
+**Time Complexity**
+O(n*m*log(n)), where n is the number of accounts and m is the average number of emails per account. The `union` function takes O(log(n)) time, and we perform it n*m times. The sorting operation takes O(m*log(m)) time, and we perform it n times.
+
+**Space Complexity**
+O(n+m), where n is the number of accounts and m is the total number of emails. We store the `parent` array, `size` array, `details` dictionary, and `user_accounts` dictionary, which take O(n+m) space.
+
+**Key Insight**
+The key insight is to use a Union-Find data structure to efficiently merge accounts with common emails. By treating each account as a node in a graph and merging nodes with common emails, we can group accounts belonging to the same person in O(n*m*log(n)) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

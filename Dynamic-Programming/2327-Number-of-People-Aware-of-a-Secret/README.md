@@ -55,6 +55,29 @@ Day 4: A forgets the secret. B, C, and D share the secret with 3 new people. (6 
 
 	- `1 <= delay < forget <= n`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved by simulating the process of people discovering and forgetting the secret. We maintain a dynamic programming array `dp` where `dp[i]` represents the number of people who know the secret at the end of day `i`. We also keep track of the number of active sharers, which is the number of people who know the secret and can share it on the current day.
+
+**Approach**
+1. Initialize a dynamic programming array `dp` of size `n+1` with all elements set to 0, except `dp[1]` which is set to 1 (since one person discovers the secret on day 1).
+2. Initialize `active_sharers` to 0, which represents the number of people who know the secret and can share it on the current day.
+3. Iterate from day 2 to `n` (inclusive):
+   1. If `day - delay` is greater than 0, add the number of people who knew the secret `delay` days ago to `active_sharers` (since they can share it now).
+   2. If `day - forget` is greater than 0, subtract the number of people who forgot the secret `forget` days ago from `active_sharers` (since they cannot share it now).
+   3. Update `dp[day]` with the current value of `active_sharers`.
+4. Calculate the total number of people who know the secret at the end of day `n` by summing up the values of `dp` from `(n-forget)+1` to `n` (inclusive) and taking the result modulo `10^9 + 7`.
+
+**Time Complexity**
+O(n), where n is the number of days. This is because we iterate from day 2 to `n` (inclusive) once.
+
+**Space Complexity**
+O(n), where n is the number of days. This is because we use a dynamic programming array of size `n+1` to store the number of people who know the secret at the end of each day.
+
+**Key Insight**
+The key insight is to maintain the number of active sharers, which is the number of people who know the secret and can share it on the current day. By simulating the process of people discovering and forgetting the secret, we can efficiently calculate the total number of people who know the secret at the end of day `n`.
+
 ## 📊 Metrics
 
 | Metric | Value |

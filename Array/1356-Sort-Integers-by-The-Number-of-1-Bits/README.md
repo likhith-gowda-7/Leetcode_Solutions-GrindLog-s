@@ -47,6 +47,28 @@ Example 2:**
 
 	- `0 <= arr[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by leveraging Python's built-in sorting functionality. We use a custom sorting key that takes into account the number of 1 bits in the binary representation of each integer. This key is a tuple where the first element is the count of 1 bits and the second element is the integer itself. This allows the sorting algorithm to first sort by the number of 1 bits and then by the integer value in case of a tie.
+
+**Approach**
+1. Use Python's built-in `sort` method to sort the input array `arr`.
+2. Define a custom sorting key using a lambda function.
+3. In the lambda function, convert the integer to binary using `bin(x)`.
+4. Count the number of 1 bits in the binary representation using the `count` method.
+5. Return a tuple where the first element is the count of 1 bits and the second element is the integer itself.
+6. The `sort` method will first sort by the first element of the tuple (count of 1 bits) and then by the second element (integer value) in case of a tie.
+
+**Time Complexity**
+The time complexity of this solution is O(n log n), where n is the length of the input array. This is because the `sort` method has a time complexity of O(n log n) in the worst case.
+
+**Space Complexity**
+The space complexity of this solution is O(n), where n is the length of the input array. This is because the `sort` method needs to create a new array to store the sorted elements.
+
+**Key Insight**
+The key insight here is that Python's built-in sorting algorithm is stable, meaning that when multiple records have the same key, their original order is preserved. By using a tuple as the sorting key, we can take advantage of this stability to first sort by the number of 1 bits and then by the integer value in case of a tie. This makes the solution efficient and easy to understand.
+
 ## 📊 Metrics
 
 | Metric | Value |

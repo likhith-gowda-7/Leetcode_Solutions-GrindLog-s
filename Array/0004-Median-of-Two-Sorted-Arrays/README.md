@@ -51,6 +51,27 @@ Example 2:**
 
 	- `-10^6 <= nums1[i], nums2[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by using a binary search approach to find the median of two sorted arrays. It ensures that the elements on the left side of the partition in both arrays are less than or equal to the elements on the right side. This is achieved by maintaining a balance between the two arrays, where the total number of elements on the left side of the partition is equal to half the total number of elements in both arrays.
+
+## Approach
+1. Initialize two pointers, `l` and `r`, to the start and end of the longer array `A`.
+2. Calculate the partition point `i` in array `A` and the corresponding partition point `j` in array `B` such that `i + j = half`, where `half` is half the total number of elements in both arrays.
+3. Compare the elements at the partition points in both arrays to determine if the partition is correct.
+4. If the partition is correct, calculate the median based on whether the total number of elements is odd or even.
+5. If the partition is not correct, adjust the pointers `l` and `r` to continue the binary search.
+
+## Time Complexity
+The time complexity is O(log(min(m, n))), where `m` and `n` are the lengths of the two arrays. This is because the solution uses a binary search approach to find the median, and the number of iterations is proportional to the logarithm of the length of the shorter array.
+
+## Space Complexity
+The space complexity is O(1), as the solution only uses a constant amount of space to store the pointers and variables.
+
+## Key Insight
+The key insight is to use a binary search approach to find the median, rather than merging the two arrays and then finding the median. This approach takes advantage of the fact that the arrays are sorted, allowing for a more efficient solution with a time complexity of O(log(min(m, n))).
+
 ## 📊 Metrics
 
 | Metric | Value |

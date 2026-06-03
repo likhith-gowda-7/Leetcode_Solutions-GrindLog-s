@@ -90,6 +90,25 @@ MyNumbers table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a subquery to find single numbers (numbers that appear only once) in the table, and then selects the maximum of these single numbers. This approach works because it first identifies the single numbers and then finds the largest among them.
+
+**Approach**
+1. The subquery groups the numbers in the `MyNumbers` table by their values and counts the occurrences of each number using `count(*) as n`.
+2. The `having n=1` clause filters the results to include only numbers that appear once.
+3. The outer query selects the maximum number from the results of the subquery.
+
+**Time Complexity**
+O(n log n) due to the sorting operation implicitly performed by the `max` function, where n is the number of unique numbers in the table.
+
+**Space Complexity**
+O(n) for storing the intermediate results of the subquery, where n is the number of rows in the `MyNumbers` table.
+
+**Key Insight**
+The key insight is to use a subquery to identify single numbers and then select the maximum among them, which allows us to avoid iterating through the entire table multiple times. This approach takes advantage of the fact that we only need to find the maximum single number, not all single numbers.
+
 ## 📊 Metrics
 
 | Metric | Value |

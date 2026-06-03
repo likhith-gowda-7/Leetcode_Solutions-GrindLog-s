@@ -80,6 +80,26 @@ Cat queries poor_ query_percentage is (1 / 3) * 100 = 33.33
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the query quality and poor query percentage for each query name by grouping the queries and applying the defined formulas. The quality is the average of the ratio between the query rating and its position, while the poor query percentage is the percentage of queries with a rating less than 3.
+
+**Approach**
+1. The solution starts by selecting the required columns: `query_name`, `quality`, and `poor_query_percentage`.
+2. It then calculates the quality for each query by taking the average of the ratio between the `rating` and `position` columns, rounded to 2 decimal places.
+3. The poor query percentage is calculated by summing the number of queries with a rating less than 3 and dividing it by the total number of queries, then multiplying by 100 and rounding to 2 decimal places.
+4. The solution groups the queries by `query_name` to ensure that the calculations are performed separately for each query.
+
+**Time Complexity**
+O(n), where n is the number of queries. This is because the solution iterates over the queries once to calculate the quality and poor query percentage for each query.
+
+**Space Complexity**
+O(n), where n is the number of queries. This is because the solution requires temporary storage to store the intermediate results of the calculations.
+
+**Key Insight**
+The key insight is that the solution can be simplified by using the `avg` and `sum` aggregation functions to calculate the quality and poor query percentage, respectively. This avoids the need for explicit loops or subqueries, making the solution more efficient and concise.
+
 ## 📊 Metrics
 
 | Metric | Value |

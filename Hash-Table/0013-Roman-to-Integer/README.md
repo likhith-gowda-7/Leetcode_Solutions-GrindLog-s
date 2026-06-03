@@ -77,6 +77,29 @@ Example 3:**
 
 	- It is **guaranteed** that `s` is a valid roman numeral in the range `[1, 3999]`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over the Roman numeral string from left to right, keeping track of the previous numeral's value. If the current numeral's value is greater than the previous one, it means we need to subtract the previous value from the result (because in Roman numerals, a smaller numeral placed before a larger one means subtraction). Otherwise, we simply add the current value to the result.
+
+**Approach**
+1. Create a dictionary to map Roman numerals to their integer values.
+2. Initialize a variable `res` to store the final result and `prev` to store the value of the previous numeral.
+3. Iterate over the input string `s` from left to right.
+4. For each numeral, get its value from the dictionary and store it in `curr`.
+5. If `curr` is greater than `prev`, subtract `prev` from `res` and add `curr - prev` to `res`. Otherwise, add `curr` to `res`.
+6. Update `prev` to be the value of the current numeral.
+7. After iterating over the entire string, return the final result `res`.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we only need to iterate over the string once to calculate the result.
+
+**Space Complexity**
+O(1), excluding the input string. We only use a constant amount of space to store the dictionary and the variables `res` and `prev`.
+
+**Key Insight**
+The key insight here is that we can take advantage of the fact that Roman numerals use subtraction to represent certain values. By keeping track of the previous numeral's value, we can efficiently calculate the result by adding or subtracting the current value as needed. This approach avoids the need for explicit handling of each possible combination of numerals.
+
 ## 📊 Metrics
 
 | Metric | Value |

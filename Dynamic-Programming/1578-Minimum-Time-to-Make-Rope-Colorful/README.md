@@ -66,6 +66,27 @@ There are no longer two consecutive balloons of the same color. Total time = 1 +
 
 	- `colors` contains only lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The key insight here is that we can break down the problem into smaller subproblems by considering each color group separately. We want to minimize the time spent by Bob in removing balloons from each group, while ensuring that no two consecutive balloons are of the same color.
+
+**Approach**
+1. Initialize variables to keep track of the minimum time spent so far (`min_time`), the current time spent in the current color group (`curr`), and the maximum time spent in the current color group (`maxi`).
+2. Iterate through the `colors` string and the `neededTime` array simultaneously.
+3. If the current balloon is of the same color as the previous one, add its time to `curr` and update `maxi` if necessary.
+4. If the current balloon is of a different color, calculate the time spent in the previous color group by subtracting `maxi` from `curr`, add this to `min_time`, and reset `curr` and `maxi` for the new color group.
+5. After the loop, add the time spent in the last color group to `min_time` and return the result.
+
+**Time Complexity**
+O(n), where n is the length of the `colors` string, since we only iterate through the string once.
+
+**Space Complexity**
+O(1), since we only use a constant amount of space to store the variables `min_time`, `curr`, and `maxi`.
+
+**Key Insight**
+The key insight is to recognize that we can minimize the time spent by Bob by considering each color group separately and minimizing the time spent in each group. This is achieved by keeping track of the maximum time spent in each group and subtracting it from the total time spent in the group to get the minimum time spent.
+
 ## 📊 Metrics
 
 | Metric | Value |

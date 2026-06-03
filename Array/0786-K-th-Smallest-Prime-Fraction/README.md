@@ -58,6 +58,28 @@ Example 2:**
 
 **Follow up:** Can you solve the problem with better than `O(n^2)` complexity?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a priority queue (min heap) to efficiently find the k-th smallest fraction. By pushing fractions into the heap in the form of a negative value (to simulate a max heap), we can easily compare and extract the largest fraction at any given time.
+
+**Approach**
+1. Initialize an empty min heap.
+2. Iterate through the array `arr` using two nested loops to generate all possible fractions.
+3. For each fraction `arr[i] / arr[j]`, push it into the min heap in the form of a tuple `(fraction, [arr[i], arr[j]])`.
+4. If the heap size is less than `k`, push the fraction without checking its value.
+5. Otherwise, if the current fraction is larger than the smallest fraction in the heap, replace it using `heapq.heappushpop`.
+6. After iterating through all fractions, the k-th smallest fraction is at the top of the heap, so return its corresponding numerator and denominator.
+
+**Time Complexity**
+O(n^2 log n), where n is the length of the array `arr`. The two nested loops generate all possible fractions in O(n^2) time, and pushing each fraction into the heap takes O(log n) time. Since we do this for all fractions, the overall time complexity is O(n^2 log n).
+
+**Space Complexity**
+O(n), where n is the length of the array `arr`. We use a min heap to store the k-th smallest fractions, which requires O(n) space in the worst case.
+
+**Key Insight**
+The key insight is to use a priority queue (min heap) to efficiently find the k-th smallest fraction. By pushing fractions into the heap in the form of a negative value, we can easily compare and extract the largest fraction at any given time, which allows us to find the k-th smallest fraction in O(n^2 log n) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

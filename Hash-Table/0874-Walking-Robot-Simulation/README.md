@@ -111,6 +111,30 @@ The furthest point the robot ever gets from the origin is `(0, 6)`, which square
 
 	- The answer is guaranteed to be less than `2^31`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a simulation approach to track the robot's movement and calculate the maximum squared Euclidean distance it reaches. It iterates through the commands, updating the robot's position and direction accordingly, while checking for obstacles and updating the maximum distance.
+
+**Approach**
+1. Store obstacles in a set for efficient lookups.
+2. Define the possible directions (North, East, South, West) as a list of tuples.
+3. Initialize the robot's position at (0, 0) and direction as North.
+4. Iterate through the commands:
+	* If the command is -1, turn right by incrementing the direction modulo 4.
+	* If the command is -2, turn left by incrementing the direction modulo 4.
+	* Otherwise, move forward in the current direction, checking for obstacles and updating the maximum distance.
+5. After iterating through all commands, return the maximum squared Euclidean distance.
+
+**Time Complexity**
+O(n), where n is the number of commands. This is because we iterate through the commands once, and each command takes constant time to process.
+
+**Space Complexity**
+O(m), where m is the number of obstacles. We store the obstacles in a set for efficient lookups, which takes O(m) space.
+
+**Key Insight**
+The key insight is to use a simulation approach to track the robot's movement, rather than trying to calculate the maximum distance analytically. This allows us to handle the obstacles and direction changes efficiently, making the solution scalable and easy to implement.
+
 ## 📊 Metrics
 
 | Metric | Value |

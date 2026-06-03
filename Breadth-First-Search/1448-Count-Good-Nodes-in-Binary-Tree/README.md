@@ -82,6 +82,27 @@ Example 3:**
 
 	- Each node's value is between `[-10^4, 10^4]`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a stack-based approach to traverse the binary tree in a depth-first manner. The key insight is to keep track of the maximum value seen so far in the path from the root to the current node, and increment the count whenever we encounter a node with a value greater than or equal to this maximum.
+
+**Approach**
+1. Initialize a stack with the root node and a maximum value of negative infinity.
+2. While the stack is not empty, pop the top node and its associated maximum value.
+3. If the current node's value is greater than or equal to the maximum value, increment the count and update the maximum value to the current node's value.
+4. Push the right and left child nodes of the current node onto the stack, along with the updated maximum value.
+5. Repeat steps 2-4 until the stack is empty.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the binary tree. This is because we visit each node exactly once.
+
+**Space Complexity**
+O(N), where N is the number of nodes in the binary tree. In the worst case, the stack will contain all nodes in the tree.
+
+**Key Insight**
+The key to this solution is to keep track of the maximum value seen so far in the path from the root to the current node, and increment the count whenever we encounter a node with a value greater than or equal to this maximum. This allows us to efficiently identify the good nodes in the binary tree.
+
 ## 📊 Metrics
 
 | Metric | Value |

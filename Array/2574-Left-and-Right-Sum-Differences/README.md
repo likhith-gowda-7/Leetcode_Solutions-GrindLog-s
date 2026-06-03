@@ -51,6 +51,30 @@ The array answer is [|0 - 0|] = [0].
 
 	- `1 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the absolute difference between the sum of elements to the left and right of each index in the input array. This is achieved by maintaining a running sum of the array elements and using it to calculate the right sum for each index.
+
+**Approach**
+1. Initialize an empty list `res` to store the results and a variable `total` to store the sum of all elements in the input array `nums`.
+2. Calculate the sum of all elements in `nums` and store it in `total`.
+3. Initialize a variable `left` to 0, which will store the sum of elements to the left of the current index.
+4. Iterate over the indices of `nums` from 0 to `n-1`.
+5. For each index `i`, calculate the right sum by subtracting the current element `nums[i]` from the total sum `total` and adding the sum of elements to the left of `i`, which is stored in `left`.
+6. Calculate the absolute difference between the left sum and the right sum, and append it to the result list `res`.
+7. Update the `left` variable by adding the current element `nums[i]` to it.
+8. Return the result list `res`.
+
+**Time Complexity**
+O(n), where n is the size of the input array `nums`. This is because we are iterating over the array once and performing constant-time operations for each element.
+
+**Space Complexity**
+O(n), where n is the size of the input array `nums`. This is because we are storing the result in a list of size n.
+
+**Key Insight**
+The key to this solution is the observation that the right sum for each index can be calculated by subtracting the current element from the total sum and adding the sum of elements to the left of the current index. This allows us to avoid recalculating the sum of elements to the right of each index, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

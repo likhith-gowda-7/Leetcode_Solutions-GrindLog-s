@@ -78,6 +78,29 @@ In total, 1 + 3 + 0 + 0 = 4 moves were used.
 
 	- `1 <= seats[i], students[j] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The approach to this problem is to pair each seat with the closest student, minimizing the total number of moves required. This is a classic greedy algorithm problem, where the optimal solution can be found by making the locally optimal choice at each step.
+
+**Approach**
+1. Sort the `seats` array in ascending order.
+2. Sort the `students` array in ascending order.
+3. Initialize a variable `mini` to store the total number of moves.
+4. Iterate through the sorted `seats` and `students` arrays simultaneously using a for loop.
+5. For each pair of seat and student, calculate the absolute difference between their positions using the `abs` function.
+6. Add the absolute difference to the `mini` variable.
+7. Return the total number of moves stored in `mini`.
+
+**Time Complexity**
+O(n log n) due to the sorting of the `seats` and `students` arrays, where n is the number of seats or students.
+
+**Space Complexity**
+O(1) excluding the input arrays, as only a constant amount of space is used to store the `mini` variable and the loop indices.
+
+**Key Insight**
+The key insight to this problem is that by pairing each seat with the closest student, we are effectively minimizing the total number of moves required. This is because the absolute difference between the positions of each pair represents the minimum number of moves needed to seat the student. By sorting the arrays and iterating through them simultaneously, we can find the optimal solution efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

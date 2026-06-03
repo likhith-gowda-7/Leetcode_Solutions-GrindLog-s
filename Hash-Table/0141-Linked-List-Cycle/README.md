@@ -64,6 +64,26 @@ Example 3:**
 
 **Follow up:** Can you solve it using `O(1)` (i.e. constant) memory?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses Floyd's Tortoise and Hare algorithm, also known as the "slow and fast pointer" technique, to detect a cycle in a linked list. This approach works by advancing two pointers at different speeds through the list. If there is a cycle, the fast pointer will eventually catch up to the slow pointer.
+
+**Approach**
+1. Initialize two pointers, `slow` and `fast`, to the head of the linked list.
+2. Move the `slow` pointer one step at a time and the `fast` pointer two steps at a time.
+3. If the `fast` pointer reaches the end of the list (i.e., `fast` or `fast.next` is `None`), there is no cycle.
+4. If the `fast` pointer catches up to the `slow` pointer, there is a cycle.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the linked list. This is because in the worst case, the fast pointer will traverse the entire list once.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the slow and fast pointers.
+
+**Key Insight**
+The key insight behind this solution is that if there is a cycle, the fast pointer will eventually catch up to the slow pointer. This is because the fast pointer is moving twice as fast as the slow pointer, so if there is a cycle, the fast pointer will eventually enter the cycle and catch up to the slow pointer.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -42,6 +42,30 @@ Example 2:**
 
 	- `digits[i]` is a digit in the range `['2', '9']`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires generating all possible letter combinations for a given phone number. The key insight is to use a backtracking approach to explore all possible combinations. We can break down the problem into smaller sub-problems by considering each digit of the input number and generating all possible letters for that digit.
+
+**Approach**
+1. Create a dictionary `num_letters` to map each digit to its corresponding letters.
+2. Initialize an empty list `res` to store the result.
+3. Define a recursive function `backtrack` to explore all possible combinations.
+4. In the `backtrack` function:
+   1. If the current solution `sol` has reached the length of the input number `n`, add it to the result list `res`.
+   2. For each letter `ch` corresponding to the current digit `digits[curr_idx]`, add it to the solution `sol` and recursively call `backtrack` with the next index `curr_idx+1`.
+   3. After the recursive call, remove the last added letter from the solution `sol` to backtrack and explore other possibilities.
+5. Call the `backtrack` function with the initial index `0` and an empty solution `[]`.
+
+**Time Complexity**
+The time complexity of this solution is O(4^n), where n is the length of the input number. This is because each digit can have up to 4 possible letters, and we recursively explore all possible combinations.
+
+**Space Complexity**
+The space complexity of this solution is O(4^n), where n is the length of the input number. This is because in the worst case, we need to store all possible combinations in the result list `res`.
+
+**Key Insight**
+The key insight is to use a backtracking approach to explore all possible combinations of letters for each digit of the input number. This approach allows us to efficiently generate all possible combinations without generating duplicate solutions.
+
 ## 📊 Metrics
 
 | Metric | Value |

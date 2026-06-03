@@ -69,6 +69,28 @@ Example 2:**
 
 	- `0 <= k < n`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved by simulating the process of people buying tickets. We use a queue to represent the line of people, and we keep track of the time taken for each person to buy their tickets. The key insight is that we only need to consider the person at position `k` and the people behind them, as they are the ones who will eventually buy tickets.
+
+**Approach**
+1. Initialize a queue with the tickets array and a variable `time_taken` to keep track of the time taken.
+2. While the queue is not empty, pop the front person from the queue and increment the `time_taken` by 1.
+3. If the person has more than one ticket left, decrement their ticket count and push them back to the end of the queue.
+4. If the person has one ticket left and it's the person at position `k`, break the loop as they will finish buying tickets.
+5. If the person has no tickets left and it's not the person at position `k`, update the position `k` to be the last person in the queue.
+6. Return the `time_taken`.
+
+**Time Complexity**
+O(n), where n is the number of people in the line. This is because we make a single pass through the queue, and each operation (popping, pushing, and updating `k`) takes constant time.
+
+**Space Complexity**
+O(n), where n is the number of people in the line. This is because we use a queue to store the people in the line, which takes up to n space.
+
+**Key Insight**
+The key insight is that we only need to consider the person at position `k` and the people behind them, as they are the ones who will eventually buy tickets. This allows us to simplify the problem and avoid considering the people in front of `k`.
+
 ## 📊 Metrics
 
 | Metric | Value |

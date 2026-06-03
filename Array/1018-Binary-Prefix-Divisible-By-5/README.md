@@ -47,6 +47,28 @@ Example 2:**
 
 	- `nums[i]` is either `0` or `1`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by simulating the process of constructing a binary number from the input array and checking if the resulting number is divisible by 5. This is done by maintaining a running binary number and updating it with each new bit from the input array. The divisibility check is performed using the modulo operator.
+
+**Approach**
+1. Initialize an empty list `res` to store the results and a variable `binary_num` to store the running binary number.
+2. Iterate through each bit in the input array `nums`.
+3. For each bit, update the `binary_num` by shifting the current value to the left by one bit and adding the new bit.
+4. Check if the updated `binary_num` is divisible by 5 by using the modulo operator (`binary_num % 5 == 0`).
+5. Append the result of the divisibility check to the `res` list.
+6. Return the `res` list.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we are iterating through each bit in the array once.
+
+**Space Complexity**
+O(n), where n is the length of the input array `nums`. This is because we are storing the results in a list of length n.
+
+**Key Insight**
+The key insight is that we can simulate the process of constructing a binary number from the input array and checking if the resulting number is divisible by 5 without actually constructing the binary number. This is done by maintaining a running binary number and updating it with each new bit from the input array, allowing us to perform the divisibility check efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

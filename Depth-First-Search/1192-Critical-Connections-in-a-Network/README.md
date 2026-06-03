@@ -51,6 +51,27 @@ Example 2:**
 
 	- There are no repeated connections.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a depth-first search (DFS) approach to find critical connections in the network. The key insight is that a critical connection is one that, if removed, would disconnect a server from the rest of the network. This can be detected by checking if the lowest reachable ancestor of a node is greater than the time at which the node was first visited.
+
+**Approach**
+1. Create an adjacency list representation of the graph from the given connections.
+2. Initialize arrays to keep track of the time at which each node was first visited (`tin`), the lowest reachable ancestor of each node (`low`), and whether each node has been visited (`visited`).
+3. Perform a DFS traversal of the graph, starting from an arbitrary node (in this case, node 0).
+4. During the DFS, update the `tin` and `low` values for each node, and check if the lowest reachable ancestor of a node is greater than the time at which the node was first visited. If so, add the connection between the current node and its parent to the result list.
+5. Return the list of critical connections.
+
+**Time Complexity**
+O(n + m), where n is the number of nodes and m is the number of edges. This is because each node and edge is visited once during the DFS traversal.
+
+**Space Complexity**
+O(n + m), where n is the number of nodes and m is the number of edges. This is because we need to store the adjacency list, as well as the `tin`, `low`, and `visited` arrays.
+
+**Key Insight**
+The key to this solution is the use of the `low` value to detect critical connections. By keeping track of the lowest reachable ancestor of each node, we can determine whether a connection is critical by checking if the lowest reachable ancestor of a node is greater than the time at which the node was first visited. This allows us to efficiently identify critical connections in the network.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -62,6 +62,27 @@ Example 3:**
 
 	- `p` and `q` will exist in the BST.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution leverages the property of a Binary Search Tree (BST), where all nodes to the left of a node have values less than the node's value, and all nodes to the right have values greater. This property allows us to efficiently find the lowest common ancestor (LCA) of two nodes by traversing the tree based on the values of the nodes.
+
+**Approach**
+1. Initialize the current node `curr` to the root of the tree.
+2. While `curr` is not `None`:
+   1. If both `p.val` and `q.val` are less than `curr.val`, move to the left child of `curr`.
+   2. If both `p.val` and `q.val` are greater than `curr.val`, move to the right child of `curr`.
+   3. Otherwise, return `curr` as it is the LCA of `p` and `q`.
+
+**Time Complexity**
+The time complexity of this solution is O(h), where h is the height of the tree. In the worst case, the tree is skewed, and the height is equal to the number of nodes (n). However, for a balanced BST, the height is log(n). The while loop runs until we find the LCA or reach a leaf node, which takes at most h iterations.
+
+**Space Complexity**
+The space complexity is O(1), as we only use a constant amount of space to store the current node `curr` and the input nodes `p` and `q`.
+
+**Key Insight**
+The key insight is that we can use the BST property to efficiently find the LCA by traversing the tree based on the values of the nodes. This approach avoids the need to recursively traverse the entire tree, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

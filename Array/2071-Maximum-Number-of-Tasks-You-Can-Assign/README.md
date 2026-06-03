@@ -74,6 +74,28 @@ The last pill is not given because it will not make any worker strong enough for
 
 	- `0 <= tasks[i], workers[j], strength <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a binary search approach to find the maximum number of tasks that can be assigned to workers, given the constraints of magical pills and worker strength. The key insight is to consider the workers with the highest strength first, and then use the pills to increase the strength of weaker workers as needed.
+
+**Approach**
+1. Define a helper function `canAssign` to check if it's possible to assign `mid` tasks to workers with the given constraints.
+2. Sort the `tasks` and `workers` arrays in ascending order.
+3. Initialize the binary search range `[l, r]` to `[0, min(len(tasks), len(workers))]`.
+4. Perform binary search to find the maximum number of tasks that can be assigned.
+5. In each iteration, call `canAssign` with the mid value and update the answer if it's possible to assign `mid` tasks.
+6. If `canAssign` returns `True`, update the answer and move the left pointer to `mid + 1`. Otherwise, move the right pointer to `mid - 1`.
+
+**Time Complexity**
+O(n log n + m log m + k log k), where n is the number of tasks, m is the number of workers, and k is the number of workers that need to be increased in strength using magical pills. This is because we perform binary search, sorting, and bisect operations.
+
+**Space Complexity**
+O(1), excluding the space required for input arrays. We only use a constant amount of space to store the binary search variables and the answer.
+
+**Key Insight**
+The key insight is to use the workers with the highest strength first and then use the pills to increase the strength of weaker workers as needed. This approach allows us to efficiently find the maximum number of tasks that can be assigned, given the constraints of magical pills and worker strength.
+
 ## 📊 Metrics
 
 | Metric | Value |

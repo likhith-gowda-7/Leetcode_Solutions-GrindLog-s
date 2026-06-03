@@ -49,6 +49,26 @@ Following the order of appearance in `order`, `"b"`, `"c"`, and `"a"` from `s` s
 
 	- All the characters of `order` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first creating a hash table to store the custom order of characters in the `order` string. Then, it sorts the characters in the `s` string based on their custom order, treating characters not in the `order` string as having a high priority (i.e., 26).
+
+**Approach**
+1. Create a hash table `h1` to store the custom order of characters in the `order` string.
+2. Iterate over the `order` string and store each character as a key in the hash table `h1`, with its value being its index in the `order` string.
+3. Sort the characters in the `s` string using the `sorted` function, with a custom key function that looks up each character in the hash table `h1`. If a character is not found in the hash table, it is treated as having a high priority (i.e., 26).
+4. Join the sorted characters into a single string using the `"".join()` method.
+
+**Time Complexity**
+O(n log n), where n is the length of the `s` string. This is because the `sorted` function has a time complexity of O(n log n) in Python.
+
+**Space Complexity**
+O(n), where n is the length of the `order` string. This is because we need to store the custom order of characters in the hash table `h1`.
+
+**Key Insight**
+The key insight is to treat characters not in the `order` string as having a high priority, allowing us to sort the characters in the `s` string based on their custom order. This is achieved by using a custom key function that looks up each character in the hash table `h1`, returning its index if found, or 26 if not found.
+
 ## 📊 Metrics
 
 | Metric | Value |

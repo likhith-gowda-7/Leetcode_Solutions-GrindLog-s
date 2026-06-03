@@ -65,6 +65,28 @@ productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers 
 
 **Follow-up: **Can you implement **both** `GetProduct` and `Add` to work in `O(1)` time complexity instead of `O(k)` time complexity?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a prefix array to efficiently calculate the product of the last `k` numbers in the stream. By maintaining a running product and handling zeros separately, we can achieve a time complexity of O(1) for the `getProduct` method.
+
+**Approach**
+1. Initialize a prefix array `prefix` with a single element `1`, and a counter `l` to keep track of the current length of the prefix array.
+2. In the `add` method, check if the last element in the prefix array is `0`. If it is, reset the `zero` variable to the current length of the prefix array minus one, and append the new number to the prefix array.
+3. If the last element is not `0`, append the product of the last element and the new number to the prefix array.
+4. In the `getProduct` method, check if the `zero` variable is greater than or equal to `l-k`. If it is, return `0`, as the product of the last `k` numbers will be zero.
+5. If the prefix array element at index `l-k-1` is `0`, return the last element of the prefix array, as the product of the last `k` numbers will be the product of all numbers after the zero.
+6. Otherwise, return the last element of the prefix array divided by the prefix array element at index `l-k-1`, which represents the product of the last `k` numbers.
+
+**Time Complexity**
+O(1) for both `add` and `getProduct` methods, as we are performing constant-time operations.
+
+**Space Complexity**
+O(n), where n is the number of elements in the stream, as we are storing the prefix array with a maximum length of n.
+
+**Key Insight**
+The key insight is to handle zeros separately and maintain a running product in the prefix array, allowing us to calculate the product of the last `k` numbers in constant time.
+
 ## 📊 Metrics
 
 | Metric | Value |

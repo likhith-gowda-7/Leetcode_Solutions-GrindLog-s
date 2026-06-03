@@ -65,6 +65,30 @@ Example 3:**
 
 **Follow up:** Could you use search pruning to make your solution faster with a larger `board`?
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by using a backtracking approach to explore all possible paths in the grid that could form the given word. It iterates over each cell in the grid and checks if the current cell matches the first character of the word, then recursively checks the neighboring cells to form the rest of the word. This approach ensures that all possible paths are explored without using any cell more than once.
+
+## Approach
+1. Define a helper function `backtrack` that takes the current cell coordinates `i` and `j`, and the current index `word_idx` in the word.
+2. Check if the current index is equal to the length of the word, if so, return `True` as the word has been found.
+3. Check if the current cell is out of bounds or if the character at the current cell does not match the character at the current index in the word, if so, return `False`.
+4. Mark the current cell as visited by changing its value to a special character.
+5. Recursively call the `backtrack` function for the neighboring cells (up, down, left, right) with the next index in the word.
+6. If any of the recursive calls return `True`, return `True`.
+7. Unmark the current cell by changing its value back to the original character.
+8. Iterate over each cell in the grid and call the `backtrack` function if the current cell matches the first character of the word.
+
+## Time Complexity
+The time complexity is O(m * n * 4^L), where m is the number of rows, n is the number of columns, and L is the length of the word. This is because in the worst case, we need to explore all possible paths of length L from each cell.
+
+## Space Complexity
+The space complexity is O(L), where L is the length of the word. This is because the maximum depth of the recursion call stack is L, as we need to store the current index and the current cell coordinates.
+
+## Key Insight
+The key insight is to use a backtracking approach to explore all possible paths in the grid, and to mark the current cell as visited to avoid using it more than once. This approach allows us to efficiently search for the word in the grid without exploring unnecessary paths.
+
 ## 📊 Metrics
 
 | Metric | Value |

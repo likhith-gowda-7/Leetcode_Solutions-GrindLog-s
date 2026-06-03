@@ -38,6 +38,28 @@ Example 2:**
 
 	- `-10 <= nums[i] <= 10`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing a backtracking approach to generate all possible subsets of the given array. To avoid duplicate subsets, the array is first sorted, and then a skipping mechanism is implemented to bypass duplicate elements. This ensures that each subset is unique and only appears once in the result.
+
+## Approach
+1. Sort the input array `nums` to group duplicate elements together.
+2. Initialize an empty list `sol` to store the current subset and another list `res` to store all generated subsets.
+3. Define a recursive function `backtrack` that takes an index `idx` as a parameter.
+4. Within `backtrack`, if the index reaches the end of the array, append a copy of the current subset `sol` to the result list `res`.
+5. Otherwise, add the current element to `sol`, recursively call `backtrack` with the next index, and then remove the last added element from `sol`.
+6. To skip duplicate elements, increment the index `idx` until a different element is found or the end of the array is reached, and then recursively call `backtrack` with the updated index.
+
+## Time Complexity
+The time complexity is O(2^n * n), where n is the length of the input array. This is because in the worst case, we generate 2^n subsets (the power set), and for each subset, we perform a copy operation that takes O(n) time.
+
+## Space Complexity
+The space complexity is O(2^n * n), which is used to store the result list `res` containing all generated subsets. The recursion stack also uses O(n) space in the worst case, but this is dominated by the space required for the result list.
+
+## Key Insight
+The key insight here is the use of sorting and skipping duplicate elements to efficiently generate unique subsets. By sorting the array and skipping duplicates, we avoid generating duplicate subsets and ensure that the result only contains unique subsets.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -63,6 +63,26 @@ Employee table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by joining the `Employee` table with itself on the `managerId` column, effectively creating a table where each row represents a manager and their direct reports. The `GROUP BY` clause then groups these rows by the manager's `id`, and the `HAVING` clause filters the results to only include managers with at least five direct reports.
+
+**Approach**
+1. Join the `Employee` table with itself on the `managerId` column, creating a table where each row represents a manager and their direct reports.
+2. Group the resulting table by the manager's `id`.
+3. Use the `COUNT(*)` function to count the number of direct reports for each manager.
+4. Filter the results using the `HAVING` clause to only include managers with at least five direct reports.
+
+**Time Complexity**
+O(n log n) due to the `GROUP BY` clause, where n is the number of employees. This is because the `GROUP BY` clause requires sorting the data, which takes O(n log n) time.
+
+**Space Complexity**
+O(n) because we need to store the intermediate results of the join and group operations.
+
+**Key Insight**
+The key insight here is that by joining the `Employee` table with itself on the `managerId` column, we can effectively create a table where each row represents a manager and their direct reports. This allows us to easily count the number of direct reports for each manager using the `COUNT(*)` function.
+
 ## 📊 Metrics
 
 | Metric | Value |

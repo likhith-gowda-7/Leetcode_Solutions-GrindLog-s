@@ -45,6 +45,28 @@ Example 2:**
 
 	- `1 <= nums[i] <= 50`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through each number in the array and finding the minimum number of operations required to make it divisible by 3. The key insight is that we can make a number divisible by 3 by either subtracting or adding the difference between the number and its nearest multiple of 3.
+
+**Approach**
+1. Initialize a variable `res` to store the total minimum number of operations.
+2. Iterate through each number `num` in the array `nums`.
+3. Calculate the difference `diff` between `num` and its nearest multiple of 3.
+4. If `diff` is not zero, calculate the minimum number of operations required to make `num` divisible by 3. This is done by finding the minimum between `3 - diff` and `diff - 0`.
+5. Add the minimum number of operations to `res`.
+6. Return `res` as the total minimum number of operations.
+
+**Time Complexity**
+O(n), where n is the number of elements in the array. This is because we are iterating through each element in the array once.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the variables `res`, `num`, and `diff`.
+
+**Key Insight**
+The key insight is that we can make a number divisible by 3 by either subtracting or adding the difference between the number and its nearest multiple of 3. This allows us to find the minimum number of operations required to make each number in the array divisible by 3.
+
 ## 📊 Metrics
 
 | Metric | Value |

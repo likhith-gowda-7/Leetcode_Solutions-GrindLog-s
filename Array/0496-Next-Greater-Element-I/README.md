@@ -60,6 +60,27 @@ Example 2:**
 
 **Follow up:** Could you find an `O(nums1.length + nums2.length)` solution?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the next greater element for each element in `nums1` from the array `nums2`. We can utilize a stack to efficiently track the elements in `nums2` and their corresponding next greater elements.
+
+**Approach**
+1. Initialize an empty stack and a hash table `h` to store the next greater element for each element in `nums2`.
+2. Iterate through `nums2` from left to right. For each element `i`, pop all elements from the stack that are less than `i` and store `i` as the next greater element for these popped elements in the hash table `h`.
+3. Push `i` onto the stack.
+4. After iterating through `nums2`, iterate through `nums1`. For each element `x` in `nums1`, check if it exists in the hash table `h`. If it does, update the value of `x` in `nums1` to its next greater element. If it doesn't, set the value of `x` to -1.
+5. Return the modified array `nums1`.
+
+**Time Complexity**
+O(n + m), where n is the length of `nums1` and m is the length of `nums2`. We iterate through `nums2` once to populate the stack and hash table, and then iterate through `nums1` once to find the next greater elements.
+
+**Space Complexity**
+O(m), as we need to store the next greater elements for all elements in `nums2` in the hash table `h`.
+
+**Key Insight**
+The key insight is to use a stack to efficiently track the elements in `nums2` and their corresponding next greater elements. By popping elements from the stack that are less than the current element, we can ensure that the next greater element for each element is stored correctly in the hash table.
+
 ## 📊 Metrics
 
 | Metric | Value |

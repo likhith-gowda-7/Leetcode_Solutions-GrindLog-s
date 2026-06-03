@@ -87,6 +87,27 @@ The output is 4.
 
 	- `1 <= l < r <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a power map to store the minimum number of operations required to reduce all elements in a range to zero. The power map is constructed by iterating over the powers of 4, where each power represents the number of operations required to reduce an element to zero. The solution then iterates over the queries and uses the power map to calculate the minimum number of operations required for each query.
+
+**Approach**
+1. Construct a power map by iterating over the powers of 4, where each power represents the number of operations required to reduce an element to zero.
+2. For each query, traverse the power map to identify the ranges that the query belongs to.
+3. For each range, calculate the number of elements in the range and the number of operations required to reduce all elements in the range to zero.
+4. Add the number of operations required for each range to the total number of operations.
+5. Divide the total number of operations by 2 and round up to the nearest integer to get the minimum number of operations required for the query.
+
+**Time Complexity**
+O(n * m), where n is the number of queries and m is the maximum range size. The solution iterates over the queries and the power map, where each iteration takes constant time.
+
+**Space Complexity**
+O(m), where m is the maximum range size. The solution stores the power map, which has a size of O(m).
+
+**Key Insight**
+The key insight is that the number of operations required to reduce an element to zero is proportional to the power of 4 of the element. By constructing a power map and iterating over the queries, the solution can efficiently calculate the minimum number of operations required for each query.
+
 ## 📊 Metrics
 
 | Metric | Value |

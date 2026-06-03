@@ -66,6 +66,30 @@ We return 0 - 15 = -15 as the answer.
 
 	- `1 <= n, m <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over the range `[1, n]` and calculating the sum of numbers that are not divisible by `m` (`num1_sum`) and the sum of numbers that are divisible by `m` (`num2_sum`). The difference between these two sums is then returned.
+
+**Approach**
+1. Initialize two variables `num1_sum` and `num2_sum` to store the sum of numbers not divisible by `m` and the sum of numbers divisible by `m`, respectively.
+2. Iterate over the range `[1, n]` using a for loop.
+3. For each number `i` in the range, check if it is not divisible by `m` by using the modulo operator (`i % m != 0`).
+4. If `i` is not divisible by `m`, add it to `num1_sum`.
+5. If `i` is divisible by `m`, add it to `num2_sum`.
+6. After iterating over the entire range, return the difference between `num1_sum` and `num2_sum`.
+
+**Time Complexity**
+O(n)
+The time complexity is linear because we are iterating over the range `[1, n]` once.
+
+**Space Complexity**
+O(1)
+The space complexity is constant because we are only using a fixed amount of space to store the two sums, regardless of the input size.
+
+**Key Insight**
+The key insight is that we can calculate the sum of numbers not divisible by `m` and the sum of numbers divisible by `m` separately, and then return their difference. This approach avoids the need to calculate the sum of all numbers in the range and then subtract the sum of numbers divisible by `m`, which would be more complex and less efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -58,6 +58,29 @@ Example 3:**
 
 	- `num` consists of only `6` and `9` digits.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the digits of the input number from left to right. As soon as it encounters a '6', it immediately changes it to '9' and returns the modified number. This approach ensures that the maximum number is achieved by changing at most one digit.
+
+**Approach**
+1. Convert the input number to a string to easily access and modify its digits.
+2. Initialize an empty string `curr` to store the modified digits.
+3. Iterate through the digits of the string from left to right.
+4. If the current digit is '6', change it to '9' and break the loop.
+5. If the current digit is not '6', add it to the `curr` string.
+6. After the loop, append the remaining digits (if any) to the `curr` string.
+7. Convert the `curr` string back to an integer and return it.
+
+**Time Complexity**
+O(n), where n is the number of digits in the input number. This is because we are iterating through the digits of the number once.
+
+**Space Complexity**
+O(n), where n is the number of digits in the input number. This is because we are storing the modified digits in the `curr` string.
+
+**Key Insight**
+The key insight is that we only need to change the first occurrence of '6' to '9' to achieve the maximum number. This is because changing any other '6' would result in a smaller number. By breaking the loop as soon as we encounter a '6', we ensure that we only change one digit.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -47,6 +47,26 @@ Example 2:**
 
 	- `s[i]` is `'a'` or `'b'`​​.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks for the minimum number of deletions needed to make the string balanced. A balanced string has no pairs of 'b' followed by 'a'. The solution uses a simple dynamic programming approach, keeping track of the minimum number of deletions required up to each position in the string.
+
+**Approach**
+1. Initialize variables `b` to count the number of 'b's seen so far and `min_del` to store the minimum number of deletions required.
+2. Iterate through the string `s`. For each character:
+   - If the character is 'b', increment `b`.
+   - If the character is 'a', update `min_del` to be the minimum of its current value and `b` (the number of 'b's seen so far) plus 1.
+
+**Time Complexity**
+O(n), where n is the length of the string `s`. This is because we are iterating through the string once.
+
+**Space Complexity**
+O(1), as we are using a constant amount of space to store the variables `b` and `min_del`.
+
+**Key Insight**
+The key insight is that the minimum number of deletions required to balance the string up to a certain position is the minimum of the current minimum number of deletions and the number of 'b's seen so far plus 1. This is because we can either delete the current 'a' and keep the previous 'b's, or delete the previous 'b's and keep the current 'a'.
+
 ## 📊 Metrics
 
 | Metric | Value |

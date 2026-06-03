@@ -57,6 +57,32 @@ wordDictionary.search("b.."); // return True
 
 	- At most `10^4` calls will be made to `addWord` and `search`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Trie data structure to store the words, where each node represents a character in the word. The `addWord` method adds a word to the Trie by traversing the nodes based on the characters in the word. The `search` method uses a depth-first search (DFS) approach to check if a given word matches any word in the Trie. If the word contains a dot, the DFS function is called recursively for each child node.
+
+**Approach**
+1. Initialize the Trie with a root node.
+2. In the `addWord` method:
+   1. Start at the root node.
+   2. For each character in the word, create a new node if it doesn't exist and move to that node.
+   3. Mark the end of the word by setting `End_of_word` to `True`.
+3. In the `search` method:
+   1. Start at the root node.
+   2. If the current character is a dot, recursively call DFS for each child node.
+   3. If the current character is not a dot, move to the corresponding child node.
+   4. Return `True` if the DFS function returns `True` or if the end of the word is reached.
+
+**Time Complexity**
+The time complexity of the `addWord` method is O(m), where m is the length of the word, since we traverse the nodes based on the characters in the word. The time complexity of the `search` method is O(n*m), where n is the number of words in the Trie and m is the length of the word being searched, since we recursively call DFS for each child node.
+
+**Space Complexity**
+The space complexity of the solution is O(n*m), where n is the number of words in the Trie and m is the maximum length of a word, since we store each word in the Trie.
+
+**Key Insight**
+The key insight is to use a Trie data structure to efficiently store and search words, and to use a depth-first search approach to handle words with dots. This allows us to take advantage of the Trie's ability to quickly locate words and to efficiently search for words that match a given pattern.
+
 ## 📊 Metrics
 
 | Metric | Value |

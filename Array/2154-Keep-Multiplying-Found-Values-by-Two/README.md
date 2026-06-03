@@ -56,6 +56,28 @@ Example 2:**
 
 	- `1 <= nums[i], original <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a set to store the unique numbers in the input array `nums` for efficient lookup. It then enters a loop where it continuously multiplies the `original` number by 2 as long as it is found in the set. Once the `original` number is no longer found in the set, the loop breaks, and the final value is returned.
+
+**Approach**
+1. Convert the input array `nums` to a set `arr` for fast lookup.
+2. Enter a loop that continues indefinitely.
+3. Inside the loop, check if the current `original` number is in the set `arr`.
+4. If `original` is not in the set, break the loop.
+5. If `original` is in the set, multiply it by 2 and continue to the next iteration.
+6. Once the loop breaks, return the final value of `original`.
+
+**Time Complexity**
+O(n) where n is the number of unique elements in the input array `nums`. This is because the set creation operation takes O(n) time, and the subsequent loop iterates at most n times.
+
+**Space Complexity**
+O(n) where n is the number of unique elements in the input array `nums`. This is because the set stores at most n unique elements.
+
+**Key Insight**
+The key insight is to use a set for efficient lookup, allowing the solution to quickly determine whether the `original` number is present in the array. This enables the solution to iterate efficiently until the final value is found.
+
 ## 📊 Metrics
 
 | Metric | Value |

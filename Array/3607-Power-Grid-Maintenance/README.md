@@ -93,6 +93,28 @@ Example 2:**
 
 	`1 <= queries[i][1] <= c`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a disjoint-set data structure to represent the power grid as a union-find data structure. The key insight is to use a priority queue (heap) to keep track of the online stations in each connected component, allowing for efficient maintenance checks and station shutdowns.
+
+**Approach**
+1. Initialize the disjoint-set data structure with each station as its own root.
+2. Iterate through the connections and perform union operations to merge stations into connected components.
+3. Create a priority queue (heap) for each connected component to store the online stations.
+4. Iterate through the queries:
+   1. If the query is a maintenance check (mode == 1), find the root of the station's connected component and check if it's online. If not, pop the online stations from the heap until the smallest online station is found.
+   2. If the query is a station shutdown (mode == 2), remove the station from the online set.
+
+**Time Complexity**
+O(n log n + q log q), where n is the number of connections and q is the number of queries. The union-find operations take O(n) time, and the priority queue operations (heap push and pop) take O(log n) time. The maintenance checks and station shutdowns take O(log q) time.
+
+**Space Complexity**
+O(n + q), where n is the number of connections and q is the number of queries. The disjoint-set data structure and priority queues require O(n + q) space.
+
+**Key Insight**
+The key insight is to use a priority queue (heap) to keep track of the online stations in each connected component, allowing for efficient maintenance checks and station shutdowns. This approach enables the solution to handle a large number of queries in O(log q) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

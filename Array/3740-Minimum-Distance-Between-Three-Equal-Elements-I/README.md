@@ -61,6 +61,27 @@ There are no good tuples. Therefore, the answer is -1.
 
 	- `1 <= nums[i] <= n`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first grouping the array elements by their values using a hash table. Then, for each group with at least three elements, it calculates the minimum distance between three distinct indices within the group. The minimum distance is updated if a smaller distance is found.
+
+**Approach**
+1. Create a hash table `h1` to store the indices of elements with the same value.
+2. Iterate through the input array `nums` and populate the hash table `h1` with the indices of elements with the same value.
+3. Iterate through the hash table `h1` and for each group with at least three elements, calculate the minimum distance between three distinct indices within the group.
+4. Update the minimum distance `res` if a smaller distance is found.
+5. Return the minimum distance `res` if it's not infinity, otherwise return -1.
+
+**Time Complexity**
+The time complexity is O(n), where n is the length of the input array `nums`. This is because we iterate through the array once to populate the hash table and then iterate through the hash table once to calculate the minimum distance.
+
+**Space Complexity**
+The space complexity is O(n), where n is the length of the input array `nums`. This is because in the worst case, we store all elements in the hash table.
+
+**Key Insight**
+The key insight is that we can find the minimum distance between three distinct indices within a group by iterating through the group and calculating the distance for each possible triple of indices. This is because the distance is symmetric, meaning that the order of the indices does not matter.
+
 ## 📊 Metrics
 
 | Metric | Value |

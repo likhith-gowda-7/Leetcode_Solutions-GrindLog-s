@@ -58,6 +58,28 @@ Example 3:**
 
 	- The string `s` consists of characters `'0'` and `'1'` only.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The approach is based on the observation that the maximum score is achieved when the number of zeros in the left substring is maximized and the number of ones in the right substring is maximized. This can be achieved by maintaining a running count of zeros and ones in the string as we iterate through it.
+
+**Approach**
+1. Initialize two variables `left` and `right` to keep track of the number of zeros in the left substring and the number of ones in the right substring, respectively.
+2. Initialize `maxi` to store the maximum score found so far.
+3. Iterate through the string from the second character to the second last character (inclusive).
+4. For each character, if it's a zero, increment `left` by 1; otherwise, decrement `right` by 1.
+5. Update `maxi` if the sum of `left` and `right` is greater than the current maximum score.
+6. Return `maxi` as the maximum score.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we only need to iterate through the string once to find the maximum score.
+
+**Space Complexity**
+O(1), since we only use a constant amount of space to store the variables `left`, `right`, and `maxi`.
+
+**Key Insight**
+The key insight is that we can maintain a running count of zeros and ones in the string as we iterate through it, which allows us to efficiently find the maximum score. This approach avoids the need to consider all possible splits of the string, making it more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

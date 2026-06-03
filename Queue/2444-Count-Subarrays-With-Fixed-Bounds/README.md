@@ -53,6 +53,28 @@ Example 2:**
 
 	- `1 <= nums[i], minK, maxK <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to count the number of subarrays in the given array `nums` where the minimum and maximum values are equal to `minK` and `maxK` respectively. We can use a sliding window approach with the help of a monotonic queue to efficiently count these subarrays.
+
+**Approach**
+1. Initialize variables to store the result, the index of the last bad element, and the indices of the last maximum and minimum elements.
+2. Iterate over the array `nums` using a right pointer `r`.
+3. If the current element is outside the range `[minK, maxK]`, update the index of the last bad element.
+4. If the current element is equal to `maxK` or `minK`, update the indices of the last maximum and minimum elements respectively.
+5. For each valid maximum and minimum element, calculate the number of subarrays ending at the current position and add it to the result.
+6. Return the total count of fixed-bound subarrays.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. We only iterate over the array once, and the operations within the loop take constant time.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the indices and the result.
+
+**Key Insight**
+The key insight is to use a monotonic queue to efficiently count the number of subarrays ending at each position. By maintaining the indices of the last maximum and minimum elements, we can calculate the number of subarrays ending at each position in O(1) time. This approach allows us to solve the problem in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

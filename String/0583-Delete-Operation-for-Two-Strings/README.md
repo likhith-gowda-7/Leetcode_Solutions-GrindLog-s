@@ -42,6 +42,28 @@ Example 2:**
 
 	- `word1` and `word2` consist of only lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved using dynamic programming by building a 2D table where each cell represents the minimum number of operations required to make the substrings up to the current indices in `word1` and `word2` the same. The key insight is that we can either delete a character from `word1` or `word2` or keep the characters the same if they match.
+
+**Approach**
+1. Initialize a 2D table `dp` with dimensions `(n1+1) x (n2+1)` where `n1` and `n2` are the lengths of `word1` and `word2` respectively.
+2. Iterate over the characters in `word1` from left to right and `word2` from left to right.
+3. For each pair of characters, if they match, the minimum number of operations is 1 plus the minimum number of operations for the substrings without these characters.
+4. If the characters do not match, the minimum number of operations is the maximum of the minimum number of operations for the substrings without the current character in `word1` or `word2`.
+5. Update the `dp` table with the minimum number of operations for each pair of characters.
+6. The minimum number of operations to make `word1` and `word2` the same is the sum of the number of characters in `word1` and `word2` minus the minimum number of operations for the entire strings.
+
+**Time Complexity**
+O(n1 * n2) where n1 and n2 are the lengths of `word1` and `word2` respectively. This is because we are iterating over each pair of characters in the strings.
+
+**Space Complexity**
+O(n2) where n2 is the length of `word2`. This is because we are storing the minimum number of operations for each substring of `word2`.
+
+**Key Insight**
+The key insight is that we can use dynamic programming to build a table of minimum number of operations for each pair of substrings, and then use this table to find the minimum number of operations for the entire strings. This approach allows us to avoid recomputing the minimum number of operations for each pair of substrings, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

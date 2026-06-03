@@ -86,6 +86,25 @@ addressId = 1 contains information about the address of personId = 2.
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires combining data from two tables, `Person` and `Address`, based on a common column `personId`. The goal is to retrieve the first name, last name, city, and state for each person. A left join is used to include all rows from the `Person` table, even if there is no matching row in the `Address` table.
+
+**Approach**
+1. Select the desired columns from the `Person` table (`p.firstName`, `p.lastName`) and the `Address` table (`a.city`, `a.state`).
+2. Use a left join to combine the two tables based on the `personId` column.
+3. The left join ensures that all rows from the `Person` table are included, even if there is no matching row in the `Address` table.
+
+**Time Complexity**
+O(n + m), where n is the number of rows in the `Person` table and m is the number of rows in the `Address` table. This is because the left join needs to iterate over all rows in both tables to perform the join.
+
+**Space Complexity**
+O(n + m), as the result set will contain at most n + m rows, assuming that each row in the `Person` table has a matching row in the `Address` table.
+
+**Key Insight**
+The key insight is to use a left join to ensure that all rows from the `Person` table are included, even if there is no matching row in the `Address` table. This allows for a more comprehensive result set that includes all persons, regardless of whether they have an associated address.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -77,6 +77,29 @@ The optimal path with no stops from city 0 to 2 is marked in red and has cost 50
 
 	- `src != dst`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a priority queue (implemented as a deque) to efficiently explore the graph and find the cheapest price from the source to the destination with at most k stops. The key insight is to maintain a costs array to keep track of the minimum cost to reach each node.
+
+**Approach**
+1. Create an adjacency list representation of the graph from the flights array.
+2. Initialize a priority queue with the source node and a cost of 0, and a costs array with all elements set to infinity except for the source node which is set to 0.
+3. While the priority queue is not empty, pop the node with the minimum cost and explore its neighbors.
+4. For each neighbor, calculate the new cost by adding the edge cost to the current cost.
+5. If the new cost is less than the current minimum cost to reach the neighbor, update the costs array and push the neighbor into the priority queue.
+6. Repeat step 3-5 until the priority queue is empty.
+7. Return the minimum cost to reach the destination node if it is not infinity, otherwise return -1.
+
+**Time Complexity**
+O(n * k * log(n)) where n is the number of nodes and k is the maximum number of stops. The priority queue operations (push and pop) take O(log(n)) time, and we perform these operations for each node and each possible number of stops.
+
+**Space Complexity**
+O(n + m) where n is the number of nodes and m is the number of edges. We need to store the adjacency list and the costs array.
+
+**Key Insight**
+The key insight is to use a priority queue to efficiently explore the graph and find the cheapest price with at most k stops. By maintaining a costs array, we can avoid recalculating the minimum cost to reach each node and improve the time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

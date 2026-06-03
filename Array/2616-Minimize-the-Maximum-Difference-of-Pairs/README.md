@@ -48,6 +48,36 @@ Example 2:**
 
 	- `0 <= p <= (nums.length)/2`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the minimum maximum difference among all pairs of indices in the given array `nums` such that the number of pairs is `p`. The key insight is to use binary search to find the minimum maximum difference by considering the pairs formed by consecutive elements in the sorted array.
+
+**Approach**
+
+1. First, sort the array `nums` in ascending order.
+2. Define a helper function `check(mid, length)` to check if it's possible to form at least `p` pairs with a maximum difference of `mid`.
+   - Initialize `pairs` to 0 and `i` to 1.
+   - Iterate through the array from index 1 to the end.
+   - If the difference between the current element and the previous element is less than or equal to `mid`, increment `pairs` and move to the next pair (i.e., increment `i` by 2).
+   - Otherwise, increment `i` by 1.
+   - Return `True` if `pairs` is greater than or equal to `p`, and `False` otherwise.
+3. Initialize `left` to 0 (minimum possible maximum difference) and `right` to the maximum possible maximum difference (difference between the last and first elements of the array).
+4. Perform binary search to find the minimum maximum difference.
+   - Calculate the mid value and call the `check(mid, length)` function.
+   - If it's possible to form at least `p` pairs with a maximum difference of `mid`, update `right` to `mid - 1`.
+   - Otherwise, update `left` to `mid + 1`.
+5. Return the minimum maximum difference found.
+
+**Time Complexity**
+The time complexity is O(n log n) due to the sorting of the array, where n is the length of the array. The binary search has a time complexity of O(log n), but it's dominated by the sorting step.
+
+**Space Complexity**
+The space complexity is O(1) (excluding the space required for the input array), as we only use a constant amount of space to store the variables.
+
+**Key Insight**
+The key insight is to use binary search to find the minimum maximum difference by considering the pairs formed by consecutive elements in the sorted array. This approach allows us to efficiently find the minimum maximum difference among all pairs of indices.
+
 ## 📊 Metrics
 
 | Metric | Value |

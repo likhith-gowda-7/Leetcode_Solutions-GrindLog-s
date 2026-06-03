@@ -47,6 +47,27 @@ Example 3:**
 
 	- `1 <= n <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by creating an array of unique integers that sum up to zero. If `n` is odd, it starts with 0 and then pairs up the positive and negative integers from 1 to `n//2`. If `n` is even, it directly pairs up the positive and negative integers from 1 to `n//2`.
+
+**Approach**
+1. Check if `n` is odd. If it is, append 0 to the array and decrement `n` by 1.
+2. Iterate from 1 to `n//2` (inclusive) and for each `i`:
+   - Append `i` to the array.
+   - Append `-i` to the array.
+3. Return the array.
+
+**Time Complexity**
+O(n) - The solution iterates from 1 to `n//2` which takes linear time.
+
+**Space Complexity**
+O(n) - The solution creates an array of size `n` to store the unique integers.
+
+**Key Insight**
+The key insight is to pair up the positive and negative integers from 1 to `n//2` to sum up to zero. This approach ensures that the array contains `n` unique integers and their sum is zero.
+
 ## 📊 Metrics
 
 | Metric | Value |

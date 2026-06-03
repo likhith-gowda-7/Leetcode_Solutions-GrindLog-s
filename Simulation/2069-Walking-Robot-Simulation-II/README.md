@@ -71,6 +71,28 @@ robot.getDir(); // return "West"
 
 	- At most `10^4` calls **in total** will be made to `step`, `getPos`, and `getDir`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a clever approach to simulate the robot's movement by taking advantage of the grid's symmetry and the robot's turning behavior. By reducing the problem to a series of steps, the solution can efficiently calculate the final position and direction of the robot.
+
+**Approach**
+1. In the `step` method, calculate the total perimeter of the grid and take the remainder of the number of steps modulo the perimeter. This is because the robot's movement is periodic and can be reduced to a smaller number of steps.
+2. Initialize a while loop that continues until the number of steps is reduced to 0.
+3. Inside the loop, check the current direction of the robot and calculate the maximum x or y coordinate that the robot can reach without going out of bounds.
+4. If the robot can reach the maximum coordinate, update its position and set the direction to the next one (e.g., from "East" to "North").
+5. If the robot cannot reach the maximum coordinate, update its position to the maximum coordinate and change its direction to the next one.
+6. Repeat steps 3-5 until the number of steps is reduced to 0.
+
+**Time Complexity**
+O(n), where n is the number of steps. The while loop runs until the number of steps is reduced to 0, and each iteration takes constant time.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the robot's position and direction.
+
+**Key Insight**
+The key insight is that the robot's movement can be reduced to a series of steps, and by taking advantage of the grid's symmetry and the robot's turning behavior, we can efficiently calculate the final position and direction of the robot. This is achieved by using the remainder of the number of steps modulo the perimeter and by updating the robot's position and direction in a way that takes into account the grid's boundaries.
+
 ## 📊 Metrics
 
 | Metric | Value |

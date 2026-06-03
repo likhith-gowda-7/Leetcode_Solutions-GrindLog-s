@@ -53,6 +53,28 @@ Example 3:**
 
 	- `nums[i]` is either `0` or `1`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with dynamic programming to find the longest subarray of 1's after deleting one element from the binary array. The key insight is to maintain a count of zeros within the current window and adjust the window boundaries accordingly.
+
+**Approach**
+1. Initialize variables to keep track of the window boundaries (`l` and `r`), the result (`res`), and the count of zeros (`zero_count`).
+2. Iterate through the array from left to right (`r`).
+3. If a zero is encountered, increment the `zero_count`.
+4. If `zero_count` exceeds 1, update the result with the maximum length of the subarray without the current zero, and slide the window to the right by incrementing `l` until `zero_count` is less than or equal to 1.
+5. After the iteration, update the result with the maximum length of the subarray without the last element.
+6. Return the result.
+
+**Time Complexity**
+O(n), where n is the length of the input array. This is because we iterate through the array once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the variables.
+
+**Key Insight**
+The key to this solution is to maintain a count of zeros within the current window and adjust the window boundaries accordingly. By doing so, we can efficiently find the longest subarray of 1's after deleting one element from the binary array.
+
 ## 📊 Metrics
 
 | Metric | Value |

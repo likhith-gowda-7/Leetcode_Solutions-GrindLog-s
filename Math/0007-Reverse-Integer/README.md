@@ -48,6 +48,27 @@ Example 3:**
 
 	- `-2^31 <= x <= 2^31 - 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first converting the integer to a string, reversing the string, and then converting it back to an integer. However, this approach can lead to overflow issues when dealing with large numbers. To mitigate this, we check if the reversed integer is within the 32-bit signed integer range before returning it.
+
+**Approach**
+1. Convert the input integer `x` to a string `s`.
+2. If `x` is negative, remove the negative sign and reverse the string from index 1 to the end (`s[1:][::-1]`).
+3. If `x` is non-negative, simply reverse the entire string (`s[::-1]`).
+4. Convert the reversed string back to an integer `res`.
+5. Check if `res` is within the 32-bit signed integer range. If not, return 0; otherwise, return `res`.
+
+**Time Complexity**
+O(n), where n is the number of digits in the input integer. This is because we're performing a string reversal operation, which has a linear time complexity.
+
+**Space Complexity**
+O(n), where n is the number of digits in the input integer. This is because we're converting the integer to a string, which requires additional space proportional to the number of digits.
+
+**Key Insight**
+The key insight here is to recognize that we can avoid overflow issues by checking the reversed integer against the 32-bit signed integer range before returning it. This allows us to safely reverse large integers without worrying about exceeding the maximum value that can be represented by a 32-bit signed integer.
+
 ## 📊 Metrics
 
 | Metric | Value |

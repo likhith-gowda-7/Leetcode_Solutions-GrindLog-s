@@ -53,6 +53,28 @@ Example 3:**
 
 	- `0 <= nums[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The House Robber II problem can be solved by breaking it down into two separate cases: one where we rob the first house and another where we don't. This is because the first and last houses are adjacent, so we can't rob both. By considering these two cases, we can find the maximum amount of money that can be robbed.
+
+## Approach
+1. Check if the number of houses is less than or equal to 2. If so, return the maximum amount of money in the houses.
+2. Define a helper function `solve` that takes an array of house values as input.
+3. Initialize two variables `n1` and `n2` to keep track of the maximum amount of money that can be robbed up to the current house.
+4. Iterate through the array starting from the third house, updating `n1` and `n2` at each step.
+5. Call the `solve` function twice: once with the array excluding the last house (`nums[:-1]`) and once with the array excluding the first house (`nums[1:]`).
+6. Return the maximum amount of money that can be robbed from the two cases.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of houses. This is because we make two passes through the array, each of which takes O(n) time.
+
+## Space Complexity
+The space complexity is O(1), excluding the space needed for the input array. This is because we only use a constant amount of space to store the variables `n1` and `n2`.
+
+## Key Insight
+The key insight is to recognize that the problem can be broken down into two separate cases, depending on whether we rob the first house or not. By considering these two cases separately, we can avoid the complexity of dealing with the circular arrangement of houses and find the maximum amount of money that can be robbed.
+
 ## 📊 Metrics
 
 | Metric | Value |

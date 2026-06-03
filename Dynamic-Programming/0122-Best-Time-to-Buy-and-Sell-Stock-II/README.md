@@ -60,6 +60,27 @@ Example 3:**
 
 	- `0 <= prices[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by iterating through the list of stock prices and checking if the current price is higher than the previous one. If it is, we add the difference to our total profit. The key idea here is to accumulate all the positive differences between consecutive prices, effectively simulating the process of buying and selling the stock multiple times. This greedy strategy takes advantage of every opportunity to make a profit.
+
+## Approach
+1. Initialize variables to keep track of the maximum profit.
+2. Iterate through the list of stock prices, starting from the second day.
+3. For each day, calculate the potential profit by subtracting the previous day's price from the current day's price.
+4. If the potential profit is positive, add it to the total profit.
+5. After iterating through all the days, return the total profit.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of days (i.e., the length of the prices list). This is because we make a single pass through the list of prices.
+
+## Space Complexity
+The space complexity is O(1), as we only use a constant amount of space to store the maximum profit and other variables, regardless of the size of the input.
+
+## Key Insight
+The key insight behind this solution is that we can maximize our profit by accumulating all the positive differences between consecutive prices, without worrying about the overall trend of the stock prices. This greedy approach works because we can buy and sell the stock multiple times, allowing us to take advantage of every opportunity to make a profit.
+
 ## 📊 Metrics
 
 | Metric | Value |

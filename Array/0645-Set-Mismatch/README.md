@@ -40,6 +40,28 @@ Example 2:**
 
 	- `1 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of a set and a simple iteration to find the duplicate and missing numbers in the array. The set is used to keep track of the numbers we've seen so far, allowing us to efficiently detect duplicates and missing numbers.
+
+**Approach**
+1. Create an empty set `check` to store the numbers we've seen so far.
+2. Iterate through the input array `nums`. For each number `n`, check if it's already in the `check` set.
+   - If `n` is in the `check` set, it's the duplicate number, so add it to the result list `res`.
+   - If `n` is not in the `check` set, add it to the `check` set.
+3. After iterating through the entire array, iterate from 1 to the length of the array (inclusive). For each number `i` in this range, check if it's not in the `check` set.
+   - If `i` is not in the `check` set, it's the missing number, so add it to the result list `res` and break out of the loop.
+
+**Time Complexity**
+O(n) - The solution iterates through the input array once and then iterates from 1 to the length of the array once. The set operations (insertion and lookup) take constant time on average.
+
+**Space Complexity**
+O(n) - In the worst case, the `check` set will store all numbers from 1 to n, so its size is linear in the size of the input array.
+
+**Key Insight**
+The key insight is that we can use a set to efficiently detect duplicates and missing numbers in the array. By iterating through the array and checking if each number is in the set, we can find the duplicate number in O(n) time. Then, by iterating from 1 to the length of the array and checking if each number is in the set, we can find the missing number in O(n) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

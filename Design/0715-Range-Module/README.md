@@ -53,6 +53,31 @@ rangeModule.queryRange(16, 17); // return True, (The number 16 in [16, 17) is st
 
 	- At most `10^4` calls will be made to `addRange`, `queryRange`, and `removeRange`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a data structure that tracks ranges of numbers as half-open intervals. It leverages the `bisect` module to maintain a sorted list of intervals, which enables efficient insertion, query, and removal operations. The key insight is to merge overlapping intervals during insertion to minimize the number of intervals stored.
+
+**Approach**
+1. Initialize an empty list `self.interval` to store the tracked intervals.
+2. In `addRange(left, right)`, use `bisect.insort` to insert the new interval into the sorted list of intervals.
+3. Merge overlapping intervals by iterating through the sorted list and updating the end points of adjacent intervals.
+4. In `queryRange(left, right)`, use `bisect.bisect` to find the index of the first interval that overlaps with the query range.
+5. If the first overlapping interval's end point is greater than or equal to the query range's end point, return `True`.
+6. In `removeRange(left, right)`, iterate through the sorted list of intervals and remove the entire interval if it is entirely within the removal range.
+7. If the removal range partially overlaps with an interval, split the interval into two parts and add them back to the list.
+
+**Time Complexity**
+- `addRange(left, right)`: O(n log n) due to the sorting operation using `bisect.insort`.
+- `queryRange(left, right)`: O(log n) using `bisect.bisect`.
+- `removeRange(left, right)`: O(n log n) due to the sorting operation using `bisect.insort` after splitting intervals.
+
+**Space Complexity**
+- O(n) to store the sorted list of intervals, where n is the number of tracked intervals.
+
+**Key Insight**
+The key to this solution is the efficient merging of overlapping intervals during insertion, which reduces the number of intervals stored and enables fast query and removal operations. This is achieved by maintaining a sorted list of intervals and updating the end points of adjacent intervals during insertion.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -93,6 +93,31 @@ Example 2:**
 
 	- `1 <= val_i <= 5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a prefix sum array to efficiently calculate the total decrement value for each index in the array. It iterates through the array and queries, adjusting the prefix sum array to reflect the minimum decrement value required to make the array a Zero Array.
+
+**Approach**
+1. Initialize a prefix sum array `diff` of size `n+1` to store the total decrement value for each index.
+2. Initialize `sum_val` to 0, which stores the cumulative sum of the prefix sum array.
+3. Iterate through the array `nums` and queries `queries` simultaneously.
+4. For each index `i` in the array, calculate the minimum decrement value required to make the array a Zero Array by checking if `sum_val + diff[i] < nums[i]`.
+5. If the minimum decrement value is not sufficient, increment `pos` to move to the next query.
+6. If `pos` reaches the end of the queries, return -1 as no such `k` exists.
+7. Otherwise, update the prefix sum array `diff` based on the current query and increment `pos`.
+8. Update `sum_val` by adding the current prefix sum value.
+9. Return `pos` as the minimum possible non-negative value of `k`.
+
+**Time Complexity**
+O(n + m), where n is the length of the array and m is the number of queries. The solution iterates through the array and queries once, resulting in a linear time complexity.
+
+**Space Complexity**
+O(n), where n is the length of the array. The solution uses a prefix sum array of size n+1 to store the total decrement value for each index.
+
+**Key Insight**
+The key insight is to use a prefix sum array to efficiently calculate the total decrement value for each index in the array. By adjusting the prefix sum array based on the current query, the solution can determine the minimum possible non-negative value of k required to make the array a Zero Array.
+
 ## 📊 Metrics
 
 | Metric | Value |

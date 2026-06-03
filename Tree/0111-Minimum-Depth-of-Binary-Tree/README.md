@@ -44,6 +44,28 @@ Example 2:**
 
 	- `-1000 <= Node.val <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a breadth-first search (BFS) approach to traverse the binary tree and find the minimum depth. The idea is to start from the root node and explore all nodes at each level before moving on to the next level. This way, we can find the minimum depth by stopping as soon as we reach a leaf node.
+
+**Approach**
+1. Check if the root node is `None`. If it is, return 0 because an empty tree has a minimum depth of 0.
+2. Create a queue `q` and add the root node to it along with its depth (1).
+3. While the queue is not empty, pop the front node and its depth from the queue.
+4. If the popped node is a leaf node (i.e., it has no children), return its depth as the minimum depth.
+5. If the popped node has a right child, add it to the queue along with its depth incremented by 1.
+6. If the popped node has a left child, add it to the queue along with its depth incremented by 1.
+
+**Time Complexity**
+The time complexity of this solution is O(N), where N is the number of nodes in the binary tree. This is because we visit each node once.
+
+**Space Complexity**
+The space complexity of this solution is O(N), where N is the number of nodes in the binary tree. This is because in the worst case, the queue will store all nodes at the last level of the tree.
+
+**Key Insight**
+The key insight here is that we can use a queue to perform a BFS traversal of the binary tree, which allows us to find the minimum depth by stopping as soon as we reach a leaf node. This approach is more efficient than a depth-first search (DFS) approach because it avoids the overhead of recursive function calls and stack management.
+
 ## 📊 Metrics
 
 | Metric | Value |

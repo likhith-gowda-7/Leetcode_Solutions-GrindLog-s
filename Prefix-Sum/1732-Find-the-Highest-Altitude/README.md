@@ -47,6 +47,27 @@ Example 2:**
 
 	- `-100 <= gain[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining a running total of the net gain in altitude and keeping track of the maximum altitude seen so far. This approach is efficient because it only requires a single pass through the input array.
+
+**Approach**
+1. Initialize two variables: `alt` to keep track of the current altitude and `maxi` to keep track of the maximum altitude seen so far.
+2. Iterate through each value in the `gain` array.
+3. For each value, add it to the current altitude `alt`.
+4. Update the maximum altitude `maxi` if the current altitude `alt` is greater than `maxi`.
+5. After iterating through all values, return the maximum altitude `maxi`.
+
+**Time Complexity**
+O(n), where n is the length of the `gain` array. This is because we only need to make a single pass through the array.
+
+**Space Complexity**
+O(1), because we only use a constant amount of space to store the `alt` and `maxi` variables, regardless of the size of the input array.
+
+**Key Insight**
+The key insight is that we can calculate the maximum altitude by simply keeping track of the maximum altitude seen so far, without needing to store the entire altitude history. This makes the solution efficient and easy to implement.
+
 ## 📊 Metrics
 
 | Metric | Value |

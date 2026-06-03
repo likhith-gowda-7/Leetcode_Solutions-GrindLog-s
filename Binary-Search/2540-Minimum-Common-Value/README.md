@@ -47,6 +47,28 @@ Example 2:**
 
 	- Both `nums1` and `nums2` are sorted in **non-decreasing** order.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-pointer technique to traverse both arrays simultaneously. By comparing the elements at the current positions of both pointers, we can efficiently find the minimum common value between the two arrays. If the elements are equal, we return the common value. If one element is smaller, we move the corresponding pointer forward.
+
+**Approach**
+1. Initialize two pointers, `i` and `j`, to the start of `nums1` and `nums2`, respectively.
+2. While both pointers are within their respective arrays, compare the elements at the current positions of both pointers.
+3. If the elements are equal, return the common value.
+4. If the element in `nums1` is smaller, increment the pointer `i`.
+5. If the element in `nums2` is smaller, increment the pointer `j`.
+6. If both pointers reach the end of their respective arrays without finding a common value, return -1.
+
+**Time Complexity**
+O(n + m), where n and m are the lengths of `nums1` and `nums2`, respectively. This is because we traverse both arrays at most once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the pointers and the return value.
+
+**Key Insight**
+The key insight is that by using two pointers to traverse both arrays simultaneously, we can take advantage of the fact that the arrays are sorted in non-decreasing order. This allows us to efficiently find the minimum common value between the two arrays.
+
 ## 📊 Metrics
 
 | Metric | Value |

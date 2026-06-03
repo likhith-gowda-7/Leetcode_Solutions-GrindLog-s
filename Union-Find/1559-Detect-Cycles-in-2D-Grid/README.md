@@ -70,6 +70,32 @@ Example 3:**
 
 	- `grid` consists only of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a breadth-first search (BFS) approach to detect cycles in the 2D grid. The key insight is to keep track of visited cells and their parents to avoid revisiting the same cell and to detect cycles. The solution iterates over each cell in the grid and performs a BFS from each unvisited cell.
+
+**Approach**
+1. Initialize a visited matrix to keep track of visited cells.
+2. Define a BFS function that takes a cell's coordinates and its parent's coordinates.
+3. In the BFS function, enqueue the current cell and mark it as visited.
+4. Explore all adjacent cells (up, down, left, right) and check if they:
+	* Are within the grid boundaries.
+	* Have the same character as the current cell.
+	* Are not the parent cell.
+5. If a cycle is detected (i.e., a cell is already visited), return True.
+6. If all adjacent cells are explored without detecting a cycle, return False.
+7. Iterate over each cell in the grid and perform a BFS from each unvisited cell.
+
+**Time Complexity**
+O(m * n * (m + n)), where m and n are the dimensions of the grid. This is because in the worst case, we might need to perform a BFS from each cell, and each BFS can explore up to (m + n) cells.
+
+**Space Complexity**
+O(m * n), where m and n are the dimensions of the grid. This is because we need to store the visited matrix to keep track of visited cells.
+
+**Key Insight**
+The key insight is to use a BFS approach with a visited matrix to detect cycles in the grid. By keeping track of visited cells and their parents, we can avoid revisiting the same cell and detect cycles efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

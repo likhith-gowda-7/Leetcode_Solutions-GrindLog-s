@@ -50,6 +50,28 @@ Example 2:**
 
 	- `1 <= k <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a clever technique to efficiently count submatrices with a sum less than or equal to `k`. The key insight is to maintain a running prefix sum for each row and column, allowing us to quickly calculate the sum of submatrices. By iterating over the grid in a specific order, we can avoid redundant calculations and take advantage of the prefix sums to count the submatrices.
+
+**Approach**
+
+1. Initialize the result `res` to 0 and the top-left element `top` of the grid.
+2. If the top-left element is less than or equal to `k`, increment `res` by 1.
+3. Iterate over the first row of the grid, updating the prefix sum for each element and incrementing `res` if the sum is less than or equal to `k`.
+4. Iterate over the first column of the grid, updating the prefix sum for each element and incrementing `res` if the sum is less than or equal to `k`.
+5. Iterate over the rest of the grid, updating the prefix sum for each element by adding the sums of the element above and to the left, and subtracting the sum of the element diagonally above-left (to avoid double-counting). If the sum is less than or equal to `k`, increment `res` by 1.
+
+**Time Complexity**
+O(m \* n), where m is the number of rows and n is the number of columns in the grid. This is because we iterate over the grid once, performing a constant amount of work for each element.
+
+**Space Complexity**
+O(1), as we only use a constant amount of extra space to store the result and prefix sums.
+
+**Key Insight**
+The key to this solution is the use of prefix sums to efficiently calculate the sum of submatrices. By maintaining running prefix sums for each row and column, we can quickly determine whether a submatrix has a sum less than or equal to `k`, allowing us to count the submatrices in a single pass over the grid.
+
 ## 📊 Metrics
 
 | Metric | Value |

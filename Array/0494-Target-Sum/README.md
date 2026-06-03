@@ -55,6 +55,28 @@ Example 2:**
 
 	- `-1000 <= target <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses dynamic programming to count the number of ways to assign symbols to the integers in the array such that the expression evaluates to the target. The idea is to build up a table `dp` where `dp[i]` represents the number of ways to reach a sum of `i` using the given integers.
+
+**Approach**
+1. Calculate the total sum of the integers in the array.
+2. If the target is greater than the total sum or if the difference between the total sum and the target is odd, return 0 because it's impossible to reach the target.
+3. Calculate the target sum as `(total - target) // 2`, because we can add or subtract each integer to reach the target.
+4. Initialize a table `dp` of size `target + 1` with all elements set to 0, except `dp[0]` which is set to 1 (there is one way to reach a sum of 0 by not using any integers).
+5. Iterate over each integer in the array, and for each integer, iterate over the table `dp` in reverse order (from `target` to `num - 1`).
+6. For each element `s` in the table, add the number of ways to reach a sum of `s - num` (i.e., `dp[s - num]`) to the current element `dp[s]`.
+
+**Time Complexity**
+O(n * target), where n is the length of the array and target is the target sum. This is because we iterate over each integer in the array and over the table `dp` in reverse order.
+
+**Space Complexity**
+O(target), because we need to store the table `dp` of size `target + 1`.
+
+**Key Insight**
+The key insight is to use dynamic programming to build up a table `dp` that represents the number of ways to reach each possible sum. By iterating over the table in reverse order, we can avoid redundant calculations and achieve a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -57,6 +57,28 @@ Example 3:**
 
 	- `text1` and `text2` consist of only lowercase English characters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks for the length of the longest common subsequence between two strings. The key insight is that we can use dynamic programming to build up a table of lengths of common subsequences between prefixes of the two strings.
+
+**Approach**
+1. Initialize a 2D table `dp` with dimensions `(n1+1) x (n2+1)`, where `n1` and `n2` are the lengths of the two input strings. The extra row and column are for handling base cases effectively.
+2. Iterate over the characters of the first string from right to left (`i` ranges from `n1-1` to `0`).
+3. For each character in the first string, iterate over the characters of the second string from right to left (`j` ranges from `n2-1` to `0`).
+4. If the current characters in both strings match, update the length of the common subsequence by adding 1 to the length of the common subsequence without the current characters.
+5. If the current characters do not match, update the length of the common subsequence by taking the maximum of the length of the common subsequence without the current character in the second string and the length of the common subsequence without the current character in the first string.
+6. Return the length of the common subsequence for the entire first string.
+
+**Time Complexity**
+O(n1 * n2), where n1 and n2 are the lengths of the two input strings. This is because we are iterating over the characters of both strings once.
+
+**Space Complexity**
+O(n1 * n2), where n1 and n2 are the lengths of the two input strings. This is because we are using a 2D table of size (n1+1) x (n2+1) to store the lengths of common subsequences.
+
+**Key Insight**
+The key insight is that we can use dynamic programming to build up a table of lengths of common subsequences between prefixes of the two strings. This allows us to avoid recomputing the length of the common subsequence for each prefix, resulting in a more efficient algorithm.
+
 ## 📊 Metrics
 
 | Metric | Value |

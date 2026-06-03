@@ -102,6 +102,30 @@ There is no path that reaches cell `(1, 1)`​​​​​​​ without exceedi
 
 	- `0 <= grid[i][j] <= 2`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This problem can be solved using dynamic programming by building a 2D table that stores the maximum score achievable for each cell and cost. The key insight is to iterate from the bottom-right corner to the top-left corner, considering the maximum score achievable from the cell below and the cell to the right, while keeping track of the total cost.
+
+**Approach**
+1. Initialize a 2D table `dp` of size `(n+1) x (k+1)` with all elements set to `-1`, where `n` is the number of columns in the grid and `k` is the maximum cost.
+2. Iterate from the bottom-right corner to the top-left corner of the grid.
+3. For each cell `(i, j)`, iterate from the maximum cost `k` down to 0.
+4. For each cost `cost`, calculate the value `val` of the current cell in the grid.
+5. Calculate the difference `diff` between the cost and the value of the current cell.
+6. If the difference is less than or equal to the maximum cost, calculate the maximum score achievable from the cell below and the cell to the right, and update the value of the current cell in the `curr` table.
+7. Update the `dp` table with the `curr` table.
+8. Return the value of the top-left cell in the `dp` table.
+
+**Time Complexity**
+O(m*n*k), where m is the number of rows in the grid and n is the number of columns. This is because we iterate over each cell in the grid and each possible cost.
+
+**Space Complexity**
+O(m*n), where m is the number of rows in the grid and n is the number of columns. This is because we need to store the 2D table `dp` of size `(n+1) x (k+1)`.
+
+**Key Insight**
+The key insight is to iterate from the bottom-right corner to the top-left corner, considering the maximum score achievable from the cell below and the cell to the right, while keeping track of the total cost. This allows us to efficiently build the 2D table `dp` that stores the maximum score achievable for each cell and cost.
+
 ## 📊 Metrics
 
 | Metric | Value |

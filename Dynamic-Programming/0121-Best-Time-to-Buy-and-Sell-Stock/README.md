@@ -48,6 +48,27 @@ Example 2:**
 
 	- `0 <= prices[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by iterating through the list of stock prices and keeping track of the minimum price encountered so far, which represents the best time to buy the stock. It then calculates the potential profit by subtracting the minimum price from the current price, updating the maximum profit if necessary. The key idea is to find the optimal buy and sell points by considering all possible pairs of prices.
+
+## Approach
+1. Initialize the minimum buy price (`buy`) to the first price in the list and the maximum profit (`max_profit`) to 0.
+2. Iterate through the list of prices starting from the second day.
+3. For each price, check if it's lower than the current minimum buy price. If so, update the minimum buy price.
+4. Calculate the potential profit by subtracting the minimum buy price from the current price.
+5. If the potential profit is greater than the current maximum profit, update the maximum profit.
+
+## Time Complexity
+The time complexity is O(n), where n is the number of days (i.e., the length of the `prices` list), because we're making a single pass through the list.
+
+## Space Complexity
+The space complexity is O(1), because we're using a constant amount of space to store the minimum buy price and the maximum profit, regardless of the input size.
+
+## Key Insight
+The key insight here is that we don't need to consider all possible pairs of buy and sell days. By keeping track of the minimum price encountered so far, we can efficiently find the optimal buy and sell points, reducing the problem to a single pass through the list of prices.
+
 ## 📊 Metrics
 
 | Metric | Value |

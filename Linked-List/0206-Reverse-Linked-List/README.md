@@ -54,6 +54,28 @@ Example 3:**
 
 **Follow up:** A linked list can be reversed either iteratively or recursively. Could you implement both?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution reverses a singly linked list by iterating through the list and updating the `next` pointer of each node to point to the previous node. This process continues until the entire list is reversed.
+
+**Approach**
+1. Initialize two pointers, `prev` and `curr`, to `None` and the head of the list, respectively.
+2. Iterate through the list until `curr` becomes `None`.
+3. In each iteration, store the next node in `temp` to avoid losing it after updating the `next` pointer.
+4. Update the `next` pointer of `curr` to point to `prev`.
+5. Move `prev` and `curr` one step forward by assigning `temp` to `curr` and the previous value of `curr` to `prev`.
+6. Return `prev`, which is now the head of the reversed list.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the list. This is because we visit each node once during the iteration.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the `prev`, `curr`, and `temp` pointers.
+
+**Key Insight**
+The key to this solution is understanding that reversing a linked list is a matter of updating the `next` pointers of each node, rather than manipulating the nodes themselves. By using a temporary pointer to store the next node, we can safely update the `next` pointer of the current node without losing the connection to the previous node.
+
 ## 📊 Metrics
 
 | Metric | Value |

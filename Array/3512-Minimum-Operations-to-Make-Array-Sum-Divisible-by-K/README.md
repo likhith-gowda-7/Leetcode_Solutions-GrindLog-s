@@ -61,6 +61,25 @@ Example 3:**
 
 	- `1 <= k <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by leveraging the property of modular arithmetic that if `a ≡ b (mod m)`, then `a + c ≡ b + c (mod m)`. This means that the remainder of the sum of the array elements when divided by `k` is equivalent to the sum of the remainders of each element when divided by `k`. The minimum number of operations required to make the sum of the array divisible by `k` is equivalent to the remainder of the sum of the array elements when divided by `k`.
+
+**Approach**
+1. Calculate the sum of the array elements using the built-in `sum()` function.
+2. Calculate the remainder of the sum when divided by `k` using the modulo operator `%`.
+3. Return the remainder as the minimum number of operations required.
+
+**Time Complexity**
+O(n), where n is the number of elements in the array. This is because the `sum()` function iterates over each element in the array once.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the sum and the remainder.
+
+**Key Insight**
+The key insight is that the remainder of the sum of the array elements when divided by `k` is equivalent to the minimum number of operations required to make the sum divisible by `k`. This allows us to simplify the problem to a single calculation, making the solution very efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

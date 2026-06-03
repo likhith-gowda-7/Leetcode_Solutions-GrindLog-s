@@ -66,6 +66,28 @@ Example 3:**
 
 	- `1 <= k <= 99`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by utilizing a hash table (implemented as a Counter object in Python) to store the frequency of each number in the input array. It then iterates over the hash table, checking for pairs of numbers with an absolute difference of `k`. The key insight is that for each number `key` in the hash table, we can calculate its corresponding "difference" number `diff` by subtracting `k` from `key`. If `diff` is also present in the hash table, we can calculate the total number of pairs by multiplying the frequency of `key` and `diff`.
+
+**Approach**
+1. Create a hash table `h1` to store the frequency of each number in the input array `nums` using the Counter class.
+2. Initialize a variable `pairs` to store the total number of pairs with an absolute difference of `k`.
+3. Iterate over the hash table `h1` using a for loop.
+4. For each key `key` in the hash table, calculate its corresponding "difference" number `diff` by subtracting `k` from `key`.
+5. Check if `diff` is also present in the hash table `h1`. If it is, calculate the total number of pairs by multiplying the frequency of `key` and `diff` and add it to the `pairs` variable.
+6. Return the total number of pairs `pairs`.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we are iterating over the hash table once, which takes O(n) time in the worst case.
+
+**Space Complexity**
+O(n), where n is the length of the input array `nums`. This is because we are storing the frequency of each number in the hash table, which takes O(n) space in the worst case.
+
+**Key Insight**
+The key insight is that for each number `key` in the hash table, we can calculate its corresponding "difference" number `diff` by subtracting `k` from `key`. This allows us to efficiently calculate the total number of pairs by multiplying the frequency of `key` and `diff`.
+
 ## 📊 Metrics
 
 | Metric | Value |

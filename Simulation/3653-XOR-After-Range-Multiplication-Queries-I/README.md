@@ -76,6 +76,30 @@ Example 2:**
 
 	- `1 <= v_i <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution takes advantage of the fact that the XOR operation has a property of being associative and commutative. This means that we can XOR the elements of the array in any order, and the result will be the same. The solution also uses the modulo operation to prevent overflow when multiplying the elements of the array.
+
+**Approach**
+1. First, we initialize the modulo value `mod` as `10^9 + 7` to prevent overflow when multiplying the elements of the array.
+2. Then, we iterate over each query in the `queries` array.
+3. For each query, we calculate the initial index `idx` as `l_i` and the end index as `r_i`.
+4. We then enter a while loop that continues as long as `idx` is within the bounds of the array and `idx` is less than or equal to `r_i`.
+5. Inside the loop, we update the value of `nums[idx]` by multiplying it with `v_i` and taking the modulo `mod` to prevent overflow.
+6. We then increment `idx` by `k_i` to move to the next index.
+7. After processing all queries, we iterate over the array and calculate the XOR of all elements by using the `^=` operator.
+8. Finally, we return the result.
+
+**Time Complexity**
+The time complexity of the solution is O(n + q * (r - l + 1) / k), where n is the length of the array, q is the number of queries, r - l + 1 is the range of the query, and k is the step size. This is because we are iterating over the array once to calculate the XOR of all elements, and for each query, we are iterating over the range of the query with a step size of k.
+
+**Space Complexity**
+The space complexity of the solution is O(1), as we are only using a constant amount of space to store the modulo value and the result.
+
+**Key Insight**
+The key insight behind this solution is that we can take advantage of the properties of the XOR operation to simplify the problem. By using the modulo operation to prevent overflow, we can avoid using a large amount of memory to store the intermediate results. This makes the solution efficient and scalable for large inputs.
+
 ## 📊 Metrics
 
 | Metric | Value |

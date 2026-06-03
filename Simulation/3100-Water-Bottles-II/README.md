@@ -55,6 +55,29 @@ Example 2:**
 
 	- `1 <= numExchange <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by simulating the process of exchanging empty bottles for full ones, always maximizing the number of water bottles drunk. The key insight is that we can always drink all the full bottles we already have, so we start with the initial number of bottles as the result.
+
+**Approach**
+1. Initialize the result (`res`) to the initial number of bottles (`numBottles`).
+2. While there are enough bottles to exchange (`numBottles >= numExchange`):
+   1. Drink `numExchange` bottles by subtracting it from `numBottles`.
+   2. Increment the result (`res`) by 1, since we can drink one more bottle.
+   3. Increment `numBottles` by 1, since we get one full bottle from exchanging `numExchange` empty bottles.
+   4. Increment `numExchange` by 1, since we can exchange one more empty bottle for a full one in the next iteration.
+3. Return the result (`res`).
+
+**Time Complexity**
+O(n), where n is the number of iterations of the while loop. In the worst case, we exchange all bottles, and the number of iterations is equal to the initial number of bottles.
+
+**Space Complexity**
+O(1), since we only use a constant amount of space to store the result, `numBottles`, `numExchange`, and the loop variables.
+
+**Key Insight**
+The key insight is that we can always drink all the full bottles we already have, so we start with the initial number of bottles as the result. This simplifies the problem and allows us to focus on exchanging empty bottles for full ones.
+
 ## 📊 Metrics
 
 | Metric | Value |

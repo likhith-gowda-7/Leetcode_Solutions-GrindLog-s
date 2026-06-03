@@ -61,6 +61,30 @@ Note that only one of the two unmatched 1s is counted as a cow since the non-bul
 
 	- `secret` and `guess` consist of digits only.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of two passes to count the bulls and cows. The first pass identifies the bulls by checking for exact matches between the secret and guess, while the second pass identifies the cows by checking for non-bull digits that appear in the secret.
+
+**Approach**
+1. Initialize counters for bulls and cows.
+2. Create a hash table (Counter) to store the frequency of each digit in the secret.
+3. Iterate through the guess, and for each digit:
+   - If the digit matches the corresponding digit in the secret, increment the bull counter and decrement the frequency of the digit in the hash table.
+   - Mark the index of the digit as used to avoid counting it again.
+4. Iterate through the guess again, and for each digit:
+   - If the digit has not been used before and its frequency in the hash table is greater than 0, increment the cow counter and decrement the frequency of the digit in the hash table.
+5. Return the hint as a string, formatted as "xAyB".
+
+**Time Complexity**
+O(n), where n is the length of the guess. The two passes through the guess take O(n) time each, and the operations within each pass take constant time.
+
+**Space Complexity**
+O(n), where n is the length of the secret. The hash table (Counter) stores the frequency of each digit in the secret, which requires O(n) space.
+
+**Key Insight**
+The key insight is to use a hash table to store the frequency of each digit in the secret, allowing for efficient counting of cows by checking the remaining frequency of each digit. This approach avoids the need for a brute-force comparison of all possible permutations of the guess.
+
 ## 📊 Metrics
 
 | Metric | Value |

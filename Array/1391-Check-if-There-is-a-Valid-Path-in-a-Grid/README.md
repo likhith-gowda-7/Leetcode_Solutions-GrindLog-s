@@ -76,6 +76,31 @@ Example 3:**
 
 	- `1 <= grid[i][j] <= 6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a breadth-first search (BFS) approach to explore all possible paths from the starting cell to the bottom-right cell. The key insight is that we can use the given grid values to determine the valid directions to move in each cell, and then use a queue to keep track of the cells to visit next.
+
+**Approach**
+1. Define a dictionary `directions` to map each grid value to its corresponding valid directions.
+2. Initialize a 2D boolean array `seen` to keep track of visited cells.
+3. Create a queue `q` and add the starting cell `(0, 0)` to it.
+4. While the queue is not empty, pop the next cell `(row, col)` from the queue.
+5. If the popped cell is the bottom-right cell, return `True`.
+6. For each valid direction `r, c` from the current cell, calculate the new cell coordinates `ro, co`.
+7. If the new cell is within the grid boundaries and has not been visited, check if the direction `r, c` is valid for the new cell's grid value.
+8. If the direction is valid, add the new cell to the queue and mark it as visited.
+9. If the queue is empty after exploring all cells, return `False`.
+
+**Time Complexity**
+O(m \* n), where m and n are the dimensions of the grid. This is because we visit each cell at most once.
+
+**Space Complexity**
+O(m \* n), where m and n are the dimensions of the grid. This is because we use a 2D boolean array `seen` to keep track of visited cells, which requires O(m \* n) space.
+
+**Key Insight**
+The key to this solution is the ability to determine valid directions for each cell based on its grid value. By using the `directions` dictionary, we can efficiently explore all possible paths from the starting cell to the bottom-right cell.
+
 ## 📊 Metrics
 
 | Metric | Value |

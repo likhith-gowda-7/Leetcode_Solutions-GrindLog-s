@@ -50,6 +50,26 @@ n = -2
 
 	- `calls[i] === "call"`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by creating a function that maintains a counter variable, which is initialized to the input `n`. Each time the function is called, it returns the current value of the counter and then increments it by 1. This way, the function behaves like a counter that returns `n`, `n + 1`, `n + 2`, etc.
+
+**Approach**
+1. Create a function `createCounter` that takes an integer `n` as input.
+2. Initialize a counter variable to `n` within the `createCounter` function.
+3. Return a new function that takes no arguments.
+4. Within the returned function, return the current value of the counter and then increment it by 1 using the `++` operator.
+
+**Time Complexity**
+O(1) - The time complexity is constant because the function performs a fixed number of operations (returning the counter value and incrementing it) regardless of the number of calls.
+
+**Space Complexity**
+O(1) - The space complexity is constant because the function only uses a fixed amount of memory to store the counter variable, regardless of the number of calls.
+
+**Key Insight**
+The key insight here is that the function `createCounter` returns a new function that maintains its own state (the counter variable). This allows the function to remember its previous value and return the next value in the sequence each time it is called. This is an example of a closure, a fundamental concept in functional programming.
+
 ## 📊 Metrics
 
 | Metric | Value |

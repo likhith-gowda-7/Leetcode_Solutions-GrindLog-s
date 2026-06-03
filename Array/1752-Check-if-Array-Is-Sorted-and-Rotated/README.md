@@ -57,6 +57,27 @@ You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.
 
 	- `1 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by checking if the array has a non-decreasing subsequence that covers all elements, which would indicate that the array was sorted and rotated. This approach is based on the observation that if the array is sorted and rotated, it must have a non-decreasing subsequence that covers all elements.
+
+**Approach**
+1. Initialize a streak counter to 1, which represents the current non-decreasing subsequence.
+2. Iterate through the array twice, considering each element as if it were part of a longer array of length `n*2`.
+3. For each element, check if it is greater than or equal to the previous element. If it is, increment the streak counter.
+4. If the streak counter reaches `n`, it means that the current subsequence covers all elements, and the array was sorted and rotated.
+5. If the streak counter is reset to 1, it means that the current element is smaller than the previous element, and the array was not sorted and rotated.
+
+**Time Complexity**
+O(n) - The solution iterates through the array twice, resulting in a time complexity of O(n*2). However, since the array is rotated, we can reduce the time complexity to O(n) by considering each element as part of a longer array of length `n*2`.
+
+**Space Complexity**
+O(1) - The solution uses a constant amount of space to store the streak counter, resulting in a space complexity of O(1).
+
+**Key Insight**
+The key insight is that if the array is sorted and rotated, it must have a non-decreasing subsequence that covers all elements. This insight allows us to check if the array was sorted and rotated by simply looking for a non-decreasing subsequence that covers all elements.
+
 ## 📊 Metrics
 
 | Metric | Value |

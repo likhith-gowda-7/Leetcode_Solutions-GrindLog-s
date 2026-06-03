@@ -81,6 +81,29 @@ There are no possible valid selections.
 
 	- There is at least one element `i` where `nums[i] == 0`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to find the number of valid selections of initial position and movement direction that can make all elements in the array equal to zero. The key insight is to use a simulation approach to explore all possible movements and count the valid ones.
+
+**Approach**
+1. Initialize a counter `res` to store the number of valid selections.
+2. Define a helper function `process(d, idx)` that simulates the movement process.
+3. In the `process` function, create a copy of the input array `nums` and initialize the current index `idx` to the given value.
+4. While the current index is within the valid range, check if the current element is zero. If it is, move in the current direction by incrementing `idx`.
+5. If the current element is positive, decrement it by 1, reverse the movement direction, and take a step in the new direction.
+6. After the simulation, check if all elements in the array are zero. If they are, increment the `res` counter.
+7. Iterate over the input array `nums` and call the `process` function for each zero element with both left and right movement directions.
+
+**Time Complexity**
+The time complexity of this solution is O(n * m), where n is the length of the input array and m is the maximum number of steps required to make all elements zero. In the worst case, we need to simulate all possible movements for each zero element, resulting in a quadratic time complexity.
+
+**Space Complexity**
+The space complexity of this solution is O(n), as we create a copy of the input array `nums` in the `process` function.
+
+**Key Insight**
+The key insight is to use a simulation approach to explore all possible movements and count the valid ones. By iterating over the input array and calling the `process` function for each zero element with both left and right movement directions, we can efficiently find the number of valid selections.
+
 ## 📊 Metrics
 
 | Metric | Value |

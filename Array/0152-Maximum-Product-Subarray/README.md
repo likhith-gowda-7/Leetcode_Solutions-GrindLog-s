@@ -47,6 +47,26 @@ Example 2:**
 
 	- The product of any subarray of `nums` is **guaranteed** to fit in a **32-bit** integer.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by maintaining two variables, `maxi` and `mini`, to track the maximum and minimum product of subarrays ending at each position. This approach is necessary because a negative number can turn a maximum product into a minimum product, and vice versa. By keeping track of both, we can handle these cases correctly.
+
+## Approach
+1. Initialize `res` with the maximum value in the array, and `maxi` and `mini` with the first element of the array.
+2. Iterate through the array starting from the second element.
+3. For each element, calculate the new maximum and minimum product by considering the current element, the product of the current element and the previous maximum product, and the product of the current element and the previous minimum product.
+4. Update `maxi` and `mini` with the new maximum and minimum product, and update `res` with the maximum of the current `res` and `maxi`.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array, because we make a single pass through the array.
+
+## Space Complexity
+The space complexity is O(1), because we use a constant amount of space to store the variables `res`, `maxi`, `mini`, and `temp`, regardless of the size of the input array.
+
+## Key Insight
+The key insight is to maintain both the maximum and minimum product of subarrays ending at each position, because a negative number can change the maximum product to a minimum product, and vice versa. This allows us to correctly handle cases where a negative number is encountered, and ensures that we find the maximum product subarray.
+
 ## 📊 Metrics
 
 | Metric | Value |

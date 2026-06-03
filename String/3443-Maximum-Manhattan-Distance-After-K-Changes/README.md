@@ -97,6 +97,28 @@ The maximum Manhattan distance from the origin that can be achieved is 6. Hence,
 
 	- `s` consists of only `'N'`, `'S'`, `'E'`, and `'W'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by maintaining a running count of the number of 'N's and 'S's, as well as the number of 'E's and 'W's, in the string. It then calculates the Manhattan distance between the current position and the origin, and updates the maximum distance if the current position is further away. The key insight is that we only need to consider the minimum of the current position and the maximum distance we can reach by changing at most k characters.
+
+**Approach**
+1. Initialize a dictionary `h1` to count the number of 'N's, 'S's, 'E's, and 'W's in the string.
+2. Initialize a variable `maxi` to store the maximum Manhattan distance.
+3. Iterate over the string, updating the counts in `h1` and calculating the Manhattan distance `diff`.
+4. Calculate the minimum of `diff + 2k` and the current position `i + 1`, which represents the maximum distance we can reach by changing at most k characters.
+5. Update `maxi` with the maximum of the current `maxi` and the minimum calculated in step 4.
+6. Return `maxi` as the maximum Manhattan distance.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we are iterating over the string once.
+
+**Space Complexity**
+O(1), since we are using a constant amount of space to store the counts and the maximum distance.
+
+**Key Insight**
+The key insight is that we only need to consider the minimum of the current position and the maximum distance we can reach by changing at most k characters. This is because we can always change at most k characters to move further away from the origin, so we only need to consider the minimum of the current position and the maximum distance we can reach by changing at most k characters.
+
 ## 📊 Metrics
 
 | Metric | Value |

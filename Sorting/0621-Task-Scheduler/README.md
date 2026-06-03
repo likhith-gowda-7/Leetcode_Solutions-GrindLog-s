@@ -57,6 +57,30 @@ There are only two types of tasks, A and B, which need to be separated by 3 inte
 
 	- `0 <= n <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by maintaining a priority queue (max heap) of the most frequent tasks and a queue (q) of tasks that are available to be executed. The idea is to execute tasks in a way that maximizes the usage of CPU intervals, ensuring that there is at least a gap of `n` intervals between two tasks with the same label.
+
+**Approach**
+1. Count the frequency of each task using a hash map `h1`.
+2. Create a max heap `max_heap` with the negative frequencies of the most frequent tasks.
+3. Initialize a queue `q` to store tasks that are available to be executed.
+4. While the max heap or queue is not empty, do the following:
+   - Increment the time by 1.
+   - If the max heap is not empty, pop the task with the highest frequency and increment its frequency by 1. If the frequency is not 0, add it to the queue with its next available time.
+   - If the queue is not empty and the task at the top of the queue is available to be executed (i.e., its next available time is equal to the current time), remove it from the queue and push it back into the max heap.
+5. Return the time when all tasks have been executed.
+
+**Time Complexity**
+O(m log m), where m is the number of unique tasks. This is because we are using a max heap to store the most frequent tasks, and each insertion and deletion operation takes O(log m) time.
+
+**Space Complexity**
+O(m), where m is the number of unique tasks. This is because we are using a hash map to count the frequency of each task and a queue to store tasks that are available to be executed.
+
+**Key Insight**
+The key insight here is to use a priority queue (max heap) to store the most frequent tasks and a queue to store tasks that are available to be executed. This allows us to execute tasks in a way that maximizes the usage of CPU intervals, ensuring that there is at least a gap of `n` intervals between two tasks with the same label.
+
 ## 📊 Metrics
 
 | Metric | Value |

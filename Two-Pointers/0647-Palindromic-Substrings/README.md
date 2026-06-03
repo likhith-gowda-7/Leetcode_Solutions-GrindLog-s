@@ -45,6 +45,26 @@ Example 2:**
 
 	- `s` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a dynamic programming approach to count the number of palindromic substrings in the given string. It iterates over the string, expanding outwards from each character to check for palindromes of increasing lengths.
+
+**Approach**
+1. Initialize a counter `total` to store the number of palindromic substrings.
+2. Define a helper function `check(l, r)` that checks if the substring from index `l` to `r` is a palindrome.
+3. Iterate over the string, and for each character, call `check(i, i)` to check for single-character palindromes and `check(i, i+1)` to check for two-character palindromes.
+4. In the `check` function, use two pointers `l` and `r` to expand outwards from the center of the substring, incrementing the `total` counter for each palindrome found.
+
+**Time Complexity**
+O(n^2), where n is the length of the string. This is because in the worst case, we need to check all substrings of the string, which results in a quadratic number of operations.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the `total` counter and the `check` function's variables.
+
+**Key Insight**
+The key insight is that we can use a single function `check` to handle both single-character and two-character palindromes, and then use a simple loop to iterate over the string and call `check` for each character. This simplifies the code and makes it more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -71,6 +71,29 @@ There are no mirror pairs in the array.
 
 	- `1 <= nums[i] <= 10^9`​​​​​​​
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to store the indices of numbers that are reverses of each other. It iterates through the input array, checks for each number if its reverse is already in the hash table, and updates the minimum distance if a mirror pair is found.
+
+**Approach**
+1. Initialize an empty hash table `h1` to store the indices of numbers that are reverses of each other.
+2. Iterate through the input array `nums` using `enumerate` to get both the index `i` and the value `val` of each element.
+3. Convert the value `val` to a string `s` and reverse it to get the reversed string `int_rev`.
+4. Remove leading zeros from the reversed string `int_rev` using `lstrip("0")`.
+5. Check if the original string `s` is already in the hash table `h1`. If it is, update the minimum distance `min_idx` if the current distance `i - h1[s]` is smaller.
+6. Store the index `i` in the hash table `h1` under the key `int_rev`.
+7. After iterating through the entire array, return the minimum distance `min_idx` if it is not infinity, otherwise return -1.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we iterate through the array once to populate the hash table and then once more to find the minimum distance.
+
+**Space Complexity**
+O(n), where n is the length of the input array `nums`. This is because in the worst case, we need to store all elements of the array in the hash table.
+
+**Key Insight**
+The key insight is to use a hash table to efficiently store and look up the indices of numbers that are reverses of each other. This allows us to find the minimum distance between mirror pairs in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

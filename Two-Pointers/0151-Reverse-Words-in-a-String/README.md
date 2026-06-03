@@ -62,6 +62,25 @@ Example 3:**
 
 Follow-up: **If the string data type is mutable in your language, can you solve it in-place** with O(1)` extra space?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first splitting the input string into a list of words, then reversing the list of words, and finally joining the reversed list back into a string with a single space between each word.
+
+**Approach**
+1. Split the input string `s` into a list of words using the `split()` method, which splits a string into a list where each word is a list item.
+2. Reverse the list of words using slicing `words[::-1]`, which creates a new list that is the reverse of the original list.
+3. Join the reversed list of words back into a string using the `join()` method, with a single space between each word.
+
+**Time Complexity**
+O(n), where n is the total number of characters in the input string. This is because the `split()` method iterates over the string once to split it into words, and the `join()` method iterates over the list of words once to join them back into a string.
+
+**Space Complexity**
+O(n), where n is the total number of characters in the input string. This is because we need to store the list of words, which can be up to n characters long.
+
+**Key Insight**
+The key insight here is that we can use the `split()` method to split the input string into a list of words, which makes it easy to reverse the list of words and then join them back into a string. This approach is concise and efficient, and it avoids the need to manually iterate over the input string to reverse the words.
+
 ## 📊 Metrics
 
 | Metric | Value |

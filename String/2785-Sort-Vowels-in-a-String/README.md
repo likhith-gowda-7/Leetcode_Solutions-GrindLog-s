@@ -49,6 +49,30 @@ Example 2:**
 
 	- `s` consists only of letters of the English alphabet in **uppercase and lowercase**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution involves separating vowels and consonants in the input string, sorting the vowels based on their ASCII values, and then reconstructing the string with vowels in their sorted positions. This approach ensures that vowels are in nondecreasing order of their ASCII values while consonants remain in their original positions.
+
+**Approach**
+1. Create a dictionary `vow_map` to store the frequency of each vowel in the string.
+2. Create a list `vow_indexes` to store the indices of vowels in the string.
+3. Iterate through the string, and for each character:
+   - If it's a vowel, increment its frequency in `vow_map` and append its index to `vow_indexes`.
+   - If it's a consonant, add it to the result string `res` at its original index.
+4. Iterate through the sorted vowels (in ASCII order), and for each vowel:
+   - Append it to the result string `res` at the index corresponding to its position in `vow_indexes`.
+5. Return the resulting string `res` by joining its characters.
+
+**Time Complexity**
+O(n + m), where n is the length of the input string and m is the number of unique vowels. The first loop iterates through the string once, and the second loop iterates through the sorted vowels once. The time complexity is dominated by the string iteration.
+
+**Space Complexity**
+O(n + m), where n is the length of the input string and m is the number of unique vowels. The solution uses additional space to store the result string, `vow_map`, and `vow_indexes`.
+
+**Key Insight**
+The key insight is to separate vowels and consonants, sort the vowels, and then reconstruct the string with vowels in their sorted positions. This approach ensures that vowels are in nondecreasing order of their ASCII values while consonants remain in their original positions.
+
 ## 📊 Metrics
 
 | Metric | Value |

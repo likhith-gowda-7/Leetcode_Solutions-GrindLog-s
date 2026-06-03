@@ -63,6 +63,29 @@ Number of valid subsequences (63 - 2 = 61).
 
 	- `1 <= target <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to find the number of non-empty subsequences of `nums` such that the sum of the minimum and maximum element on it is less or equal to `target`. We can use a two-pointer technique to solve this problem efficiently. The key insight is that we can generate all possible subsequences by choosing the minimum and maximum elements from the sorted array.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Initialize two pointers, `left` and `right`, to the start and end of the sorted array, respectively.
+3. Initialize a variable `res` to store the count of valid subsequences.
+4. While `left` is less than or equal to `right`, calculate the sum of the elements at the `left` and `right` indices.
+5. If the sum is less than or equal to `target`, add 2 to the power of `right - left` to `res` (since we can choose any subset of the elements between `left` and `right`), and increment `left`.
+6. If the sum is greater than `target`, decrement `right`.
+7. Return `res` modulo `10^9 + 7`.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the length of the input array `nums`.
+
+**Space Complexity**
+O(1) since we only use a constant amount of space to store the pointers and the result.
+
+**Key Insight**
+The key insight is that we can generate all possible subsequences by choosing the minimum and maximum elements from the sorted array. This allows us to use a two-pointer technique to efficiently count the number of valid subsequences.
+
 ## 📊 Metrics
 
 | Metric | Value |

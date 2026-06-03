@@ -84,6 +84,29 @@ Example 2:**
 
 	- `0 <= l_i <= r_i < nums.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a technique called "line sweep" or "difference array" to efficiently process the queries and determine if it's possible to transform the array into a Zero Array. The key insight is to maintain a running sum of the decrements and increments caused by the queries, allowing us to check if the array can be made zero in a single pass.
+
+**Approach**
+1. Initialize a difference array `diff_arr` of size `n+1` with all elements set to 0, where `n` is the length of the input array `nums`.
+2. Iterate through the queries and update the difference array accordingly:
+   - For each query `[left, right]`, increment the value at index `left` by 1 and decrement the value at index `right+1` by 1.
+3. Iterate through the difference array and calculate the running sum for each element:
+   - For each element `i` (except the first one), add the value at `i-1` to `diff_arr[i]`.
+4. Check if the array can be made zero by iterating through `nums` and `diff_arr` simultaneously:
+   - For each element `i` in `nums`, check if `nums[i]` is greater than `diff_arr[i]`. If true, return False.
+
+**Time Complexity**
+O(n + q), where n is the length of the input array `nums` and q is the number of queries. This is because we perform a single pass through the queries and the difference array.
+
+**Space Complexity**
+O(n), as we need to store the difference array of size `n+1`.
+
+**Key Insight**
+The key insight is to maintain a running sum of the decrements and increments caused by the queries, allowing us to check if the array can be made zero in a single pass. This is achieved by using a difference array, which simplifies the problem and enables an efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

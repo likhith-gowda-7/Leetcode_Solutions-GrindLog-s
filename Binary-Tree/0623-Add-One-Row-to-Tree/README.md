@@ -61,6 +61,28 @@ Example 2:**
 
 	- `1 <= depth <= the depth of tree + 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a level-order traversal (BFS) to find the nodes at the desired depth, then modifies these nodes by adding new left and right children with the given value. This approach works because it efficiently traverses the tree and allows for easy modification of the nodes at the specified depth.
+
+**Approach**
+1. If the desired depth is 1, create a new root node with the given value and set the original root as its left child.
+2. Initialize a queue with the root node and its level (1).
+3. Perform a level-order traversal (BFS) to find the nodes at the desired depth (depth - 1).
+4. Once the nodes at the desired depth are found, modify each of these nodes by creating new left and right children with the given value.
+5. The new left child's left child is set to the original left child, and the new right child's right child is set to the original right child.
+6. Return the modified root node.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the tree. This is because each node is visited once during the level-order traversal.
+
+**Space Complexity**
+O(n), where n is the number of nodes in the tree. This is because in the worst case, the queue will store all nodes at the desired depth.
+
+**Key Insight**
+The key insight is to use a level-order traversal to efficiently find the nodes at the desired depth, and then modify these nodes by adding new left and right children with the given value. This approach allows for a simple and efficient solution to the problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

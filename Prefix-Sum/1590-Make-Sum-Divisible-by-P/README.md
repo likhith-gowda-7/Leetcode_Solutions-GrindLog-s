@@ -59,6 +59,30 @@ Example 3:**
 
 	- `1 <= p <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a prefix sum approach with a hash table to efficiently find the smallest subarray that needs to be removed to make the sum of the remaining elements divisible by `p`. The key insight is to maintain a running sum of the array elements modulo `p`, which allows us to quickly identify the smallest subarray that needs to be removed.
+
+**Approach**
+1. Calculate the remainder of the sum of all array elements when divided by `p`. If the remainder is 0, return 0 as no subarray needs to be removed.
+2. Initialize the result to the length of the array, assuming the whole array needs to be removed.
+3. Initialize a hash table `prefix_map` with the initial prefix sum (0) mapped to -1.
+4. Iterate through the array, maintaining a running sum `curr_sum` of the array elements modulo `p`.
+5. For each prefix sum, calculate the target prefix sum `prefix` that would make the sum of the remaining elements divisible by `p`.
+6. Check if the target prefix sum `prefix` is already in the hash table `prefix_map`. If it is, calculate the length of the subarray that needs to be removed and update the result if it's smaller.
+7. Update the hash table `prefix_map` with the current prefix sum and its index.
+8. Return the result if it's not equal to the length of the array, indicating that a subarray needs to be removed. Otherwise, return -1.
+
+**Time Complexity**
+O(n), where n is the length of the array. The iteration through the array and hash table operations take linear time.
+
+**Space Complexity**
+O(n), where n is the length of the array. The hash table `prefix_map` stores at most n entries.
+
+**Key Insight**
+The key insight is to maintain a running sum of the array elements modulo `p`, which allows us to quickly identify the smallest subarray that needs to be removed. This approach takes advantage of the properties of modular arithmetic to efficiently solve the problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

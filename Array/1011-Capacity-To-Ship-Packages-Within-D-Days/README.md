@@ -69,6 +69,28 @@ Example 3:**
 
 	- `1 <= weights[i] <= 500`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a binary search approach to find the minimum weight capacity of the ship that will result in all packages being shipped within the given number of days. The idea is to find the smallest capacity that can ship all packages in the given number of days.
+
+**Approach**
+1. If there's only one day, return the sum of all weights as the minimum capacity.
+2. Define a helper function `helper` that takes a mid capacity, weights, and days as input. It simulates shipping packages with the given capacity and returns True if more than the given number of days are required, False otherwise.
+3. Initialize the left and right boundaries of the search space to the maximum weight and the sum of all weights, respectively.
+4. Perform a binary search to find the minimum capacity that can ship all packages within the given number of days. In each iteration, calculate the mid capacity and check if it's sufficient using the `helper` function.
+5. If the mid capacity is not sufficient, update the left boundary to mid + 1. Otherwise, update the right boundary to mid.
+6. Return the left boundary as the minimum capacity.
+
+**Time Complexity**
+O(n log m), where n is the number of packages and m is the sum of all weights. The binary search takes O(log m) time, and the helper function takes O(n) time in the worst case.
+
+**Space Complexity**
+O(1), as the space complexity is constant and does not depend on the input size.
+
+**Key Insight**
+The key insight is to use a binary search approach to find the minimum capacity that can ship all packages within the given number of days. By simulating shipping packages with the given capacity and checking if it's sufficient, we can efficiently find the minimum capacity required.
+
 ## 📊 Metrics
 
 | Metric | Value |

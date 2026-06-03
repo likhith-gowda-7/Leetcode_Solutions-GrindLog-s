@@ -57,6 +57,27 @@ Example 2:**
 
 **Note:** This question is the same as 1765: [https://leetcode.com/problems/map-of-highest-peak/](https://leetcode.com/problems/map-of-highest-peak/description/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a breadth-first search (BFS) approach to find the distance of the nearest `0` for each cell in the binary matrix. The key insight is to use a queue to keep track of the cells to visit and a visited matrix to avoid revisiting cells.
+
+**Approach**
+1. Initialize a queue `q` to store the cells to visit, a visited matrix `visited` to mark visited cells, and a distance variable `dist` to keep track of the current distance.
+2. Iterate through the matrix and add all `0` cells to the queue and mark them as visited.
+3. Define a helper function `check` to perform the BFS. It checks if a cell is within the matrix boundaries and not visited before. If so, it marks the cell as visited, adds it to the queue, and updates the matrix with the current distance.
+4. Perform BFS by iterating through the queue and calling the `check` function for each cell in the queue. Increment the distance variable after each iteration.
+5. Repeat step 4 until the queue is empty.
+
+**Time Complexity**
+O(m*n), where m is the number of rows and n is the number of columns in the matrix. This is because each cell in the matrix is visited at most once.
+
+**Space Complexity**
+O(m*n), where m is the number of rows and n is the number of columns in the matrix. This is because we need to store the visited matrix and the queue, which can grow up to the size of the matrix.
+
+**Key Insight**
+The key insight is to use a queue to keep track of the cells to visit and a visited matrix to avoid revisiting cells. This allows us to perform a BFS traversal of the matrix efficiently and find the distance of the nearest `0` for each cell.
+
 ## 📊 Metrics
 
 | Metric | Value |

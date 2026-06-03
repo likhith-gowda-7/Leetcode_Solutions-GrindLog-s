@@ -61,6 +61,29 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach to find the longest balanced subarray. It iterates over the array, maintaining two sets to track the distinct even and odd numbers within the current window. When the number of distinct even and odd numbers are equal, it updates the maximum length of the balanced subarray.
+
+**Approach**
+1. Initialize variables to store the maximum length of the balanced subarray (`maxi`) and the length of the input array (`n`).
+2. Iterate over the array using a sliding window, starting from the first element (`i`).
+3. For each window, initialize two sets to store the distinct even (`even`) and odd (`odd`) numbers.
+4. Iterate over the elements within the current window (`j` ranges from `i` to `n-1`).
+5. For each element, add it to the corresponding set based on its parity (even or odd).
+6. Check if the number of distinct even and odd numbers are equal. If they are, update the maximum length of the balanced subarray (`maxi`) with the current window size (`j-i+1`).
+7. Repeat steps 4-6 for each window until the end of the array.
+
+**Time Complexity**
+O(n^2), where n is the length of the input array. This is because for each window, we are iterating over the remaining elements in the array.
+
+**Space Complexity**
+O(n), where n is the length of the input array. This is because in the worst case, we are storing all elements in the `even` and `odd` sets.
+
+**Key Insight**
+The key insight is to use a sliding window approach to efficiently find the longest balanced subarray. By maintaining two sets to track the distinct even and odd numbers, we can quickly determine when the number of distinct even and odd numbers are equal, allowing us to update the maximum length of the balanced subarray.
+
 ## 📊 Metrics
 
 | Metric | Value |

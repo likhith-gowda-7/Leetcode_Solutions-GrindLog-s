@@ -54,6 +54,28 @@ Example 2:**
 
 	- `1 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with a twist. It maintains a running sum of the bitwise OR of elements in the current window, and expands the window to the right while ensuring that the bitwise AND of elements in different positions within the window is zero. This is achieved by maintaining a running sum of the bitwise OR of elements in the window, and shrinking the window from the left when the bitwise AND of the current element and the running sum is non-zero.
+
+**Approach**
+1. Initialize variables to keep track of the maximum length of the nice subarray (`res`), the current window's sum of bitwise OR of elements (`curr`), and the left boundary of the window (`l`).
+2. Iterate over the array from the left to the right, expanding the window to the right.
+3. For each new element, check if the bitwise AND of the current element and the running sum (`curr`) is non-zero.
+4. If it is, shrink the window from the left by subtracting the leftmost element from the running sum (`curr`) and incrementing the left boundary (`l`).
+5. Add the new element to the running sum (`curr`) and update the maximum length of the nice subarray (`res`) if necessary.
+6. Repeat steps 3-5 until the end of the array is reached.
+
+**Time Complexity**
+O(n), where n is the length of the input array. This is because we are iterating over the array once, and the while loop in step 3 is bounded by the size of the window, which is at most n.
+
+**Space Complexity**
+O(1), as we are using a constant amount of space to store the variables `res`, `curr`, and `l`.
+
+**Key Insight**
+The key insight is that the bitwise OR of elements in a nice subarray is equal to the bitwise OR of the elements in the subarray minus the bitwise AND of the elements in the subarray. This allows us to maintain a running sum of the bitwise OR of elements in the window, and shrink the window from the left when the bitwise AND of the current element and the running sum is non-zero.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -47,6 +47,25 @@ Example 2:**
 
 	- `-1000 <= matrix[i][j] <= 1000`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The approach to rotating the image by 90 degrees clockwise involves a two-step process: transposing the matrix and then reversing each row. This works because transposing the matrix effectively swaps the rows and columns, and then reversing each row achieves the desired rotation.
+
+## Approach
+1. Calculate the size of the matrix (`n`).
+2. Iterate over the upper triangular part of the matrix, swapping elements to transpose the matrix.
+3. Reverse each row of the transposed matrix to achieve the 90-degree clockwise rotation.
+
+## Time Complexity
+The time complexity is O(n^2), where n is the size of the matrix. This is because we are iterating over each element in the matrix once to transpose it and then again to reverse each row.
+
+## Space Complexity
+The space complexity is O(1), as we are modifying the input matrix in-place and not using any additional space that scales with the input size.
+
+## Key Insight
+The key insight here is that a 90-degree clockwise rotation can be achieved by first transposing the matrix (swapping rows and columns) and then reversing each row. This allows us to perform the rotation in-place, without needing to allocate additional space for the rotated matrix.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -56,6 +56,28 @@ As all the sides are of different lengths, it will form a scalene triangle.
 
 	- `1 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting the input array in ascending order. This allows us to easily determine the type of triangle that can be formed based on the lengths of the sides. The key insight is that a triangle can be formed if the sum of the lengths of any two sides is greater than the length of the third side.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Check if the sum of the lengths of the two smallest sides is less than or equal to the length of the largest side. If so, return "none" as it's impossible to form a triangle.
+3. Iterate through the sorted array to check for the following conditions:
+	* If all sides are equal, return "equilateral".
+	* If exactly two sides are equal and the third side is different, return "isosceles".
+	* If all sides are different, return "scalene".
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the number of elements in the input array.
+
+**Space Complexity**
+O(n) for the sorting operation, where n is the number of elements in the input array.
+
+**Key Insight**
+The key to this solution is the triangle inequality theorem, which states that a triangle can be formed if the sum of the lengths of any two sides is greater than the length of the third side. By sorting the input array and checking for this condition, we can efficiently determine the type of triangle that can be formed.
+
 ## 📊 Metrics
 
 | Metric | Value |

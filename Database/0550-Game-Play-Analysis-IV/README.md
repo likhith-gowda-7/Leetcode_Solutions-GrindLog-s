@@ -61,6 +61,26 @@ Only the player with id 1 logged back in after the first day he had logged in so
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a common technique in SQL known as a "Common Table Expression" (CTE) to first identify the first login date for each player. Then, it joins this CTE with the original table to find the number of players who logged in again the day after their first login.
+
+**Approach**
+1. Create a CTE `User_logins` that groups the `Activity` table by `player_id` and selects the minimum `event_date` for each player, which represents their first login date.
+2. Join the `User_logins` CTE with the `Activity` table on `player_id` and `event_date` (with a 1-day interval) to find the players who logged in again the day after their first login.
+3. Count the number of players who logged in again and divide it by the total number of players to get the fraction.
+4. Round the fraction to 2 decimal places using the `round` function.
+
+**Time Complexity**
+O(n log n) due to the grouping operation in the CTE, where n is the number of rows in the `Activity` table. However, this can be optimized to O(n) by using a single pass through the table.
+
+**Space Complexity**
+O(n) for storing the intermediate results in the CTE.
+
+**Key Insight**
+The key insight is to use a CTE to efficiently identify the first login date for each player, which allows us to join the original table and find the players who logged in again the day after their first login. This approach avoids the need for a self-join or a subquery, making it more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -55,6 +55,28 @@ So the total number of operations required is 1.
 
 	- `0 <= num1, num2 <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution takes advantage of the fact that the problem allows us to choose which number to subtract from the other in each operation. By always subtracting the smaller number from the larger one, we can ensure that the difference between the two numbers decreases by at least 1 in each operation. This approach is similar to a "gcd" (greatest common divisor) calculation, where we repeatedly subtract the smaller number from the larger one until we reach 0.
+
+**Approach**
+1. Initialize a counter variable `count` to keep track of the number of operations.
+2. While both `num1` and `num2` are non-zero:
+   1. If `num1` is greater than `num2`, subtract `num2` from `num1`.
+   2. Otherwise, subtract `num1` from `num2`.
+   3. Increment the `count` variable by 1.
+3. Return the `count` variable if either `num1` or `num2` is 0, indicating that we have reached the target state.
+
+**Time Complexity**
+The time complexity of this solution is O(log min(num1, num2)), where `log` is the logarithm to the base 2. This is because the number of operations required to reach 0 is proportional to the number of bits in the smaller number. In each operation, we are effectively dividing the larger number by 2, which is a constant-time operation.
+
+**Space Complexity**
+The space complexity of this solution is O(1), as we only use a constant amount of space to store the `count` variable and the input numbers `num1` and `num2`.
+
+**Key Insight**
+The key insight behind this solution is that by always subtracting the smaller number from the larger one, we can ensure that the difference between the two numbers decreases by at least 1 in each operation. This approach allows us to reach the target state (either `num1` or `num2` being 0) in a minimum number of operations.
+
 ## 📊 Metrics
 
 | Metric | Value |

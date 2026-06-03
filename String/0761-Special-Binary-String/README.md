@@ -53,6 +53,29 @@ Example 2:**
 
 	- `s` is a special binary string.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by recursively finding all special substrings within the input string, sorting them lexicographically in descending order, and then concatenating them to form the lexicographically largest resulting string. The key insight is that the lexicographically largest string can be obtained by sorting the special substrings and then concatenating them.
+
+**Approach**
+1. Initialize an empty list `ans` to store the special substrings.
+2. Initialize a counter `cnt` to keep track of the difference between the number of `1`s and `0`s in the current substring.
+3. Initialize two pointers `i` and `j` to the start of the string.
+4. Iterate through the string using pointer `i`. If the current character is `1`, increment `cnt`, otherwise decrement `cnt`.
+5. When `cnt` becomes `0`, it means we have found a special substring. Append this substring to `ans` by recursively calling `makeLargestSpecial` on the substring between `j + 1` and `i`, and then append `'1'` and `'0'` to the result.
+6. Reset `j` to `i + 1` to start searching for the next special substring.
+7. After iterating through the entire string, sort `ans` in descending order and join the substrings to form the final result.
+
+**Time Complexity**
+O(n log n), where n is the length of the input string. This is because we need to sort the special substrings, which takes O(n log n) time.
+
+**Space Complexity**
+O(n), where n is the length of the input string. This is because we need to store the special substrings in the `ans` list, which can have up to n substrings.
+
+**Key Insight**
+The key insight is that the lexicographically largest string can be obtained by sorting the special substrings and then concatenating them. This is because the special substrings are already lexicographically largest within themselves, and sorting them allows us to concatenate them in the correct order to form the final result.
+
 ## 📊 Metrics
 
 | Metric | Value |

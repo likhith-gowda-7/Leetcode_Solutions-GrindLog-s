@@ -86,6 +86,29 @@ So function 0 spends 2 + 4 + 1 = 7 units of total time executing, and function 1
 
 	- Each function has an `"end"` log for each `"start"` log.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by simulating the call stack and keeping track of the time spent in each function. When a function starts, we add the time spent since the last start to its exclusive time and update the current time. When a function ends, we add the time spent since the last start to its exclusive time and update the current time.
+
+**Approach**
+1. Initialize an array `excl_time` to store the exclusive time for each function and a stack to keep track of the current function being executed.
+2. Initialize `prev_time` to keep track of the time since the last start.
+3. Iterate over each log in the `logs` list:
+   - Split the log into function ID, status, and time.
+   - If the status is "start", add the time spent since the last start to the exclusive time of the function at the top of the stack, update the current time, and push the function ID onto the stack.
+   - If the status is "end", add the time spent since the last start to the exclusive time of the function at the top of the stack, update the current time, and pop the function ID from the stack.
+4. Return the `excl_time` array.
+
+**Time Complexity**
+O(n), where n is the number of logs. We iterate over each log once, and the operations inside the loop take constant time.
+
+**Space Complexity**
+O(n), where n is the number of functions. We use a stack to keep track of the current function being executed, and in the worst case, the stack will contain all function IDs.
+
+**Key Insight**
+The key insight is to keep track of the time spent since the last start and update the exclusive time accordingly. This allows us to accurately calculate the exclusive time for each function without needing to know the exact start and end times of each function.
+
 ## 📊 Metrics
 
 | Metric | Value |

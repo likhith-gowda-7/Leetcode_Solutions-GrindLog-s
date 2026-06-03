@@ -61,6 +61,30 @@ lRUCache.get(4);    // return 4
 
 	- At most `2 * 10^5` calls will be made to `get` and `put`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses an `OrderedDict` to implement the LRU cache, where the keys are the cache entries and the values are the corresponding values. The `OrderedDict` maintains the order of access, allowing for efficient eviction of the least recently used entry.
+
+**Approach**
+1. Initialize the cache with a capacity `capacity` and an `OrderedDict` `valmap` to store key-value pairs.
+2. In the `get` method:
+	* Check if the key exists in the cache. If not, return -1.
+	* If the key exists, move it to the end of the `OrderedDict` to mark it as recently used.
+3. In the `put` method:
+	* If the key already exists, update its value and move it to the end of the `OrderedDict`.
+	* If the cache is full and the key does not exist, remove the least recently used entry (the first entry in the `OrderedDict`).
+	* Add the new key-value pair to the cache.
+
+**Time Complexity**
+The time complexity is O(1) for both `get` and `put` methods, as the operations on the `OrderedDict` (insertion, deletion, and moving to the end) take constant time.
+
+**Space Complexity**
+The space complexity is O(capacity), as the cache stores at most `capacity` key-value pairs.
+
+**Key Insight**
+The key insight is using an `OrderedDict` to maintain the order of access, allowing for efficient eviction of the least recently used entry. This approach enables the `get` and `put` methods to run in O(1) average time complexity, meeting the problem's requirements.
+
 ## 📊 Metrics
 
 | Metric | Value |

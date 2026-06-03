@@ -48,6 +48,26 @@ Example 2:**
 
 	- `1 <= m, n <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved using dynamic programming by breaking it down into smaller sub-problems. The key insight is that each cell in the grid can be reached from the cell above it or the cell to its left, and the number of ways to reach a cell is the sum of the number of ways to reach the cell above it and the cell to its left.
+
+**Approach**
+1. Initialize a 2D array `dp` to store the number of unique paths to reach each cell.
+2. If the current cell is at the top or left edge of the grid, there is only one way to reach it (i.e., by moving from the top-left corner).
+3. For all other cells, the number of unique paths to reach the cell is the sum of the number of unique paths to reach the cell above it and the cell to its left.
+4. Return the value of the bottom-right cell in the `dp` array.
+
+**Time Complexity**
+O(m*n), where m and n are the dimensions of the grid. This is because we need to iterate over each cell in the grid once to fill up the `dp` array.
+
+**Space Complexity**
+O(m*n), where m and n are the dimensions of the grid. This is because we need to store the number of unique paths to reach each cell in the `dp` array.
+
+**Key Insight**
+The key insight is that the number of unique paths to reach a cell is the sum of the number of unique paths to reach the cell above it and the cell to its left. This is because the robot can only move down or right, so the number of ways to reach a cell is the sum of the number of ways to reach the cell above it and the cell to its left.
+
 ## 📊 Metrics
 
 | Metric | Value |

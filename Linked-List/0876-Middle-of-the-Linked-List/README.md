@@ -45,6 +45,26 @@ Example 2:**
 
 	- `1 <= Node.val <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses the "tortoise and hare" algorithm, a classic approach for finding the middle node of a linked list. This algorithm takes advantage of the fact that the fast pointer moves twice as fast as the slow pointer, effectively skipping over every other node.
+
+**Approach**
+1. Initialize two pointers, `fast` and `slow`, both pointing to the head of the linked list.
+2. Move the `fast` pointer two nodes at a time (`fast = fast.next.next`) and the `slow` pointer one node at a time (`slow = slow.next`).
+3. Continue moving the pointers until the `fast` pointer reaches the end of the list (`fast` becomes `None` or `fast.next` becomes `None`).
+4. At this point, the `slow` pointer will be at the middle node of the linked list.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the linked list. This is because we visit each node once.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the `fast` and `slow` pointers.
+
+**Key Insight**
+The key insight behind this solution is that the fast pointer moves twice as fast as the slow pointer, allowing us to skip over every other node and reach the middle of the list in linear time. This is a fundamental technique in linked list algorithms and has many applications.
+
 ## 📊 Metrics
 
 | Metric | Value |

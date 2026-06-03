@@ -55,6 +55,29 @@ Example 3:**
 
 	- `1 <= n <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining a running sum of the left side (from 1 to `x`) and checking if it equals the sum of the right side (from `x` to `n`). This is possible because the total sum of all numbers from 1 to `n` is known and can be calculated in constant time.
+
+**Approach**
+1. Calculate the total sum of all numbers from 1 to `n` using the formula for the sum of an arithmetic series: `n * (n + 1) / 2`.
+2. Initialize a variable `left` to 0, which will store the running sum of the left side.
+3. Iterate over the numbers from 1 to `n`:
+   1. Calculate the sum of the right side by subtracting the current `left` from the total sum.
+   2. Add the current number to `left`.
+   3. Check if the sum of the right side equals the current `left`. If it does, return the current number as the pivot integer.
+4. If no pivot integer is found after iterating over all numbers, return -1.
+
+**Time Complexity**
+O(n), where n is the input number. This is because we iterate over the numbers from 1 to `n` once.
+
+**Space Complexity**
+O(1), which means constant space complexity. We only use a few variables to store the total sum, left sum, and current number, regardless of the input size.
+
+**Key Insight**
+The key insight is that we can calculate the total sum of all numbers from 1 to `n` in constant time, allowing us to maintain a running sum of the left side and compare it to the sum of the right side in linear time. This makes the solution efficient and scalable for large input sizes.
+
 ## 📊 Metrics
 
 | Metric | Value |

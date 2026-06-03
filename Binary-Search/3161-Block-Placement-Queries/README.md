@@ -65,6 +65,27 @@ Example 2:**
 
 	- The input is generated such that there is at least one query of type 2.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires us to process queries on a line with obstacles. We use a Fenwick tree to efficiently count the number of obstacles to the left and right of a given point, and a segment tree to store the maximum prefix sum up to each point. This allows us to determine whether a block of a given size can be placed within a range without intersecting any obstacles.
+
+**Approach**
+1. Initialize a Fenwick tree and a segment tree with the maximum possible size.
+2. Process each query:
+   - For type 1 queries, add an obstacle at the given point, update the Fenwick tree, and update the segment tree with the new maximum prefix sum.
+   - For type 2 queries, calculate the number of obstacles to the left of the given point, and query the segment tree to get the maximum prefix sum up to the given point. Determine whether a block of the given size can be placed within the range.
+3. Return the results as a boolean array.
+
+**Time Complexity**
+The time complexity is O(n log n), where n is the number of queries. This is because we process each query in O(log n) time using the Fenwick tree and segment tree, and we perform O(n) queries in total.
+
+**Space Complexity**
+The space complexity is O(n), where n is the maximum possible size. This is because we store the Fenwick tree and segment tree with the maximum possible size.
+
+**Key Insight**
+The key insight is to use a Fenwick tree to efficiently count the number of obstacles to the left and right of a given point, and a segment tree to store the maximum prefix sum up to each point. This allows us to determine whether a block of a given size can be placed within a range without intersecting any obstacles in O(log n) time per query.
+
 ## 📊 Metrics
 
 | Metric | Value |

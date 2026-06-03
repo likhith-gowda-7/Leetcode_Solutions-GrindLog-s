@@ -83,6 +83,30 @@ In this example, only `robots[0]` can reach the wall, but its shot to the **righ
 
 	- All values in `walls` are **unique**
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to find the maximum number of unique walls that can be destroyed by the robots. We can approach this problem by considering the maximum distance each robot's bullet can travel and the position of the walls. By analyzing the possible paths of the bullets and the positions of the walls, we can calculate the maximum number of walls that can be destroyed.
+
+**Approach**
+1. First, we create a dictionary `robots_to_distance` to store the position of each robot as the key and its corresponding maximum distance as the value.
+2. We sort the robots and walls arrays in ascending order.
+3. We initialize three arrays `left`, `right`, and `num` to store the number of walls that can be destroyed by each robot from the left, right, and the overlap of the two, respectively.
+4. We iterate through the sorted robots array and for each robot, we calculate the number of walls that can be destroyed from the left and right using binary search.
+5. We then calculate the overlap of the two and store it in the `num` array.
+6. We initialize two variables `sub_left` and `sub_right` to store the maximum number of walls that can be destroyed from the left and right, respectively.
+7. We iterate through the `left` and `right` arrays and update `sub_left` and `sub_right` by considering the maximum number of walls that can be destroyed from the left and right, respectively.
+8. Finally, we return the maximum of `sub_left` and `sub_right`.
+
+**Time Complexity**
+The time complexity of this solution is O(n log n + m log n), where n is the number of robots and m is the number of walls. This is because we are using binary search to find the position of the walls, which takes O(log n) time, and we are iterating through the robots and walls arrays, which takes O(n) time.
+
+**Space Complexity**
+The space complexity of this solution is O(n + m), where n is the number of robots and m is the number of walls. This is because we are storing the position of each robot and wall in the `robots_to_distance` dictionary and the `left`, `right`, and `num` arrays.
+
+**Key Insight**
+The key insight of this solution is to consider the overlap of the two paths of the bullets and the position of the walls. By analyzing the possible paths of the bullets and the positions of the walls, we can calculate the maximum number of walls that can be destroyed. This is achieved by using binary search to find the position of the walls and iterating through the robots and walls arrays to calculate the number of walls that can be destroyed.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -65,6 +65,29 @@ Example 2:**
 
 	- If `graph[u]` contains `v`, then `graph[v]` contains `u`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a graph coloring approach to determine if a graph is bipartite. The idea is to assign a color (0 or 1) to each node, such that adjacent nodes have different colors. If a node is already colored, we can skip it. If we encounter a node with the same color as its neighbor, it means the graph is not bipartite.
+
+**Approach**
+1. Initialize a color array with None values, representing the color of each node.
+2. Iterate through each node in the graph.
+3. If a node is already colored, skip it.
+4. Perform a BFS traversal starting from the current node.
+5. For each neighbor of the current node, if it's not colored, assign the opposite color and add it to the queue.
+6. If a neighbor has the same color as the current node, return False (graph is not bipartite).
+7. If the BFS traversal completes without finding any conflicts, return True (graph is bipartite).
+
+**Time Complexity**
+O(n + m), where n is the number of nodes and m is the number of edges. We visit each node and edge once during the BFS traversal.
+
+**Space Complexity**
+O(n), where n is the number of nodes. We store the color of each node in the color array.
+
+**Key Insight**
+The key insight is that we can use a simple graph coloring approach to determine if a graph is bipartite. By assigning colors to nodes based on their neighbors, we can efficiently detect conflicts and determine if the graph is bipartite. This approach works because a graph is bipartite if and only if it can be colored with two colors such that adjacent nodes have different colors.
+
 ## 📊 Metrics
 
 | Metric | Value |

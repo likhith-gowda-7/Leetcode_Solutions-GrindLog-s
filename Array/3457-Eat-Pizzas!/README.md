@@ -59,6 +59,28 @@ The total weight gained after eating all the pizzas is `2 + 1 = 3.`
 
 	- `n` is a multiple of 4.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution takes advantage of the fact that on odd-numbered days, we gain the weight of the heaviest pizza, and on even-numbered days, we gain the weight of the second-heaviest pizza. By sorting the pizzas in descending order, we can maximize the weight gained on each day.
+
+**Approach**
+1. Sort the pizzas in descending order.
+2. Calculate the number of odd-numbered days and even-numbered days we can have, given that we eat exactly 4 pizzas per day.
+3. Initialize a variable `total` to store the maximum total weight gained.
+4. Iterate over the odd-numbered days, adding the weight of the heaviest pizza to `total` and decrementing the index `idx` by 1.
+5. After iterating over the odd-numbered days, decrement `idx` by 1 to move to the second-heaviest pizza.
+6. Iterate over the even-numbered days, adding the weight of the second-heaviest pizza to `total` and decrementing the index `idx` by 2.
+
+**Time Complexity**
+O(n log n) due to the sorting of the pizzas in descending order, where n is the number of pizzas.
+
+**Space Complexity**
+O(1) since we only use a constant amount of space to store the variables `total`, `idx`, and the indices used in the loops.
+
+**Key Insight**
+The key insight is that by sorting the pizzas in descending order, we can maximize the weight gained on each day by always choosing the heaviest or second-heaviest pizza. This greedy approach ensures that we make the optimal choice at each step, leading to the maximum total weight gained.
+
 ## 📊 Metrics
 
 | Metric | Value |

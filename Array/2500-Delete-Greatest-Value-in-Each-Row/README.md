@@ -63,6 +63,26 @@ The final answer = 10.
 
 	- `1 <= grid[i][j] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting each row in the grid, and then summing up the maximum value in each column. This approach takes advantage of the fact that the maximum value in each column will be the maximum value in the corresponding row.
+
+**Approach**
+1. Sort each row in the grid using a list comprehension.
+2. Use the `zip(*grid)` function to transpose the grid, effectively swapping rows and columns.
+3. Use a generator expression to find the maximum value in each column by summing up the maximum values.
+4. Return the sum of the maximum values as the result.
+
+**Time Complexity**
+The time complexity of this solution is O(m*n log n), where m is the number of rows and n is the number of columns. This is because we are sorting each row, which takes O(n log n) time, and we are doing this for m rows.
+
+**Space Complexity**
+The space complexity of this solution is O(m*n), as we are creating a new sorted grid.
+
+**Key Insight**
+The key insight here is that by sorting each row, we can efficiently find the maximum value in each column by summing up the maximum values. This approach avoids the need to use a priority queue or other complex data structures, making it a simple and efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

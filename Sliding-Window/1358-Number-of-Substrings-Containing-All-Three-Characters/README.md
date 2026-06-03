@@ -54,6 +54,27 @@ Example 3:**
 
 	- `s` only consists of *a*, *b* or *c *characters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with a hash table to efficiently count the number of substrings containing all three characters. By maintaining a window of characters that meet the condition, we can calculate the number of substrings that can be formed using the remaining characters outside the window.
+
+**Approach**
+1. Initialize variables to keep track of the window boundaries (`l` and `r`) and a hash table (`h`) to store the frequency of characters in the window.
+2. Iterate over the string using the right pointer (`r`), incrementing the frequency of the current character in the hash table.
+3. When the hash table contains three characters, calculate the number of substrings that can be formed using the remaining characters outside the window and add it to the result.
+4. Move the left pointer (`l`) to the right, decrementing the frequency of the character at the left boundary and removing it from the hash table if its frequency becomes zero.
+5. Repeat steps 2-4 until the right pointer reaches the end of the string.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we iterate over the string once using the right pointer and move the left pointer at most n times.
+
+**Space Complexity**
+O(1), excluding the space needed for the output. The hash table stores at most three characters, which is a constant amount of space.
+
+**Key Insight**
+The key insight is that when the hash table contains three characters, we can calculate the number of substrings that can be formed using the remaining characters outside the window by multiplying the number of remaining characters by the number of substrings that can be formed using each character. This is because each character can be used to form a substring with the remaining characters, and we can choose any of the remaining characters to be the starting point of the substring.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -49,6 +49,29 @@ Example 3:**
 
 	- `1 <= k <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a deque (double-ended queue) to efficiently track the subarray with the smallest sum that meets the condition. The deque stores the indices and corresponding cumulative sums of subarrays. By maintaining a sliding window and using binary search-like logic, we can efficiently find the shortest subarray with a sum of at least k.
+
+**Approach**
+1. Initialize variables to keep track of the current cumulative sum (`curr`), the result (`res`), and a deque (`dq`) to store subarray indices and cumulative sums.
+2. Iterate through the array, updating the cumulative sum and deque as follows:
+   - If the current cumulative sum is greater than or equal to k, update the result with the minimum length of the current subarray.
+   - Remove elements from the front of the deque if the difference between the current cumulative sum and the cumulative sum of the subarray at the front of the deque is greater than or equal to k.
+   - Remove elements from the back of the deque if the current cumulative sum is less than the cumulative sum of the subarray at the back of the deque.
+   - Add the current index and cumulative sum to the back of the deque.
+3. If the result is still infinity after iterating through the entire array, return -1; otherwise, return the result.
+
+**Time Complexity**
+O(n), where n is the length of the input array. This is because we are iterating through the array once and performing constant-time operations on the deque.
+
+**Space Complexity**
+O(n), where n is the length of the input array. This is because in the worst case, we may need to store all elements of the array in the deque.
+
+**Key Insight**
+The key insight is to use a deque to efficiently track the subarray with the smallest sum that meets the condition. By maintaining a sliding window and using binary search-like logic, we can efficiently find the shortest subarray with a sum of at least k.
+
 ## 📊 Metrics
 
 | Metric | Value |

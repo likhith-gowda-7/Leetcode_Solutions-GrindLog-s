@@ -43,6 +43,28 @@ Example 2:**
 
 	- `0 <= k <= 2 * 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by treating the linked list as a circular list and rotating it to the right by `k` places. This is achieved by connecting the tail of the list back to the head, effectively making it a circular list. Then, we find the new head of the rotated list by traversing `k` nodes from the head in the circular list.
+
+**Approach**
+1. Check if the list is empty or `k` is 0, in which case we return the original list.
+2. Find the length of the list by traversing it.
+3. Connect the tail of the list back to the head, making it a circular list.
+4. Calculate the effective rotation `k` by taking the remainder of `k` divided by the length of the list.
+5. Traverse the circular list to find the new head by counting `k` nodes from the head.
+6. When we reach the new head, set its `next` pointer to `None` to break the circular list and return the new head.
+
+**Time Complexity**
+O(n), where n is the length of the list. We traverse the list twice: once to find its length and once to find the new head.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the current node and the length of the list.
+
+**Key Insight**
+The key insight is to treat the linked list as a circular list and rotate it by connecting the tail back to the head. This allows us to find the new head by traversing `k` nodes from the head in the circular list.
+
 ## 📊 Metrics
 
 | Metric | Value |

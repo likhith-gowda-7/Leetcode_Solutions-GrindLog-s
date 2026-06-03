@@ -58,6 +58,30 @@ Example 3:**
 
 	- `1 <= prices[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to keep track of the indices of the prices that have not been discounted yet. It iterates through the prices array, popping elements from the stack if the current price is smaller than the price at the top of the stack, and updating the result array with the discounted price.
+
+**Approach**
+1. Initialize an empty stack and a result array of the same length as the input prices array.
+2. Iterate through the prices array, keeping track of the current index and price.
+3. While the stack is not empty and the price at the top of the stack is greater than or equal to the current price:
+   - Pop the top element from the stack, which represents the index and price of an item that has not been discounted yet.
+   - Update the result array at the popped index with the discounted price.
+4. Push the current index and price onto the stack.
+5. After iterating through the entire prices array, pop any remaining elements from the stack and update the result array with their original prices.
+6. Return the result array.
+
+**Time Complexity**
+O(n), where n is the length of the prices array. This is because each element in the prices array is pushed and popped from the stack at most once.
+
+**Space Complexity**
+O(n), where n is the length of the prices array. This is because in the worst case, the stack will store all elements from the prices array.
+
+**Key Insight**
+The key insight is to use a stack to keep track of the indices of the prices that have not been discounted yet. By popping elements from the stack when a smaller price is encountered, we can efficiently calculate the discounted price for each item. This approach takes advantage of the fact that the prices array is processed in order, allowing us to use a stack to store the indices of the prices that have not been discounted yet.
+
 ## 📊 Metrics
 
 | Metric | Value |

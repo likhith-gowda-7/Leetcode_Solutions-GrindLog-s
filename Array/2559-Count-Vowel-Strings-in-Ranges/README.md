@@ -58,6 +58,27 @@ Example 2:**
 
 	- `0 <= l_i <= r_i < words.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a prefix sum approach to efficiently calculate the number of strings in each query range that start and end with a vowel. By precomputing the cumulative count of such strings, we can quickly determine the answer for each query.
+
+**Approach**
+1. Initialize an empty set `s` containing the vowel letters `'a'`, `'e'`, `'i'`, `'o'`, and `'u'`.
+2. Create an array `rang` of the same length as `words`, initialized with zeros. This array will store the cumulative count of strings that start and end with a vowel.
+3. Iterate through `words` and for each string `w`, check if it starts and ends with a vowel. If so, increment the cumulative count `prev` and store it in `rang` at the current index.
+4. Initialize an array `res` of the same length as `queries`, filled with zeros. This array will store the answers to each query.
+5. Iterate through `queries` and for each query `[l, r]`, check if `l` is 0. If so, the answer is the cumulative count at index `r`. Otherwise, the answer is the difference between the cumulative counts at indices `r` and `l-1`.
+
+**Time Complexity**
+O(n + m), where n is the length of `words` and m is the number of queries. This is because we iterate through `words` once to precompute the cumulative count, and then iterate through `queries` once to calculate the answers.
+
+**Space Complexity**
+O(n + m), where n is the length of `words` and m is the number of queries. This is because we create two arrays of the same length as `words` and `queries`, respectively.
+
+**Key Insight**
+The key insight is to use a prefix sum approach to precompute the cumulative count of strings that start and end with a vowel. This allows us to efficiently calculate the answer for each query by simply looking up the cumulative counts at the query range boundaries.
+
 ## 📊 Metrics
 
 | Metric | Value |

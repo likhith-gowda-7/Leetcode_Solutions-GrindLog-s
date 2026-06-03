@@ -47,6 +47,29 @@ Example 3:**
 
 	- `arr` is **guaranteed** to be a mountain array.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The given problem involves finding the peak element in a mountain array. A mountain array is a special type of array where the values increase to a peak element and then decrease. The key insight is that the peak element must be the maximum element in the array, and we can use binary search to find it efficiently.
+
+**Approach**
+1. Initialize two pointers, `l` and `r`, to the start and end of the array, respectively.
+2. While `l` is less than `r`, calculate the midpoint `mid` of the current range `[l, r]`.
+3. Compare the value at `mid` with the value at `mid + 1`.
+   - If `arr[mid]` is greater than `arr[mid + 1]`, it means the peak element is in the left half of the array. Update `r` to `mid`.
+   - Otherwise, the peak element is in the right half of the array. Update `l` to `mid + 1`.
+4. Repeat step 3 until `l` is no longer less than `r`.
+5. The index of the peak element is stored in `r`.
+
+**Time Complexity**
+O(log(n)), where n is the length of the array. This is because we divide the search space roughly in half at each step of the binary search.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the pointers `l` and `r`, and the midpoint `mid`.
+
+**Key Insight**
+The key insight is that the peak element must be the maximum element in the array, and we can use binary search to find it efficiently by comparing the values at the midpoint and the next element. This approach takes advantage of the mountain array property to reduce the search space at each step.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -98,6 +98,27 @@ Bob registered in contest 207 and the percentage is ((1/3) * 100) = 33.33%
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the percentage of users registered in each contest by dividing the number of users in each contest by the total number of users and multiplying by 100. The `ROUND` function is used to round the result to two decimal places.
+
+**Approach**
+1. First, we select all columns from the `Register` table (`r`) to access the `contest_id` and `user_id` columns.
+2. We use the `COUNT` aggregation function to count the number of users in each contest. This is done by grouping the results by `contest_id`.
+3. To calculate the percentage, we divide the count of users in each contest by the total number of users in the `Users` table. This is achieved by using a subquery to count the total number of users.
+4. We multiply the result by 100 to convert the fraction to a percentage and round it to two decimal places using the `ROUND` function.
+5. Finally, we sort the results in descending order by percentage and ascending order by `contest_id`.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the number of contests.
+
+**Space Complexity**
+O(n) for storing the intermediate results, where n is the number of contests.
+
+**Key Insight**
+The key insight is to use a subquery to calculate the total number of users, which allows us to avoid joining the `Users` table with the `Register` table. This makes the query more efficient and easier to read.
+
 ## 📊 Metrics
 
 | Metric | Value |

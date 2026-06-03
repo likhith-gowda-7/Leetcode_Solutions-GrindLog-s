@@ -62,6 +62,30 @@ Example 3:**
 
 	- `0 <= start < arr.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a breadth-first search (BFS) approach to explore all possible indices that can be reached from the starting index. The key insight is that we can use a queue to keep track of the indices to visit next, and by marking the visited indices with a special character (`#`), we can avoid revisiting them.
+
+**Approach**
+1. Initialize a queue with the starting index.
+2. While the queue is not empty, pop the next index from the queue.
+3. If the current index has already been visited (marked with `#`), skip it.
+4. If the current index has a value of 0, return True (we have reached a target index).
+5. Mark the current index with `#` to avoid revisiting it.
+6. For each possible jump (forward and backward) from the current index, calculate the next index.
+7. If the next index is within the bounds of the array and has not been visited, add it to the queue.
+8. If the queue becomes empty and no target index has been reached, return False.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we visit each index at most once, and the time complexity of the BFS algorithm is linear.
+
+**Space Complexity**
+O(n), where n is the length of the array. This is because in the worst case, we need to store all indices in the queue.
+
+**Key Insight**
+The key to this solution is the use of a queue to keep track of the indices to visit next, and by marking the visited indices with a special character (`#`), we can avoid revisiting them. This allows us to efficiently explore all possible indices and find a path to a target index with value 0.
+
 ## 📊 Metrics
 
 | Metric | Value |

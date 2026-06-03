@@ -47,6 +47,27 @@ Example 2:**
 
 **Follow up:** If the BST is modified often (i.e., we can do insert and delete operations) and you need to find the kth smallest frequently, how would you optimize?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution leverages the property of Binary Search Trees (BSTs) where all elements in the left subtree are smaller than the root, and all elements in the right subtree are greater than the root. This allows us to perform an in-order traversal of the BST, which visits nodes in ascending order, and stop at the kth smallest node.
+
+**Approach**
+1. Define a helper function `inorder` that performs an in-order traversal of the BST.
+2. Initialize a counter `c` to keep track of the current node's index and a variable `kth` to store the kth smallest node's value.
+3. Recursively traverse the left subtree, then increment the counter `c` and check if it's equal to `k`. If it is, store the current node's value in `kth` and return.
+4. If the counter is not equal to `k`, recursively traverse the right subtree.
+5. After the traversal, return the kth smallest node's value stored in `kth`.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the BST. This is because we visit each node once during the in-order traversal.
+
+**Space Complexity**
+O(H), where H is the height of the BST. This is because the maximum depth of the recursive call stack is equal to the height of the BST.
+
+**Key Insight**
+The key insight is that the in-order traversal of a BST visits nodes in ascending order, allowing us to find the kth smallest node by simply stopping at the kth node during the traversal. This approach takes advantage of the BST's property and avoids the need for explicit sorting or searching.
+
 ## 📊 Metrics
 
 | Metric | Value |

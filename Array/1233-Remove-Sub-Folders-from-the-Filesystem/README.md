@@ -62,6 +62,28 @@ Example 3:**
 
 	- Each folder name is **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution takes advantage of the fact that the input list of folders is sorted. By iterating through the sorted list, we can efficiently identify and remove sub-folders by checking if the current folder starts with the last added folder in the result list.
+
+**Approach**
+1. Sort the input list of folders in ascending order.
+2. Initialize the result list with the first folder in the sorted list.
+3. Iterate through the remaining folders in the sorted list.
+4. For each folder, check if it starts with the last added folder in the result list (including the trailing "/").
+5. If it does not start with the last added folder, add it to the result list.
+6. Return the result list.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the number of folders. The subsequent iteration through the sorted list takes O(n) time.
+
+**Space Complexity**
+O(n) for storing the result list, where n is the number of folders.
+
+**Key Insight**
+The key insight is that by sorting the input list of folders, we can efficiently identify and remove sub-folders by checking if the current folder starts with the last added folder in the result list. This approach takes advantage of the fact that sub-folders are located within their parent folders in a sorted list.
+
 ## 📊 Metrics
 
 | Metric | Value |

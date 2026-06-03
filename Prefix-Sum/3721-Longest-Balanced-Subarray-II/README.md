@@ -63,6 +63,29 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Segment Tree to efficiently update and query the number of distinct even and odd numbers in a subarray. By maintaining a balance between even and odd numbers, it can find the longest balanced subarray.
+
+**Approach**
+1. Initialize a Segment Tree with `n` nodes, where `n` is the length of the input array `nums`.
+2. Create a hash table `pos` to store the indices of each number in `nums`.
+3. Iterate through `nums` and for each number `v`, add a range of indices to the Segment Tree using the `add_range` method. The range corresponds to the indices of `v` in `pos`, and the value to add is `1` if `v` is odd and `-1` if `v` is even.
+4. Initialize a pointer `ptr` to keep track of the current index for each number in `pos`.
+5. Iterate through `nums` again and for each number `x`, find the rightmost index `r` such that the number of distinct even and odd numbers in the subarray `[l, r]` is balanced using the `find` method of the Segment Tree.
+6. Update the answer `ans` with the maximum length of the balanced subarray found so far.
+7. Update the pointer `ptr` for each number `x` and add a range of indices to the Segment Tree using the `add` method. The range corresponds to the indices of `x` in `pos`, and the value to add is `-1` if `x` is odd and `1` if `x` is even.
+
+**Time Complexity**
+The time complexity of the solution is O(n log n), where n is the length of the input array `nums`. This is because the `add_range` and `find` methods of the Segment Tree take O(log n) time, and we perform these operations n times.
+
+**Space Complexity**
+The space complexity of the solution is O(n), where n is the length of the input array `nums`. This is because we need to store the indices of each number in `nums` in the hash table `pos`, and the Segment Tree requires O(n) space.
+
+**Key Insight**
+The key insight behind the solution is to use a Segment Tree to efficiently update and query the number of distinct even and odd numbers in a subarray. By maintaining a balance between even and odd numbers, we can find the longest balanced subarray. The use of a hash table to store the indices of each number in `nums` allows us to efficiently update the pointer `ptr` and add ranges to the Segment Tree.
+
 ## 📊 Metrics
 
 | Metric | Value |

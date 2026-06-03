@@ -63,6 +63,29 @@ Example 3:**
 
 	- `-10^8 <= arr[i] <= 10^8`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a combination of a queue (BFS) and a hash table to efficiently traverse the array and find the minimum number of jumps to reach the last index. By utilizing the fact that we can jump to indices with the same value, we can explore multiple paths simultaneously.
+
+**Approach**
+1. Create a hash table `h1` to store the indices of elements with the same value.
+2. Initialize a queue `q` with the starting index and a jump count of 0.
+3. Initialize a seen array to keep track of visited indices.
+4. While the queue is not empty, pop an index and its corresponding jump count.
+5. If the next index (or previous index if we're at the start) is within bounds and not seen before, add it to the queue and mark it as seen.
+6. If the current index has elements with the same value in the hash table, pop the indices from the hash table and add them to the queue if they're not seen before.
+7. If we reach the last index, return the current jump count plus one.
+
+**Time Complexity**
+O(n) - We visit each index at most twice (once in the queue and once in the hash table), resulting in a linear time complexity.
+
+**Space Complexity**
+O(n) - We use a seen array of size n and a hash table that can store up to n elements, resulting in a linear space complexity.
+
+**Key Insight**
+The key insight is to utilize the fact that we can jump to indices with the same value, allowing us to explore multiple paths simultaneously. By using a queue and a hash table, we can efficiently traverse the array and find the minimum number of jumps to reach the last index.
+
 ## 📊 Metrics
 
 | Metric | Value |

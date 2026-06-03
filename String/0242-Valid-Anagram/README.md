@@ -39,6 +39,27 @@ Example 2:**
 
 **Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by comparing the frequency of each character in both strings. If the two strings are anagrams, they must contain the same characters with the same frequency. This approach takes advantage of the fact that anagrams can be transformed into each other by rearranging their characters.
+
+**Approach**
+1. Check if the lengths of the two strings are equal. If not, return False immediately, as anagrams must have the same number of characters.
+2. Create two empty dictionaries, `h1` and `h2`, to store the frequency of each character in the first and second strings, respectively.
+3. Iterate over the characters in the first string and update the frequency of each character in `h1`.
+4. Iterate over the characters in the second string and update the frequency of each character in `h2`.
+5. Compare the two dictionaries, `h1` and `h2`. If they are equal, return True; otherwise, return False.
+
+**Time Complexity**
+O(n + m), where n and m are the lengths of the two strings. This is because we iterate over each character in both strings once.
+
+**Space Complexity**
+O(n + m), where n and m are the lengths of the two strings. This is because in the worst case, we need to store all characters in the dictionaries.
+
+**Key Insight**
+The key insight is that anagrams can be compared by counting the frequency of each character, rather than comparing the characters themselves. This approach is efficient and scalable, even for large strings.
+
 ## 📊 Metrics
 
 | Metric | Value |

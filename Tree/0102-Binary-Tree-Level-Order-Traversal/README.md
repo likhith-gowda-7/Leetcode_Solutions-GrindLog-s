@@ -49,6 +49,30 @@ Example 3:**
 
 	- `-1000 <= Node.val <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution leverages a breadth-first search (BFS) approach to traverse the binary tree level by level, collecting the node values at each level. By using a queue to keep track of nodes to visit, we can efficiently process the tree in a level-order manner.
+
+**Approach**
+1. Check if the root is `None`, in which case we return an empty list since there are no nodes to process.
+2. Initialize an empty list `nodes` to store the node values and their corresponding levels.
+3. Create a queue `q` and enqueue the root node with its level (1).
+4. While the queue is not empty, dequeue a node and its level, and append the node value and level to `nodes`.
+5. If the node has a left child, enqueue it with its level incremented by 1. Similarly, if the node has a right child, enqueue it with its level incremented by 1.
+6. After processing all nodes, determine the maximum level (height) from the last node in `nodes`.
+7. Create a list `res` with `height` empty lists, each representing a level in the tree.
+8. Iterate through `nodes` and append each node value to the corresponding level in `res`.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the tree. This is because we visit each node once and perform a constant amount of work for each node.
+
+**Space Complexity**
+O(n), where n is the number of nodes in the tree. This is because in the worst case, we need to store all nodes in the `nodes` list and their corresponding levels.
+
+**Key Insight**
+The key insight here is to use a queue to keep track of nodes to visit, allowing us to efficiently process the tree in a level-order manner. By storing the node values and their corresponding levels, we can easily reconstruct the level order traversal of the tree.
+
 ## 📊 Metrics
 
 | Metric | Value |

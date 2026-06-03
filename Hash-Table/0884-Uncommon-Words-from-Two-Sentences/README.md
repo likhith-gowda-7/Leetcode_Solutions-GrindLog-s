@@ -45,6 +45,29 @@ Example 2:**
 
 	- All the words in `s1` and `s2` are separated by a single space.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first splitting each sentence into individual words, then counting the occurrences of each word in both sentences using a hash table. Finally, it iterates through the hash table to find words that appear only once in one of the sentences.
+
+**Approach**
+1. Initialize an empty hash table `h1` to store word counts.
+2. Iterate through the first sentence `s1`:
+   - If the current character is not a space, add it to the current word `curr`.
+   - If the current character is a space, increment the count of `curr` in `h1` and reset `curr`.
+3. After iterating through `s1`, increment the count of the last word `curr` in `h1`.
+4. Repeat steps 2-3 for the second sentence `s2`.
+5. Iterate through `h1` and append words with a count of 1 to the result list `res`.
+
+**Time Complexity**
+O(n + m), where n and m are the lengths of `s1` and `s2`, respectively. This is because we iterate through each character in both sentences once.
+
+**Space Complexity**
+O(n + m), where n and m are the lengths of `s1` and `s2`, respectively. This is because we store each word in the hash table, and in the worst case, we store all words from both sentences.
+
+**Key Insight**
+The key insight is to use a hash table to efficiently count word occurrences in both sentences. This allows us to find uncommon words in O(n + m) time, making the solution efficient for large input sentences.
+
 ## 📊 Metrics
 
 | Metric | Value |

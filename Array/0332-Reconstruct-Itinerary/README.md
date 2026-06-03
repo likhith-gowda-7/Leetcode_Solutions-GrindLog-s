@@ -56,6 +56,26 @@ Example 2:**
 
 	- `from_i != to_i`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by building a graph from the given tickets and then performing a depth-first search (DFS) to find the valid itinerary. The use of a heap to store the adjacent nodes ensures that the lexical order is maintained. By exploring the graph in a depth-first manner, we can reconstruct the itinerary in the correct order.
+
+## Approach
+1. Create an adjacency list representation of the graph using a dictionary and a heap to store the adjacent nodes.
+2. Define a recursive DFS function that explores the graph, popping nodes from the heap and recursively calling itself until all nodes have been visited.
+3. Once all nodes have been visited, append the current node to the result list and return.
+4. Start the DFS from the node "JFK" and reverse the result list to obtain the correct order.
+
+## Time Complexity
+The time complexity is O(n log n) due to the heap operations, where n is the number of tickets. The while loop inside the DFS function runs in O(n) time, but the heap operations (heappush and heappop) take O(log n) time.
+
+## Space Complexity
+The space complexity is O(n) as we need to store the adjacency list and the result list, both of which can contain up to n nodes.
+
+## Key Insight
+The key insight is to use a heap to store the adjacent nodes, which ensures that the lexical order is maintained when there are multiple valid itineraries. This allows us to efficiently find the correct order of the itinerary by exploring the graph in a depth-first manner.
+
 ## 📊 Metrics
 
 | Metric | Value |

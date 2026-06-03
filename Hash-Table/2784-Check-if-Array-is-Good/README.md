@@ -67,6 +67,31 @@ Example 4:**
 
 	- `1 <= num[i] <= 200`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting the input array and checking if it's a permutation of the base array. It does this by comparing the frequency of each number in the array with the expected frequency in the base array. The key insight is that the base array has exactly one duplicate of the largest number, so the solution checks for this condition.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Find the maximum element `n` in the sorted array.
+3. Initialize a counter `dup` to keep track of the number of duplicates in the array.
+4. Initialize a counter `curr` to keep track of the current number in the array.
+5. Check if the first element of the array is 1. If not, return False.
+6. Iterate through the array starting from the second element. For each element:
+   * If the current element is the same as the previous one, increment `dup` and check if it's not equal to `n`. If so, return False.
+   * If the current element is different from the previous one, increment `curr`.
+7. After iterating through the array, check if `curr` is equal to `n` and `dup` is equal to 1. If both conditions are met, return True; otherwise, return False.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the length of the input array.
+
+**Space Complexity**
+O(1) since the space used does not grow with the size of the input array, excluding the space needed for the output.
+
+**Key Insight**
+The solution relies on the fact that the base array has exactly one duplicate of the largest number, which is a crucial property that allows us to determine if the input array is a good array.
+
 ## 📊 Metrics
 
 | Metric | Value |

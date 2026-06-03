@@ -57,6 +57,28 @@ Example 3:**
 
 **Follow up:** Can you solve it in `O(n)` time complexity?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting the input array and then comparing it with the original array. The goal is to find the shortest subarray that needs to be sorted to make the entire array sorted. This can be achieved by finding the first and last indices where the original array differs from the sorted array.
+
+**Approach**
+1. Sort the input array `nums` to get `n1`.
+2. Check if the original array is already sorted or has only one element. If so, return 0 as there's no unsorted subarray.
+3. Initialize two pointers, `l` and `r`, to the start and end of the array, respectively.
+4. Move the pointers towards each other. If the elements at the current positions of the pointers match the corresponding elements in the sorted array, move the pointer towards the center.
+5. If the elements at the current positions of the pointers do not match the corresponding elements in the sorted array, it means we've found the first and last indices of the unsorted subarray. Break the loop.
+6. Return the length of the unsorted subarray, which is `r - l + 1`.
+
+**Time Complexity**
+O(n log n) due to the sorting operation, where n is the length of the input array.
+
+**Space Complexity**
+O(n) for the sorting operation, where n is the length of the input array.
+
+**Key Insight**
+The key insight is that we can find the shortest unsorted subarray by comparing the original array with its sorted version. By using two pointers to traverse the array, we can efficiently find the first and last indices of the unsorted subarray, which allows us to calculate its length.
+
 ## 📊 Metrics
 
 | Metric | Value |

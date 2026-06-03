@@ -57,6 +57,31 @@ Example 3:**
 
 	- `s1` and `s2` consist of only lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to determine if we can make two strings equal by performing at most one string swap on exactly one of the strings. We can approach this by counting the frequency of each character in both strings and then checking if there's a mismatch that can be resolved with a single swap.
+
+**Approach**
+1. Count the frequency of each character in the first string using a hash table (in this case, `Counter` from the `collections` module).
+2. If the two strings are already equal, return `True`.
+3. Iterate through the second string. For each character:
+   1. Check if it's present in the hash table and if its count is greater than 0.
+   2. If the characters at the current position in both strings are different, increment a counter.
+   3. Decrement the count of the character in the hash table.
+   4. If the character is not present in the hash table or its count is 0, return `False`.
+4. After iterating through the second string, check if the counter is equal to 2. If it's not, return `False`.
+5. If all checks pass, return `True`.
+
+**Time Complexity**
+O(n), where n is the length of the strings. We iterate through each character in the strings once.
+
+**Space Complexity**
+O(1), excluding the space needed for the input strings. We use a hash table to store the frequency of each character, which has a constant maximum size.
+
+**Key Insight**
+The key insight is that we only need to count the frequency of each character once and then check if there's a mismatch that can be resolved with a single swap. This approach allows us to solve the problem in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

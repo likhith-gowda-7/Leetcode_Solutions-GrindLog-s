@@ -58,6 +58,26 @@ It can be proved that the cars cannot be repaired in less than 16 minutes.​​
 
 	- `1 <= cars <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses binary search to find the minimum time required to repair all the cars. The key insight is that the time required to repair all the cars is a function of the ranks of the mechanics and the number of cars. We can use binary search to find the minimum time by iterating through the possible times and checking if it's sufficient to repair all the cars.
+
+**Approach**
+1. Initialize the minimum and maximum possible times to repair all the cars. The minimum time is the time taken by the mechanic with the lowest rank to repair all the cars, while the maximum time is the time taken by the mechanic with the highest rank to repair all the cars.
+2. Perform a binary search on the possible times. For each mid value, calculate the total number of cars that can be repaired by each mechanic.
+3. If the total number of cars that can be repaired is greater than or equal to the total number of cars, update the maximum time to mid - 1. Otherwise, update the minimum time to mid + 1.
+4. Repeat steps 2-3 until the minimum and maximum times converge.
+
+**Time Complexity**
+O(n log m), where n is the number of mechanics and m is the maximum possible time to repair all the cars. The binary search takes O(log m) time, and the calculation of the total number of cars that can be repaired by each mechanic takes O(n) time.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the minimum and maximum times, and the mid value.
+
+**Key Insight**
+The key insight is that the time required to repair all the cars is a function of the ranks of the mechanics and the number of cars. By using binary search, we can efficiently find the minimum time required to repair all the cars.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -75,6 +75,28 @@ Only one ring is given. Thus, no rods have all three colors.
 
 	- `rings[i]` where `i` is **odd** is a digit from `'0'` to `'9'` (**0-indexed**).
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first creating a hash table where the keys are the rod numbers and the values are sets of colors placed on those rods. Then, it iterates through the hash table values and counts the number of rods that have all three colors.
+
+**Approach**
+1. Create an empty hash table `h1` with default values as sets.
+2. Iterate through the input string `rings` in steps of 2, where each pair of characters represents a color-position pair.
+3. For each pair, extract the color (`col`) and rod number (`rod`), and add the color to the set of colors for the corresponding rod in the hash table.
+4. Initialize a count variable to 0.
+5. Iterate through the values of the hash table, and for each set of colors, check if it has exactly 3 elements (i.e., all three colors). If it does, increment the count.
+6. Return the count.
+
+**Time Complexity**
+O(n), where n is the length of the input string `rings`. This is because we iterate through the string once to populate the hash table, and then iterate through the hash table values once to count the rods with all three colors.
+
+**Space Complexity**
+O(n), where n is the length of the input string `rings`. This is because in the worst case, we might need to store all colors in the hash table.
+
+**Key Insight**
+The key insight is that we can use a hash table to efficiently store and query the colors on each rod. By using sets as values, we can easily check if a rod has all three colors by checking the size of the set. This approach allows us to solve the problem in linear time and space.
+
 ## 📊 Metrics
 
 | Metric | Value |

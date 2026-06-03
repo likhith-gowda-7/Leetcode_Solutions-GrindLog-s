@@ -62,6 +62,29 @@ Example 3:**
 
 	- `grid[i][j] is 0 or 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a breadth-first search (BFS) approach to find the shortest clear path in the binary matrix. It starts from the destination cell (bottom-right) and tries to reach the source cell (top-left) by exploring all possible 8-directional paths. The key insight is to invert the thinking process and start from the destination, which simplifies the problem and makes it easier to find the shortest path.
+
+**Approach**
+1. Check if the source or destination cell is blocked (1), in which case return -1.
+2. Define a helper function `check` to verify if a cell is within the grid boundaries and not blocked.
+3. Initialize a queue `q` with the destination cell and its distance (1).
+4. Mark the destination cell as visited by setting its value to 1.
+5. Define all 8 possible directions for the BFS exploration.
+6. While the queue is not empty, dequeue a cell and check if it's the target cell. If it is, return its distance.
+7. For each neighboring cell in the 8 directions, check if it's valid using the `check` function. If it is, mark it as visited and enqueue it with its distance incremented by 1.
+
+**Time Complexity**
+O(n^2) where n is the size of the grid. This is because in the worst case, we need to visit all cells in the grid to find the shortest path.
+
+**Space Complexity**
+O(n^2) where n is the size of the grid. This is because in the worst case, we need to store all cells in the queue.
+
+**Key Insight**
+The key insight is to invert the thinking process and start from the destination cell, which simplifies the problem and makes it easier to find the shortest path. This approach avoids the need to keep track of the source cell and its distance, making the algorithm more efficient and easier to implement.
+
 ## 📊 Metrics
 
 | Metric | Value |

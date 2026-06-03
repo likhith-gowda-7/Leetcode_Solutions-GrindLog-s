@@ -57,6 +57,27 @@ We have now a = 9 and b = 1 and max difference = 8
 
 	- `1 <= num <= 10^8`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by finding the maximum possible difference between two integers obtained by replacing digits in the input number. The key insight is to maximize the difference by replacing the largest digit with 9 and the smallest digit with 1, or vice versa.
+
+**Approach**
+1. Convert the input number to a string to easily access and replace individual digits.
+2. Define a helper function `check` that takes the number string, a digit to replace (initially `None`), a replacement digit (initially "9"), and a flag to indicate whether to replace the digit.
+3. Iterate through the number string, replacing the digit if the flag is `True` and the digit is less than 9, or if the digit is greater than 1 and the flag is `False`.
+4. Return the integer value of the modified number string.
+5. Call the `check` function twice: once to replace the largest digit with 9 and once to replace the smallest digit with 1 (or vice versa), and return the difference between the two results.
+
+**Time Complexity**
+O(n), where n is the number of digits in the input number. This is because we iterate through the number string once to replace the digits.
+
+**Space Complexity**
+O(n), where n is the number of digits in the input number. This is because we create a new string to store the modified number.
+
+**Key Insight**
+The key to this solution is to maximize the difference by replacing the largest digit with 9 and the smallest digit with 1 (or vice versa). This is achieved by carefully selecting the replacement digits and using a flag to control the replacement process.
+
 ## 📊 Metrics
 
 | Metric | Value |

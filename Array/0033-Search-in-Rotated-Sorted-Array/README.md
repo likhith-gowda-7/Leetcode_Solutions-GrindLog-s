@@ -55,6 +55,27 @@ Example 3:**
 
 	- `-10^4 <= target <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by utilizing a modified binary search algorithm to find the target element in the rotated sorted array. The key idea is to determine which half of the array is sorted and then decide which half to continue searching in. This approach takes advantage of the fact that the array was initially sorted in ascending order.
+
+## Approach
+1. Initialize two pointers, `left` and `right`, to the start and end of the array, respectively.
+2. Calculate the middle index `mid` and compare the middle element to the target.
+3. If the left half is sorted, check if the target is within the range of the left half. If it is, update `right` to `mid - 1`. Otherwise, update `left` to `mid + 1`.
+4. If the left half is not sorted, the right half must be sorted. Check if the target is within the range of the right half. If it is, update `left` to `mid + 1`. Otherwise, update `right` to `mid - 1`.
+5. Repeat steps 2-4 until `left` is greater than `right`.
+
+## Time Complexity
+The time complexity is O(log n), where n is the number of elements in the array. This is because the algorithm divides the search space in half at each step, similar to a standard binary search.
+
+## Space Complexity
+The space complexity is O(1), as the algorithm only uses a constant amount of space to store the pointers and the middle index.
+
+## Key Insight
+The key insight that makes this solution work is the ability to determine which half of the array is sorted at each step, allowing the algorithm to efficiently narrow down the search space. This is achieved by comparing the middle element to the left and right elements, and using the fact that the array was initially sorted in ascending order.
+
 ## 📊 Metrics
 
 | Metric | Value |

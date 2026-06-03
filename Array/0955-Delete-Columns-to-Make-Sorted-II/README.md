@@ -67,6 +67,28 @@ Example 3:**
 
 	- `strs[i]` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to find the minimum number of columns to delete from a set of strings so that the remaining strings are in lexicographic order. The key insight is that we can delete a column if and only if the characters in that column are not in lexicographic order. We can use a greedy approach to iterate through the columns and delete the ones that are not in order.
+
+**Approach**
+1. Initialize a boolean array `state` of size `rows` to keep track of whether each row is in lexicographic order with the previous row.
+2. Iterate through each column `col` from left to right.
+3. For each column, check if the characters in that column are in lexicographic order by iterating through the rows from 1 to `rows-1`.
+4. If the characters are not in order, increment the `deleted` count and mark all subsequent rows as not in order.
+5. If the characters are in order, mark all subsequent rows as in order.
+6. After iterating through all columns, return the `deleted` count.
+
+**Time Complexity**
+O(n*m), where n is the number of rows and m is the number of columns. We iterate through each column and each row once.
+
+**Space Complexity**
+O(n), where n is the number of rows. We use a boolean array of size n to keep track of whether each row is in lexicographic order.
+
+**Key Insight**
+The key insight is that we can delete a column if and only if the characters in that column are not in lexicographic order. This allows us to use a greedy approach to iterate through the columns and delete the ones that are not in order.
+
 ## 📊 Metrics
 
 | Metric | Value |

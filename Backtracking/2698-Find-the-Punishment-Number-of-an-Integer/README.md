@@ -56,6 +56,28 @@ Hence, the punishment number of 37 is 1 + 81 + 100 + 1296 = 1478
 
 	- `1 <= n <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by precomputing a set of perfect squares that can be formed by summing contiguous substrings of their decimal representation. This set is used to efficiently check if a given square can be formed in this way, allowing for a straightforward calculation of the punishment number.
+
+**Approach**
+1. Precompute a set of perfect squares that can be formed by summing contiguous substrings of their decimal representation.
+2. Initialize a variable `res` to store the punishment number.
+3. Iterate over the range from 1 to `n` (inclusive).
+4. For each `i` in the range, check if `i` is in the precomputed set of perfect squares.
+5. If `i` is in the set, add `i * i` to the punishment number `res`.
+6. Return the calculated punishment number `res`.
+
+**Time Complexity**
+O(n) - The precomputation step has a fixed time complexity, and the iteration over the range from 1 to `n` dominates the overall time complexity.
+
+**Space Complexity**
+O(k) - where k is the number of precomputed perfect squares, which is a small constant in this case.
+
+**Key Insight**
+The key insight is that the punishment number can be efficiently calculated by precomputing a set of perfect squares that can be formed by summing contiguous substrings of their decimal representation. This allows for a straightforward iteration over the range from 1 to `n` to calculate the punishment number.
+
 ## 📊 Metrics
 
 | Metric | Value |

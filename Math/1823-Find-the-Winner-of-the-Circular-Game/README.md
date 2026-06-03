@@ -70,6 +70,30 @@ Example 2:**
 
 Could you solve this problem in linear time with constant space?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution simulates the circular game by maintaining a list of friends in the circle and removing friends based on the given rules. The key insight is to use modular arithmetic to efficiently handle the circular nature of the game.
+
+**Approach**
+1. Initialize an empty list `circle` to represent the friends in the circle.
+2. Populate the list with friends numbered from 1 to `n` in clockwise order.
+3. Initialize a variable `ele` to keep track of the current friend being considered for removal.
+4. Subtract 1 from `k` to make the counting start from 0 (for easier modular arithmetic).
+5. While there is more than one friend in the circle:
+   1. Calculate the index of the friend to be removed using modular arithmetic: `ele = (ele + k) % len(circle)`.
+   2. Remove the friend at the calculated index from the circle.
+6. Return the index of the last friend remaining in the circle.
+
+**Time Complexity**
+O(n) - The while loop iterates at most `n` times, where `n` is the number of friends in the circle.
+
+**Space Complexity**
+O(n) - The space complexity is linear due to the use of a list to represent the friends in the circle.
+
+**Key Insight**
+The key insight is to use modular arithmetic to efficiently handle the circular nature of the game. By using `(ele + k) % len(circle)`, we can calculate the index of the friend to be removed without worrying about the circular boundary. This allows us to simplify the problem and avoid explicit handling of the circular boundary.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -59,6 +59,28 @@ Thus, there are 5 subarrays having scores less than 5.
 
 	- `1 <= k <= 10^15`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with a twist. It maintains a running sum of the subarray and adjusts the left boundary of the window to ensure the score of the subarray is strictly less than `k`. The key insight is to use the product of the sum and length as the score, which allows for efficient calculation and comparison.
+
+**Approach**
+1. Initialize variables `l` (left boundary), `sub_arr` (count of subarrays), `curr` (running sum), and `length` (length of the current subarray).
+2. Iterate over the array with the right boundary `r`.
+3. For each `r`, update `curr` by adding `nums[r]` and calculate the length of the current subarray (`length = r - l + 1`).
+4. While the score of the current subarray (`curr * length`) is greater than or equal to `k`, adjust the left boundary `l` by incrementing it and subtracting `nums[l]` from `curr`. Also, decrement `length` by 1.
+5. Increment `sub_arr` by the length of the current subarray (`length`) after the while loop.
+6. Return `sub_arr` as the count of subarrays with score less than `k`.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. The while loop in step 4 is executed at most n times, and the iteration over the array is linear.
+
+**Space Complexity**
+O(1), as the solution uses a constant amount of space to store the variables `l`, `sub_arr`, `curr`, and `length`.
+
+**Key Insight**
+The solution's efficiency relies on the fact that the score of a subarray is the product of its sum and length. By maintaining a running sum and adjusting the left boundary, we can efficiently calculate the score of the subarray and count the number of subarrays with score less than `k`.
+
 ## 📊 Metrics
 
 | Metric | Value |

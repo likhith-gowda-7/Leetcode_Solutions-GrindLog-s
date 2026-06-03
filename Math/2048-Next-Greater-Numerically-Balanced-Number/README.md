@@ -65,6 +65,30 @@ It is also the smallest numerically balanced number strictly greater than 3000.
 
 	- `0 <= n <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a helper function `find` to check if a number is numerically balanced. It then iterates through numbers starting from `n+1` and returns the first numerically balanced number found. The key insight is that we can generate numerically balanced numbers by incrementing the count of each digit in the number.
+
+**Approach**
+1. Define a helper function `find` that takes a number `num` as input and returns `True` if the number is numerically balanced, `False` otherwise.
+2. Initialize a count array `count` of size 10 to store the frequency of each digit in the number.
+3. Iterate through the digits of the number from right to left, updating the count array accordingly.
+4. Check if the count of any digit `i` is greater than 0 and not equal to `i`. If so, return `False`.
+5. If the count of the digit 0 is greater than 0, return `False`.
+6. If the number passes all checks, return `True`.
+7. Iterate through numbers starting from `n+1` and use the `find` function to check if each number is numerically balanced.
+8. Return the first numerically balanced number found.
+
+**Time Complexity**
+O(n \* log(n)) where n is the number of digits in the input number. This is because we iterate through numbers starting from `n+1` and for each number, we iterate through its digits to check if it's numerically balanced.
+
+**Space Complexity**
+O(1) because we use a fixed-size array `count` to store the frequency of each digit, regardless of the size of the input number.
+
+**Key Insight**
+The key insight is that we can generate numerically balanced numbers by incrementing the count of each digit in the number. This is because a numerically balanced number must have exactly `d` occurrences of the digit `d` for each digit `d` in the number. By incrementing the count of each digit, we can systematically generate all possible numerically balanced numbers.
+
 ## 📊 Metrics
 
 | Metric | Value |

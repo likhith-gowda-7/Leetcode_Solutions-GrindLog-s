@@ -71,6 +71,29 @@ The difference between any two elements in each array is less than or equal to 1
 
 	- `1 <= k <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting the input array `nums` in ascending order. Then, it iterates over the sorted array in steps of 3, creating a new array for each group of 3 elements. It checks if the difference between the largest and smallest element in each group is less than or equal to `k`. If any group has a difference greater than `k`, it returns an empty array. Otherwise, it adds the group to the result.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Initialize an empty list `res` to store the result.
+3. Iterate over the sorted array in steps of 3, starting from the first element.
+4. For each group of 3 elements, calculate the difference between the largest and smallest element (`diff1`).
+5. If `diff1` is greater than `k`, return an empty array.
+6. Otherwise, add the group to the result (`res`).
+7. Return the result (`res`).
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the length of the input array `nums`. The subsequent iteration and group creation steps take O(n) time.
+
+**Space Complexity**
+O(n) for storing the result (`res`) and the temporary group arrays. The input array `nums` is not modified in place.
+
+**Key Insight**
+The key insight is that by sorting the input array, we can ensure that the difference between the largest and smallest element in each group is minimized. This makes it easier to check if the difference is less than or equal to `k`, and if not, return an empty array.
+
 ## 📊 Metrics
 
 | Metric | Value |

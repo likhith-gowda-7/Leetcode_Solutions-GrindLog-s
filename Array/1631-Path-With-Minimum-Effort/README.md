@@ -65,6 +65,28 @@ Example 3:**
 
 	- `1 <= heights[i][j] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses Dijkstra's algorithm with a twist, where it inverts the thinking by considering the effort required to travel between cells as the maximum absolute difference in heights. This allows it to use a priority queue to efficiently explore the most promising paths.
+
+**Approach**
+1. Initialize a matrix `efforts_mat` to store the minimum effort required to reach each cell, with all values initially set to infinity.
+2. Create a priority queue `heap` and add the starting point (bottom-right cell) with an effort of 0.
+3. While the heap is not empty, pop the cell with the minimum effort.
+4. If the popped cell is the top-left cell, return its effort as the minimum effort required to travel from the top-left cell to the bottom-right cell.
+5. For each neighboring cell, calculate the effort required to reach it by taking the maximum of the current effort and the absolute difference in heights between the current cell and the neighboring cell.
+6. If the calculated effort is less than the stored effort in `efforts_mat`, update the stored effort and add the neighboring cell to the heap.
+
+**Time Complexity**
+O(m*n*log(m*n)), where m and n are the number of rows and columns in the `heights` matrix. This is because each cell is visited at most once, and the priority queue operations (insertion and extraction) take O(log(m*n)) time.
+
+**Space Complexity**
+O(m*n), where m and n are the number of rows and columns in the `heights` matrix. This is because we need to store the minimum effort required to reach each cell in the `efforts_mat` matrix.
+
+**Key Insight**
+The key insight here is to use a priority queue to efficiently explore the most promising paths, and to invert the thinking by considering the effort required to travel between cells as the maximum absolute difference in heights. This allows us to use a simple and efficient algorithm to find the minimum effort required to travel from the top-left cell to the bottom-right cell.
+
 ## 📊 Metrics
 
 | Metric | Value |

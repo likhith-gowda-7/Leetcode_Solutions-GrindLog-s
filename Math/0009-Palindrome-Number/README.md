@@ -53,6 +53,29 @@ Example 3:**
 
 **Follow up:** Could you solve it without converting the integer to a string?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution checks if a given integer `x` is a palindrome by comparing it with its reverse. This approach works because a palindrome remains the same when its digits are reversed.
+
+**Approach**
+1. First, we check if the input `x` is negative. If it is, we immediately return `False` because negative numbers cannot be palindromes.
+2. We define a helper function `rev(num)` that calculates the reverse of a given number `num`.
+3. Inside `rev(num)`, we use a while loop to extract the last digit of `num` using the modulo operator (`num % 10`).
+4. We then remove the last digit from `num` by performing integer division (`num //= 10`).
+5. We add the last digit to `reversed_num` by multiplying it by 10 and adding the last digit.
+6. We repeat steps 3-5 until `num` becomes 0.
+7. Finally, we compare `x` with its reverse `rev(x)` using the `==` operator. If they are equal, we return `True`; otherwise, we return `False`.
+
+**Time Complexity**
+O(log x), where x is the input integer. This is because the while loop in the `rev(num)` function runs until `num` becomes 0, which happens in log(x) iterations.
+
+**Space Complexity**
+O(1), which means the space complexity is constant. This is because we only use a fixed amount of space to store the variables `reversed_num`, `last`, and `num`, regardless of the input size.
+
+**Key Insight**
+The key insight here is that we can reverse a number by repeatedly extracting its last digit and adding it to the reversed number. This approach allows us to check if a number is a palindrome without converting it to a string.
+
 ## 📊 Metrics
 
 | Metric | Value |

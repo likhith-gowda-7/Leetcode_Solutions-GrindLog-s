@@ -61,6 +61,29 @@ Example 2:**
 
 	- `dominoes[i]` is either `'L'`, `'R'`, or `'.'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a queue to simulate the domino effect, where each domino's state (L, R, or .) is updated based on the adjacent dominoes. The key insight is that a domino will stay still if it has dominoes falling on it from both sides, so we only need to consider the dominoes that are not yet balanced.
+
+**Approach**
+1. Convert the input string into a list of characters and create a queue to store the dominoes that need to be updated.
+2. Iterate through the list and add the dominoes that are not yet balanced (i.e., L, R) to the queue along with their indices.
+3. While the queue is not empty, pop the next domino from the queue and check its adjacent dominoes.
+4. If the current domino is falling to the right (R) and the next domino is still standing (.), update the next domino to R and add it to the queue.
+5. If the current domino is falling to the left (L) and the previous domino is still standing (.), update the previous domino to L and add it to the queue.
+6. Repeat steps 3-5 until the queue is empty.
+7. Join the updated list of dominoes back into a string and return the result.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we iterate through the list of dominoes once and perform a constant amount of work for each domino.
+
+**Space Complexity**
+O(n), where n is the length of the input string. This is because we store the dominoes that need to be updated in a queue, which can grow up to the size of the input string in the worst case.
+
+**Key Insight**
+The key insight is that we only need to consider the dominoes that are not yet balanced, and we can update their states based on the adjacent dominoes. This allows us to avoid considering all possible combinations of dominoes and reduces the time complexity to O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -64,6 +64,29 @@ The maximum distance is 2 with pair (2,4).
 
 	- Both `nums1` and `nums2` are **non-increasing**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-pointer technique to find the maximum distance between a pair of values in two non-increasing integer arrays. The key insight is to start from the beginning of both arrays and move the pointer of the array with the smaller value at each step, ensuring that the pair is valid.
+
+**Approach**
+1. Initialize two pointers `i` and `j` to 0, and two variables `n1` and `n2` to store the lengths of `nums1` and `nums2`, respectively.
+2. Initialize a variable `res` to store the maximum distance found so far, and set it to 0.
+3. Enter a while loop that continues as long as both `i` and `j` are within their respective array bounds.
+4. Inside the loop, check if `i` is greater than `j`. If true, increment `j` and continue to the next iteration.
+5. If `nums1[i]` is less than or equal to `nums2[j]`, increment `j` and update `res` with the maximum of its current value and `j - i`.
+6. If `nums1[i]` is greater than `nums2[j]`, increment `i`.
+7. After the loop, return `res - 1` if `res` is not 0, otherwise return 0.
+
+**Time Complexity**
+O(n1 + n2), where n1 and n2 are the lengths of `nums1` and `nums2`, respectively. This is because we are iterating through both arrays once using the two-pointer technique.
+
+**Space Complexity**
+O(1), which means the space complexity is constant. We are only using a few extra variables to store the pointers and the maximum distance, without using any additional data structures that scale with the input size.
+
+**Key Insight**
+The key insight is to start from the beginning of both arrays and move the pointer of the array with the smaller value at each step, ensuring that the pair is valid. This approach allows us to find the maximum distance between a pair of values in two non-increasing integer arrays efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

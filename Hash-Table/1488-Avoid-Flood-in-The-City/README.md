@@ -82,6 +82,29 @@ After that, it will rain over lakes [1,2]. It's easy to prove that no matter whi
 
 	- `0 <= rains[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a combination of a hash table, a set, and a min heap to efficiently track the lakes that are full of water and the lakes that are scheduled to rain. By maintaining a min heap of the next lake that will flood, the solution can choose a lake to dry on a given day to avoid a flood.
+
+**Approach**
+1. Create a hash table `lakes_to_day` to store the lakes that are scheduled to rain on each day.
+2. Initialize a set `full_lakes` to track the lakes that are currently full of water.
+3. Initialize a min heap `min_heap` to store the next lake that will flood.
+4. Iterate through each day, checking if it's a raining day or a dry day.
+   - If it's a raining day, check if the lake is already full. If it is, return an empty array because a flood is unavoidable.
+   - If it's a dry day, check if the min heap is not empty. If it's not empty, pop the next lake from the heap and remove it from the `full_lakes` set. Otherwise, choose lake 1 to dry.
+5. Return the array `res` which contains the lake to dry on each dry day.
+
+**Time Complexity**
+O(n log n) due to the use of a min heap. The heap operations (push and pop) take O(log n) time, and we perform these operations n times.
+
+**Space Complexity**
+O(n) for the hash table `lakes_to_day` and the set `full_lakes`. The min heap takes O(n) space in the worst case.
+
+**Key Insight**
+The key insight is to use a min heap to efficiently track the next lake that will flood, allowing us to choose a lake to dry on a given day to avoid a flood. This approach ensures that we can avoid floods in any lake.
+
 ## 📊 Metrics
 
 | Metric | Value |

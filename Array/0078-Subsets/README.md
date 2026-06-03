@@ -43,6 +43,28 @@ Example 2:**
 
 	- All the numbers of `nums` are **unique**.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution uses a backtracking approach to generate all possible subsets of the given array. This approach works because it systematically explores all possible combinations of including or excluding each element from the subset. By recursively calling the backtrack function, we can efficiently generate all possible subsets.
+
+## Approach
+1. Initialize an empty result list `res` and an empty solution list `sol`.
+2. Define a recursive backtrack function that takes an index `idx` as a parameter.
+3. In the backtrack function, check if the current index `idx` is equal to the length of the input array `n`. If true, append a copy of the current solution `sol` to the result list `res`.
+4. Recursively call the backtrack function with `idx + 1` to explore the case where the current element is not included in the subset.
+5. Append the current element `nums[idx]` to the solution list `sol` and recursively call the backtrack function with `idx + 1` to explore the case where the current element is included in the subset.
+6. After the recursive call, remove the last element from the solution list `sol` to undo the changes and backtrack.
+
+## Time Complexity
+The time complexity is O(2^n), where n is the length of the input array. This is because each element can be either included or excluded from the subset, resulting in 2^n possible combinations.
+
+## Space Complexity
+The space complexity is O(n), where n is the length of the input array. This is because the maximum depth of the recursion call stack is n, and we need to store the current solution list `sol` of size n.
+
+## Key Insight
+The key insight behind this solution is the use of backtracking to systematically explore all possible combinations of including or excluding each element from the subset. By using a recursive approach and undoing the changes after each recursive call, we can efficiently generate all possible subsets without duplicates.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -38,6 +38,28 @@ Example 2:**
 
 	- `1 <= n <= 5 * 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a clever iterative approach to generate lexicographical numbers within the given range. It maintains a "current" number and iteratively appends it to the result list, then increments the current number to the next lexicographically smaller number. This process continues until all numbers in the range are covered.
+
+**Approach**
+1. Initialize the current number `curr` to 1 and an empty result list `res`.
+2. Iterate `n` times to generate all numbers in the range.
+3. In each iteration, append the current number to the result list.
+4. Check if the next number (obtained by multiplying the current number by 10) is within the range. If it is, update the current number to this next number.
+5. If the next number is not within the range, decrement the current number by 1 until it is less than the next number or its last digit is not 9. Then, increment the current number by 1.
+6. Repeat steps 3-5 until all numbers in the range are covered.
+
+**Time Complexity**
+O(n) - The algorithm iterates `n` times to generate all numbers in the range, resulting in linear time complexity.
+
+**Space Complexity**
+O(1) - The algorithm uses a constant amount of extra space to store the current number and the result list, making the space complexity constant.
+
+**Key Insight**
+The key insight is to increment the current number to the next lexicographically smaller number by either multiplying it by 10 (if the next number is within the range) or decrementing it by 1 until it is less than the next number or its last digit is not 9. This approach allows the algorithm to generate all numbers in the range in lexicographical order with a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

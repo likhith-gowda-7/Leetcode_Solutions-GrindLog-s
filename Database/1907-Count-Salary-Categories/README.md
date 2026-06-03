@@ -71,6 +71,26 @@ High Salary: Accounts 3, 6, and 8.
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses the `UNION` operator to combine three separate queries, each counting the number of accounts in a specific salary category. This approach works because the `UNION` operator allows us to combine the results of multiple queries into a single result set.
+
+**Approach**
+1. The first query counts the number of accounts with an income strictly less than $20,000, categorizing them as "Low Salary".
+2. The second query counts the number of accounts with an income between $20,000 and $50,000 (inclusive), categorizing them as "Average Salary".
+3. The third query counts the number of accounts with an income strictly greater than $50,000, categorizing them as "High Salary".
+4. The `UNION` operator combines the results of these three queries into a single result set, with each query's result set having two columns: "category" and "accounts_count".
+
+**Time Complexity**
+O(n) - The `UNION` operator processes each row in the `Accounts` table once, resulting in a linear time complexity.
+
+**Space Complexity**
+O(n) - The `UNION` operator requires additional memory to store the combined result set, which can grow up to the size of the `Accounts` table.
+
+**Key Insight**
+The key insight here is that the `UNION` operator allows us to combine multiple queries into a single result set, making it easy to count the number of accounts in each salary category. This approach is efficient because it only requires a single pass through the `Accounts` table.
+
 ## 📊 Metrics
 
 | Metric | Value |

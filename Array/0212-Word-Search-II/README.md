@@ -55,6 +55,28 @@ Example 2:**
 
 	- All the strings of `words` are unique.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing a Trie data structure to efficiently store and search for words in the given list. This approach allows for fast lookup and exploration of possible word paths on the board. By combining the Trie with a backtracking algorithm, the solution can effectively explore all possible word paths and find the words that exist on the board.
+
+## Approach
+1. Create a TrieNode class to represent each node in the Trie, containing a dictionary to store child nodes and a boolean to mark the end of a word.
+2. Build the Trie by iterating through each word in the given list and adding it to the Trie.
+3. Define a backtracking function to explore the board and find words.
+4. Iterate through each cell on the board and use the backtracking function to explore all possible word paths starting from that cell.
+5. In the backtracking function, check if the current cell is out of bounds or if the current character is not in the Trie, and return if so.
+6. If the current character is in the Trie, move to the corresponding child node and check if it marks the end of a word. If so, add the word to the result list and mark the node as visited to avoid duplicates.
+
+## Time Complexity
+The time complexity is O(N * M * 4^L * W), where N is the number of rows, M is the number of columns, L is the maximum length of a word, and W is the number of words. This is because in the worst case, the backtracking function explores all four directions for each cell, and for each word, it explores up to L levels deep in the Trie.
+
+## Space Complexity
+The space complexity is O(N * M + W * L), where N is the number of rows, M is the number of columns, W is the number of words, and L is the maximum length of a word. This is because the solution uses a Trie to store all words, which requires O(W * L) space, and a 2D array to store the board, which requires O(N * M) space.
+
+## Key Insight
+The key insight is to use a Trie to store the words and combine it with a backtracking algorithm to efficiently explore all possible word paths on the board. This approach allows for fast lookup and exploration of possible word paths, making it possible to solve the problem efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

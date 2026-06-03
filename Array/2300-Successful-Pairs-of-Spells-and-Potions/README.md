@@ -59,6 +59,29 @@ Thus, [2,0,2] is returned.
 
 	- `1 <= success <= 10^10`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a binary search approach to find the number of potions that will form a successful pair with each spell. The key insight is that we can use a sorted array of potions to efficiently find the number of successful pairs for each spell.
+
+**Approach**
+1. Sort the array of potions in ascending order.
+2. Initialize an empty list `pairs` to store the number of successful pairs for each spell.
+3. Define a helper function `bs` that performs a binary search on the sorted array of potions.
+4. For each spell, use the `bs` function to find the index `success_idx` where the product of the spell's strength and the potion's strength is greater than or equal to the `success` threshold.
+5. If `success_idx` is equal to the length of the potions array, it means that no potion forms a successful pair with the current spell, so skip it.
+6. Otherwise, calculate the number of successful pairs by subtracting `success_idx` from the length of the potions array.
+7. Store the number of successful pairs in the `pairs` list.
+
+**Time Complexity**
+O(m log m + n), where m is the length of the potions array and n is the length of the spells array. The binary search function `bs` takes O(log m) time, and we call it n times, resulting in a total time complexity of O(n log m). Additionally, we sort the potions array in O(m log m) time.
+
+**Space Complexity**
+O(n), where n is the length of the spells array. We store the number of successful pairs for each spell in the `pairs` list, which requires O(n) space.
+
+**Key Insight**
+The key insight is that we can use a sorted array of potions to efficiently find the number of successful pairs for each spell. By performing a binary search on the sorted array, we can find the index where the product of the spell's strength and the potion's strength is greater than or equal to the `success` threshold, which allows us to calculate the number of successful pairs in O(log m) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -77,6 +77,26 @@ Queue table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a common technique in SQL, known as window functions, to calculate the cumulative sum of weights for each person as they board the bus. This allows us to determine which person is the last one to fit on the bus without exceeding the weight limit.
+
+**Approach**
+1. Create a temporary result set `person_sum` that contains the person's name and the cumulative sum of weights as they board the bus, ordered by turn.
+2. Use the `sum` window function with the `order by` clause to calculate the cumulative sum.
+3. Select the person's name from `person_sum` where the cumulative sum is less than or equal to the weight limit (1000 kg).
+4. Order the results by the cumulative sum in descending order and limit the output to the first row.
+
+**Time Complexity**
+O(n), where n is the number of rows in the table. This is because we are scanning the table once to calculate the cumulative sum.
+
+**Space Complexity**
+O(n), where n is the number of rows in the table. This is because we are creating a temporary result set `person_sum` that contains all the rows from the original table.
+
+**Key Insight**
+The key insight here is that we can use window functions to efficiently calculate the cumulative sum of weights, which allows us to determine which person is the last one to fit on the bus without having to iterate through all possible combinations of people. This makes the solution much more efficient than a brute-force approach.
+
 ## 📊 Metrics
 
 | Metric | Value |

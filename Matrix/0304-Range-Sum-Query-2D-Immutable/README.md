@@ -62,6 +62,25 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (i.e sum of the blue rectangle)
 
 	- At most `10^4` calls will be made to `sumRegion`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by precomputing the prefix sum of the entire matrix, which allows for efficient calculation of the sum of any sub-rectangle. This approach takes advantage of the fact that the prefix sum at each cell can be calculated using the values of its neighboring cells. By storing the prefix sum in a separate matrix, we can quickly calculate the sum of any rectangle in constant time.
+
+## Approach
+1. Initialize a prefix sum matrix with an extra row and column to handle edge cases.
+2. Iterate over each cell in the input matrix, calculating the prefix sum at each cell by adding the current cell's value to the prefix sums of the cells above and to the left, and subtracting the prefix sum of the cell above and to the left.
+3. To calculate the sum of a rectangle, use the prefix sum values at the corners of the rectangle to compute the sum in constant time.
+
+## Time Complexity
+The time complexity of the `sumRegion` method is O(1), since it only involves a constant number of operations to calculate the sum of the rectangle. The time complexity of the `__init__` method is O(m*n), where m and n are the dimensions of the input matrix, since it needs to iterate over each cell in the matrix to precompute the prefix sum.
+
+## Space Complexity
+The space complexity is O(m*n), where m and n are the dimensions of the input matrix, since we need to store the prefix sum matrix.
+
+## Key Insight
+The key insight behind this solution is that the prefix sum of a rectangle can be calculated using the inclusion-exclusion principle, which allows us to compute the sum in constant time by using the prefix sum values at the corners of the rectangle. This enables us to efficiently handle multiple queries on the same matrix.
+
 ## 📊 Metrics
 
 | Metric | Value |

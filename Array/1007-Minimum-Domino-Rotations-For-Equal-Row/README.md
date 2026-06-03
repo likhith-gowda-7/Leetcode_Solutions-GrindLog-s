@@ -53,6 +53,29 @@ In this case, it is not possible to rotate the dominoes to make one row of value
 
 	- `1 <= tops[i], bottoms[i] <= 6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by checking if it's possible to make all dominoes have the same value on either the top or bottom half. It iterates through the dominoes, counting the minimum number of rotations required to make all dominoes have the same value on either the top or bottom half.
+
+**Approach**
+1. Define a helper function `check(val)` that calculates the minimum number of rotations required to make all dominoes have the same value `val` on either the top or bottom half.
+2. Initialize `top_mini` and `botm_mini` to 0, which will store the minimum number of rotations required to make all dominoes have the same value `val` on the top and bottom halves, respectively.
+3. Iterate through the dominoes. For each domino, if both the top and bottom halves are not equal to `val`, return -1, indicating that it's impossible to make all dominoes have the same value.
+4. If the top half is not equal to `val`, increment `top_mini` by 1, indicating that the bottom half must be equal to `val`.
+5. If the bottom half is not equal to `val`, increment `botm_mini` by 1, indicating that the top half must be equal to `val`.
+6. After iterating through all dominoes, return the minimum of `top_mini` and `botm_mini`, which is the minimum number of rotations required to make all dominoes have the same value on either the top or bottom half.
+7. Call `check(tops[0])` and `check(bottoms[0])` to find the minimum number of rotations required to make all dominoes have the same value on either the top or bottom half.
+
+**Time Complexity**
+O(n), where n is the number of dominoes. This is because the solution iterates through the dominoes once.
+
+**Space Complexity**
+O(1), which means the space complexity is constant. This is because the solution only uses a few variables to store the minimum number of rotations required, regardless of the input size.
+
+**Key Insight**
+The key insight is that if the top half of a domino is not equal to the target value, then the bottom half must be equal to the target value, and vice versa. This allows us to count the minimum number of rotations required to make all dominoes have the same value on either the top or bottom half.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -73,6 +73,28 @@ There is no time during the event not occupied by meetings.
 
 	- `endTime[i] <= startTime[i + 1]` where `i` lies in the range `[0, n - 2]`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to find the maximum continuous period of free time by rescheduling meetings. It calculates the free time between each meeting and then uses a sliding window to find the maximum sum of free times.
+
+**Approach**
+1. Calculate the free time between each meeting by subtracting the previous meeting's end time from the current meeting's start time.
+2. Append the free time after the last meeting to the list of free times.
+3. Initialize a sliding window of size `k+1` with the sum of the first `k+1` free times.
+4. Iterate through the list of free times, expanding the window to the right by adding the current free time and subtracting the free time at the left end of the window.
+5. Update the maximum free time found so far by comparing it with the current window sum.
+6. Return the maximum free time found.
+
+**Time Complexity**
+O(n), where n is the number of meetings. This is because we iterate through the list of free times once to calculate the window sum.
+
+**Space Complexity**
+O(n), where n is the number of meetings. This is because we store the list of free times, which has a length equal to the number of meetings.
+
+**Key Insight**
+The key insight is to use a sliding window to efficiently find the maximum sum of free times. By expanding the window to the right and updating the window sum, we can find the maximum free time in linear time. This approach takes advantage of the fact that the meetings are non-overlapping and the relative order is maintained.
+
 ## 📊 Metrics
 
 | Metric | Value |

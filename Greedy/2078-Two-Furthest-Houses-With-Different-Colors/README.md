@@ -69,6 +69,26 @@ House 0 has color 0, and house 1 has color 1. The distance between them is abs(0
 
 	- Test data are generated such that **at least** two houses have different colors.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to find the maximum distance between two houses with different colors. It starts from both ends of the array and moves towards the center, keeping track of the first and last houses with different colors. The maximum distance is then calculated as the maximum of the distance from the first house with a different color to the last house, and the distance from the first house to the last house with a different color.
+
+**Approach**
+1. Initialize two pointers, `r` and `l`, to the last and first elements of the array, respectively.
+2. While `r` is greater than 0 and the first and last houses have the same color, decrement `r`.
+3. While `l` is less than the length of the array and the first and last houses have the same color, increment `l`.
+4. Return the maximum of `r` and `n - l - 1`, where `n` is the length of the array.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because in the worst case, we need to traverse the entire array to find the first and last houses with different colors.
+
+**Space Complexity**
+O(1), since we only use a constant amount of space to store the pointers and the length of the array.
+
+**Key Insight**
+The key insight is that we can use a greedy approach to find the maximum distance by starting from both ends of the array and moving towards the center. This approach takes advantage of the fact that the houses are evenly lined up and the distance between them is calculated as the absolute value of their indices.
+
 ## 📊 Metrics
 
 | Metric | Value |

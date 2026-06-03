@@ -91,6 +91,31 @@ Example 3:**
 
 	- There are no duplicate edges.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a disjoint-set data structure to efficiently manage the edges of the graph and a priority queue to keep track of the minimum strength of the edges. The goal is to maximize the stability of the spanning tree by upgrading the edges with the highest strength.
+
+**Approach**
+
+1. Initialize the disjoint-set data structure with `n` nodes and their corresponding sizes.
+2. Separate the edges into two lists: `must` edges that must be included in the spanning tree and `flex` edges that can be upgraded.
+3. Iterate through the `must` edges and add them to the disjoint-set data structure, ensuring that they form a single connected component.
+4. Sort the `flex` edges in descending order of their strengths.
+5. Create a priority queue to store the minimum strength of the edges.
+6. Iterate through the `flex` edges and add them to the disjoint-set data structure, updating the priority queue with their strengths.
+7. While there are remaining upgrades (`k > 0`) and edges in the priority queue, upgrade the edge with the minimum strength, updating the priority queue and the minimum stability.
+8. If the resulting spanning tree has multiple connected components or the priority queue is not empty, return -1, indicating that it is impossible to form a valid spanning tree.
+
+**Time Complexity**
+The time complexity of the solution is O((n + m) log m), where `n` is the number of nodes and `m` is the number of edges. This is because the disjoint-set data structure operations (find and union) take O(log n) time, and the priority queue operations (insert and delete) take O(log m) time.
+
+**Space Complexity**
+The space complexity of the solution is O(n + m), where `n` is the number of nodes and `m` is the number of edges. This is because we need to store the disjoint-set data structure, the `must` and `flex` edges, and the priority queue.
+
+**Key Insight**
+The key insight is to use a priority queue to efficiently keep track of the minimum strength of the edges and to upgrade the edges with the highest strength first. This approach ensures that we maximize the stability of the spanning tree while still satisfying the constraints of the problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

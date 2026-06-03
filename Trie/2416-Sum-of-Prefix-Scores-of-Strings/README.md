@@ -67,6 +67,26 @@ Each prefix has a score of one, so the total is answer[0] = 1 + 1 + 1 + 1 = 4.
 
 	- `words[i]` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Trie data structure to efficiently count the number of strings that have each prefix. By traversing the Trie, we can calculate the score of each prefix in linear time. The key insight is to use a Trie's ability to store a mapping of characters to child nodes, allowing us to count the number of strings with each prefix in a single pass.
+
+**Approach**
+1. Create a TrieNode class with a dictionary `map` to store child nodes and a `count` attribute to store the number of strings that pass through the node.
+2. Create a Trie by initializing the root node and building the Trie for each word in the input array `words`.
+3. Define a recursive function `get_score` to calculate the score of a prefix by traversing the Trie and summing the counts of nodes that correspond to the prefix characters.
+4. For each word in `words`, call `get_score` to calculate the score of each prefix and append the result to the `res` array.
+
+**Time Complexity**
+O(n \* m \* l), where n is the number of words, m is the average number of characters in a word, and l is the maximum length of a word. This is because we build the Trie for each word, and then traverse the Trie for each word to calculate the score of each prefix.
+
+**Space Complexity**
+O(n \* m), where n is the number of words and m is the maximum length of a word. This is because we store the Trie for all words, and each node in the Trie has a constant amount of space.
+
+**Key Insight**
+The key insight is to use the Trie's ability to store a mapping of characters to child nodes, allowing us to count the number of strings with each prefix in a single pass. This is achieved by recursively traversing the Trie and summing the counts of nodes that correspond to the prefix characters.
+
 ## 📊 Metrics
 
 | Metric | Value |

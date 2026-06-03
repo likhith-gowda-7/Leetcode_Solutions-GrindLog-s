@@ -57,6 +57,29 @@ Example 2:**
 
 	- `sentence` does not have leading or trailing spaces.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Trie data structure to efficiently store and search for words in the dictionary. It then iterates over each word in the sentence, replacing it with its shortest root if it exists in the Trie.
+
+**Approach**
+1. Create a TrieNode class to represent each node in the Trie, with a dictionary to store child nodes and a boolean to mark the end of a word.
+2. Create a Trie class with methods to add words to the Trie and search for words in the Trie.
+3. Add each word in the dictionary to the Trie using the `add` method.
+4. Split the sentence into individual words and iterate over each word.
+5. For each word, use the `search` method to find its shortest root if it exists in the Trie.
+6. Append the shortest root or the original word to the result list.
+7. Join the result list into a string and return it.
+
+**Time Complexity**
+The time complexity is O(N + M * L), where N is the number of words in the sentence, M is the number of words in the dictionary, and L is the average length of a word. This is because we iterate over each word in the sentence (O(N)) and each word in the dictionary (O(M)) to add it to the Trie, and then iterate over each word in the sentence again (O(N)) to search for its shortest root.
+
+**Space Complexity**
+The space complexity is O(M * L), where M is the number of words in the dictionary and L is the average length of a word. This is because we store each word in the dictionary in the Trie, which requires O(L) space for each word.
+
+**Key Insight**
+The key insight is to use a Trie to efficiently store and search for words in the dictionary, allowing us to find the shortest root for each word in the sentence in linear time. This approach enables us to handle a large dictionary and sentence efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

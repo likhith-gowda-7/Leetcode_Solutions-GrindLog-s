@@ -64,6 +64,27 @@ Example 3:**
 
 	- `n` is even.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a prefix sum array to efficiently calculate the minimum number of moves required to make the array complementary. The key insight is to consider the sum of pairs of elements from both ends of the array and use a prefix sum array to keep track of the cumulative count of such pairs.
+
+**Approach**
+1. Initialize a prefix sum array `delta` of size `2 * limit + 2` to keep track of the cumulative count of pairs with a given sum.
+2. Iterate through the first half of the array `nums`, and for each pair of elements `nums[i]` and `nums[-1 - i]`, update the prefix sum array `delta` accordingly.
+3. For each pair, increment the count of pairs with a sum of 2, decrement the count of pairs with a sum of `mini + 1`, decrement the count of pairs with a sum of `mini + maxi`, increment the count of pairs with a sum of `mini + maxi + 1`, and increment the count of pairs with a sum of `maxi + limit + 1`.
+4. Initialize the minimum number of moves `res` to the length of the array `n` and the current number of moves `moves` to 0.
+5. Iterate through the prefix sum array `delta` and update the minimum number of moves `res` by taking the minimum of `res` and `moves` for each target sum `targ`.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. The time complexity is linear because we are iterating through the array once and updating the prefix sum array in a single pass.
+
+**Space Complexity**
+O(limit), where limit is the given limit. The space complexity is linear because we are using a prefix sum array of size `2 * limit + 2` to keep track of the cumulative count of pairs.
+
+**Key Insight**
+The key insight is to use a prefix sum array to efficiently calculate the minimum number of moves required to make the array complementary. By updating the prefix sum array in a single pass, we can avoid iterating through the array multiple times and achieve a linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

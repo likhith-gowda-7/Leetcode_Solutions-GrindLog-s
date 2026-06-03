@@ -59,6 +59,27 @@ Both result in the string "51".
 
 	- `digit` occurs at least once in `number`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to find the maximum possible number by removing exactly one occurrence of the given digit. It iterates through the number string, removing the digit at each position and keeping track of the maximum resulting string.
+
+**Approach**
+1. Initialize an empty string `maxi` to store the maximum resulting string.
+2. Iterate through the `number` string using a for loop.
+3. For each position `i`, create a temporary string `temp` by removing the digit at position `i` from the original number.
+4. Check if the temporary string is greater than the current maximum string `maxi`. If it is, update `maxi` with the temporary string.
+5. After iterating through the entire string, return the maximum string `maxi`.
+
+**Time Complexity**
+O(n), where n is the length of the `number` string. This is because we are iterating through the string once, and the operations inside the loop (string concatenation and comparison) take constant time.
+
+**Space Complexity**
+O(n), where n is the length of the `number` string. This is because we are creating a temporary string `temp` at each position, which can potentially be as large as the original string.
+
+**Key Insight**
+The key insight is that we can remove the digit at any position and still get a valid number, so we can simply try removing the digit at each position and keep track of the maximum resulting string. This greedy approach ensures that we find the maximum possible number by removing exactly one occurrence of the given digit.
+
 ## 📊 Metrics
 
 | Metric | Value |

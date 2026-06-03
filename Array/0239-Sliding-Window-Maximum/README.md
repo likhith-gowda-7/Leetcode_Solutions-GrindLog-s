@@ -52,6 +52,27 @@ Example 2:**
 
 	- `1 <= k <= nums.length`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by maintaining a deque to store the indices of the maximum elements within the current sliding window. This approach ensures that the maximum element is always at the front of the deque, allowing for efficient retrieval and removal of elements as the window moves. The deque is updated based on the comparison of the current element with the elements at the back of the deque.
+
+## Approach
+1. Initialize an empty deque `max_queue` to store the indices of the maximum elements and an empty list `res` to store the maximum sliding window values.
+2. Iterate over the array using the right pointer `r`, and for each element, remove the elements from the back of the deque that are smaller than the current element.
+3. Append the current element to the deque.
+4. When the window size is reached (i.e., `r + 1 >= k`), append the maximum element (at the front of the deque) to the result list and remove it from the deque if it is the leftmost element of the window.
+5. Move the left pointer `l` to the right to slide the window.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array. This is because each element is pushed and popped from the deque at most once, resulting in a linear time complexity.
+
+## Space Complexity
+The space complexity is O(n), where n is the length of the input array. This is because in the worst case, the deque can store up to n elements (e.g., when the input array is sorted in descending order).
+
+## Key Insight
+The key insight is to use a deque to store the indices of the maximum elements within the current sliding window, allowing for efficient retrieval and removal of elements as the window moves. This approach enables the solution to maintain a time complexity of O(n) and a space complexity of O(n), making it efficient for large input arrays.
+
 ## 📊 Metrics
 
 | Metric | Value |

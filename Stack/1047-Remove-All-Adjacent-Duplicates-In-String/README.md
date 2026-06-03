@@ -47,6 +47,29 @@ Example 2:**
 
 	- `s` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a stack data structure to efficiently remove adjacent duplicate characters from the input string. By continuously popping characters from the stack when a duplicate is found, we effectively eliminate consecutive duplicates.
+
+**Approach**
+1. Initialize a stack with the first character of the input string.
+2. Iterate through the input string starting from the second character.
+3. For each character, check if the top of the stack matches the current character.
+   - If a match is found, pop the top character from the stack (remove the duplicate).
+   - If no match is found, push the current character onto the stack.
+4. After iterating through the entire string, the stack will contain the final string with all adjacent duplicates removed.
+5. Join the characters in the stack into a single string and return it.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we make a single pass through the string, performing constant-time operations for each character.
+
+**Space Complexity**
+O(n), where n is the length of the input string. In the worst case, the stack will store all characters from the input string.
+
+**Key Insight**
+The key to this solution is recognizing that a stack is an ideal data structure for this problem, as it allows us to efficiently remove characters from the end of the string (i.e., the top of the stack) when a duplicate is found. This approach ensures that we process the input string in a single pass, resulting in a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

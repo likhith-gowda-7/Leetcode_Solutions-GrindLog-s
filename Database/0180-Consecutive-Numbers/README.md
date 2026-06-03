@@ -61,6 +61,25 @@ Logs table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a common technique in SQL: window functions. By using `lag` and `lead` functions, we can access the previous and next rows in the result set, allowing us to check if a number appears consecutively.
+
+**Approach**
+1. Create a temporary view `num_neighbours` that selects the `num` column from the `Logs` table, along with the previous (`back`) and next (`front`) numbers using `lag` and `lead` window functions.
+2. Select the `num` column from `num_neighbours` where both `back` and `front` are equal to `num`, indicating consecutive numbers.
+3. Use `distinct` to remove duplicates from the result.
+
+**Time Complexity**
+O(n), where n is the number of rows in the `Logs` table. This is because we're scanning the table once to create the temporary view, and then scanning it again to select the consecutive numbers.
+
+**Space Complexity**
+O(n), as we're creating a temporary view that stores the previous and next numbers for each row. However, this is a reasonable trade-off for the benefits of using window functions.
+
+**Key Insight**
+The key insight here is that by using `lag` and `lead` functions, we can effectively "look ahead" and "look behind" each row, allowing us to check for consecutive numbers without having to use self-joins or other more complex techniques. This makes the solution concise and efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -61,6 +61,28 @@ Example 2:**
 
 	- `nums[i]` is a prime number.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution leverages the properties of bitwise operations to find the minimum value for each `ans[i]` that satisfies the condition `ans[i] OR (ans[i] + 1) == nums[i]`. It iterates through each number in the input array and checks the bits that are set in the number. If a bit is not set, it tries to clear the bit by performing a bitwise XOR operation.
+
+**Approach**
+1. Iterate through each number `val` in the input array `nums`.
+2. If `val` is 2, set `ans[i]` to -1 and continue to the next number.
+3. Iterate through each bit position `j` from 0 to 31.
+4. If the bit at position `j` is not set in `val`, try to clear the bit by performing a bitwise XOR operation with `1<<j-1`.
+5. If the XOR operation is successful, set `ans[i]` to the result and break the loop.
+6. If no suitable value is found for `ans[i]`, set it to -1.
+
+**Time Complexity**
+O(n * 32) = O(n), where n is the length of the input array. This is because we iterate through each number in the array and each bit position up to 32.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the current number `val` and the result `x`.
+
+**Key Insight**
+The key insight behind this solution is that if a bit is not set in `val`, we can try to clear it by performing a bitwise XOR operation with `1<<j-1`. This is because XORing a number with a power of 2 (e.g., `1<<j-1`) will clear the bit at that position if and only if the bit is not set in the number. This allows us to efficiently find the minimum value for each `ans[i]` that satisfies the condition.
+
 ## 📊 Metrics
 
 | Metric | Value |

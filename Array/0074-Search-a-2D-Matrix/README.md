@@ -53,6 +53,26 @@ Example 2:**
 
 	- `-10^4 <= matrix[i][j], target <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by treating the 2D matrix as a single sorted array, leveraging the given properties of the matrix to perform a binary search. The key idea is to first find the row where the target element could potentially be, and then perform another binary search within that row to find the target.
+
+## Approach
+1. Determine the number of rows (`m`) and columns (`n`) in the matrix.
+2. Perform a binary search across the rows to find the row where the target element could be, based on the first and last elements of each row.
+3. Once the correct row is identified, perform another binary search within that row to find the target element.
+4. If the target element is found during the second binary search, return `True`; otherwise, return `False`.
+
+## Time Complexity
+The time complexity is O(log(m * n)), which can be broken down into two parts: O(log(m)) for the row search and O(log(n)) for the column search. This is because we are essentially performing two binary searches in sequence.
+
+## Space Complexity
+The space complexity is O(1), as we are only using a constant amount of space to store the row and column indices, regardless of the size of the input matrix.
+
+## Key Insight
+The crucial insight here is recognizing that the matrix can be treated as a single sorted array, allowing us to apply binary search techniques to find the target element efficiently. By first identifying the correct row and then searching within that row, we can take advantage of the matrix's sorted properties to achieve the required time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

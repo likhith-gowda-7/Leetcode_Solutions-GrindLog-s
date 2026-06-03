@@ -77,6 +77,27 @@ Example 3:**
 
 	- `0 < speed[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to keep track of the time taken by each car fleet to reach the destination. The key insight is that a car fleet is formed when a car catches up to another car, and the speed of the fleet is the minimum speed of any car in the fleet. By sorting the cars in descending order of their positions and using a stack to keep track of the time taken by each fleet, we can efficiently count the number of car fleets that will arrive at the destination.
+
+**Approach**
+1. Combine the position and speed of each car into a list of tuples, `car_order`, and sort it in descending order of position.
+2. Initialize an empty stack to keep track of the time taken by each car fleet.
+3. Iterate through each car in `car_order`. For each car, calculate the time taken to reach the destination and push it onto the stack.
+4. If the current time taken is less than or equal to the previous time taken (i.e., the current car catches up to the previous fleet), pop the previous time taken from the stack.
+5. After iterating through all cars, the size of the stack represents the number of car fleets that will arrive at the destination.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the number of cars.
+
+**Space Complexity**
+O(n) for storing the sorted list of cars and the stack.
+
+**Key Insight**
+The key to this solution is the observation that a car fleet is formed when a car catches up to another car, and the speed of the fleet is the minimum speed of any car in the fleet. By using a stack to keep track of the time taken by each fleet, we can efficiently count the number of car fleets that will arrive at the destination.
+
 ## 📊 Metrics
 
 | Metric | Value |

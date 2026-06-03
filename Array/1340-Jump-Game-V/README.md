@@ -66,6 +66,31 @@ Example 3:**
 
 	- `1 <= d <= arr.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This problem can be solved using a depth-first search (DFS) approach, where we start from each index and explore all possible jumps within the given distance `d`. We keep track of the maximum number of indices we can visit from each starting index.
+
+**Approach**
+1. Initialize a memoization dictionary `memo` to store the maximum number of indices we can visit from each index.
+2. Define a recursive DFS function `dfs(idx)` that takes an index `idx` as input.
+3. If the result for `idx` is already stored in `memo`, return the stored value.
+4. Initialize a variable `curr` to store the maximum number of indices we can visit from `idx`.
+5. Explore all possible left jumps from `idx` by iterating from `1` to `d` and checking if the jump is within the array bounds and if `arr[idx] > arr[left]`. If the jump is valid, recursively call `dfs(left)` and update `curr` with the maximum value.
+6. Explore all possible right jumps from `idx` by iterating from `1` to `d` and checking if the jump is within the array bounds and if `arr[idx] > arr[right]`. If the jump is valid, recursively call `dfs(right)` and update `curr` with the maximum value.
+7. Store the result `1 + curr` in `memo[idx]` and return it.
+8. Initialize a variable `res` to store the maximum number of indices we can visit from any starting index.
+9. Iterate over all indices in the array and call `dfs(i)` to update `res` with the maximum value.
+
+**Time Complexity**
+O(n * d * log(n)), where n is the length of the array and d is the given distance. This is because in the worst case, we may need to explore all possible jumps from each index, resulting in a time complexity of O(n * d). Additionally, the recursive DFS function may need to explore the entire array, resulting in a time complexity of O(log(n)) due to the binary search-like behavior of the DFS.
+
+**Space Complexity**
+O(n), where n is the length of the array. This is because we need to store the maximum number of indices we can visit from each index in the memoization dictionary.
+
+**Key Insight**
+The key insight here is to use a DFS approach to explore all possible jumps from each index, while keeping track of the maximum number of indices we can visit from each starting index. This allows us to efficiently find the maximum number of indices we can visit from any starting index.
+
 ## 📊 Metrics
 
 | Metric | Value |

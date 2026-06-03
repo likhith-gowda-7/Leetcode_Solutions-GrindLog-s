@@ -50,6 +50,28 @@ Example 2:**
 
 	- `0 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to store the frequency of the differences between each number and its reverse. The idea is that if `nums[i]` and `nums[j]` form a nice pair, then `nums[i] - rev(nums[i])` and `nums[j] - rev(nums[j])` must be equal. By counting the frequency of these differences, we can efficiently calculate the number of nice pairs.
+
+**Approach**
+1. Initialize a hash table `h1` to store the frequency of differences between numbers and their reverses.
+2. Iterate over the input array `nums`.
+3. For each number `nums[i]`, calculate its difference with its reverse `val = nums[i] - int(str(nums[i])[::-1])`.
+4. Increment the count of nice pairs by the frequency of `val` in the hash table `h1`.
+5. Increment the frequency of `val` in the hash table `h1`.
+6. Return the total count of nice pairs modulo `10^9 + 7`.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we iterate over the array once to calculate the differences and update the hash table.
+
+**Space Complexity**
+O(n), where n is the length of the input array `nums`. This is because in the worst case, we need to store all differences in the hash table.
+
+**Key Insight**
+The key insight is that the difference between a number and its reverse is a unique characteristic that can be used to identify nice pairs. By counting the frequency of these differences, we can efficiently calculate the number of nice pairs without having to compare each pair individually.
+
 ## 📊 Metrics
 
 | Metric | Value |

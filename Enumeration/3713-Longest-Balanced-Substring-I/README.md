@@ -57,6 +57,29 @@ Example 3:**
 
 	- `s` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach to find the longest balanced substring. It maintains a frequency count of characters within the current window and checks if all characters appear the same number of times. If they do, it updates the result with the length of the current window.
+
+**Approach**
+1. Initialize a variable `res` to store the length of the longest balanced substring found so far.
+2. Iterate over the string `s` using a sliding window approach, where the window starts at index `i` and expands to the right.
+3. For each window, maintain a frequency count of characters using a hash table `h1`.
+4. Update the maximum frequency `maxi` and minimum frequency `mini` within the current window.
+5. Check if the minimum frequency `mini` is equal to the maximum frequency `maxi`. If they are equal, it means all characters in the current window appear the same number of times.
+6. If the window is balanced, update the result `res` with the length of the current window.
+7. Repeat steps 2-6 until the end of the string is reached.
+
+**Time Complexity**
+O(n^2), where n is the length of the string `s`. This is because the solution uses a nested loop structure, where the outer loop iterates over the string and the inner loop expands the window to the right.
+
+**Space Complexity**
+O(n), where n is the length of the string `s`. This is because the solution uses a hash table `h1` to store the frequency count of characters within the current window.
+
+**Key Insight**
+The key insight is to use a sliding window approach to efficiently check all possible substrings of the input string. By maintaining a frequency count of characters within the current window, we can quickly determine if the window is balanced and update the result accordingly.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -49,6 +49,25 @@ Example 2:**
 
 	- `1 <= money <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first finding the two smallest prices in the `prices` array. This is because we want to minimize the sum of the prices of the two chocolates we buy. We then subtract this sum from the initial `money` to get the leftover amount. If the leftover amount is negative, it means we cannot buy two chocolates without going into debt, so we return the initial `money`.
+
+**Approach**
+1. Use the `nsmallest` function from the `heapq` module to find the two smallest prices in the `prices` array.
+2. Calculate the sum of these two smallest prices and subtract it from the initial `money` to get the leftover amount.
+3. If the leftover amount is negative, return the initial `money`; otherwise, return the leftover amount.
+
+**Time Complexity**
+O(n log n) due to the `nsmallest` function, which uses a heap to find the k smallest elements in the array. The heap operations (insertion and extraction) take O(log n) time, and we perform these operations n times.
+
+**Space Complexity**
+O(n) for the heap used by the `nsmallest` function, where n is the number of elements in the `prices` array.
+
+**Key Insight**
+The key insight is that we can find the optimal solution by simply buying the two cheapest chocolates, as this will minimize the sum of their prices. This is a classic example of a greedy algorithm, where we make the locally optimal choice at each step (buying the cheapest chocolates) in the hope that it will lead to a globally optimal solution (minimizing the sum of the prices).
+
 ## 📊 Metrics
 
 | Metric | Value |

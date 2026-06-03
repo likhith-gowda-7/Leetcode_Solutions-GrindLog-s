@@ -60,6 +60,27 @@ Example 2:**
 
 	- `s` consists of lowercase English letters only.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over the input string and maintaining a count of the maximum frequency of vowels and consonants separately. It uses a dictionary to store the frequency of each letter and updates the maximum frequency of vowels and consonants accordingly.
+
+**Approach**
+1. Initialize a set of vowels and a dictionary to store the frequency of each letter.
+2. Initialize variables to store the maximum frequency of vowels and consonants.
+3. Iterate over each character in the input string.
+4. For each character, increment its frequency in the dictionary and update the maximum frequency of vowels and consonants if necessary.
+5. Return the sum of the maximum frequency of vowels and consonants.
+
+**Time Complexity**
+O(n), where n is the length of the input string. This is because we are iterating over the string once.
+
+**Space Complexity**
+O(n), where n is the length of the input string. This is because in the worst case, we are storing the frequency of each character in the dictionary.
+
+**Key Insight**
+The key insight is to use a dictionary to store the frequency of each letter, which allows us to update the maximum frequency of vowels and consonants efficiently. This approach avoids the need to sort the letters or use a separate data structure to store the maximum frequency, making it more efficient and scalable.
+
 ## 📊 Metrics
 
 | Metric | Value |

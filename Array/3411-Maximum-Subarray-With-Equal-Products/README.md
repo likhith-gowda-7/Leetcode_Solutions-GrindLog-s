@@ -57,6 +57,27 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a brute-force approach to find the longest product equivalent subarray by iterating over all possible subarrays and checking if they are product equivalent. This works because the problem only asks for the length of the longest product equivalent subarray, not the subarray itself.
+
+**Approach**
+1. Initialize variables to keep track of the longest product equivalent subarray found so far (`longest`).
+2. Iterate over the array `nums` using two nested loops to generate all possible subarrays.
+3. For each subarray, calculate the product (`p`), GCD (`g`), and LCM (`l`) of the elements.
+4. Check if the product is equal to the product of the GCD and LCM (`p == g * l`). If true, update `longest` with the length of the current subarray.
+5. After checking all subarrays, return the length of the longest product equivalent subarray found.
+
+**Time Complexity**
+O(n^2), where n is the length of the input array `nums`. This is because the solution uses two nested loops to generate all possible subarrays.
+
+**Space Complexity**
+O(1), as the solution only uses a constant amount of space to store the variables `longest`, `p`, `g`, and `l`.
+
+**Key Insight**
+The key insight here is that we only need to check if the product of the subarray is equal to the product of the GCD and LCM, which is a much simpler condition than checking if the subarray is product equivalent. This allows us to use a brute-force approach to find the longest product equivalent subarray.
+
 ## 📊 Metrics
 
 | Metric | Value |

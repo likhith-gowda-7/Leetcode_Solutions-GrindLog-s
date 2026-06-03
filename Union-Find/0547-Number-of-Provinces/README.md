@@ -57,6 +57,32 @@ Example 2:**
 
 	- `isConnected[i][j] == isConnected[j][i]`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a depth-first search (DFS) approach to traverse the graph represented by the `isConnected` matrix. The idea is to start from each unvisited node and explore all its connected nodes, effectively grouping them into a province. By counting the number of provinces, we can determine the total number of provinces in the graph.
+
+**Approach**
+1. Initialize a visited array to keep track of visited nodes.
+2. Define a DFS function that takes a node as input and returns True if the node is connected to other nodes, False otherwise.
+3. In the DFS function:
+   1. Check if the node is visited; if so, return False.
+   2. Mark the node as visited.
+   3. Iterate through all nodes and check if they are connected to the current node.
+   4. Recursively call the DFS function for each connected node.
+4. Initialize a total counter to store the number of provinces.
+5. Iterate through all nodes and call the DFS function for each unvisited node.
+6. Increment the total counter for each province found.
+
+**Time Complexity**
+O(n^2) where n is the number of cities. In the worst case, we visit each node and check all its connections, resulting in a quadratic time complexity.
+
+**Space Complexity**
+O(n) where n is the number of cities. We use a visited array of size n to keep track of visited nodes.
+
+**Key Insight**
+The key insight is that DFS allows us to efficiently explore the graph and group connected nodes into provinces. By starting from each unvisited node and exploring its connections, we can effectively count the number of provinces in the graph.
+
 ## 📊 Metrics
 
 | Metric | Value |

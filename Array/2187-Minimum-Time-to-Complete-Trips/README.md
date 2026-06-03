@@ -54,6 +54,29 @@ So the minimum time needed to complete 1 trip is 2.
 
 	- `1 <= time[i], totalTrips <= 10^7`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a binary search approach to find the minimum time required for all buses to complete at least `totalTrips` trips. The idea is to find the smallest time `t` such that the total number of trips completed by all buses is greater than or equal to `totalTrips`.
+
+**Approach**
+1. Initialize the search range to `[1, min(time) * totalTrips]`, where `min(time)` is the minimum time taken by any bus to complete one trip, and `totalTrips` is the total number of trips required.
+2. While the search range is not empty, calculate the mid value `mid` of the range.
+3. For each bus, calculate the number of trips completed by dividing `mid` by the time taken by the bus.
+4. If the total number of trips completed by all buses is greater than or equal to `totalTrips`, update the upper bound of the search range to `mid - 1`.
+5. Otherwise, update the lower bound of the search range to `mid + 1`.
+6. Repeat steps 2-5 until the search range is empty.
+7. Return the lower bound of the search range, which represents the minimum time required for all buses to complete at least `totalTrips` trips.
+
+**Time Complexity**
+O(n * log(min(time) * totalTrips)), where n is the number of buses. The binary search takes O(log(min(time) * totalTrips)) time, and for each iteration, we calculate the number of trips completed by each bus, which takes O(n) time.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the search range, mid value, and total number of trips completed.
+
+**Key Insight**
+The key insight is that we can use binary search to find the minimum time required for all buses to complete at least `totalTrips` trips, by iteratively narrowing down the search range based on the total number of trips completed by all buses.
+
 ## 📊 Metrics
 
 | Metric | Value |

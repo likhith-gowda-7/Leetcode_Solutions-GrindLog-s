@@ -56,6 +56,31 @@ Example 3:**
 
 	- `-10^6 <= arr[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first sorting the input array in ascending order. Then, it iterates through the sorted array to find the minimum absolute difference between any two elements. Once the minimum difference is found, it iterates through the array again to find all pairs of elements with the minimum difference.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Initialize `min_diff` to infinity and `res` to an empty list.
+3. Iterate through the sorted array from index 1 to `n-1` (where `n` is the length of the array).
+4. For each iteration, calculate the absolute difference `curr_diff` between the current element and the previous element.
+5. If `curr_diff` is less than `min_diff`, update `min_diff` to `curr_diff`.
+6. After finding the minimum difference, iterate through the sorted array again from index 1 to `n-1`.
+7. For each iteration, calculate the absolute difference `curr_diff` between the current element and the previous element.
+8. If `curr_diff` is equal to `min_diff`, append a pair of elements `[nums[i-1], nums[i]]` to the `res` list.
+9. Return the `res` list.
+
+**Time Complexity**
+The time complexity is O(n log n) due to the sorting step, where n is the length of the input array. The subsequent two loops have a time complexity of O(n), but they are dominated by the sorting step.
+
+**Space Complexity**
+The space complexity is O(n) for the sorting step, where n is the length of the input array. The space complexity of the subsequent two loops is O(1) since they only iterate through the array and do not use any additional space that scales with the input size.
+
+**Key Insight**
+The key insight is that after sorting the array, we can find the minimum absolute difference by iterating through the array only once. Once the minimum difference is found, we can then iterate through the array again to find all pairs of elements with the minimum difference. This approach avoids unnecessary comparisons and makes the solution efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

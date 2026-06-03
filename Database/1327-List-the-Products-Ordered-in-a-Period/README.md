@@ -102,6 +102,27 @@ Products with product_id = 5 is ordered in February a total of (50 + 50) = 100.
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by joining the `Products` and `Orders` tables based on the `product_id` column, then filtering the results to only include orders from February 2020. The `group by` clause groups the results by `product_id`, and the `having` clause filters the results to only include products with a total unit count of 100 or more.
+
+**Approach**
+
+1. Join the `Products` and `Orders` tables on the `product_id` column to link each product with its corresponding orders.
+2. Filter the joined table to only include orders from February 2020 using the `month` and `year` functions.
+3. Group the filtered table by `product_id` to calculate the total unit count for each product.
+4. Use the `having` clause to filter the grouped table to only include products with a total unit count of 100 or more.
+
+**Time Complexity**
+O(n), where n is the number of orders in the `Orders` table. This is because the solution involves a single join operation, followed by filtering and grouping, all of which can be performed in a single pass through the data.
+
+**Space Complexity**
+O(n), where n is the number of orders in the `Orders` table. This is because the solution requires storing the joined and filtered data in memory.
+
+**Key Insight**
+The key insight here is that the `having` clause allows us to filter the results after grouping, which is more efficient than trying to filter the data before grouping. This is because the `having` clause can take advantage of the grouping already performed, making the solution more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

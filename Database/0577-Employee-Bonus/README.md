@@ -90,6 +90,25 @@ Bonus table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution joins the `Employee` and `Bonus` tables based on the `empId` column and selects employees who either have no bonus or a bonus less than $1000.
+
+**Approach**
+1. The solution starts by selecting the `name` column from the `Employee` table (`e`) and the `bonus` column from the `Bonus` table (`b`).
+2. It then performs a left join on the `Employee` and `Bonus` tables based on the `empId` column. This ensures that all employees are included in the result, even if they don't have a bonus.
+3. The `where` clause filters the result to include only employees with no bonus (`b.bonus is null`) or a bonus less than $1000 (`b.bonus < 1000`).
+
+**Time Complexity**
+O(n + m), where n is the number of employees and m is the number of bonuses. This is because the solution performs a single pass through both tables.
+
+**Space Complexity**
+O(n + m), where n is the number of employees and m is the number of bonuses. This is because the solution needs to store the result of the join, which can be up to the size of both tables.
+
+**Key Insight**
+The key insight here is that the left join allows us to include all employees in the result, even if they don't have a bonus. By filtering the result based on the bonus amount, we can easily identify employees who meet the condition. This approach is efficient because it avoids the need for subqueries or complex filtering logic.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -44,6 +44,30 @@ Example 2:**
 
 	- `word` consists of lowercase and uppercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by counting the number of uppercase and lowercase letters in the input string. It then checks if the usage of capitals is right based on the counts and the first letter of the string.
+
+**Approach**
+1. Initialize two counters, `upper_count` and `lower_count`, to keep track of the number of uppercase and lowercase letters in the string.
+2. Iterate through each character `w` in the string.
+3. Check if the character is lowercase (ASCII value greater than 96) and increment `lower_count` accordingly.
+4. Otherwise, increment `upper_count`.
+5. After iterating through the entire string, check the conditions:
+   - If all characters are uppercase (`upper_count == n`), return `True`.
+   - If all characters are lowercase (`lower_count == n`), return `True`.
+   - If the first character is uppercase and the rest are lowercase (`word[0] == word[0].upper() and lower_count == n - 1`), return `True`.
+
+**Time Complexity**
+O(n), where n is the length of the input string, because we iterate through each character once.
+
+**Space Complexity**
+O(1), because we only use a constant amount of space to store the counters and do not use any data structures that scale with the input size.
+
+**Key Insight**
+The key insight is that we can determine the usage of capitals in the string by simply counting the number of uppercase and lowercase letters. This approach is efficient because it avoids the need to iterate through the string multiple times or use complex string manipulation.
+
 ## 📊 Metrics
 
 | Metric | Value |

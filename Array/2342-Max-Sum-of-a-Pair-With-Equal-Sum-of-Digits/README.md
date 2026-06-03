@@ -46,6 +46,31 @@ Example 2:**
 
 	- `1 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to store the maximum number seen so far for each possible sum of digits. It then iterates over the array, updating the hash table and keeping track of the maximum sum that can be obtained.
+
+**Approach**
+
+1. Define a helper function `summing` to calculate the sum of digits of a given number.
+2. Initialize a hash table `h1` to store the maximum number seen so far for each possible sum of digits.
+3. Iterate over the array `nums`:
+   1. Calculate the sum of digits of the current number `n` using the `summing` function.
+   2. Check if the sum of digits is already in the hash table `h1`. If it is, update the current maximum sum `curr` by adding the current number `n` to the maximum number stored in the hash table.
+   3. Update the hash table `h1` with the current number `n` if it is greater than the maximum number stored for the same sum of digits.
+   4. Update the maximum sum `maxi` with the current maximum sum `curr`.
+4. If the maximum sum `maxi` is still 0 after iterating over the array, return -1. Otherwise, return the maximum sum `maxi`.
+
+**Time Complexity**
+O(n*m), where n is the length of the array `nums` and m is the maximum number of digits in any number in the array. This is because we are iterating over the array once and for each number, we are calculating the sum of its digits, which takes at most m operations.
+
+**Space Complexity**
+O(n*m), where n is the length of the array `nums` and m is the maximum number of digits in any number in the array. This is because we are storing the maximum number seen so far for each possible sum of digits in the hash table, which can take up to n*m space.
+
+**Key Insight**
+The key insight is to use a hash table to store the maximum number seen so far for each possible sum of digits, allowing us to efficiently find the maximum sum that can be obtained by adding two numbers with equal sum of digits.
+
 ## 📊 Metrics
 
 | Metric | Value |

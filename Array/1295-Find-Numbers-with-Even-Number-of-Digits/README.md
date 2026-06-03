@@ -48,6 +48,29 @@ Only 1771 contains an even number of digits.
 
 	- `1 <= nums[i] <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through each number in the input array, converting it to a string to easily determine the number of digits, and then checking if the number of digits is even. If it is, the solution increments a counter.
+
+**Approach**
+1. Initialize a counter `ans` to 0 to keep track of the numbers with an even number of digits.
+2. Iterate through each number `i` in the input array `nums`.
+3. Convert the number `i` to a string using `str(i)` to easily determine the number of digits.
+4. Calculate the number of digits by getting the length of the string `ch = len(str(i))`.
+5. Check if the number of digits is even by using the modulo operator `ch % 2 == 0`.
+6. If the number of digits is even, increment the counter `ans` by 1.
+7. After iterating through all numbers, return the counter `ans`.
+
+**Time Complexity**
+O(n*m), where n is the number of elements in the input array and m is the maximum number of digits in a number. This is because we are iterating through each number and converting it to a string, which takes O(m) time.
+
+**Space Complexity**
+O(m), where m is the maximum number of digits in a number. This is because we are converting each number to a string, which takes O(m) space.
+
+**Key Insight**
+The key insight is that converting a number to a string allows us to easily determine the number of digits, which is a crucial step in solving this problem. This approach is simple and efficient, making it a good solution for this problem.
+
 ## 📊 Metrics
 
 | Metric | Value |

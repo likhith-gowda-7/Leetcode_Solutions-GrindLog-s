@@ -44,6 +44,28 @@ Example 2:**
 
 	- `-10^9 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a monotonic stack to efficiently find the next greater element for each number in the circular array. The key insight is to treat the circular array as a linear array of length `2*n`, where `n` is the length of the original array. This allows us to use a single pass through the array to find the next greater element for each number.
+
+**Approach**
+1. Create a new array by concatenating the original array with itself, effectively treating the circular array as a linear array of length `2*n`.
+2. Initialize an empty stack and a result array `res` of length `n` with all elements initialized to `-1`.
+3. Iterate through the new array, and for each element `val` at index `i`:
+   a. While the stack is not empty and the top element of the stack is less than `val`, pop the top element from the stack and update the result array with the current value `val`.
+   b. Push the current index `i` onto the stack.
+4. Return the result array `res`.
+
+**Time Complexity**
+O(n) - The algorithm makes a single pass through the array, and each operation (push, pop, comparison) takes constant time.
+
+**Space Complexity**
+O(n) - The space complexity is dominated by the stack and the result array, both of which have a maximum size of `n`.
+
+**Key Insight**
+The key to this solution is treating the circular array as a linear array of length `2*n`, which allows us to use a single pass through the array to find the next greater element for each number. This insight enables us to avoid using multiple passes or more complex data structures, resulting in a efficient and elegant solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

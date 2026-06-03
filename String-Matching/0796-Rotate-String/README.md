@@ -42,6 +42,26 @@ Example 2:**
 
 	- `s` and `goal` consist of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by essentially "rotating" the string `s` to all possible positions and checking if `goal` is a substring of the rotated string. This is possible because a string can be rotated to match another string if and only if the two strings have the same length.
+
+**Approach**
+1. First, we check if the lengths of `s` and `goal` are equal. If not, we immediately return `False` because a string cannot be rotated to match another string of a different length.
+2. We then concatenate `s` with itself. This is because we can rotate `s` to all possible positions by taking substrings of the concatenated string.
+3. We check if `goal` is a substring of the concatenated string. If it is, we return `True` because `goal` can be obtained by rotating `s`.
+4. If `goal` is not a substring of the concatenated string, we return `False`.
+
+**Time Complexity**
+O(n^2), where n is the length of `s`. This is because we are checking if `goal` is a substring of the concatenated string, which takes O(n^2) time in the worst case.
+
+**Space Complexity**
+O(n), where n is the length of `s`. This is because we are concatenating `s` with itself, which takes O(n) space.
+
+**Key Insight**
+The key insight is that a string can be rotated to match another string if and only if the two strings have the same length. This allows us to "rotate" the string by taking substrings of the concatenated string, making the problem much easier to solve.
+
 ## 📊 Metrics
 
 | Metric | Value |

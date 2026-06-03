@@ -57,6 +57,27 @@ Example 3:**
 
 **Follow up:** If you have figured out the `O(n)` solution, try coding another solution of which the time complexity is `O(n log(n))`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+This solution works by utilizing a sliding window approach to find the minimum length subarray whose sum is greater than or equal to the target. The key idea is to maintain a window of elements that sum up to at least the target, and then try to minimize the size of this window. By doing so, we can efficiently explore all possible subarrays and find the one with the minimum length.
+
+## Approach
+1. Initialize two pointers, `l` and `r`, to represent the left and right boundaries of the sliding window.
+2. Initialize a variable `curr` to keep track of the sum of elements within the current window.
+3. Iterate over the array using the `r` pointer, expanding the window to the right and updating `curr` accordingly.
+4. When the sum of elements within the window is greater than or equal to the target, try to minimize the window by moving the `l` pointer to the right and updating `curr` and the result if necessary.
+5. Repeat steps 3-4 until the entire array has been traversed.
+
+## Time Complexity
+The time complexity of this solution is O(n), where n is the length of the input array. This is because each element in the array is visited at most twice (once by the `r` pointer and once by the `l` pointer).
+
+## Space Complexity
+The space complexity of this solution is O(1), as it only uses a constant amount of space to store the pointers, the current sum, and the result.
+
+## Key Insight
+The key insight behind this solution is the use of a sliding window to efficiently explore all possible subarrays and find the one with the minimum length. By maintaining a window of elements that sum up to at least the target and trying to minimize its size, we can avoid unnecessary computations and achieve a linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

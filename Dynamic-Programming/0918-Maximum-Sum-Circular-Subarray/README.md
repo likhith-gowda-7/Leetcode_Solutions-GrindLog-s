@@ -59,6 +59,30 @@ Example 3:**
 
 	- `-3 * 10^4 <= nums[i] <= 3 * 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses Kadane's algorithm to find the maximum and minimum sum of subarrays in the given circular array. It keeps track of the maximum and minimum sum of subarrays ending at the current position and updates the overall maximum and minimum sum. The key insight is that the maximum sum of a subarray in a circular array is either the maximum sum of a subarray in the linear array or the total sum minus the minimum sum of a subarray in the linear array.
+
+**Approach**
+1. Initialize `maxi` and `mini` to the first element of the array, and `curr_max` and `curr_min` to 0.
+2. Iterate through the array, updating `curr_max` and `curr_min` as follows:
+   - `curr_max` is the maximum of the current element and the sum of the current element and `curr_max`.
+   - `curr_min` is the minimum of the current element and the sum of the current element and `curr_min`.
+3. Update `maxi` and `mini` to be the maximum of the current `maxi` and `curr_max`, and the minimum of the current `mini` and `curr_min`, respectively.
+4. Keep a running total of the sum of all elements in the array.
+5. If `maxi` is negative, return `maxi` as the maximum sum of a subarray.
+6. Otherwise, return the maximum of `maxi` and the total sum minus `mini`.
+
+**Time Complexity**
+O(n), where n is the length of the array, because we make a single pass through the array.
+
+**Space Complexity**
+O(1), because we use a constant amount of space to store the variables `maxi`, `mini`, `curr_max`, `curr_min`, and `total`.
+
+**Key Insight**
+The key insight is that the maximum sum of a subarray in a circular array is either the maximum sum of a subarray in the linear array or the total sum minus the minimum sum of a subarray in the linear array. This allows us to solve the problem in a single pass through the array.
+
 ## 📊 Metrics
 
 | Metric | Value |

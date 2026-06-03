@@ -92,6 +92,28 @@ Average selling price for product 2 = ((200 * 15) + (30 * 30)) / 230 = 16.96
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution joins the `Prices` and `UnitsSold` tables based on the product ID and date range, then calculates the average price for each product by dividing the total revenue (price * units) by the total units sold.
+
+**Approach**
+1. Perform a LEFT JOIN between the `Prices` and `UnitsSold` tables on the product ID and date range.
+2. For each joined row, multiply the price by the units sold to get the total revenue.
+3. Calculate the total units sold by summing the units column.
+4. Divide the total revenue by the total units sold to get the average price.
+5. Round the average price to two decimal places using the `ROUND` function.
+6. Group the results by product ID using the `GROUP BY` clause.
+
+**Time Complexity**
+O(n), where n is the total number of rows in the `Prices` and `UnitsSold` tables. This is because we perform a single pass through the joined tables to calculate the average price for each product.
+
+**Space Complexity**
+O(n), where n is the total number of rows in the `Prices` and `UnitsSold` tables. This is because we need to store the intermediate results in memory before grouping and calculating the average price.
+
+**Key Insight**
+The key insight here is to use a LEFT JOIN to include all products from the `Prices` table, even if there are no matching rows in the `UnitsSold` table. This allows us to calculate the average price for each product, even if there are no sales data available.
+
 ## 📊 Metrics
 
 | Metric | Value |

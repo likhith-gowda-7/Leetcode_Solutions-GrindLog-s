@@ -79,6 +79,25 @@ Starting with 27 energy, we finish the tasks in the following order:
 
 	- `1 <= actual_​i <= minimum_i <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The key insight behind this solution is that we should prioritize tasks that require the most energy to begin but have the smallest energy difference between their actual and minimum values. This is because these tasks are the most critical to complete first, as they require the least amount of additional energy to start.
+
+**Approach**
+1. Sort the tasks based on the difference between their minimum and actual energy requirements in ascending order.
+2. Initialize a variable `res` to keep track of the minimum initial energy required.
+3. Iterate through the sorted tasks. For each task, update `res` to be the maximum of its current value and the sum of the task's actual energy and `res`.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the number of tasks. The subsequent iteration through the tasks takes O(n) time, but it's dominated by the sorting step.
+
+**Space Complexity**
+O(1) since we're only using a constant amount of space to store the `res` variable and the lambda function for sorting.
+
+**Key Insight**
+The key to this solution is recognizing that we can always start with the minimum energy required to begin the next task, and then add the actual energy spent to complete it. By prioritizing tasks with the smallest energy difference, we ensure that we're always making progress towards completing the tasks with the least additional energy required.
+
 ## 📊 Metrics
 
 | Metric | Value |

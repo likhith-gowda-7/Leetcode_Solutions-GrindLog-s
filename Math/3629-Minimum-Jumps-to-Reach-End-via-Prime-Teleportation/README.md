@@ -75,6 +75,28 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a combination of dynamic programming and a prime number sieve to efficiently find the minimum number of jumps required to reach the end of the array. The key insight is to use a hash table to store the indices of numbers that can be reached by prime teleportation, allowing for fast lookup and update of the dynamic programming table.
+
+**Approach**
+1. Create a prime number sieve to generate a list of prime numbers up to a certain limit.
+2. Initialize a hash table `head` to store the indices of numbers that can be reached by prime teleportation.
+3. Initialize a dynamic programming table `dp` to store the minimum number of jumps required to reach each index.
+4. Initialize a queue with the starting index (0) and a set to keep track of seen prime numbers.
+5. While the queue is not empty, pop an index from the queue and update the dynamic programming table and the queue with its adjacent indices and prime teleportation indices.
+6. If the end index is reached, return the minimum number of jumps required.
+
+**Time Complexity**
+O(n + m log log m), where n is the length of the array and m is the maximum value in the array. The prime number sieve takes O(m log log m) time, and the dynamic programming and queue operations take O(n) time.
+
+**Space Complexity**
+O(m + n), where m is the maximum value in the array and n is the length of the array. The prime number sieve and hash table take O(m) space, and the dynamic programming table and queue take O(n) space.
+
+**Key Insight**
+The key insight is to use a hash table to store the indices of numbers that can be reached by prime teleportation, allowing for fast lookup and update of the dynamic programming table. This allows the solution to efficiently handle the prime teleportation operation and find the minimum number of jumps required to reach the end of the array.
+
 ## 📊 Metrics
 
 | Metric | Value |

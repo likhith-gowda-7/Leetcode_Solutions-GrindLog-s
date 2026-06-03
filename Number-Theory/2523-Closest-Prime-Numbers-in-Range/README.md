@@ -60,6 +60,29 @@ Example 2:**
 .spoilerbutton[value="Show Message"] + .spoiler > div {margin-top:-500%;}
 .spoilerbutton[value="Hide Message"] + .spoiler {padding:5px;}
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses the Sieve of Eratosthenes algorithm to efficiently find all prime numbers within the given range. It then iterates through the list of primes to find the closest pair with the minimum difference.
+
+**Approach**
+1. Create a boolean array `is_prime` of size `right + 1` and initialize all values to `True`.
+2. Set `is_prime[0]` and `is_prime[1]` to `False` since 0 and 1 are not prime numbers.
+3. Iterate from 2 to the square root of `right` and mark multiples of each prime number as non-prime.
+4. Collect all prime numbers in the range `[left, right]` using a list comprehension.
+5. If there are less than 2 prime numbers, return `[-1, -1]`.
+6. Iterate through the list of primes and find the closest pair with the minimum difference.
+7. Return the pair of primes with the minimum difference.
+
+**Time Complexity**
+O(n log log n) where n is the upper bound of the range. This is because the Sieve of Eratosthenes algorithm has a time complexity of O(n log log n) and we are iterating through the list of primes once.
+
+**Space Complexity**
+O(n) where n is the upper bound of the range. This is because we are creating a boolean array of size `right + 1` and a list of primes of size n.
+
+**Key Insight**
+The key insight is to use the Sieve of Eratosthenes algorithm to efficiently find all prime numbers within the given range. This allows us to iterate through the list of primes once to find the closest pair with the minimum difference, resulting in a time complexity of O(n log log n).
+
 ## 📊 Metrics
 
 | Metric | Value |

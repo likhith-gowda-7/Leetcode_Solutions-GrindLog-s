@@ -59,6 +59,27 @@ Example 3:**
 
 	- All the strings of `nums` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by generating a binary string that is the bitwise XOR of the characters at each index in the input strings. This approach is based on the property that XORing a bit with itself results in 0, and XORing a bit with its complement results in 1.
+
+**Approach**
+1. Initialize an empty string `res` to store the result.
+2. Iterate over the indices of the input strings `nums`.
+3. For each index `i`, calculate the XOR of the character at index `i` in the current string and 1.
+4. Convert the result to a string and append it to `res`.
+5. Return the resulting binary string `res`.
+
+**Time Complexity**
+O(n), where n is the length of the input strings. This is because we are iterating over the indices of the input strings once.
+
+**Space Complexity**
+O(n), where n is the length of the input strings. This is because we are storing the result in a string of length n.
+
+**Key Insight**
+The key insight is that XORing a bit with itself results in 0, and XORing a bit with its complement results in 1. This property allows us to generate a binary string that is the bitwise XOR of the characters at each index in the input strings, which is guaranteed to be different from any of the input strings.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -53,6 +53,27 @@ To take course 1 you should have finished course 0, and to take course 0 you sho
 
 	- All the pairs prerequisites[i] are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a depth-first search (DFS) approach to detect cycles in the graph of courses. If a cycle is found, it means that there's a course that cannot be taken, and the function returns `False`. If no cycles are found, it means that all courses can be taken, and the function returns `True`.
+
+**Approach**
+1. Create an adjacency list representation of the graph using the `prerequisites` array.
+2. Initialize a `states` array to keep track of the state of each course (unvisited, visiting, or visited).
+3. Define a `dfs` function to perform the depth-first search. The function takes a node (course) as input and returns `True` if the course can be taken and `False` otherwise.
+4. In the `dfs` function, check if the node is being visited (cycle detected) or has already been visited (course can be taken). If not, mark the node as visiting and recursively call the `dfs` function on its prerequisites.
+5. If all courses have been checked and no cycles are found, return `True`.
+
+**Time Complexity**
+O(n + m), where n is the number of courses and m is the number of prerequisites. This is because each course and prerequisite is visited at most once.
+
+**Space Complexity**
+O(n), where n is the number of courses. This is because we need to store the state of each course in the `states` array.
+
+**Key Insight**
+The key insight is that a cycle in the graph of courses indicates that there's a course that cannot be taken, and therefore, all courses cannot be taken. By using DFS to detect cycles, we can efficiently determine whether it's possible to finish all courses.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -54,6 +54,29 @@ Example 3:**
 
 	- `-10^4 <= target <= 10^4`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing a binary search approach to find the target value in the sorted array. If the target is found, the index is returned; otherwise, the algorithm determines the correct insertion point to maintain the sorted order. This approach takes advantage of the fact that the input array is already sorted, allowing for an efficient search.
+
+## Approach
+1. Initialize two pointers, `l` and `r`, to the start and end of the array, respectively.
+2. Loop until `l` is greater than `r`.
+3. Calculate the midpoint `mid` of the current range `[l, r]`.
+4. Compare the value at the midpoint `nums[mid]` with the target value.
+5. If `nums[mid]` is less than the target, move the left pointer `l` to `mid + 1`.
+6. Otherwise, move the right pointer `r` to `mid - 1`.
+7. Once the loop ends, return the left pointer `l`, which represents the index where the target should be inserted to maintain the sorted order.
+
+## Time Complexity
+The time complexity is O(log n), where n is the length of the input array. This is because the algorithm divides the search space in half at each step, resulting in a logarithmic number of iterations.
+
+## Space Complexity
+The space complexity is O(1), as the algorithm only uses a constant amount of space to store the pointers and the midpoint, regardless of the input size.
+
+## Key Insight
+The key insight is that the binary search approach can be modified to find the insertion point of a target value in a sorted array, even if the target is not present. By returning the left pointer `l` after the loop ends, the algorithm effectively determines the correct index where the target should be inserted to maintain the sorted order.
+
 ## 📊 Metrics
 
 | Metric | Value |

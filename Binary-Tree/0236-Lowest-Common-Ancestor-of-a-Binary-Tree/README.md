@@ -62,6 +62,29 @@ Example 3:**
 
 	- `p` and `q` will exist in the tree.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a Depth-First Search (DFS) approach to traverse the binary tree and find the lowest common ancestor (LCA) of two given nodes. The key insight is that the LCA must be a node that has both `p` and `q` as descendants, and it must be the lowest such node.
+
+**Approach**
+1. Define a helper function `dfs` that takes a node `root` as input.
+2. If `root` is `None` or if `root` is either `p` or `q`, return `root` immediately.
+3. Recursively call `dfs` on `root.left` and `root.right`.
+4. If both `left` and `right` are not `None`, it means that `p` and `q` are in different subtrees of `root`, so return `root`.
+5. If only `left` is not `None`, it means that `p` and `q` are in the left subtree of `root`, so return `left`.
+6. If only `right` is not `None`, it means that `p` and `q` are in the right subtree of `root`, so return `right`.
+7. Call `dfs` on the root node to start the traversal.
+
+**Time Complexity**
+O(N), where N is the number of nodes in the binary tree. This is because in the worst case, we visit each node once.
+
+**Space Complexity**
+O(H), where H is the height of the binary tree. This is because the maximum depth of the recursive call stack is H.
+
+**Key Insight**
+The key insight is that the LCA must be a node that has both `p` and `q` as descendants, and it must be the lowest such node. This is why we return `root` as soon as we find a node that has both `p` and `q` as descendants, because it is guaranteed to be the lowest such node.
+
 ## 📊 Metrics
 
 | Metric | Value |

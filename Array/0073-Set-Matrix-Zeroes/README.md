@@ -57,6 +57,25 @@ Example 2:**
 
 	- Could you devise a constant space solution?
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by first identifying the rows and columns that need to be zeroed out, and then iterating over the matrix again to set the corresponding elements to zero. The use of sets to store the rows and columns with zeros allows for efficient lookups.
+
+## Approach
+1. Initialize two sets, `row_zeros` and `col_zeros`, to store the indices of rows and columns that contain zeros.
+2. Iterate over the matrix to find the rows and columns with zeros and add their indices to the respective sets.
+3. Iterate over the matrix again, and for each element, check if its row or column index is in the `row_zeros` or `col_zeros` set. If it is, set the element to zero.
+
+## Time Complexity
+The time complexity is O(mn), where m is the number of rows and n is the number of columns in the matrix. This is because we are iterating over the matrix twice: once to find the rows and columns with zeros, and again to set the corresponding elements to zero.
+
+## Space Complexity
+The space complexity is O(m + n), where m is the number of rows and n is the number of columns in the matrix. This is because in the worst-case scenario, we might need to store all row and column indices in the `row_zeros` and `col_zeros` sets.
+
+## Key Insight
+The key insight here is to use sets to store the rows and columns with zeros, which allows for efficient lookups and avoids the need to use extra space that scales with the size of the matrix. This approach enables us to solve the problem in-place, as required.
+
 ## 📊 Metrics
 
 | Metric | Value |

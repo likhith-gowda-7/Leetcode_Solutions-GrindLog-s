@@ -85,6 +85,28 @@ foodRatings.highestRated("japanese"); // return "ramen"
 
 	- At most `2 * 10^4` calls **in total** will be made to `changeRating` and `highestRated`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution leverages a combination of a hash map and a heap data structure to efficiently manage the food rating system. The hash map allows for fast lookups of food items and their corresponding cuisines, while the heap enables efficient retrieval of the highest-rated food item for a given cuisine.
+
+**Approach**
+1. Initialize a hash map `self.food_map` to store the cuisine of each food item, and a hash map `self.details` to store the food items for each cuisine in a min-heap.
+2. Iterate through the input lists `foods`, `cuisines`, and `ratings` to populate the `self.food_map` and `self.details` hash maps.
+3. For each cuisine, use the `heapify` function to transform the list of food items into a min-heap.
+4. When changing the rating of a food item, update the rating in the `self.food_map` hash map and use the `heappush` function to update the heap of food items for the corresponding cuisine.
+5. When retrieving the highest-rated food item for a cuisine, use the `heappop` function to remove the top-rated food item from the heap and return its name.
+
+**Time Complexity**
+- `O(n log n)` for the initial population of the hash maps and heaps, where `n` is the number of food items.
+- `O(log n)` for the `changeRating` and `highestRated` operations, since they involve updating or retrieving a single food item from the heap.
+
+**Space Complexity**
+- `O(n)` for the hash maps `self.food_map` and `self.details`, which store the food items and their corresponding cuisines.
+
+**Key Insight**
+The key to this solution is the use of a min-heap to efficiently retrieve the highest-rated food item for a given cuisine. By storing the food items in a heap, we can quickly identify the top-rated item and update the heap as ratings change. This approach allows us to solve the problem in near-constant time for the `changeRating` and `highestRated` operations.
+
 ## 📊 Metrics
 
 | Metric | Value |

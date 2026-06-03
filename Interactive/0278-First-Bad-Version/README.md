@@ -48,6 +48,27 @@ Example 2:**
 
 	- `1 <= bad <= n <= 2^31 - 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a binary search approach to find the first bad version. The idea is to repeatedly divide the search space in half until we find the first bad version. This approach works because the versions are ordered, and each bad version causes all subsequent versions to be bad.
+
+**Approach**
+1. Initialize two pointers, `l` and `r`, to the start and end of the version range, respectively.
+2. While `l` is less than or equal to `r`, calculate the midpoint `mid` of the current search range.
+3. Call the `isBadVersion` API to check if the version at `mid` is bad. If it is, update `r` to `mid - 1` to search in the left half of the range. If it's not, update `l` to `mid + 1` to search in the right half of the range.
+4. Repeat steps 2-3 until `l` is greater than `r`.
+5. The first bad version is the one at index `l`.
+
+**Time Complexity**
+O(log n), where n is the number of versions. This is because we divide the search space in half at each step, resulting in a logarithmic number of iterations.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the pointers `l` and `r`.
+
+**Key Insight**
+The key insight here is that we can use binary search to find the first bad version in logarithmic time, even though we don't have direct access to the version numbers. This is possible because we can use the `isBadVersion` API to determine whether a version is bad or not, and then adjust our search range accordingly.
+
 ## 📊 Metrics
 
 | Metric | Value |

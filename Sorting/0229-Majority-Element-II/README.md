@@ -54,6 +54,27 @@ Example 3:**
 
 **Follow up:** Could you solve the problem in linear time and in `O(1)` space?
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by first counting the frequency of each element in the array using a hash table. This allows us to efficiently determine which elements appear more than `n/3` times. The key idea is to leverage the hash table's ability to store and retrieve frequency information in constant time.
+
+## Approach
+1. Initialize a hash table to store the frequency of each element in the array.
+2. Iterate through the array and update the frequency count for each element in the hash table.
+3. Initialize an empty list to store the result.
+4. Iterate through the hash table and check if the frequency of each element exceeds `n/3`.
+5. If an element's frequency exceeds `n/3`, add it to the result list.
+
+## Time Complexity
+The time complexity is O(n), where n is the length of the input array. This is because we perform a constant amount of work for each element in the array, both when counting frequencies and when checking for majority elements.
+
+## Space Complexity
+The space complexity is O(n), where n is the length of the input array. This is because in the worst case, we may need to store every element in the hash table.
+
+## Key Insight
+The key insight is to use a hash table to efficiently count the frequency of each element, allowing us to solve the problem in linear time. However, this solution does not meet the follow-up requirement of O(1) space complexity, suggesting that a more optimized approach may be necessary to achieve this goal.
+
 ## 📊 Metrics
 
 | Metric | Value |

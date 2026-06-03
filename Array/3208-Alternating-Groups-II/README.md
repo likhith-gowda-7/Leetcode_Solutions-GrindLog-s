@@ -71,6 +71,27 @@ Example 3:**
 
 	- `3 <= k <= colors.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining a sliding window of size `k` and counting the number of times the colors inside the window alternate. The key insight is that when the colors inside the window stop alternating, we can reset the window to the next tile and start counting again.
+
+**Approach**
+1. First, we append the first `k-1` elements of the `colors` array to the end of the array to form a circle.
+2. We initialize two pointers, `l` and `r`, to the start of the array and a variable `res` to count the number of alternating groups.
+3. We iterate through the array with the `r` pointer, and for each tile, we check if the color is the same as the previous tile. If it is, we reset the `l` pointer to the current `r` index.
+4. When the window size (`r-l+1`) equals `k`, we increment the `l` pointer and the `res` counter, indicating that we have found an alternating group.
+5. We repeat steps 3-4 until we reach the end of the array.
+
+**Time Complexity**
+O(n), where n is the length of the `colors` array. This is because we make a single pass through the array.
+
+**Space Complexity**
+O(n), where n is the length of the `colors` array. This is because we append the first `k-1` elements of the `colors` array to the end of the array.
+
+**Key Insight**
+The key insight is that when the colors inside the window stop alternating, we can reset the window to the next tile and start counting again. This allows us to efficiently count the number of alternating groups in the array.
+
 ## 📊 Metrics
 
 | Metric | Value |

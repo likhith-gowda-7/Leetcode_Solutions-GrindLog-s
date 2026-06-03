@@ -56,6 +56,30 @@ Since there is only one element in nums, the triangular sum is the value of that
 
 	- `0 <= nums[i] <= 9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The triangular sum problem involves repeatedly applying a transformation to the input array, where each element is the sum of the two adjacent elements modulo 10. The process terminates when the array has only one element left, which is the triangular sum of the original array.
+
+**Approach**
+1. Initialize a variable `n` to store the length of the input array `nums`.
+2. Iterate `n-1` times to apply the transformation to the array.
+3. In each iteration, create a new array `new_arr` to store the transformed elements.
+4. Iterate through the input array, starting from the second element (index 1), and calculate the sum of each element and its previous element modulo 10.
+5. Append the calculated value to the `new_arr`.
+6. Replace the input array `nums` with the `new_arr`.
+7. Repeat steps 3-6 until the array has only one element left.
+8. Return the single element in the array as the triangular sum.
+
+**Time Complexity**
+O(n * m), where n is the number of iterations and m is the average number of elements in the array after each iteration. Since the array size decreases by 1 in each iteration, the total number of elements processed is n + (n-1) + ... + 1 = n*(n+1)/2. Therefore, the time complexity is O(n^2).
+
+**Space Complexity**
+O(n), as we need to store the transformed array in each iteration, which has a maximum size of n.
+
+**Key Insight**
+The key insight is that the transformation process reduces the array size by 1 in each iteration, and the resulting array has only one element left, which is the triangular sum of the original array. This insight allows us to simplify the problem and focus on the iterative process of applying the transformation.
+
 ## 📊 Metrics
 
 | Metric | Value |

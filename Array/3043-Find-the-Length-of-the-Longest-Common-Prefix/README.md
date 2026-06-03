@@ -54,6 +54,30 @@ Note that common prefixes between elements of the same array do not count.
 
 	- `1 <= arr1[i], arr2[i] <= 10^8`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The approach works by first storing all prefixes of numbers in `arr1` in a set `h1`. Then, for each number in `arr2`, it checks the length of the common prefix with all prefixes in `h1`. The maximum length found is the length of the longest common prefix among all pairs.
+
+**Approach**
+1. Create an empty set `h1` to store all prefixes of numbers in `arr1`.
+2. Define a helper function `solve` that takes a number `num` and adds all its prefixes to `h1`.
+3. Iterate over each number `val` in `arr1` and call `solve(val)` to add its prefixes to `h1`.
+4. Iterate over each number `val` in `arr2`.
+5. For each `val` in `arr2`, initialize a variable `curr` to `val` and a variable `l` to 0.
+6. While `curr` is not 0, check if `curr` is in `h1`. If it is, set `found` to True. If `found` is True, increment `l`.
+7. Update `max_length` to be the maximum of `max_length` and `l`.
+8. Return `max_length`.
+
+**Time Complexity**
+The time complexity is O(n*m*log(m)), where n is the total number of digits in `arr1` and `arr2`, and m is the maximum number of digits in a number in `arr1` or `arr2`. This is because we are iterating over each number in `arr1` and `arr2`, and for each number, we are iterating over its digits.
+
+**Space Complexity**
+The space complexity is O(n*m), where n is the total number of digits in `arr1` and `arr2`, and m is the maximum number of digits in a number in `arr1` or `arr2`. This is because we are storing all prefixes of numbers in `arr1` in a set `h1`.
+
+**Key Insight**
+The key insight is that we can store all prefixes of numbers in `arr1` in a set `h1` and then check the length of the common prefix with all prefixes in `h1` for each number in `arr2`. This allows us to efficiently find the length of the longest common prefix among all pairs.
+
 ## 📊 Metrics
 
 | Metric | Value |

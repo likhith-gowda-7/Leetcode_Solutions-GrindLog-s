@@ -45,6 +45,28 @@ Example 2:**
 
 	- `-10^4 <= arr[i], x <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a priority queue (implemented with a heap) to efficiently find the k closest elements to x in the sorted array. The key insight is to use the negative absolute difference between each element and x as the priority, which allows us to easily pop the smallest elements from the heap.
+
+**Approach**
+1. Initialize an empty heap and a result list.
+2. Iterate through the sorted array, calculating the negative absolute difference between each element and x.
+3. If the heap is not full (i.e., its size is less than k), push the element and its difference onto the heap.
+4. If the heap is full, check if the smallest element in the heap (i.e., the one with the smallest difference) is smaller than the current element's difference. If so, pop the smallest element from the heap and push the current element onto the heap.
+5. After iterating through the entire array, pop all elements from the heap and add them to the result list.
+6. Finally, sort the result list in ascending order and return it.
+
+**Time Complexity**
+O(n log k), where n is the length of the array. This is because each insertion and deletion operation on the heap takes O(log k) time, and we perform these operations n times.
+
+**Space Complexity**
+O(k), as we need to store at most k elements in the heap.
+
+**Key Insight**
+The key insight is to use the negative absolute difference between each element and x as the priority, which allows us to easily pop the smallest elements from the heap. This approach takes advantage of the heap data structure's ability to efficiently maintain the smallest element at the top.
+
 ## 📊 Metrics
 
 | Metric | Value |

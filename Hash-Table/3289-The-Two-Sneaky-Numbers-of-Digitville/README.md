@@ -59,6 +59,26 @@ The numbers 4 and 5 each appear twice in the array.
 
 	The input is generated such that `nums` contains **exactly** two repeated elements.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by utilizing a hash table (in this case, a count array) to keep track of the frequency of each number in the input list. Since the two sneaky numbers appear twice, we can simply iterate through the list, incrementing the count for each number, and append the numbers to the result list when their count reaches 2.
+
+**Approach**
+1. Initialize a count array of size `n`, where `n` is the length of the input list, to keep track of the frequency of each number.
+2. Iterate through the input list, incrementing the count for each number in the count array.
+3. When the count for a number reaches 2, append it to the result list.
+4. Return the result list containing the two sneaky numbers.
+
+**Time Complexity**
+O(n), where n is the length of the input list, because we are iterating through the list once.
+
+**Space Complexity**
+O(n), where n is the length of the input list, because we are using a count array of size n to keep track of the frequency of each number.
+
+**Key Insight**
+The key insight is that since the two sneaky numbers appear twice, we can simply iterate through the list and keep track of the frequency of each number. When a number's count reaches 2, we know it's one of the sneaky numbers. This approach allows us to solve the problem efficiently with a single pass through the list.
+
 ## 📊 Metrics
 
 | Metric | Value |

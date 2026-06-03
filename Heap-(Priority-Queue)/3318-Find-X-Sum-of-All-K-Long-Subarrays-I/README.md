@@ -61,6 +61,29 @@ Since `k == x`, `answer[i]` is equal to the sum of the subarray `nums[i..i + k -
 
 	- `1 <= x <= k <= nums.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a combination of a frequency array and a priority queue to efficiently calculate the x-sum of subarrays. The key insight is to maintain a sliding window of size k and update the frequency array and priority queue accordingly.
+
+**Approach**
+1. Initialize a frequency array `freq` to store the count and value of each element in the array.
+2. Create a priority queue `heap` to store the top x most frequent elements.
+3. Iterate through the array, updating the frequency array and priority queue for each subarray of size k.
+4. For each subarray, pop elements from the priority queue until it has less than x elements or the count of the top element is 0.
+5. Calculate the x-sum by multiplying the count of each element by its value and summing the results.
+6. Append the x-sum to the result array.
+7. Repeat steps 3-6 until the end of the array is reached.
+
+**Time Complexity**
+O(n log x), where n is the length of the array and x is the number of top frequent elements. The priority queue operations (insert, delete, and extract_min) take O(log x) time, and we perform these operations n times.
+
+**Space Complexity**
+O(n + x), where n is the length of the array and x is the number of top frequent elements. We store the frequency array and priority queue, which take O(n + x) space.
+
+**Key Insight**
+The key insight is to use a priority queue to efficiently maintain the top x most frequent elements, allowing us to calculate the x-sum of subarrays in O(n log x) time. This approach avoids the need to sort the entire array or use a complex data structure, making it efficient and scalable.
+
 ## 📊 Metrics
 
 | Metric | Value |

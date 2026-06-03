@@ -73,6 +73,30 @@ It can be shown that 4 is the minimum number of operations needed so that all el
 
 	- The input is generated such that an answer always exists. That is, after performing some number of operations, all elements of the array are greater than or equal to `k`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a priority queue (min-heap) to efficiently manage the smallest elements in the array. By repeatedly removing the two smallest elements, combining them, and inserting the result back into the heap, we can simulate the described operations and find the minimum number of operations needed to exceed the threshold value.
+
+**Approach**
+1. Initialize a min-heap to store the smallest elements from the input array `nums`.
+2. Iterate through `nums` and push each element into the min-heap.
+3. Initialize a counter `op` to keep track of the number of operations performed.
+4. While the min-heap is not empty:
+   1. Pop the two smallest elements `min1` and `min2` from the heap.
+   2. If `min1` is greater than or equal to the threshold value `k`, break the loop.
+   3. Calculate the new element `curr` by combining `min1` and `min2`.
+   4. Push `curr` back into the heap and increment the operation counter `op`.
+
+**Time Complexity**
+O(n log n), where n is the length of the input array `nums`. The reason is that we perform a heap operation (push or pop) for each element in `nums`, and each heap operation takes O(log n) time.
+
+**Space Complexity**
+O(n), as we need to store all elements from `nums` in the min-heap.
+
+**Key Insight**
+The key insight is that by repeatedly combining the two smallest elements, we can effectively "grow" the smallest elements in the array while minimizing the number of operations. This approach takes advantage of the heap data structure to efficiently manage the smallest elements and find the minimum number of operations needed to exceed the threshold value.
+
 ## 📊 Metrics
 
 | Metric | Value |

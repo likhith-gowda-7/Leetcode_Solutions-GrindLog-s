@@ -65,6 +65,27 @@ If we had started at the first tree, we would only pick from trees [1,2].
 
 	- `0 <= fruits[i] < fruits.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach with two pointers, `l` and `r`, to traverse the array of fruits. The key insight is to maintain a bucket (hash map) that keeps track of the types of fruits in the current window. By ensuring that the bucket size is at most 2, we can collect as much fruit as possible while adhering to the problem constraints.
+
+**Approach**
+1. Initialize the result (`res`) to 0, a bucket (hash map) to store the types of fruits, and two pointers (`l` and `r`) to the start and end of the window.
+2. Iterate through the array of fruits with the `r` pointer.
+3. If the current fruit is not in the bucket, update the result with the maximum window size seen so far and slide the window to the right by incrementing the `l` pointer until the bucket size is 2.
+4. Add the current fruit to the bucket and update its count.
+5. After the iteration, update the result with the maximum window size seen at the end of the array.
+
+**Time Complexity**
+O(n), where n is the length of the array of fruits. This is because we iterate through the array once with the `r` pointer and perform constant-time operations for each fruit.
+
+**Space Complexity**
+O(n), where n is the length of the array of fruits. In the worst case, we need to store all the unique fruits in the bucket.
+
+**Key Insight**
+The key to this solution is to maintain a bucket size of at most 2, which allows us to collect as much fruit as possible while adhering to the problem constraints. By sliding the window to the right and updating the bucket accordingly, we can efficiently find the maximum window size that satisfies the problem conditions.
+
 ## 📊 Metrics
 
 | Metric | Value |

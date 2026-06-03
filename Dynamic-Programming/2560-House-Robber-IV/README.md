@@ -58,6 +58,29 @@ Example 2:**
 
 	- `1 <= k <= (nums.length + 1)/2`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the minimum capability of a robber who refuses to steal from adjacent houses, given a list of houses with varying amounts of money and a minimum number of houses to steal from. The solution involves a binary search approach to find the minimum capability.
+
+**Approach**
+1. Define a helper function `is_valid(capability)` that checks if it's possible to steal at least `k` houses with a given capability.
+2. Initialize the search range `[l, r]` to `[1, max(nums)]`, where `l` is the minimum possible capability and `r` is the maximum possible capability.
+3. Perform a binary search within the range `[l, r]`.
+4. For each mid capability, check if it's possible to steal at least `k` houses using the `is_valid(mid)` function.
+5. If it's possible to steal at least `k` houses, update the range to `[l, mid-1]`. Otherwise, update the range to `[mid+1, r]`.
+6. Repeat steps 4-5 until the range `[l, r]` is empty.
+7. The minimum capability is the remaining value in the range `[l, r]`.
+
+**Time Complexity**
+The time complexity is O(n log m), where n is the number of houses and m is the maximum capability. This is because the binary search is performed within the range `[l, r]`, and the `is_valid(mid)` function is called for each mid capability.
+
+**Space Complexity**
+The space complexity is O(1), as the solution only uses a constant amount of space to store the search range and the capability.
+
+**Key Insight**
+The key insight is that the capability of the robber is a key factor in determining the minimum number of houses to steal from. By performing a binary search on the capability, we can efficiently find the minimum capability required to steal at least `k` houses.
+
 ## 📊 Metrics
 
 | Metric | Value |

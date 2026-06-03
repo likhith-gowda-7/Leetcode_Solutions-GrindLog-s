@@ -88,6 +88,25 @@ Employee table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution joins the `Project` and `Employee` tables based on the `employee_id` column, then calculates the average experience years for each project by grouping the results.
+
+**Approach**
+1. Join the `Project` and `Employee` tables on the `employee_id` column to create a combined table with project information and employee experience years.
+2. Group the combined table by `project_id` to calculate the average experience years for each project.
+3. Use the `round` function to round the average experience years to two decimal places.
+
+**Time Complexity**
+O(n), where n is the number of rows in the combined table. This is because we are performing a single pass through the data to join the tables and calculate the average experience years.
+
+**Space Complexity**
+O(n), where n is the number of rows in the combined table. This is because we are creating a new table with the combined data, which requires additional storage space.
+
+**Key Insight**
+The key insight here is that we can use a simple join and grouping operation to calculate the average experience years for each project, without needing to use any complex aggregation functions or subqueries. This is a great example of how a well-designed join can simplify complex queries.
+
 ## 📊 Metrics
 
 | Metric | Value |

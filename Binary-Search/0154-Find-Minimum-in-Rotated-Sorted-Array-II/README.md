@@ -56,6 +56,27 @@ Example 2:**
 
 **Follow up:** This problem is similar to [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/), but `nums` may contain **duplicates**. Would this affect the runtime complexity? How and why?
 
+## 🧠 Solution Explanation
+
+## Intuition
+This approach works by utilizing a modified binary search algorithm to find the minimum element in a rotated sorted array that may contain duplicates. The key idea is to handle duplicates by skipping over them and then applying the standard binary search logic. The algorithm iteratively narrows down the search space until it finds the minimum element.
+
+## Approach
+1. Initialize two pointers, `l` and `r`, to the start and end of the array, respectively, and a variable `mini` to store the minimum element found so far.
+2. Skip over any duplicate elements at the start and end of the current search space.
+3. Calculate the midpoint `mid` of the current search space.
+4. Compare the elements at `l` and `mid` to determine which half of the search space the minimum element is likely to be in.
+5. Update the `mini` variable and adjust the search space accordingly.
+
+## Time Complexity
+The time complexity is O(n) in the worst case, where n is the number of elements in the array. This occurs when the array is filled with duplicates, and the algorithm has to iterate over the entire array to find the minimum element.
+
+## Space Complexity
+The space complexity is O(1), as the algorithm only uses a constant amount of space to store the pointers and the minimum element.
+
+## Key Insight
+The key insight behind this solution is the way it handles duplicates by skipping over them before applying the standard binary search logic. This allows the algorithm to efficiently find the minimum element in a rotated sorted array with duplicates, even in the worst-case scenario where the array is filled with duplicates.
+
 ## 📊 Metrics
 
 | Metric | Value |

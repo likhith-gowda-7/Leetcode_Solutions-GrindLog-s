@@ -68,6 +68,29 @@ Example 3:**
 
 	- No two computers are connected by more than one cable.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Union-Find approach to find the minimum number of cables to extract and reconnect to make all computers connected. The idea is to first check if it's possible to make all computers connected, and then use the Union-Find algorithm to find the minimum number of cables to extract and reconnect.
+
+**Approach**
+1. Check if it's possible to make all computers connected by comparing the number of connections to the number of computers minus one (n-1).
+2. Initialize the parent array and size array for the Union-Find algorithm.
+3. Define the find function to find the root of a node in the Union-Find tree.
+4. Define the union function to merge two nodes in the Union-Find tree and update the size array.
+5. Iterate through the connections and use the union function to merge connected nodes.
+6. Count the number of connected components and the number of extra cables.
+7. Calculate the minimum number of cables to extract and reconnect.
+
+**Time Complexity**
+O(n + m), where n is the number of computers and m is the number of connections. The Union-Find algorithm has a time complexity of O(n + m) for the find and union operations.
+
+**Space Complexity**
+O(n), where n is the number of computers. The parent and size arrays have a space complexity of O(n).
+
+**Key Insight**
+The key insight is that the Union-Find algorithm can be used to find the minimum number of cables to extract and reconnect to make all computers connected. By counting the number of connected components and the number of extra cables, we can calculate the minimum number of cables to extract and reconnect.
+
 ## 📊 Metrics
 
 | Metric | Value |

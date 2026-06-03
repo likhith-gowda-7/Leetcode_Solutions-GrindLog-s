@@ -67,6 +67,27 @@ The operations can be performed using valid integers in the order 7, 5, 3, and 1
 
 	- `1 <= k <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first identifying the unique elements in the array and checking if the minimum of these unique elements is less than the target value `k`. If it is, it's impossible to make all elements equal to `k`, so the function returns -1. Otherwise, it counts the number of unique elements and subtracts 1 if `k` is one of them, since all elements greater than `k` can be set to `k` in a single operation.
+
+**Approach**
+1. Create a set `unique` containing the unique elements in the array `nums`.
+2. Check if the minimum element in `unique` is less than `k`. If it is, return -1.
+3. Count the number of unique elements in `unique` and store it in `l`.
+4. If `k` is one of the unique elements, decrement `l` by 1.
+5. Return `l`, which represents the minimum number of operations required to make all elements equal to `k`.
+
+**Time Complexity**
+O(n) where n is the number of unique elements in the array. This is because creating a set of unique elements takes O(n) time.
+
+**Space Complexity**
+O(n) where n is the number of unique elements in the array. This is because a set of unique elements is created, which requires O(n) space.
+
+**Key Insight**
+The key insight is that the minimum number of operations required to make all elements equal to `k` is equal to the number of unique elements greater than `k`, minus 1 if `k` is one of these unique elements. This is because all elements greater than `k` can be set to `k` in a single operation, and the remaining elements are already equal to `k`.
+
 ## 📊 Metrics
 
 | Metric | Value |

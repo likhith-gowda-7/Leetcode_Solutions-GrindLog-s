@@ -56,6 +56,31 @@ Example 3:**
 
 	- `denominator != 0`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by first handling the sign of the fraction and then performing long division to obtain the integer part of the result. To handle the decimal part, it uses a hash table to keep track of the remainders encountered during the division process. This allows it to identify when a repeating pattern is encountered and to format the result accordingly.
+
+**Approach**
+1. Check if either the numerator or denominator is zero, in which case the result is simply "0".
+2. Determine the sign of the fraction and store it in the `minus` variable.
+3. If the sign is negative, convert both the numerator and denominator to positive.
+4. Initialize an empty result string `res` and a hash table `remainder_map` to store the remainders encountered during division.
+5. Perform long division to obtain the integer part of the result and append it to `res`.
+6. If the remainder is zero, break out of the loop.
+7. If the remainder is already in `remainder_map`, it means a repeating pattern has been encountered, so break out of the loop.
+8. Otherwise, append the remainder to `remainder_map` with its corresponding index in `res` and continue the loop.
+9. If a repeating pattern is encountered, format the result by inserting parentheses around the repeating part.
+
+**Time Complexity**
+O(n), where n is the number of digits in the numerator or denominator. This is because each digit in the numerator or denominator is processed at most once during the division process.
+
+**Space Complexity**
+O(n), where n is the number of digits in the numerator or denominator. This is because in the worst case, the hash table `remainder_map` may store all the remainders encountered during the division process.
+
+**Key Insight**
+The key insight behind this solution is the use of a hash table to keep track of the remainders encountered during the division process. This allows it to identify when a repeating pattern is encountered and to format the result accordingly.
+
 ## 📊 Metrics
 
 | Metric | Value |

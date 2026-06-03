@@ -47,6 +47,30 @@ Example 2:**
 
 	- `-100 <= matrix[i][j] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to find the minimum sum of a "falling path" in a given matrix. A falling path starts at any element in the first row and chooses the element in the next row that is either directly below or diagonally left/right. The key insight is that we can use dynamic programming to break down the problem into smaller subproblems and find the minimum sum.
+
+**Approach**
+1. Define a helper function `check(r, c)` that returns the value of the element at position `(r, c)` in the matrix, or `inf` if the position is out of bounds.
+2. Iterate over the matrix from the second last row to the first row.
+3. For each element at position `(row, col)`, calculate the minimum sum of the three possible falling paths:
+	* Down: `check(row + 1, col)`
+	* Left: `check(row + 1, col - 1)`
+	* Right: `check(row + 1, col + 1)`
+4. Add the minimum sum of the three paths to the current element.
+5. After iterating over all elements, return the minimum value in the first row.
+
+**Time Complexity**
+O(n^2), where n is the number of rows (or columns) in the matrix. We iterate over each element in the matrix once, and each iteration involves a constant amount of work.
+
+**Space Complexity**
+O(1), excluding the space required for the input matrix. We only use a constant amount of space to store the helper function `check` and the variables used in the iteration.
+
+**Key Insight**
+The key insight is that we can use dynamic programming to break down the problem into smaller subproblems and find the minimum sum. By iterating over the matrix from the second last row to the first row, we can calculate the minimum sum of each element based on the minimum sums of its neighbors in the previous row. This allows us to find the minimum sum of the entire falling path in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

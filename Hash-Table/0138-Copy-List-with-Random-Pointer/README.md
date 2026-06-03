@@ -68,6 +68,26 @@ Example 3:**
 
 	- `Node.random` is `null` or is pointing to some node in the linked list.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to store the mapping between original nodes and their corresponding copied nodes. This allows us to efficiently update the `next` and `random` pointers of the copied nodes.
+
+**Approach**
+1. Initialize an empty hash table `copy_of_node` to store the mapping between original nodes and their copied nodes.
+2. Traverse the original linked list, creating a new node for each original node and storing the mapping in the hash table.
+3. Traverse the original linked list again, updating the `next` and `random` pointers of the copied nodes using the mappings in the hash table.
+4. Return the copied head node from the hash table.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the linked list. We make two passes through the linked list, each taking O(n) time.
+
+**Space Complexity**
+O(n), where n is the number of nodes in the linked list. We need to store the mapping between original nodes and their copied nodes in the hash table, which requires O(n) space.
+
+**Key Insight**
+The key insight is to use a hash table to store the mapping between original nodes and their copied nodes, allowing us to efficiently update the `next` and `random` pointers of the copied nodes. This approach avoids the need to recursively traverse the linked list, making it more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -65,6 +65,27 @@ Since all fruits are successfully placed, we return 0.
 
 	- `1 <= fruits[i], baskets[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a Segment Tree to efficiently find the leftmost available basket with a capacity greater than or equal to the quantity of each fruit type. This approach allows for fast updates and queries, enabling the algorithm to handle the dynamic allocation of fruits to baskets.
+
+**Approach**
+1. Build a Segment Tree from the baskets array, where each node represents the maximum capacity of a range of baskets.
+2. Iterate through the fruits array, and for each fruit type, query the Segment Tree to find the leftmost available basket with a capacity greater than or equal to the fruit's quantity.
+3. If such a basket is found, update the Segment Tree by setting the capacity of the basket to 0.
+4. If no such basket is found, increment the unplaced counter.
+5. After iterating through all fruit types, return the unplaced counter.
+
+**Time Complexity**
+O(n log n), where n is the number of baskets. The Segment Tree operations (build, update, query) take O(log n) time, and we perform these operations n times.
+
+**Space Complexity**
+O(n), where n is the number of baskets. We store the Segment Tree, which requires O(n) space.
+
+**Key Insight**
+The key insight is to use a Segment Tree to efficiently manage the availability of baskets. By storing the maximum capacity of each range of baskets, we can quickly find the leftmost available basket for each fruit type, allowing us to allocate fruits to baskets in a dynamic and efficient manner.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -59,6 +59,27 @@ The substrings `"u"`, `"uc"`, and `"uck"` match the pattern.
 
 	- `p` contains only lowercase English letters and exactly one `'*'`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by splitting the pattern string `p` into two parts at the `'*'` character. It then checks if the first part is a substring of `s` and if the second part is a substring of `s` starting from the end of the first part. This approach leverages the fact that the `'*'` in `p` can be replaced with any sequence of zero or more characters.
+
+**Approach**
+1. Split the pattern string `p` into two parts at the `'*'` character using the `split()` method.
+2. Find the index of the `'*'` character in `p` using the `index()` method.
+3. Find the index of the first part of `p` in `s` using the `find()` method.
+4. Find the index of the second part of `p` in `s` starting from the end of the first part using the `find()` method with a starting index.
+5. Return `True` if both indices are not `-1`, indicating that both parts of `p` are substrings of `s`.
+
+**Time Complexity**
+O(n + m), where n is the length of `s` and m is the length of `p`. This is because we are using the `find()` method, which has a time complexity of O(n) in the worst case.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the indices and the parts of `p`.
+
+**Key Insight**
+The key insight is that we can split the pattern string `p` into two parts at the `'*'` character and then check if both parts are substrings of `s`. This approach allows us to take advantage of the fact that the `'*'` in `p` can be replaced with any sequence of zero or more characters.
+
 ## 📊 Metrics
 
 | Metric | Value |

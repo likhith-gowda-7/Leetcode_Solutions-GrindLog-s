@@ -78,6 +78,26 @@ Therefore, we return [[1,7],[2,4],[7,1]].
 
 	- Each `value_i` in `items2` is **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a hash table to efficiently store and sum up the weights of items with the same value. This approach allows for a simple and scalable way to merge the two sets of items.
+
+**Approach**
+1. Initialize an empty list `res` to store the merged items and a hash table `h1` to store the sum of weights for each item value.
+2. Iterate through the combined list of items from both `items1` and `items2`, incrementing the weight value in the hash table `h1` for each item value.
+3. Iterate through the hash table `h1` and append each item value and its corresponding weight to the `res` list.
+4. Sort the `res` list in ascending order by item value.
+
+**Time Complexity**
+The time complexity of this solution is O(n log n) due to the sorting operation in the final step, where n is the total number of items across both input arrays. The initial iteration through the combined list of items is O(n) and the iteration through the hash table is also O(n), but these operations are dominated by the sorting step.
+
+**Space Complexity**
+The space complexity of this solution is O(n), where n is the total number of items across both input arrays. This is because we are storing the merged items in the `res` list and the hash table `h1`.
+
+**Key Insight**
+The key insight behind this solution is the use of a hash table to efficiently store and sum up the weights of items with the same value. This allows us to avoid duplicate calculations and simplify the merging process, making the solution scalable for large input arrays.
+
 ## 📊 Metrics
 
 | Metric | Value |

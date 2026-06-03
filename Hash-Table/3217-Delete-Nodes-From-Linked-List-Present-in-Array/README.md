@@ -67,6 +67,28 @@ No node has value 5.
 
 	- The input is generated such that there is at least one node in the linked list that has a value not present in `nums`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a set to store the values present in the input array `nums` and then iterates through the linked list, removing nodes with values that exist in the set. This approach is efficient because it allows for constant-time lookups in the set.
+
+**Approach**
+1. Create a set `h1` from the input array `nums` for fast lookups.
+2. Initialize a dummy node `dummy` and a current node `curr` to keep track of the modified linked list.
+3. Iterate through the linked list `head` until it reaches the end.
+4. For each node, check if its value is present in the set `h1`. If not, add it to the modified linked list by setting `curr.next` to the current node and moving `curr` to the next node.
+5. After iterating through the entire linked list, set `curr.next` to `None` to mark the end of the modified linked list.
+6. Return the next node of the dummy node, which is the head of the modified linked list.
+
+**Time Complexity**
+O(n + m), where n is the number of nodes in the linked list and m is the number of elements in the input array `nums`. This is because we iterate through the linked list once and create a set from the input array, which takes constant time.
+
+**Space Complexity**
+O(m), where m is the number of elements in the input array `nums`. This is because we create a set from the input array, which requires additional space proportional to the size of the input array.
+
+**Key Insight**
+The key insight is to use a set to store the values present in the input array, allowing for fast lookups and efficient removal of nodes from the linked list. This approach makes the solution scalable and efficient for large inputs.
+
 ## 📊 Metrics
 
 | Metric | Value |

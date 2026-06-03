@@ -73,6 +73,31 @@ Example 3:**
 
 	- `0 <= target <= 2 * 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem requires finding the maximum number of jumps to reach the last index in a given array, with the constraint that the difference between the current and previous elements must be within a certain target range. The key insight is to use a depth-first search (DFS) approach to explore all possible jumping sequences.
+
+**Approach**
+1. Initialize a memoization dictionary to store the maximum number of jumps for each subproblem.
+2. Define a recursive DFS function that takes the previous and current indices as input.
+3. If the current index is out of bounds or the previous index is greater than or equal to the last index, return 0 or negative infinity, respectively.
+4. If the subproblem is already solved, return the stored result from the memoization dictionary.
+5. Calculate the difference between the current and previous elements and check if it's within the target range.
+6. If the difference is within the target range, consider taking a jump from the current index to the next index, and recursively call the DFS function with the updated indices.
+7. If the difference is not within the target range, skip the current index and recursively call the DFS function with the updated indices.
+8. Store the maximum result between taking a jump and skipping the current index in the memoization dictionary.
+9. Return the maximum number of jumps for the given subproblem.
+
+**Time Complexity**
+O(n \* target), where n is the length of the input array. The DFS function explores all possible jumping sequences, and the number of sequences is bounded by the target range.
+
+**Space Complexity**
+O(n \* target), where n is the length of the input array. The memoization dictionary stores the maximum number of jumps for each subproblem, and the number of subproblems is bounded by the target range.
+
+**Key Insight**
+The key insight is to use a DFS approach to explore all possible jumping sequences, and to use memoization to store the maximum number of jumps for each subproblem. This allows us to efficiently solve the problem by avoiding redundant calculations and exploring only the most promising sequences.
+
 ## 📊 Metrics
 
 | Metric | Value |

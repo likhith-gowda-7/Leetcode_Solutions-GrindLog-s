@@ -68,6 +68,26 @@ World table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to identify "big countries" based on their area or population. We can solve this by filtering the `World` table to include only rows where the area is at least 3 million or the population is at least 25 million.
+
+**Approach**
+1. We start by selecting the columns we're interested in: `name`, `population`, and `area`.
+2. We then use the `where` clause to filter the table based on the conditions specified in the problem.
+3. We use the `or` operator to combine the two conditions: `area >= 3000000` or `population >= 25000000`.
+4. The resulting table will contain only the rows that satisfy either of these conditions.
+
+**Time Complexity**
+O(n), where n is the number of rows in the `World` table. This is because we're scanning the entire table once to filter out the rows that don't meet the conditions.
+
+**Space Complexity**
+O(n), where n is the number of rows in the resulting table. This is because we're creating a new table with the filtered rows.
+
+**Key Insight**
+The key insight here is that we can use a simple `where` clause with an `or` operator to filter the table based on multiple conditions. This is a common technique in SQL, and it allows us to solve the problem efficiently without needing to use complex joins or subqueries.
+
 ## 📊 Metrics
 
 | Metric | Value |

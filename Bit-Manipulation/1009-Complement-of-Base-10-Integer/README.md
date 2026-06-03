@@ -57,6 +57,29 @@ Example 3:**
 
 **Note:** This question is the same as 476: [https://leetcode.com/problems/number-complement/](https://leetcode.com/problems/number-complement/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first converting the input integer `n` to its binary representation. Then, it simply flips all the bits (0s to 1s and 1s to 0s) in the binary representation to get the complement.
+
+**Approach**
+1. Convert the input integer `n` to its binary representation using the `bin()` function.
+2. Remove the '0b' prefix from the binary string using indexing `[2:]`.
+3. Initialize an empty string `curr` to store the complement.
+4. Iterate through each character `b` in the binary string.
+5. If `b` is '1', append '0' to `curr`.
+6. If `b` is '0', append '1' to `curr`.
+7. Convert the `curr` string back to an integer using `int()` with base 2.
+
+**Time Complexity**
+O(log n) - The time complexity is logarithmic because we are iterating through the binary representation of `n`, which has a length of log n.
+
+**Space Complexity**
+O(log n) - The space complexity is also logarithmic because we are storing the binary representation and the complement in strings, which have a length of log n.
+
+**Key Insight**
+The key insight is that we can get the complement of a binary number by simply flipping all its bits. This is because the binary representation of a number is essentially a sequence of bits (0s and 1s), and flipping these bits is equivalent to changing the number's value.
+
 ## 📊 Metrics
 
 | Metric | Value |

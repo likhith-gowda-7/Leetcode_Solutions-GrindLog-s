@@ -66,6 +66,29 @@ Example 3:**
 
 	- `s` contains only lower and upper case English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to keep track of the characters in the string. It iterates over the string in reverse order and checks if the current character is the same as the top of the stack but with a different case. If so, it pops the top of the stack, effectively removing the adjacent duplicate characters. This process continues until the stack is empty, at which point the string is good.
+
+**Approach**
+1. Check if the string is empty. If so, return it as it is already good.
+2. Initialize an empty stack.
+3. Iterate over the string in reverse order.
+4. For each character, check if the stack is not empty and the top of the stack is not the same as the current character but with a different case.
+5. If the condition in step 4 is met, pop the top of the stack.
+6. Otherwise, push the current character onto the stack.
+7. After iterating over the entire string, return the characters in the stack in the original order.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we iterate over the string once in reverse order.
+
+**Space Complexity**
+O(n), where n is the length of the string. This is because in the worst case, we might need to push all characters onto the stack.
+
+**Key Insight**
+The key insight here is that we can remove adjacent duplicate characters by popping the top of the stack when we encounter a character that is the same as the top of the stack but with a different case. This allows us to effectively remove the duplicate characters without having to keep track of the entire string.
+
 ## 📊 Metrics
 
 | Metric | Value |

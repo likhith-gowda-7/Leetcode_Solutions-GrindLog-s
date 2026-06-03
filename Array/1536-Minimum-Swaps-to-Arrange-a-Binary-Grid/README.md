@@ -60,6 +60,27 @@ Example 3:**
 
 	- `grid[i][j]` is either `0` or `1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by treating each row as a sequence of trailing zeros and ones, and then greedily selecting the row with the most trailing zeros to fill in the current position. This approach is based on the observation that the minimum number of swaps required to make the grid valid is equivalent to the minimum number of rows that need to be swapped to make all cells above the main diagonal zeros.
+
+**Approach**
+1. Convert each row into a sequence of trailing zeros and ones by iterating over the columns in reverse order.
+2. Initialize a variable `ans` to store the minimum number of swaps required.
+3. Iterate over each row in the grid. For each row, find the first row with enough trailing zeros (i.e., `v <= k`) and increment `ans` by the index of this row. Remove the value from the `row` list to avoid duplicates.
+4. If no such row is found, return -1, indicating that the grid cannot be made valid.
+5. Repeat step 3 until all rows have been processed.
+
+**Time Complexity**
+O(n^2), where n is the number of rows in the grid. This is because we iterate over each row and column in the grid once.
+
+**Space Complexity**
+O(n), where n is the number of rows in the grid. This is because we store the sequence of trailing zeros and ones for each row in the `row` list.
+
+**Key Insight**
+The key insight behind this solution is that the minimum number of swaps required to make the grid valid is equivalent to the minimum number of rows that need to be swapped to make all cells above the main diagonal zeros. By treating each row as a sequence of trailing zeros and ones, we can greedily select the row with the most trailing zeros to fill in the current position, resulting in the minimum number of swaps required.
+
 ## 📊 Metrics
 
 | Metric | Value |

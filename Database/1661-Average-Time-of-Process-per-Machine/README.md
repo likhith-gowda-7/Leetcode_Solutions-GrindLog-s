@@ -85,6 +85,26 @@ Machine 2's average time is ((4.512 - 4.100) + (5.000 - 2.500)) / 2 = 1.456
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution calculates the average processing time per machine by joining the `Activity` table with itself to match start and end events for each process, and then computes the average time difference between these events.
+
+**Approach**
+1. Join the `Activity` table with itself on the machine ID, process ID, and activity type (start and end) to match start and end events for each process.
+2. Compute the time difference between the start and end events for each process.
+3. Group the results by machine ID to calculate the average processing time per machine.
+4. Round the average processing time to 3 decimal places using the `ROUND` function.
+
+**Time Complexity**
+O(n log n) due to the grouping operation, where n is the number of rows in the `Activity` table. The join operation has a time complexity of O(n), but the grouping operation dominates the time complexity.
+
+**Space Complexity**
+O(n) because the join operation requires storing the joined table in memory, which has a size proportional to the number of rows in the `Activity` table.
+
+**Key Insight**
+The key insight is that we can match start and end events for each process by joining the `Activity` table with itself on the machine ID, process ID, and activity type. This allows us to compute the time difference between these events and calculate the average processing time per machine.
+
 ## 📊 Metrics
 
 | Metric | Value |

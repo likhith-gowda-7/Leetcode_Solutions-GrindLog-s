@@ -55,6 +55,26 @@ Example 2:**
 
 	- `grid[i][j]` is `'0'` or `'1'`.
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by iterating over each cell in the grid and using a depth-first search (DFS) to mark all connected land cells as visited. This approach effectively groups all cells in an island together, allowing us to count the number of distinct islands. By modifying the grid in-place to mark visited cells, we avoid revisiting the same island multiple times.
+
+## Approach
+1. Initialize variables to store the number of rows (`m`) and columns (`n`) in the grid.
+2. Define a nested DFS function that takes a row and column as input and recursively explores all adjacent land cells.
+3. Iterate over each cell in the grid, and when a land cell is encountered, call the DFS function to mark all connected land cells as visited and increment the island count.
+4. Return the total count of islands found.
+
+## Time Complexity
+The time complexity is O(m*n), where `m` and `n` are the number of rows and columns in the grid, respectively. This is because in the worst-case scenario, we might need to visit every cell in the grid.
+
+## Space Complexity
+The space complexity is O(m*n), which is used by the recursive call stack in the worst-case scenario (when the grid is filled with lands and the DFS goes by m*n deep).
+
+## Key Insight
+The key insight is to use DFS to group connected land cells together, allowing us to count the number of distinct islands by incrementing a counter each time we encounter a new, unvisited land cell. This approach takes advantage of the fact that islands are defined as connected components in the grid.
+
 ## 📊 Metrics
 
 | Metric | Value |

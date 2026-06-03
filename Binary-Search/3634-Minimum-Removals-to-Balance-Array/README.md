@@ -67,6 +67,28 @@ Example 3:**
 
 	- `1 <= k <= 10^5`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining a sliding window of elements in the sorted array, where the minimum element is at the left boundary (`l`) and the maximum element is at the right boundary (`r`). The goal is to find the minimum number of elements to remove such that the remaining array is balanced.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Initialize two pointers, `l` and `r`, to the start of the array.
+3. Iterate through the array using the `r` pointer.
+4. At each step, check if the current element (`nums[r]`) is greater than `k` times the minimum element (`nums[l]`).
+5. If the condition is true, increment the `l` pointer to move the minimum element to the right.
+6. The number of elements removed is the difference between the initial length of the array and the final position of the `l` pointer.
+
+**Time Complexity**
+O(n log n) due to the sorting step, where n is the length of the input array. The subsequent iteration through the array takes O(n) time, but it's dominated by the sorting step.
+
+**Space Complexity**
+O(1) (excluding the input array), as we only use a constant amount of space to store the pointers and variables.
+
+**Key Insight**
+The key insight is that by maintaining a sliding window of elements, we can efficiently find the minimum number of elements to remove to balance the array. The sorting step allows us to easily identify the minimum and maximum elements within the window, making it possible to check the balance condition in O(1) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

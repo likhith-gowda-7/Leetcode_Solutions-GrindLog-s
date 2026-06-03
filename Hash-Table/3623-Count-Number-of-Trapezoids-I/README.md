@@ -61,6 +61,29 @@ There is only one horizontal trapezoid that can be formed.
 
 	- All points are pairwise distinct.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to count the number of points at each y-coordinate. It then iterates over the y-coordinates, calculating the number of horizontal lines (i.e., pairs of points with the same y-coordinate) and the number of trapezoids that can be formed using these lines. The key insight is that each pair of horizontal lines can form multiple trapezoids, and the number of trapezoids formed by a pair of lines is proportional to the number of points above and below the lines.
+
+**Approach**
+1. Create a hash table `coord_points` to store the number of points at each y-coordinate.
+2. Iterate over the points and update the hash table accordingly.
+3. Initialize variables `prev` and `res` to keep track of the total number of horizontal lines and the total number of trapezoids, respectively.
+4. Iterate over the y-coordinates in the hash table, calculating the number of horizontal lines `horizontal_lines` that can be formed using the points at the current y-coordinate.
+5. Update the total number of trapezoids `res` by adding the product of `horizontal_lines` and `prev`, which represents the number of trapezoids that can be formed using the current pair of horizontal lines and all previous pairs.
+6. Update `prev` by adding `horizontal_lines`, which represents the number of new horizontal lines that can be formed using the points at the current y-coordinate.
+7. Return the total number of trapezoids modulo `10^9 + 7`.
+
+**Time Complexity**
+O(n), where n is the number of points. This is because we iterate over the points once to populate the hash table, and then iterate over the y-coordinates in the hash table once to calculate the number of trapezoids.
+
+**Space Complexity**
+O(n), where n is the number of points. This is because we store the number of points at each y-coordinate in the hash table.
+
+**Key Insight**
+The key insight is that each pair of horizontal lines can form multiple trapezoids, and the number of trapezoids formed by a pair of lines is proportional to the number of points above and below the lines. This allows us to calculate the total number of trapezoids by iterating over the y-coordinates and updating the total number of trapezoids accordingly.
+
 ## 📊 Metrics
 
 | Metric | Value |

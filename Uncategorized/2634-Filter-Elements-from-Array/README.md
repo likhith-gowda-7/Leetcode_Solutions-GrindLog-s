@@ -65,6 +65,27 @@ Falsey values such as 0 should be filtered out
 
 	- `-10^9 <= arr[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by iterating through the input array and applying the provided filtering function to each element. If the function returns a truthy value, the element is added to the filtered array. This approach leverages the fact that JavaScript's `Boolean` function treats certain values (like numbers, strings, and objects) as truthy or falsy based on their inherent properties.
+
+**Approach**
+1. Initialize an empty array `filteredArr` to store the filtered elements.
+2. Iterate through the input array `arr` using a `for` loop, keeping track of the current index `i`.
+3. For each element `arr[i]`, apply the filtering function `fn` by passing `arr[i]` and `i` as arguments.
+4. If the filtering function returns a truthy value, add `arr[i]` to the `filteredArr`.
+5. After iterating through the entire array, return the `filteredArr`.
+
+**Time Complexity**
+O(n), where n is the length of the input array `arr`. This is because we're making a single pass through the array, and the filtering function is evaluated once for each element.
+
+**Space Complexity**
+O(n), where n is the length of the input array `arr`. This is because in the worst case, we might need to store all elements of the input array in the `filteredArr`.
+
+**Key Insight**
+The key insight here is that we can leverage JavaScript's built-in behavior of treating certain values as truthy or falsy to simplify the filtering process. By using a simple `if` statement to check the return value of the filtering function, we can efficiently create a new array containing only the elements that pass the filter.
+
 ## 📊 Metrics
 
 | Metric | Value |

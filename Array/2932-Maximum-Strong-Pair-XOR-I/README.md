@@ -62,6 +62,29 @@ The maximum XOR possible from these pairs is 25 XOR 30 = 7 since the only other 
 
 	- `1 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over all pairs of numbers in the sorted array and checking if they form a strong pair. If they do, it calculates their XOR and updates the maximum XOR value if necessary. This approach takes advantage of the fact that the array is sorted, allowing us to efficiently check for strong pairs.
+
+**Approach**
+1. Sort the input array `nums` in ascending order.
+2. Initialize `maxi` to 0, which will store the maximum XOR value found so far.
+3. Iterate over the array using two nested loops, where the outer loop iterates over each element `nums[i]` and the inner loop iterates over the elements `nums[j]` starting from `i+1`.
+4. For each pair `(nums[i], nums[j])`, calculate the difference `diff = nums[j] - nums[i]`.
+5. If `diff` is greater than `nums[i]`, it means the pair does not form a strong pair, so we break the inner loop.
+6. Otherwise, calculate the XOR `val = nums[j] ^ nums[i]` and update `maxi` if `val` is greater than the current maximum.
+7. Return the maximum XOR value `maxi` found.
+
+**Time Complexity**
+The time complexity of this solution is O(n^2), where n is the length of the input array `nums`. This is because we have two nested loops that iterate over the array.
+
+**Space Complexity**
+The space complexity of this solution is O(1), as we only use a constant amount of space to store the maximum XOR value `maxi` and other variables.
+
+**Key Insight**
+The key insight behind this solution is that we can efficiently check for strong pairs by sorting the array and iterating over it in a way that takes advantage of the sorted order. This allows us to avoid checking all possible pairs, which would result in a time complexity of O(2^n).
+
 ## 📊 Metrics
 
 | Metric | Value |

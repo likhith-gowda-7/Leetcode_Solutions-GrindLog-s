@@ -67,6 +67,28 @@ All partitions result in an even sum difference.
 
 	- `1 <= nums[i] <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses the concept of prefix sum to efficiently calculate the sum of the left and right subarrays. By maintaining the running sum of the left subarray and the total sum of the array, we can easily compute the sum of the right subarray. The key insight is that we only need to consider the difference between the sums of the left and right subarrays, which can be efficiently calculated using the prefix sum.
+
+**Approach**
+1. Initialize two variables `left` and `right` to store the sum of the left subarray and the total sum of the array, respectively.
+2. Iterate through the array, excluding the last element.
+3. For each element, add it to `left` and subtract it from `right` to update the sums.
+4. Calculate the absolute difference between `left` and `right` and check if it is even.
+5. If the difference is even, increment the result counter `res`.
+6. Return the final count of partitions with even sum difference.
+
+**Time Complexity**
+O(n), where n is the length of the input array. This is because we only need to iterate through the array once to calculate the prefix sum and check for even differences.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the prefix sum variables `left` and `right`.
+
+**Key Insight**
+The key insight is that we can efficiently calculate the sum of the right subarray by subtracting the current element from the total sum of the array, which is stored in `right`. This allows us to avoid recalculating the sum of the right subarray for each element, resulting in a time complexity of O(n).
+
 ## 📊 Metrics
 
 | Metric | Value |

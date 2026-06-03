@@ -46,6 +46,27 @@ Example 2:**
 
 **Follow up:** Suppose there are lots of incoming `s`, say `s_1, s_2, ..., s_k` where `k >= 10^9`, and you want to check one by one to see if `t` has its subsequence. In this scenario, how would you change your code?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a two-pointer technique to traverse both strings `s` and `t` simultaneously. It checks if the characters at the current positions of both strings match, and if they do, it increments the pointer for string `s`. This approach ensures that we are considering the characters of string `s` in the correct order.
+
+**Approach**
+1. Initialize two pointers, `i` and `j`, to 0, which represent the current positions in strings `s` and `t`, respectively.
+2. Enter a while loop that continues as long as both `i` is within the bounds of string `s` and `j` is within the bounds of string `t`.
+3. Inside the loop, check if the characters at positions `i` and `j` in strings `s` and `t` are equal. If they are, increment `i` to move to the next character in string `s`.
+4. Regardless of whether the characters match, increment `j` to move to the next character in string `t`.
+5. After the loop, check if `i` has reached the end of string `s`. If it has, return `True`, indicating that string `s` is a subsequence of string `t`. Otherwise, return `False`.
+
+**Time Complexity**
+O(n + m), where n and m are the lengths of strings `s` and `t`, respectively. This is because we are traversing both strings once, and the number of operations is directly proportional to the lengths of the strings.
+
+**Space Complexity**
+O(1), as we are using a constant amount of space to store the pointers `i` and `j`, regardless of the input sizes.
+
+**Key Insight**
+The key insight is that we can use a two-pointer technique to traverse both strings simultaneously, checking for matches at each position. This approach allows us to efficiently determine if string `s` is a subsequence of string `t` by considering the characters in the correct order.
+
 ## 📊 Metrics
 
 | Metric | Value |

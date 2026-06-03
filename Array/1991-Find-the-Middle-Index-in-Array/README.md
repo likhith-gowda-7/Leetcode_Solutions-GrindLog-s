@@ -63,6 +63,29 @@ Example 3:**
 
 **Note:** This question is the same as 724: [https://leetcode.com/problems/find-pivot-index/](https://leetcode.com/problems/find-pivot-index/)
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses the concept of prefix sum to efficiently calculate the sum of elements before and after each index. By maintaining the total sum of the array and the sum of elements before the current index, we can compare these sums to find the middle index.
+
+**Approach**
+1. Calculate the total sum of the array.
+2. Initialize the left sum to 0.
+3. Iterate through the array, for each index:
+   1. Calculate the right sum by subtracting the current element and the left sum from the total sum.
+   2. If the left sum equals the right sum, return the current index as the middle index.
+   3. Otherwise, add the current element to the left sum.
+4. If no middle index is found, return -1.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because we make a single pass through the array, performing constant-time operations at each index.
+
+**Space Complexity**
+O(1), excluding the input array. We only use a constant amount of space to store the total sum, left sum, and right sum.
+
+**Key Insight**
+The key insight is that we can efficiently calculate the sum of elements after each index by subtracting the current element and the sum of elements before the current index from the total sum. This allows us to compare the sums before and after each index to find the middle index.
+
 ## 📊 Metrics
 
 | Metric | Value |

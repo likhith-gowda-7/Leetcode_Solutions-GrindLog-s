@@ -60,6 +60,28 @@ Example 2:**
 
 	- `0 <= right - left <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the given range and checking if the number of set bits in the binary representation of each number is a prime number. This is done by using a set of known prime numbers to quickly check if the number of set bits is prime.
+
+**Approach**
+1. Define a set of known prime numbers (`primes`).
+2. Initialize a counter (`res`) to keep track of the numbers with a prime number of set bits.
+3. Iterate through the range from `left` to `right` (inclusive) using a for loop.
+4. For each number `i` in the range, use the `bit_count()` method to get the number of set bits in its binary representation.
+5. Check if the number of set bits is in the set of known prime numbers (`primes`). If it is, increment the counter (`res`).
+6. After iterating through the entire range, return the counter (`res`).
+
+**Time Complexity**
+O(n), where n is the range from `left` to `right` (inclusive). This is because we are iterating through the range once.
+
+**Space Complexity**
+O(1), excluding the input, because we are using a fixed-size set of known prime numbers, regardless of the input size.
+
+**Key Insight**
+The key insight is that we only need to check if the number of set bits is in a set of known prime numbers, which makes the solution efficient. This is possible because the number of set bits in a binary representation can only be a small number, and we can precompute the set of prime numbers up to that maximum value.
+
 ## 📊 Metrics
 
 | Metric | Value |

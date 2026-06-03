@@ -64,6 +64,28 @@ Example 3:**
 
 	- All the integers in `rating` are **unique**.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution works by iterating over each soldier in the line and considering them as the middle element of a potential team. It then counts the number of soldiers to the left and right who are smaller or greater than the middle soldier, and multiplies these counts to get the total number of valid teams that can be formed with the middle soldier.
+
+**Approach**
+1. Initialize a variable `res` to store the total number of teams that can be formed.
+2. Iterate over each soldier in the line, considering them as the middle element of a potential team.
+3. For each middle soldier, iterate over the soldiers to the left and count the number of soldiers who are smaller (`left_smaller`) and greater (`left_greater`) than the middle soldier.
+4. For each middle soldier, iterate over the soldiers to the right and count the number of soldiers who are smaller (`right_smaller`) and greater (`right_greater`) than the middle soldier.
+5. For each middle soldier, calculate the total number of valid teams that can be formed by multiplying the counts of smaller and greater soldiers to the left and right, and add this to the total count `res`.
+6. Return the total count `res` as the number of teams that can be formed.
+
+**Time Complexity**
+O(n^2), where n is the number of soldiers in the line. This is because for each soldier, we are iterating over the soldiers to the left and right, resulting in a quadratic time complexity.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the counts of smaller and greater soldiers.
+
+**Key Insight**
+The key insight here is that for each middle soldier, we can calculate the total number of valid teams that can be formed by considering the counts of smaller and greater soldiers to the left and right. This allows us to avoid having to consider all possible combinations of soldiers, resulting in a more efficient solution.
+
 ## 📊 Metrics
 
 | Metric | Value |

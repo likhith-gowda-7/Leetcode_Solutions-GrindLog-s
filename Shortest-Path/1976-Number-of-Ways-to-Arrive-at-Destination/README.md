@@ -65,6 +65,29 @@ Example 2:**
 
 	- You can reach any intersection from any other intersection.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem can be solved using a modified version of Dijkstra's algorithm, which is typically used for finding the shortest path in a graph. However, in this case, we're interested in the number of ways to reach the destination in the shortest amount of time, not just the shortest time itself. This requires keeping track of the number of paths that reach each node in the shortest possible time.
+
+**Approach**
+1. Create an adjacency list representation of the graph, where each edge is weighted with the time it takes to travel.
+2. Initialize a priority queue (heap) with the starting node (0) and its initial time (0).
+3. Initialize arrays to keep track of the shortest time needed to reach each node (`time_needed`) and the number of ways to reach each node in the shortest time (`shortest_time_count`).
+4. While the heap is not empty, pop the node with the shortest time and explore its neighbors:
+   - If a neighbor has not been visited before or if the current path is shorter than the previously known shortest path, update its shortest time and the number of ways to reach it.
+   - If the current path is equally short as the previously known shortest path, add the number of ways to reach the current node to the number of ways to reach the neighbor.
+5. Return the number of ways to reach the destination node (`n-1`) in the shortest time.
+
+**Time Complexity**
+O((n + m) log n), where n is the number of nodes and m is the number of edges. This is because we perform a constant amount of work for each edge and each node, and we use a heap to efficiently select the node with the shortest time.
+
+**Space Complexity**
+O(n + m), where n is the number of nodes and m is the number of edges. This is because we store the adjacency list representation of the graph and the arrays to keep track of the shortest time and the number of ways to reach each node.
+
+**Key Insight**
+The key insight is to recognize that the number of ways to reach a node in the shortest time is the same as the number of ways to reach its predecessor node, because we can only reach the node in the shortest time by following the shortest path from its predecessor. This allows us to efficiently compute the number of ways to reach each node in the shortest time by keeping track of the number of ways to reach its predecessor node.
+
 ## 📊 Metrics
 
 | Metric | Value |

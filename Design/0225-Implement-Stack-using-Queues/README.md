@@ -65,6 +65,27 @@ myStack.empty(); // return False
 
 **Follow-up:** Can you implement the stack using only one queue?
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a list to simulate a stack, which is a common approach when implementing a stack data structure. However, the problem statement requires us to use only two queues to implement the stack. The key insight is to use the queues to mimic the Last-In-First-Out (LIFO) behavior of a stack.
+
+**Approach**
+1. We create an instance of the `MyStack` class, which initializes an empty list `box`.
+2. The `push` method simply appends the element `x` to the end of the `box` list.
+3. The `pop` method removes and returns the last element from the `box` list using the `pop` method.
+4. The `top` method returns the last element from the `box` list without removing it, using the index `-1`.
+5. The `empty` method checks if the `box` list is empty by checking its length.
+
+**Time Complexity**
+The time complexity of this solution is O(1) for all operations (`push`, `pop`, `top`, and `empty`). This is because we are using a list to store the elements, and all operations on a list take constant time.
+
+**Space Complexity**
+The space complexity of this solution is O(n), where n is the number of elements in the stack. This is because we are storing all elements in the `box` list.
+
+**Key Insight**
+The key insight here is that we are using a list to simulate a stack, which allows us to implement the LIFO behavior required by the problem statement. This approach is simple and efficient, but it does not meet the problem statement's requirement of using only two queues.
+
 ## 📊 Metrics
 
 | Metric | Value |

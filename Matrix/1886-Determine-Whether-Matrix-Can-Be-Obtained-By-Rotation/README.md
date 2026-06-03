@@ -60,6 +60,27 @@ Example 3:**
 
 	- `mat[i][j]` and `target[i][j]` are either `0` or `1`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by checking if the given matrix can be transformed into the target matrix by rotating it 90 degrees up to three times. This is possible because a 90-degree rotation is equivalent to transposing the matrix and then reversing each row.
+
+**Approach**
+1. First, we check if the given matrix is already equal to the target matrix. If so, we return True.
+2. If not, we define a helper function `transpose()` that transposes the matrix by swapping elements across the diagonal and then reversing each row.
+3. We then iterate over the possible rotations (0, 1, 2, or 3 90-degree rotations) and apply the `transpose()` function each time.
+4. After each rotation, we check if the matrix is now equal to the target matrix. If so, we return True.
+5. If we have tried all possible rotations and the matrix is still not equal to the target, we return False.
+
+**Time Complexity**
+O(n^2 * 4), where n is the size of the matrix. This is because we have a nested loop structure that iterates over the matrix elements, and we apply this structure up to four times (once for the initial check and three times for the rotations).
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the matrix elements and do not allocate any additional memory that scales with the input size.
+
+**Key Insight**
+The key insight is that a 90-degree rotation is equivalent to transposing the matrix and then reversing each row. This allows us to simplify the problem of checking if a matrix can be transformed into another matrix by rotating it into a series of simple row operations.
+
 ## 📊 Metrics
 
 | Metric | Value |

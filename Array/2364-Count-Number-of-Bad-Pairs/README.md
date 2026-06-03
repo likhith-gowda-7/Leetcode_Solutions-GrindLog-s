@@ -48,6 +48,29 @@ Example 2:**
 
 	- `1 <= nums[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by counting the total number of pairs and subtracting the number of good pairs. A good pair is defined as a pair where the difference between the indices is equal to the difference between the corresponding values in the array. The key insight is to use a hash table to store the frequency of the differences between the values and the indices, which allows us to efficiently count the good pairs.
+
+**Approach**
+1. Initialize a hash table `h1` to store the frequency of the differences between the values and the indices.
+2. Calculate the total number of pairs using the formula `n*(n-1)/2`, where `n` is the length of the array.
+3. Initialize a variable `good_pair` to store the number of good pairs.
+4. Iterate through the array, for each element at index `ind` with value `val`, do the following:
+   - Increment `good_pair` by the frequency of the difference `val-ind` in the hash table `h1`.
+   - Increment the frequency of the difference `val-ind` in the hash table `h1`.
+5. Return the total number of pairs minus the number of good pairs.
+
+**Time Complexity**
+The time complexity is O(n), where n is the length of the array. This is because we are iterating through the array once and performing constant time operations for each element.
+
+**Space Complexity**
+The space complexity is O(n), where n is the length of the array. This is because in the worst case, we need to store all the differences between the values and the indices in the hash table.
+
+**Key Insight**
+The key insight is to use a hash table to store the frequency of the differences between the values and the indices, which allows us to efficiently count the good pairs. This approach avoids the need to compare each pair of elements, resulting in a significant improvement in time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

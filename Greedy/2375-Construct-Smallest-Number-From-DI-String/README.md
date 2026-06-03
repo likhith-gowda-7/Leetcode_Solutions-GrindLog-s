@@ -59,6 +59,27 @@ It can be proven that "4321" is the smallest possible num that meets the conditi
 
 	- `pattern` consists of only the letters `'I'` and `'D'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a stack to keep track of the digits that can be used to construct the smallest possible string. When encountering an 'I' in the pattern, it pops the largest digit from the stack and appends it to the result, ensuring that the current digit is smaller than the next one. When encountering a 'D' in the pattern, it simply appends the top of the stack to the result, ensuring that the current digit is larger than the next one.
+
+**Approach**
+1. Initialize an empty result list and a stack with digits from 1 to n+1.
+2. Iterate through the pattern, and for each character:
+   - If it's an 'I' or we're at the end of the pattern, pop the largest digit from the stack and append it to the result.
+   - If it's a 'D', append the top of the stack to the result.
+3. Join the result list into a string and return it.
+
+**Time Complexity**
+O(n), where n is the length of the pattern. This is because we make a single pass through the pattern.
+
+**Space Complexity**
+O(n), where n is the length of the pattern. This is because in the worst case, we might need to push all digits onto the stack.
+
+**Key Insight**
+The key insight is that we can use a stack to efficiently keep track of the digits that can be used to construct the smallest possible string, and that we only need to consider the current digit and the next one when making decisions. This allows us to avoid considering all possible combinations of digits, making the solution much more efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

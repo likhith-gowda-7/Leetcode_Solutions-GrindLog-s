@@ -55,6 +55,27 @@ Example 3:**
 
 	- `s[i]` is either `'0'` or `'1'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating through the string and keeping track of the minimum number of operations required to make the string alternating. It uses a clever trick to simplify the problem by only considering two possible operations: changing all '0's to '1's or vice versa.
+
+**Approach**
+1. Initialize two counters `op1_cnt` and `op2_cnt` to keep track of the minimum number of operations required for the two possible operations.
+2. Iterate through the string, and for each character, check if it matches the current operation (i.e., if the current character is the same as the operation's expected character).
+3. If the character does not match, increment the corresponding counter.
+4. After each iteration, toggle the current operation by XORing `1` with the current operation index `curr`. This ensures that we consider the alternative operation in the next iteration.
+5. Finally, return the minimum of `op1_cnt` and `op2_cnt`, which represents the minimum number of operations required to make the string alternating.
+
+**Time Complexity**
+O(n), where n is the length of the string. This is because we only need to iterate through the string once to calculate the minimum number of operations.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the counters and the current operation index.
+
+**Key Insight**
+The key insight is that we only need to consider two possible operations, and by toggling the current operation after each iteration, we can effectively explore both possibilities in a single pass through the string. This simplifies the problem and allows us to achieve a linear time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

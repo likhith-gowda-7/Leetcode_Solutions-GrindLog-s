@@ -118,6 +118,25 @@ Frozen 2 and Joker have a rating average of 3.5 in February but Frozen 2 is smal
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This SQL query is designed to find the user with the most ratings and the movie with the highest average rating within a specific date range. The query uses a combination of joins, group by, and order by clauses to achieve this.
+
+**Approach**
+1. First, the query selects the user with the most ratings by joining the `Users` and `MovieRating` tables, grouping by `user_id` and `name`, ordering by the count of ratings in descending order, and limiting the result to 1.
+2. Then, it selects the movie with the highest average rating within the specified date range by joining the `Movies` and `MovieRating` tables, filtering by the date range, grouping by `movie_id` and `title`, ordering by the average rating in descending order, and limiting the result to 1.
+3. The two results are combined using the `UNION ALL` operator.
+
+**Time Complexity**
+O(n log n) due to the use of order by clauses, where n is the number of rows in the `MovieRating` table.
+
+**Space Complexity**
+O(n) for the temporary result sets created during the execution of the query.
+
+**Key Insight**
+The key insight here is the use of the `UNION ALL` operator to combine the results of two separate queries, each of which finds a single row with the most ratings or highest average rating. This allows the query to return both the user with the most ratings and the movie with the highest average rating within the specified date range.
+
 ## 📊 Metrics
 
 | Metric | Value |

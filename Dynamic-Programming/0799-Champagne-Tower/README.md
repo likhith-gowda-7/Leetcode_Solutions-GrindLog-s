@@ -58,6 +58,27 @@ Example 3:**
 
 	- `0 <= query_glass <= query_row < 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses dynamic programming to simulate the champagne tower's behavior. It starts with a full top glass and iteratively calculates the amount of champagne that flows to the glasses below, ensuring that each glass remains at or below the maximum capacity of 1 cup.
+
+**Approach**
+1. Initialize a 2D array `tower` with 102 rows and 102 columns, representing the glasses in the pyramid. The first glass at the top is filled with `poured` cups of champagne.
+2. Iterate through each row `r` from 0 to `query_row`, and for each column `c` in row `r`, check if the champagne level exceeds 1 cup.
+3. If the champagne level is above 1 cup, calculate the excess champagne by subtracting 1 cup from the current level and dividing the result by 2 (since the excess flows equally to the left and right glasses).
+4. Update the current glass's level to 1 cup and distribute the excess champagne equally to the glasses below, at positions `(r+1, c)` and `(r+1, c+1)`.
+5. After iterating through all rows, return the champagne level in the specified glass at row `query_row` and column `query_glass`.
+
+**Time Complexity**
+O(query_row^2), as the solution iterates through each row and column in the pyramid.
+
+**Space Complexity**
+O(query_row^2), as the solution uses a 2D array to store the champagne levels in each glass.
+
+**Key Insight**
+The key to this solution is recognizing that the champagne tower's behavior can be simulated by iteratively distributing the excess champagne to the glasses below, ensuring that each glass remains at or below the maximum capacity of 1 cup. This insight allows us to use dynamic programming to efficiently calculate the champagne level in any glass at any row and column.
+
 ## 📊 Metrics
 
 | Metric | Value |

@@ -47,6 +47,30 @@ Example 2:**
 
 	- `-10^6 <= Node.val <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by maintaining two pointers, one for the odd nodes and one for the even nodes. We swap the next pointers of the odd and even nodes to reorder the list in-place, without using any extra space.
+
+**Approach**
+1. Check if the input list is empty, and return it immediately if so.
+2. Initialize two pointers, `odd` and `even`, to the head of the list and the next node of the head, respectively.
+3. Initialize `even_start` to the second node of the list, which will be the start of the even nodes.
+4. Traverse the list until we reach the end of the even nodes (i.e., until `even` is `None` or `even.next` is `None`).
+5. Inside the loop, swap the next pointers of the odd and even nodes by setting `odd.next` to `even.next` and `even.next` to `odd.next`.
+6. Move the `odd` and `even` pointers one step forward.
+7. After the loop, set `odd.next` to `even_start` to connect the odd nodes to the even nodes.
+8. Return the head of the reordered list.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the list. We traverse the list once, and the operations inside the loop take constant time.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the pointers and do not use any extra data structures.
+
+**Key Insight**
+The key insight is that we can reorder the list in-place by swapping the next pointers of the odd and even nodes, without using any extra space. This is possible because we are only modifying the pointers and not creating any new nodes or data structures.
+
 ## 📊 Metrics
 
 | Metric | Value |

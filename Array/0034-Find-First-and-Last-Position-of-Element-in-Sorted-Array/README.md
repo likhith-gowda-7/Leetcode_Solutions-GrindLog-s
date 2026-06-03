@@ -51,6 +51,27 @@ Example 3:**
 
 	- `-10^9 <= target <= 10^9`
 
+## 🧠 Solution Explanation
+
+## Intuition
+The solution works by utilizing two binary search operations to find the first and last occurrence of the target element in the sorted array. This approach takes advantage of the fact that the array is sorted, allowing for efficient searching. By modifying the standard binary search algorithm, we can find the first and last position of the target element.
+
+## Approach
+1. First, we perform a binary search to find the last occurrence of the target element by moving the left pointer to `mid + 1` when `nums[mid]` is less than or equal to the target.
+2. We store the result of this search in the `right` variable and check if the element at the `right` index is equal to the target. If not, we set `right` to -1.
+3. Next, we perform another binary search to find the first occurrence of the target element by moving the right pointer to `mid - 1` when `nums[mid]` is greater than or equal to the target.
+4. We store the result of this search in the `left` variable and check if the element at the `left` index is equal to the target. If not, or if `left` is out of bounds, we set `left` to -1.
+5. Finally, we return the `[left, right]` pair as the result.
+
+## Time Complexity
+The time complexity is O(log n), where n is the length of the input array. This is because we are performing two binary search operations, each of which takes O(log n) time.
+
+## Space Complexity
+The space complexity is O(1), as we are only using a constant amount of space to store the `left`, `right`, `l`, and `r` variables.
+
+## Key Insight
+The key insight behind this solution is the modification of the standard binary search algorithm to find the first and last occurrence of the target element. By adjusting the movement of the pointers based on the comparison with the target, we can efficiently find the desired positions in the sorted array.
+
 ## 📊 Metrics
 
 | Metric | Value |

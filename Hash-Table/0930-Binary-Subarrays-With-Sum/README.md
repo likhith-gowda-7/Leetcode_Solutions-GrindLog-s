@@ -50,6 +50,29 @@ Example 2:**
 
 	- `0 <= goal <= nums.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a hash table to store the cumulative sum of the array and its frequency. By maintaining a running sum and checking for the existence of the difference between the current sum and the goal in the hash table, we can efficiently count the number of subarrays with the target sum.
+
+**Approach**
+1. Initialize a hash table `ch` with a default value of 1 for the key 0, representing the frequency of the sum 0.
+2. Initialize the running sum `prefix_sum` to 0 and the result `res` to 0.
+3. Iterate through the array `nums`. For each element:
+   1. Update the running sum by adding the current element.
+   2. Check if the difference between the current sum and the goal exists in the hash table. If it does, increment the result by the frequency of this difference.
+   3. Update the frequency of the current sum in the hash table.
+4. Return the result.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. This is because we are iterating through the array once and performing constant-time operations for each element.
+
+**Space Complexity**
+O(n), where n is the length of the array `nums`. This is because in the worst case, we need to store all possible cumulative sums in the hash table.
+
+**Key Insight**
+The key insight is to use the difference between the current sum and the goal as a key in the hash table. This allows us to efficiently count the number of subarrays with the target sum by checking for the existence of this difference in the hash table.
+
 ## 📊 Metrics
 
 | Metric | Value |

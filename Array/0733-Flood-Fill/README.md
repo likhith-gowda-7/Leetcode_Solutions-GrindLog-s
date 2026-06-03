@@ -65,6 +65,29 @@ The starting pixel is already colored with 0, which is the same as the target co
 
 	- `0 <= sc < n`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The flood fill algorithm works by performing a breadth-first search (BFS) from the starting pixel, changing the color of adjacent pixels that match the original color, and repeating this process until all reachable pixels have been updated.
+
+**Approach**
+1. Initialize variables to store the number of rows (`m`) and columns (`n`) in the image, as well as the starting pixel's color (`st_color`).
+2. Define a helper function `check` to verify if a pixel is within the image boundaries, has the same color as the starting pixel, and has not been updated yet.
+3. Create a queue (`q`) to store pixels to be processed and add the starting pixel to it.
+4. Update the starting pixel's color to the target color (`color`).
+5. While the queue is not empty, pop the next pixel from the queue and iterate over its adjacent pixels.
+6. For each adjacent pixel, check if it is valid using the `check` function. If it is, update its color to the target color and add it to the queue.
+7. Repeat step 5 until the queue is empty.
+
+**Time Complexity**
+O(m \* n) because in the worst case, we need to visit every pixel in the image.
+
+**Space Complexity**
+O(m \* n) due to the use of a queue to store pixels to be processed, which can grow up to the size of the image in the worst case.
+
+**Key Insight**
+The key insight here is to use a BFS approach to efficiently update all reachable pixels in the image, rather than using a recursive approach that could lead to stack overflow errors for large images.
+
 ## 📊 Metrics
 
 | Metric | Value |

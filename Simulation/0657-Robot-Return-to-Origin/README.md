@@ -49,6 +49,27 @@ Example 2:**
 
 	- `moves` only contains the characters `'U'`, `'D'`, `'L'` and `'R'`.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem asks us to determine if a robot returns to the origin after a sequence of moves. We can solve this by counting the number of up and down moves, and left and right moves, and checking if they are equal. If they are, the robot must have returned to the origin.
+
+**Approach**
+1. Count the number of up moves in the sequence using `moves.count("U")`.
+2. Count the number of down moves in the sequence using `moves.count("D")`.
+3. Count the number of left moves in the sequence using `moves.count("L")`.
+4. Count the number of right moves in the sequence using `moves.count("R")`.
+5. Return `True` if the counts of up and down moves are equal, and the counts of left and right moves are equal. Otherwise, return `False`.
+
+**Time Complexity**
+O(n), where n is the length of the `moves` string. This is because we are using the `count` method, which has a time complexity of O(n) in Python.
+
+**Space Complexity**
+O(1), because we are only using a constant amount of space to store the counts of up, down, left, and right moves. The space complexity does not depend on the input size.
+
+**Key Insight**
+The key insight here is that the robot's movement is symmetrical, meaning that every up move is matched by a down move, and every left move is matched by a right move. By counting the number of up and down moves, and left and right moves, we can determine if the robot has returned to the origin.
+
 ## 📊 Metrics
 
 | Metric | Value |

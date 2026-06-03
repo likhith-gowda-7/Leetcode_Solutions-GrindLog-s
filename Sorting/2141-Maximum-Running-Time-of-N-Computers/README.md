@@ -60,6 +60,27 @@ We can run the two computers simultaneously for at most 2 minutes, so we return 
 
 	- `1 <= batteries[i] <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The problem is asking us to find the maximum time we can run all `n` computers simultaneously using the given batteries. We can use binary search to find the maximum time, as the time complexity is related to the number of batteries. The key insight is that we can insert or remove batteries from computers at any time, so we can assume that the computers are always running at the maximum possible time.
+
+**Approach**
+1. Initialize the search range `[l, r]` to `[min(batteries), sum(batteries) // n]`, where `l` is the minimum time a single battery can run and `r` is the maximum time all batteries can run together.
+2. Define a helper function `possible(time)` that checks if it's possible to run all `n` computers for `time` minutes. This function iterates over the batteries and subtracts the minimum of each battery's power and `time` from the total power needed.
+3. Perform binary search on the search range `[l, r]`. For each `mid` value, check if it's possible to run all `n` computers for `mid` minutes using the `possible(mid)` function.
+4. If `possible(mid)` returns `True`, update the search range to `[mid + 1, r]`. Otherwise, update the search range to `[l, mid - 1]`.
+5. Repeat step 4 until the search range is empty. The maximum time we can run all `n` computers simultaneously is the final value of `r`.
+
+**Time Complexity**
+The time complexity of this solution is O(n log (sum(batteries) // n)), where n is the number of computers and sum(batteries) // n is the maximum time all batteries can run together. This is because we perform binary search on the search range, which takes O(log (sum(batteries) // n)) time, and we iterate over the batteries in the `possible(mid)` function, which takes O(n) time.
+
+**Space Complexity**
+The space complexity of this solution is O(1), as we only use a constant amount of space to store the search range and the helper function's variables.
+
+**Key Insight**
+The key insight is that we can use binary search to find the maximum time we can run all `n` computers simultaneously, as the time complexity is related to the number of batteries. This allows us to avoid iterating over the batteries in a brute-force manner, which would take O(n^2) time.
+
 ## 📊 Metrics
 
 | Metric | Value |

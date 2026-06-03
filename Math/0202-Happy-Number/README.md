@@ -54,6 +54,27 @@ Example 2:**
 
 	- `1 <= n <= 2^31 - 1`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a set to keep track of the numbers we've seen so far, which allows us to detect cycles. This is crucial because a happy number will eventually reach 1, while a non-happy number will get stuck in a cycle.
+
+**Approach**
+1. Define a helper function `power_of_numbers(n)` that calculates the sum of squares of the digits of `n`.
+2. Initialize a set `seen` to store the numbers we've seen so far.
+3. While `n` is not equal to 1, check if `n` is in the `seen` set. If it is, return `False` because we've encountered a cycle.
+4. Add `n` to the `seen` set and update `n` to be the result of `power_of_numbers(n)`.
+5. Repeat steps 3-4 until `n` equals 1, at which point return `True`.
+
+**Time Complexity**
+O(log(n)) because in the worst case, we're reducing the number of digits by one in each iteration. Since the number of digits in a number is proportional to the logarithm of the number, the time complexity is logarithmic.
+
+**Space Complexity**
+O(log(n)) because in the worst case, we're storing all numbers in the `seen` set, which has a size proportional to the logarithm of the input number.
+
+**Key Insight**
+The key insight is that we can use a set to detect cycles, which allows us to determine whether a number is happy or not. This approach is much more efficient than trying to calculate the sum of squares of the digits repeatedly, which would lead to an exponential time complexity.
+
 ## 📊 Metrics
 
 | Metric | Value |

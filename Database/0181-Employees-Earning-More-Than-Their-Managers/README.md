@@ -60,6 +60,25 @@ Employee table:
 
 ```
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a self-join to compare the salaries of employees with their managers. By joining the `Employee` table with itself, we can create a relationship between each employee and their manager, allowing us to compare their salaries.
+
+**Approach**
+1. We join the `Employee` table with itself on the `managerId` column, creating a relationship between each employee and their manager.
+2. We select the `name` column from the first instance of the table (`a`) and alias it as `Employee`.
+3. We filter the results to include only employees whose salary is greater than their manager's salary.
+
+**Time Complexity**
+O(n^2) where n is the number of employees. This is because the self-join operation has a time complexity of O(n^2), and the filtering operation does not affect the overall time complexity.
+
+**Space Complexity**
+O(n) where n is the number of employees. This is because we are creating a temporary result set that contains all employees who earn more than their managers.
+
+**Key Insight**
+The key insight here is that we can use a self-join to create a relationship between each employee and their manager, allowing us to compare their salaries. This is a common technique in SQL when working with hierarchical or relational data.
+
 ## 📊 Metrics
 
 | Metric | Value |

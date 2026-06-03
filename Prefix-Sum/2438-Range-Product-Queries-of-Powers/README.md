@@ -56,6 +56,28 @@ The answer to the only query is powers[0] = 2. The answer modulo 10^9 + 7 is the
 
 	- `0 <= start_i <= end_i < powers.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first generating the array of powers of 2 that sum to `n` using a binary representation of `n`. Then, it calculates the product of all powers within each query range using prefix sums and modular arithmetic.
+
+**Approach**
+1. Convert `n` to binary and store it in the `binary` string.
+2. Initialize an empty list `powers` to store the powers of 2 that sum to `n`.
+3. Iterate through the reversed binary string. If a bit is 1, calculate the corresponding power of 2 and append it to `powers`. If the list is not empty, multiply the new power by the last element in `powers`.
+4. Initialize an empty list `res` to store the results of the queries.
+5. Iterate through each query in `queries`. For each query, calculate the product of all powers within the range by dividing the power at the end of the range by the power at the start of the range (if the start is not 0). Take the result modulo `10^9 + 7` to avoid overflow.
+6. Append the result to `res`.
+
+**Time Complexity**
+O(n + q), where n is the number of bits in the binary representation of `n` and q is the number of queries. This is because we iterate through the binary string once to generate `powers`, and then through each query to calculate the result.
+
+**Space Complexity**
+O(n + q), where n is the number of bits in the binary representation of `n` and q is the number of queries. This is because we store the powers in a list of size n and the results in a list of size q.
+
+**Key Insight**
+The key insight is that the powers of 2 that sum to `n` can be generated efficiently using a binary representation of `n`. By iterating through the reversed binary string, we can calculate the powers in a single pass. This approach allows us to solve the problem in linear time.
+
 ## 📊 Metrics
 
 | Metric | Value |

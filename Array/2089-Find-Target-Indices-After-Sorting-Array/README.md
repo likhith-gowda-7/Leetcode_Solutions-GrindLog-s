@@ -58,6 +58,26 @@ The index where nums[i] == 5 is 4.
 
 	- `1 <= nums[i], target <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by first counting the number of elements less than the target and the number of duplicates of the target. Then, it generates a list of indices by iterating over the range of indices where the target elements are located.
+
+**Approach**
+1. Initialize two counters, `less` and `dup`, to keep track of the number of elements less than the target and the number of duplicates of the target, respectively.
+2. Iterate through the input array `nums` and increment `less` if an element is less than the target, and increment `dup` if an element is equal to the target.
+3. Generate a list `l` of indices by iterating over the range from `less` to `less + dup`.
+4. Return the list `l` of target indices.
+
+**Time Complexity**
+O(n), where n is the length of the input array `nums`. This is because we iterate through the array twice: once to count the elements less than and equal to the target, and once to generate the list of target indices.
+
+**Space Complexity**
+O(n), where n is the length of the input array `nums`. This is because in the worst case, we need to store all elements of the array in the list of target indices.
+
+**Key Insight**
+The key insight is that after sorting the array, the target elements will be located in a contiguous block of indices. By counting the number of elements less than the target, we can determine the starting index of this block, and by counting the number of duplicates, we can determine the length of the block. This allows us to generate the list of target indices efficiently.
+
 ## 📊 Metrics
 
 | Metric | Value |

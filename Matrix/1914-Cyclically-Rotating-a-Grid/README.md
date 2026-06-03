@@ -81,6 +81,37 @@ Example 2:**
 
 	- `1 <= k <= 10^9`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution works by iterating over each layer of the grid, rotating it, and then moving on to the next layer. The key insight is to treat each layer as a ring and rotate it by moving elements in a counter-clockwise direction.
+
+**Approach**
+1. Initialize variables to keep track of the top, left, bottom, and right boundaries of the grid.
+2. While there are still layers to process (i.e., top < bottom and left < right):
+   1. Calculate the length and width of the current layer.
+   2. Calculate the perimeter of the layer.
+   3. Calculate the number of rotations needed for the current layer (k % perimeter).
+   4. While there are still rotations needed:
+      1. Save the top-left element of the layer.
+      2. Shift all elements in the top row to the left.
+      3. Shift all elements in the right column up.
+      4. Shift all elements in the bottom row to the right.
+      5. Shift all elements in the left column down.
+      6. Place the saved top-left element in its new position.
+      7. Decrement the number of rotations needed.
+   5. Move to the next layer by incrementing top and left, and decrementing bottom and right.
+3. Return the rotated grid.
+
+**Time Complexity**
+O(m*n) where m and n are the dimensions of the grid. This is because each element in the grid is visited at most once.
+
+**Space Complexity**
+O(1) as we only use a constant amount of space to store the variables and do not use any additional data structures that scale with the input size.
+
+**Key Insight**
+The key insight is to treat each layer as a ring and rotate it by moving elements in a counter-clockwise direction. This allows us to efficiently rotate each layer without having to shift all elements in the entire grid.
+
 ## 📊 Metrics
 
 | Metric | Value |

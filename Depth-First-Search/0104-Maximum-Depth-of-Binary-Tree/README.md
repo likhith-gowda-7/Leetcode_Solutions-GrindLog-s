@@ -44,6 +44,29 @@ Example 2:**
 
 	- `-100 <= Node.val <= 100`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses a breadth-first search (BFS) approach to traverse the binary tree level by level, keeping track of the maximum depth encountered. The key insight is that the maximum depth of a binary tree is equal to the number of levels, which can be determined by the number of nodes at each level.
+
+**Approach**
+1. Check if the root node is None, if so return 0 as there are no nodes in the tree.
+2. Initialize a queue with the root node and a level counter to 0.
+3. While the queue is not empty, perform the following steps:
+   1. Dequeue all nodes at the current level.
+   2. Enqueue the left and right children of each dequeued node, if they exist.
+   3. Increment the level counter.
+4. Return the level counter, which represents the maximum depth of the binary tree.
+
+**Time Complexity**
+O(n), where n is the number of nodes in the binary tree. This is because each node is visited once during the BFS traversal.
+
+**Space Complexity**
+O(n), where n is the number of nodes in the binary tree. This is because in the worst case, the queue will store all nodes at the last level of the tree.
+
+**Key Insight**
+The key insight is that the maximum depth of a binary tree is equal to the number of levels, which can be determined by the number of nodes at each level. This solution uses a BFS approach to traverse the tree level by level, making it efficient for calculating the maximum depth.
+
 ## 📊 Metrics
 
 | Metric | Value |

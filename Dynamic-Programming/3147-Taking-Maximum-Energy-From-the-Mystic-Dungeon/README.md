@@ -53,6 +53,26 @@ Example 2:**
 
 ​​​​​​
 
+## 🧠 Solution Explanation
+
+**Intuition**
+This solution uses dynamic programming to build up a table of maximum energy that can be gained at each position in the array. The key insight is that the maximum energy at a position is the maximum of the energy at that position plus the maximum energy that can be gained at the position `k` steps ahead.
+
+**Approach**
+1. Create a copy of the input array `energy` and store it in the `dp` array.
+2. Iterate over the `dp` array from the end to the beginning, considering each position `i`.
+3. If the position `i + k` is within the bounds of the array, add the maximum energy at position `i + k` to the energy at position `i`.
+4. After iterating over the entire array, return the maximum value in the `dp` array.
+
+**Time Complexity**
+O(n), where n is the length of the input array. This is because we only need to iterate over the array once, and each iteration takes constant time.
+
+**Space Complexity**
+O(n), where n is the length of the input array. This is because we need to create a copy of the input array to store the dynamic programming table.
+
+**Key Insight**
+The key insight is that the maximum energy at a position is the maximum of the energy at that position plus the maximum energy that can be gained at the position `k` steps ahead. This allows us to build up a table of maximum energy that can be gained at each position in the array, and then return the maximum value in the table.
+
 ## 📊 Metrics
 
 | Metric | Value |

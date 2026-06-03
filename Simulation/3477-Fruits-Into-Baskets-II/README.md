@@ -67,6 +67,27 @@ Since all fruits are successfully placed, we return 0.
 
 	- `1 <= fruits[i], baskets[i] <= 1000`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through each fruit and checks if it can be placed in any of the baskets. If a fruit can be placed, it marks the corresponding basket as unavailable and decrements the count of remaining fruits. This process continues until all fruits have been checked.
+
+**Approach**
+1. Initialize a variable `remaining` to store the count of remaining fruits.
+2. Iterate through each fruit in the `fruits` array.
+3. For each fruit, iterate through each basket in the `baskets` array.
+4. If the capacity of the current basket is greater than or equal to the quantity of the current fruit, mark the basket as unavailable by setting its value to -1 and decrement the `remaining` count.
+5. After checking all fruits, return the `remaining` count.
+
+**Time Complexity**
+O(n*m), where n is the number of fruits and m is the number of baskets. This is because we are iterating through each fruit and each basket.
+
+**Space Complexity**
+O(1), as we are only using a constant amount of space to store the `remaining` count and the indices of the baskets.
+
+**Key Insight**
+The key insight is that we only need to check if a fruit can be placed in any of the baskets, and if it can, we mark the corresponding basket as unavailable. This approach ensures that we don't need to keep track of the actual allocation of fruits to baskets, making the solution efficient.
+
 ## 📊 Metrics
 
 | Metric | Value |

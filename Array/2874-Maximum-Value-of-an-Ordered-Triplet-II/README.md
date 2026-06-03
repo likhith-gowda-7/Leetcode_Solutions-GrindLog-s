@@ -57,6 +57,28 @@ Example 3:**
 
 	- `1 <= nums[i] <= 10^6`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution iterates through the array to find the maximum value of all triplets of indices `(i, j, k)` such that `i < j < k`. The key insight is that the maximum value of a triplet is determined by the maximum difference between the smallest and largest elements in the triplet, multiplied by the largest element.
+
+**Approach**
+1. Initialize variables `max_val`, `max_diff`, and `max_trip` to keep track of the maximum value, maximum difference, and maximum triplet value respectively.
+2. Iterate through the array `nums` and for each element `i`:
+   1. Update `max_trip` to be the maximum of its current value and `max_diff * i`.
+   2. Update `max_val` to be the maximum of its current value and `i`.
+   3. Update `max_diff` to be the maximum of its current value and `max_val - i`.
+3. Return `max_trip` as the maximum value of all triplets.
+
+**Time Complexity**
+O(n), where n is the length of the array `nums`. This is because we are iterating through the array once.
+
+**Space Complexity**
+O(1), as we are using a constant amount of space to store the variables `max_val`, `max_diff`, and `max_trip`.
+
+**Key Insight**
+The solution works by maintaining the maximum difference between the smallest and largest elements in the triplet, and multiplying it by the largest element to get the maximum value of the triplet. This approach ensures that we consider all possible triplets and find the maximum value.
+
 ## 📊 Metrics
 
 | Metric | Value |

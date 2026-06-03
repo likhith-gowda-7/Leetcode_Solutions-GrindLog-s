@@ -51,6 +51,28 @@ Example 2:**
 
 	- `words[i]` consists of lowercase English letters.
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a greedy approach to find the longest alternating subsequence by maintaining a search direction (0 or 1) based on the groups array. It iterates through the words array, appending a word to the result if its corresponding group matches the current search direction.
+
+**Approach**
+1. Determine the initial search direction based on the first group in the groups array.
+2. Initialize the result with the first word in the words array.
+3. Iterate through the words array starting from the second word (index 1).
+4. For each word, check if its corresponding group matches the current search direction.
+5. If it matches, append the word to the result and toggle the search direction.
+6. Return the result after iterating through all words.
+
+**Time Complexity**
+O(n), where n is the length of the words array. This is because we iterate through the array once, performing a constant amount of work for each element.
+
+**Space Complexity**
+O(n), where n is the length of the words array. This is because in the worst case, we need to store all words in the result array.
+
+**Key Insight**
+The key insight is that we can maintain a single search direction (0 or 1) and toggle it whenever we encounter a group that matches the current direction. This allows us to efficiently find the longest alternating subsequence without considering all possible subsequences.
+
 ## 📊 Metrics
 
 | Metric | Value |

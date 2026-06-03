@@ -70,6 +70,27 @@ Example 3:**
 
 	- `0 <= startIndex < words.length`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution utilizes a two-pointer approach to traverse the circular array from both the start and end directions simultaneously. This allows for efficient exploration of the array, taking advantage of the circular nature of the problem.
+
+**Approach**
+1. First, check if the target string exists in the array. If not, return -1.
+2. Initialize two pointers, `back` and `front`, to the start index. `back` moves in the reverse direction, while `front` moves in the forward direction.
+3. Initialize a counter `c` to keep track of the number of steps taken.
+4. Continue moving `back` and `front` until either of them reaches the target string.
+5. Return the total number of steps taken, which represents the shortest distance to the target string.
+
+**Time Complexity**
+O(n), where n is the length of the array. This is because in the worst case, we might need to traverse the entire array to find the target string.
+
+**Space Complexity**
+O(1), as we only use a constant amount of space to store the pointers and the counter.
+
+**Key Insight**
+The key insight here is that by using two pointers moving in opposite directions, we can efficiently explore the circular array and find the shortest distance to the target string. This approach takes advantage of the fact that the array is circular, allowing us to cover the entire array in a single pass.
+
 ## 📊 Metrics
 
 | Metric | Value |

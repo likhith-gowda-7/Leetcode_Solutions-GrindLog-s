@@ -44,6 +44,27 @@ Example 2:**
 
 	- `-10^4 <= nums[i] <= 10^4`
 
+## 🧠 Solution Explanation
+
+**Intuition**
+The solution uses a sliding window approach to efficiently calculate the maximum average subarray sum. By maintaining a running sum of the current window and subtracting the element that just left the window, we can efficiently update the sum without recalculating the entire subarray.
+
+**Approach**
+1. Initialize the maximum sum (`max_sum`) and the current sum (`curr`) to the sum of the first `k` elements in the array.
+2. Iterate over the array starting from the `k`-th element.
+3. For each element, add the current element to the current sum and subtract the element that just left the window (`nums[i-k]`).
+4. Update the maximum sum if the current sum is greater.
+5. Return the maximum sum divided by `k` to get the maximum average.
+
+**Time Complexity**
+O(n) - The solution iterates over the array once, where n is the number of elements in the array.
+
+**Space Complexity**
+O(1) - The solution uses a constant amount of space to store the maximum sum, current sum, and other variables, regardless of the input size.
+
+**Key Insight**
+The key insight is that by maintaining a running sum and updating it efficiently, we can avoid recalculating the sum of the subarray for each element, resulting in a time complexity of O(n). This is a common technique used in sliding window problems to optimize the solution.
+
 ## 📊 Metrics
 
 | Metric | Value |
