@@ -81,7 +81,7 @@ The key to this solution is the observation that the right sum for each index ca
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1 ms (Beats 83.48%) |
-| 💾 Memory | 18 MB (Beats 100%) |
-| 📅 Solved | 2025-02-10 |
+| ⏱️ Runtime | 0 ms (Beats 100%) |
+| 💾 Memory | 19.3 MB (Beats 86.97%) |
+| 📅 Solved | 2026-06-06 |
 | 💻 Language | Python |

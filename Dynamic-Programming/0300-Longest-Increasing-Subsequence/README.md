@@ -79,7 +79,7 @@ The key insight behind this solution is the realization that we can build the lo
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1255 ms (Beats 44.83%) |
-| 💾 Memory | 19.4 MB (Beats 85.36%) |
-| 📅 Solved | 2026-04-25 |
+| ⏱️ Runtime | 11 ms (Beats 77.59%) |
+| 💾 Memory | 19.6 MB (Beats 32.89%) |
+| 📅 Solved | 2026-06-06 |
 | 💻 Language | Python |
