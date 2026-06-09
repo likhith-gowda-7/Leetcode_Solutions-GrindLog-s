@@ -1,17 +1,13 @@
 class Solution:
     def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
         less=[]
-        great=[]
-        c=0
-        for i in nums:
-            if(i<pivot):
-                less.append(i)
-            elif(i>pivot):
-                great.append(i)
+        great_equ=deque()
+        for val in nums:
+            if(val<pivot):
+                less.append(val)
+            elif(val==pivot):
+                great_equ.appendleft(val)
             else:
-                c+=1
-        res=[]
-        res+=less
-        res+=[pivot]*c
-        res+=great
-        return res
+                great_equ.append(val)
+        less.extend(great_equ)
+        return less

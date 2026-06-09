@@ -88,7 +88,7 @@ The key insight is to recognize that the problem requires a two-stage approach: 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 19 ms (Beats 93.76%) |
-| 💾 Memory | 35.6 MB (Beats 5.69%) |
-| 📅 Solved | 2025-03-03 |
+| ⏱️ Runtime | 30 ms (Beats 60.88%) |
+| 💾 Memory | 34.2 MB (Beats 6.97%) |
+| 📅 Solved | 2026-06-08 |
 | 💻 Language | Python |
