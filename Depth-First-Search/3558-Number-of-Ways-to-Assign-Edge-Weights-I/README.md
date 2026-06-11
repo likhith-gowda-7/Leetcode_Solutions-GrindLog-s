@@ -93,7 +93,7 @@ The key insight is that we can assign weights to edges in a way that ensures the
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 350 ms (Beats 69.89%) |
-| 💾 Memory | 114.5 MB (Beats 34.41%) |
+| ⏱️ Runtime | 307 ms (Beats 79.57%) |
+| 💾 Memory | 78.9 MB (Beats 48.39%) |
 | 📅 Solved | 2026-06-11 |
 | 💻 Language | Python |
