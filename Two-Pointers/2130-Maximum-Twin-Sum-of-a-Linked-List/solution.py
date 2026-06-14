@@ -5,16 +5,18 @@
 #         self.next = next
 class Solution:
     def pairSum(self, head: Optional[ListNode]) -> int:
-        idx=0
-        idx_map={}
         res=0
-        curr=head
-        while curr:
-            idx_map[idx]=curr.val
-            idx+=1
-            curr=curr.next
-        for i in range((idx//2)):
-            twin_idx=(idx-i)-1
-            twin_sum=idx_map[i]+idx_map[twin_idx]
+        fast=head
+        slow=head
+        prev=None
+        while fast and fast.next:
+            fast=fast.next.next
+            Next=slow.next
+            slow.next=prev
+            slow,prev=Next,slow
+        while slow:
+            twin_sum=prev.val+slow.val
             res=max(res,twin_sum)
+            prev=prev.next
+            slow=slow.next
         return res

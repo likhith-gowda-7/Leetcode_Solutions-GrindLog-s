@@ -97,7 +97,7 @@ The key insight is that we can store node values in a dictionary and then iterat
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 106 ms (Beats 9.46%) |
-| 💾 Memory | 68.2 MB (Beats 5.03%) |
+| ⏱️ Runtime | 69 ms (Beats 43.5%) |
+| 💾 Memory | 44.4 MB (Beats 92.6%) |
 | 📅 Solved | 2026-06-14 |
 | 💻 Language | Python |
