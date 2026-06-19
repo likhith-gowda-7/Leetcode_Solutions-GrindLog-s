@@ -73,6 +73,6 @@ The key insight is that we can calculate the maximum altitude by simply keeping 
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 17.4 MB (Beats 100%) |
-| 📅 Solved | 2024-12-09 |
+| 💾 Memory | 19.3 MB (Beats 52.19%) |
+| 📅 Solved | 2026-06-19 |
 | 💻 Language | Python |

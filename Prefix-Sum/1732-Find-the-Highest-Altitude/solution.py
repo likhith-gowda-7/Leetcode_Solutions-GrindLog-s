@@ -1,9 +1,8 @@
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
-        alt=0
-        maxi=0
-        for val in gain:
-            alt+=val
-            maxi=max(alt,maxi)
-        return maxi
-           
+        rise=0
+        max_rise=0
+        for alti in gain:
+            rise+=alti
+            max_rise=max(max_rise,rise)
+        return max_rise
