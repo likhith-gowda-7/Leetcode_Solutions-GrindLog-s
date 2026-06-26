@@ -85,7 +85,7 @@ The key insight is to realize that the maximum number of instances that can be f
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 18 MB (Beats 100%) |
-| 📅 Solved | 2025-01-17 |
+| ⏱️ Runtime | 3 ms (Beats 56.83%) |
+| 💾 Memory | 19.3 MB (Beats 74.38%) |
+| 📅 Solved | 2026-06-22 |
 | 💻 Language | Python |

@@ -91,7 +91,7 @@ The key insight is that by sorting the costs array, we can apply a greedy strate
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 83 ms (Beats 57.98%) |
-| 💾 Memory | 32 MB (Beats 44.03%) |
+| ⏱️ Runtime | 27 ms (Beats 99.48%) |
+| 💾 Memory | 31 MB (Beats 71.4%) |
 | 📅 Solved | 2026-06-21 |
 | 💻 Language | Python |
