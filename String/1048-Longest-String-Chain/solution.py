@@ -1,17 +1,19 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         def check(s1,s2):
-            if(len(s1)!=(len(s2)+1)):
+            n1=len(s1)
+            n2=len(s2)
+            if(n1!=(n2+1)):
                 return False
             p1=0
             p2=0
-            while p1<len(s1):
-                if(p2<len(s2) and s1[p1]==s2[p2]):
+            while p1<n1:
+                if(p2<n2 and s1[p1]==s2[p2]):
                     p1+=1
                     p2+=1
                 else:
                     p1+=1
-            return (p1==len(s1) and p2==len(s2))
+            return (p1==n1 and p2==n2)
         words.sort(key=lambda x:len(x))
         n=len(words)
         dp=[1]*n

@@ -89,7 +89,7 @@ The key insight is that we can extend a word chain by finding a predecessor of t
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 787 ms (Beats 19.6%) |
-| 💾 Memory | 19.5 MB (Beats 69.9%) |
-| 📅 Solved | 2026-06-21 |
+| ⏱️ Runtime | 757 ms (Beats 25.17%) |
+| 💾 Memory | 19.4 MB (Beats 70.2%) |
+| 📅 Solved | 2026-06-28 |
 | 💻 Language | Python |
