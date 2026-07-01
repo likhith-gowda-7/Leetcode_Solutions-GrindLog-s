@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*762 problems solved across 53 topics in 5 language(s)*
+*763 problems solved across 53 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-762-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-303-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-386-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-73-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-763-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-303-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-387-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-73-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -682,6 +682,7 @@
 | 2784 | [Check if Array is Good](https://leetcode.com/problems/check-if-array-is-good/) | 🟢 Easy | Array, Hash Table, Sorting | Python | N/A | N/A |
 | 2785 | [Sort Vowels in a String](https://leetcode.com/problems/sort-vowels-in-a-string/) | 🟡 Medium | String, Sorting | Python | N/A | N/A |
 | 2787 | [Ways to Express an Integer as Sum of Powers](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/) | 🟡 Medium | Dynamic Programming | Python | N/A | N/A |
+| 2812 | [Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid/) | 🟡 Medium | Array, Binary Search | Python | N/A | N/A |
 | 2833 | [Furthest Point From Origin](https://leetcode.com/problems/furthest-point-from-origin/) | 🟢 Easy | String, Counting | Python | N/A | N/A |
 | 2839 | [Check if Strings Can be Made Equal With Operations I](https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i/) | 🟢 Easy | String | Python | N/A | N/A |
 | 2840 | [Check if Strings Can be Made Equal With Operations II](https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii/) | 🟡 Medium | Hash Table, String, Sorting | Python | N/A | N/A |
