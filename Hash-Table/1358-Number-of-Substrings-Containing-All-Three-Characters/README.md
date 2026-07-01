@@ -77,7 +77,7 @@ The key insight is that when the hash table contains three characters, we can ca
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 98 ms (Beats 66.3%) |
-| 💾 Memory | 17.8 MB (Beats 100%) |
-| 📅 Solved | 2025-03-11 |
+| ⏱️ Runtime | 56 ms (Beats 94.06%) |
+| 💾 Memory | 19.4 MB (Beats 48.32%) |
+| 📅 Solved | 2026-06-30 |
 | 💻 Language | Python |
