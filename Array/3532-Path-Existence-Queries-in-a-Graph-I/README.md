@@ -98,7 +98,7 @@ The key insight is that by compressing the graph into a set of connected compone
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 94 ms (Beats 61.11%) |
-| 💾 Memory | 49.6 MB (Beats 73.02%) |
-| 📅 Solved | 2026-07-09 |
+| ⏱️ Runtime | 101 ms (Beats 56.45%) |
+| 💾 Memory | 49.6 MB (Beats 70.16%) |
+| 📅 Solved | 2026-07-10 |
 | 💻 Language | Python |
