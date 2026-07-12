@@ -1,7 +1,7 @@
 # 1331. Rank Transform of an Array
 
 
-![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00b8a3) ![Language](https://img.shields.io/badge/Language-JavaScript-blue) ![Array](https://img.shields.io/badge/Array-purple) ![Hash Table](https://img.shields.io/badge/Hash%20Table-purple) ![Sorting](https://img.shields.io/badge/Sorting-purple)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00b8a3) ![Language](https://img.shields.io/badge/Language-Python-blue) ![Array](https://img.shields.io/badge/Array-purple) ![Hash Table](https://img.shields.io/badge/Hash%20Table-purple) ![Sorting](https://img.shields.io/badge/Sorting-purple)
 
 
 🔗 [View on LeetCode](https://leetcode.com/problems/rank-transform-of-an-array/)
@@ -81,7 +81,7 @@ The key insight is to first create a sorted array of unique elements, which allo
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 188 ms (Beats 6.56%) |
-| 💾 Memory | 83.2 MB (Beats 32.24%) |
-| 📅 Solved | 2024-10-04 |
-| 💻 Language | JavaScript |
+| ⏱️ Runtime | 29 ms (Beats 95.39%) |
+| 💾 Memory | 37.7 MB (Beats 39.04%) |
+| 📅 Solved | 2026-07-12 |
+| 💻 Language | Python |
