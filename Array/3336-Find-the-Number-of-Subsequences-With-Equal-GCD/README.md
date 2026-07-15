@@ -107,7 +107,7 @@ The key insight is to break down the problem into smaller subproblems by conside
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 3404 ms (Beats 31.82%) |
-| 💾 Memory | 594.2 MB (Beats 15.91%) |
+| ⏱️ Runtime | 3434 ms (Beats 31.82%) |
+| 💾 Memory | 592.3 MB (Beats 18.18%) |
 | 📅 Solved | 2026-07-15 |
 | 💻 Language | Python |
