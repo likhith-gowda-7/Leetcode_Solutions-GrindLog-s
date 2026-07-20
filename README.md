@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*780 problems solved across 53 topics in 5 language(s)*
+*781 problems solved across 53 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-780-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-306-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-396-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-78-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-781-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-307-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-396-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-78-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -431,6 +431,7 @@
 | 1211 | [Queries Quality and Percentage](https://leetcode.com/problems/queries-quality-and-percentage/) | 🟢 Easy | Database | SQL | N/A | N/A |
 | 1233 | [Remove Sub Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/) | 🟡 Medium | Array, String, Trie | Python | N/A | N/A |
 | 1251 | [Average Selling Price](https://leetcode.com/problems/average-selling-price/) | 🟢 Easy | Database | SQL | N/A | N/A |
+| 1260 | [Shift 2D Grid](https://leetcode.com/problems/shift-2d-grid/) | 🟢 Easy | Array, Matrix, Simulation | Python | N/A | N/A |
 | 1266 | [Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points/) | 🟢 Easy | Array, Math, Geometry | Python | N/A | N/A |
 | 1280 | [Students and Examinations](https://leetcode.com/problems/students-and-examinations/) | 🟢 Easy | Database | SQL | N/A | N/A |
 | 1288 | [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/) | 🟡 Medium | Array, Sorting | Python | N/A | N/A |
