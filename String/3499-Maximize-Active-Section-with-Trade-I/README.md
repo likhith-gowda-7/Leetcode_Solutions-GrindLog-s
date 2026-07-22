@@ -113,7 +113,7 @@ The key insight is that by comparing pairs of adjacent blocks of zeros, we can f
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 463 ms (Beats 95.33%) |
-| 💾 Memory | 21.1 MB (Beats 61.68%) |
+| ⏱️ Runtime | 391 ms (Beats 98.18%) |
+| 💾 Memory | 20.8 MB (Beats 68.18%) |
 | 📅 Solved | 2026-07-21 |
 | 💻 Language | Python |
