@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*787 problems solved across 53 topics in 5 language(s)*
+*790 problems solved across 53 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-787-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-308-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-400-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-79-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-790-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-310-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-401-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-79-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -304,6 +304,7 @@
 | 622 | [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/) | 🟡 Medium | Array, Linked List, Design | Python | N/A | N/A |
 | 623 | [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree/) | 🟡 Medium | Tree, Binary Tree | Python | N/A | N/A |
 | 626 | [Exchange Seats](https://leetcode.com/problems/exchange-seats/) | 🟡 Medium | Database | SQL | N/A | N/A |
+| 628 | [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) | 🟢 Easy | Array, Math, Sorting | Python | N/A | N/A |
 | 636 | [Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/) | 🟡 Medium | Array, Stack | Python | N/A | N/A |
 | 643 | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) | 🟢 Easy | Array, Sliding Window | Python | N/A | N/A |
 | 645 | [Set Mismatch](https://leetcode.com/problems/set-mismatch/) | 🟢 Easy | Array, Hash Table, Bit Manipulation | Python | N/A | N/A |
@@ -481,6 +482,7 @@
 | 1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | 🟡 Medium | Tree, Binary Tree | Python | N/A | N/A |
 | 1456 | [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | 🟡 Medium | String, Sliding Window | Python | N/A | N/A |
 | 1461 | [Check If a String Contains All Binary Codes of Size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/) | 🟡 Medium | Hash Table, String, Bit Manipulation | Python | N/A | N/A |
+| 1464 | [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/) | 🟢 Easy | Array, Sorting, Heap (Priority Queue) | Python | N/A | N/A |
 | 1470 | [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | 🟢 Easy | Array | Python | N/A | N/A |
 | 1475 | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | 🟢 Easy | Array, Stack, Monotonic Stack | Python | N/A | N/A |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | 🟢 Easy | Array, Prefix Sum | Python | N/A | N/A |
@@ -792,6 +794,7 @@
 | 3513 | [Number of Unique XOR Triplets I](https://leetcode.com/problems/number-of-unique-xor-triplets-i/) | 🟡 Medium | Array, Math, Bit Manipulation | Python | N/A | N/A |
 | 3514 | [Number of Unique XOR Triplets II](https://leetcode.com/problems/number-of-unique-xor-triplets-ii/) | 🟡 Medium | Array, Math, Bit Manipulation | Python | N/A | N/A |
 | 3516 | [Find Closest Person](https://leetcode.com/problems/find-closest-person/) | 🟢 Easy | Math | Python | N/A | N/A |
+| 3517 | [Smallest Palindromic Rearrangement I](https://leetcode.com/problems/smallest-palindromic-rearrangement-i/) | 🟡 Medium | String, Sorting, Counting Sort | Python | N/A | N/A |
 | 3532 | [Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i/) | 🟡 Medium | Array, Hash Table, Binary Search | Python | N/A | N/A |
 | 3534 | [Path Existence Queries in a Graph II](https://leetcode.com/problems/path-existence-queries-in-a-graph-ii/) | 🔴 Hard | Array, Two Pointers, Binary Search | Python | N/A | N/A |
 | 3536 | [Maximum Product of Two Digits](https://leetcode.com/problems/maximum-product-of-two-digits/) | 🟢 Easy | Math, Sorting | Python | N/A | N/A |
@@ -850,7 +853,7 @@
 
 ---
 
-*🔄 Auto-generated by [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s) on 2026-07-25*
+*🔄 Auto-generated by [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s) on 2026-07-29*
 
 *⭐ Star this repo if you find it helpful!*
 
