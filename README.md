@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*790 problems solved across 53 topics in 5 language(s)*
+*795 problems solved across 54 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-790-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-310-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-401-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-79-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-795-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-311-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-403-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-81-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -265,6 +265,7 @@
 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | 🔴 Hard | Hash Table, Linked List, Design | Python | N/A | N/A |
 | 462 | [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | 🟡 Medium | Array, Math, Sorting | Python | N/A | N/A |
 | 485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | 🟢 Easy | Array | Python | N/A | N/A |
+| 486 | [Predict the Winner](https://leetcode.com/problems/predict-the-winner/) | 🟡 Medium | Array, Math, Dynamic Programming | Python | N/A | N/A |
 | 494 | [Target Sum](https://leetcode.com/problems/target-sum/) | 🟡 Medium | Array, Dynamic Programming, Backtracking | Python | N/A | N/A |
 | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | 🟢 Easy | Array, Hash Table, Stack | Python | N/A | N/A |
 | 498 | [Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | 🟡 Medium | Array, Matrix, Simulation | Python | N/A | N/A |
@@ -470,6 +471,7 @@
 | 1394 | [Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/) | 🟢 Easy | Array, Hash Table, Counting | Python | N/A | N/A |
 | 1395 | [Count Number of Teams](https://leetcode.com/problems/count-number-of-teams/) | 🟡 Medium | Array, Dynamic Programming, Binary Indexed Tree | Python | N/A | N/A |
 | 1404 | [Number of Steps to Reduce a Number in Binary Representation to One](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | 🟡 Medium | String, Bit Manipulation, Simulation | Python | N/A | N/A |
+| 1406 | [Stone Game III](https://leetcode.com/problems/stone-game-iii/) | 🔴 Hard | Array, Math, Dynamic Programming | Python | N/A | N/A |
 | 1408 | [String Matching in an Array](https://leetcode.com/problems/string-matching-in-an-array/) | 🟢 Easy | Array, String, String Matching | Python | N/A | N/A |
 | 1413 | [Minimum Value to Get Positive Step by Step Sum](https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/) | 🟢 Easy | Array, Prefix Sum | Python | N/A | N/A |
 | 1415 | [The k th Lexicographical String of All Happy Strings of Length n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | 🟡 Medium | String, Backtracking | Python | N/A | N/A |
@@ -715,6 +717,8 @@
 | 3005 | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | 🟢 Easy | Array, Hash Table, Counting | Python | N/A | N/A |
 | 3010 | [Divide an Array Into Subarrays With Minimum Cost I](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i/) | 🟢 Easy | Array, Sorting, Enumeration | Python | N/A | N/A |
 | 3013 | [Divide an Array Into Subarrays With Minimum Cost II](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-ii/) | 🔴 Hard | Array, Hash Table, Sliding Window | Python | N/A | N/A |
+| 3014 | [Minimum Number of Pushes to Type Word I](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i/) | 🟢 Easy | Math, String, Greedy | Python | N/A | N/A |
+| 3016 | [Minimum Number of Pushes to Type Word II](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/) | 🟡 Medium | Hash Table, String, Greedy | Python | N/A | N/A |
 | 3020 | [Find the Maximum Number of Elements in Subset](https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset/) | 🟡 Medium | Array, Hash Table, Enumeration | Python | N/A | N/A |
 | 3021 | [Alice and Bob Playing Flower Game](https://leetcode.com/problems/alice-and-bob-playing-flower-game/) | 🟡 Medium | Math | Python | N/A | N/A |
 | 3024 | [Type of Triangle](https://leetcode.com/problems/type-of-triangle/) | 🟢 Easy | Array, Math, Sorting | Python | N/A | N/A |
@@ -795,6 +799,7 @@
 | 3514 | [Number of Unique XOR Triplets II](https://leetcode.com/problems/number-of-unique-xor-triplets-ii/) | 🟡 Medium | Array, Math, Bit Manipulation | Python | N/A | N/A |
 | 3516 | [Find Closest Person](https://leetcode.com/problems/find-closest-person/) | 🟢 Easy | Math | Python | N/A | N/A |
 | 3517 | [Smallest Palindromic Rearrangement I](https://leetcode.com/problems/smallest-palindromic-rearrangement-i/) | 🟡 Medium | String, Sorting, Counting Sort | Python | N/A | N/A |
+| 3518 | [Smallest Palindromic Rearrangement II](https://leetcode.com/problems/smallest-palindromic-rearrangement-ii/) | 🔴 Hard | Hash Table, Math, String | Python | N/A | N/A |
 | 3532 | [Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i/) | 🟡 Medium | Array, Hash Table, Binary Search | Python | N/A | N/A |
 | 3534 | [Path Existence Queries in a Graph II](https://leetcode.com/problems/path-existence-queries-in-a-graph-ii/) | 🔴 Hard | Array, Two Pointers, Binary Search | Python | N/A | N/A |
 | 3536 | [Maximum Product of Two Digits](https://leetcode.com/problems/maximum-product-of-two-digits/) | 🟢 Easy | Math, Sorting | Python | N/A | N/A |
@@ -853,7 +858,7 @@
 
 ---
 
-*🔄 Auto-generated by [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s) on 2026-07-29*
+*🔄 Auto-generated by [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s) on 2026-08-03*
 
 *⭐ Star this repo if you find it helpful!*
 
