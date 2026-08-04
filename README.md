@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*796 problems solved across 54 topics in 5 language(s)*
+*797 problems solved across 54 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-796-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-312-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-403-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-81-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-797-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-312-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-404-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-81-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -372,6 +372,7 @@
 | 874 | [Walking Robot Simulation](https://leetcode.com/problems/walking-robot-simulation/) | 🟡 Medium | Array, Hash Table, Simulation | Python | N/A | N/A |
 | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | 🟡 Medium | Array, Binary Search | Python | N/A | N/A |
 | 876 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | 🟢 Easy | Linked List, Two Pointers | Python | N/A | N/A |
+| 877 | [Stone Game](https://leetcode.com/problems/stone-game/) | 🟡 Medium | Array, Math, Dynamic Programming | Python | N/A | N/A |
 | 880 | [Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/) | 🟡 Medium | String, Stack | Python | N/A | N/A |
 | 884 | [Uncommon Words from Two Sentences](https://leetcode.com/problems/uncommon-words-from-two-sentences/) | 🟢 Easy | Hash Table, String, Counting | Python | N/A | N/A |
 | 901 | [Online Stock Span](https://leetcode.com/problems/online-stock-span/) | 🟡 Medium | Stack, Design, Monotonic Stack | Python | N/A | N/A |
