@@ -79,7 +79,7 @@ The key insight is that the optimal strategy for the players is to maximize thei
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.6 MB (Beats 37.67%) |
-| 📅 Solved | 2026-08-01 |
+| ⏱️ Runtime | 2 ms (Beats 49.25%) |
+| 💾 Memory | 20.2 MB (Beats 5.91%) |
+| 📅 Solved | 2026-08-05 |
 | 💻 Language | Python |
