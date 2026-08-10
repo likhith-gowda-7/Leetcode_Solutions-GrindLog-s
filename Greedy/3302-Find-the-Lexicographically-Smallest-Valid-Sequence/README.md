@@ -109,7 +109,7 @@ The key insight is to use a suffix array to store the last occurrence of each ch
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 403 ms (Beats 87.23%) |
-| 💾 Memory | 47.4 MB (Beats 63.83%) |
-| 📅 Solved | 2026-08-08 |
+| ⏱️ Runtime | 427 ms (Beats 73.85%) |
+| 💾 Memory | 46.6 MB (Beats 96.01%) |
+| 📅 Solved | 2026-08-10 |
 | 💻 Language | Python |
