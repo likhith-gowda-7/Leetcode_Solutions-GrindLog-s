@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*802 problems solved across 54 topics in 5 language(s)*
+*803 problems solved across 54 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-802-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-313-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-407-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-82-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-803-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-313-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-407-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-83-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -493,6 +493,7 @@
 | 1488 | [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/) | 🟡 Medium | Array, Hash Table, Binary Search | Python | N/A | N/A |
 | 1493 | [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1's-after-deleting-one-element/) | 🟡 Medium | Array, Dynamic Programming, Sliding Window | Python | N/A | N/A |
 | 1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | 🟡 Medium | Array, Two Pointers, Binary Search | Python | N/A | N/A |
+| 1510 | [Stone Game IV](https://leetcode.com/problems/stone-game-iv/) | 🔴 Hard | Math, Dynamic Programming, Minimax | Python | N/A | N/A |
 | 1518 | [Water Bottles](https://leetcode.com/problems/water-bottles/) | 🟢 Easy | Math, Simulation | Python | N/A | N/A |
 | 1523 | [Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/) | 🟢 Easy | Math | Python | N/A | N/A |
 | 1526 | [Minimum Number of Increments on Subarrays to Form a Target Array](https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/) | 🔴 Hard | Array, Dynamic Programming, Stack | Python | N/A | N/A |
