@@ -75,7 +75,7 @@ The key insight is to consider the game as a zero-sum game, where the maximum nu
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 71 ms (Beats 88.55%) |
-| 💾 Memory | 26.1 MB (Beats 49.1%) |
-| 📅 Solved | 2026-08-09 |
+| ⏱️ Runtime | 59 ms (Beats 95.91%) |
+| 💾 Memory | 26 MB (Beats 44.07%) |
+| 📅 Solved | 2026-08-12 |
 | 💻 Language | Python |
