@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*810 problems solved across 54 topics in 5 language(s)*
+*811 problems solved across 54 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-810-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-315-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-410-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-85-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-811-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-316-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-410-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-85-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -797,6 +797,7 @@
 | 3453 | [Separate Squares I](https://leetcode.com/problems/separate-squares-i/) | 🟡 Medium | Array, Binary Search | Python | N/A | N/A |
 | 3457 | [Eat Pizzas!](https://leetcode.com/problems/eat-pizzas!/) | 🟡 Medium | Array, Greedy, Sorting | Python | N/A | N/A |
 | 3461 | [Check If Digits Are Equal in String After Operations I](https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/) | 🟢 Easy | Math, String, Simulation | Python | N/A | N/A |
+| 3471 | [Find the Largest Almost Missing Integer](https://leetcode.com/problems/find-the-largest-almost-missing-integer/) | 🟢 Easy | Array, Hash Table | Python | N/A | N/A |
 | 3477 | [Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/) | 🟢 Easy | Array, Binary Search, Segment Tree | Python | N/A | N/A |
 | 3479 | [Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/) | 🟡 Medium | Array, Binary Search, Segment Tree | Python | N/A | N/A |
 | 3484 | [Design Spreadsheet](https://leetcode.com/problems/design-spreadsheet/) | 🟡 Medium | Array, Hash Table, String | Python | N/A | N/A |
