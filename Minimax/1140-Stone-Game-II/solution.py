@@ -1,15 +1,19 @@
 class Solution:
-    def stoneGameII(self, piles: List[int]) -> int:
-        n=len(piles)
-        for i in range(len(piles) - 2, -1, -1):
-            piles[i] += piles[i + 1]
-
+    def stoneGameII(self, nums: List[int]) -> int:
+        n=len(nums)
         @cache
-        def dfs(i, M):
-            if i + M * 2 >= n:
-                return piles[i]
-            res=float('inf')
-            for x in range(1,2*M+1):
-                res=min(res,dfs(i+x,max(M,x)))
-            return piles[i]-res
-        return dfs(0, 1)
+        def dfs(alice,i,M):
+            if(i>=n):
+                return 0
+            res=0 if(alice) else float('inf')
+            total=0
+            for X in range(1,2*M+1):
+                if((i+X)>n):
+                    break
+                total+=nums[i+X-1]
+                if(alice):
+                    res=max(res,total+dfs(not alice,i+X,max(M,X)))
+                else:
+                    res=min(res,dfs(not alice,i+X,max(M,X)))
+            return res
+        return dfs(True,0,1)

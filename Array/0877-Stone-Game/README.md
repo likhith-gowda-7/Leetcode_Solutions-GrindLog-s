@@ -84,6 +84,6 @@ The key insight is that the maximum difference is the maximum of the difference 
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 19.3 MB (Beats 67.88%) |
-| 📅 Solved | 2026-08-05 |
+| 💾 Memory | 19.1 MB (Beats 98.42%) |
+| 📅 Solved | 2026-08-21 |
 | 💻 Language | Python |
