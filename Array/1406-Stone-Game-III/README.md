@@ -91,7 +91,7 @@ The key insight is to use the minimax algorithm to determine the outcome of the 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 1208 ms (Beats 17.42%) |
-| 💾 Memory | 229.7 MB (Beats 6.3%) |
+| ⏱️ Runtime | 331 ms (Beats 96.18%) |
+| 💾 Memory | 25.2 MB (Beats 47.85%) |
 | 📅 Solved | 2026-08-25 |
 | 💻 Language | Python |

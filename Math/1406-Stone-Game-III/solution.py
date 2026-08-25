@@ -1,22 +1,22 @@
 class Solution:
     def stoneGameIII(self, nums: List[int]) -> str:
         n=len(nums)
-        @cache
-        def solve(i):
-            if(i>=n):
-                return 0
-            take1=nums[i]-solve(i+1)
-            take2=float('-inf')
-            if(i+1<n):
-                take2=nums[i]+nums[i+1]-solve(i+2)
-            take3=float('-inf')
-            if(i+2<n):
-                take3=nums[i]+nums[i+1]+nums[i+2]-solve(i+3)
-            return max(take1,take2,take3)
-        res=solve(0)
-        if(res<0):
+        take1=take2=take3=0
+        for i in range(n-1,-1,-1):
+            res=nums[i]-take1
+            if(i+2<=n):
+                res=max(res,nums[i]+nums[i+1]-take2)
+            if(i+3<=n):
+                res=max(res,nums[i]+nums[i+1]+nums[i+2]-take3)
+            #State Saving
+            take3=take2
+            take1,take2=res,take1
+        ans=take1
+        if(ans<0):
             return "Bob"
-        elif(res>0):
+        elif(ans>0):
             return "Alice"
         else:
             return "Tie"
+
+
