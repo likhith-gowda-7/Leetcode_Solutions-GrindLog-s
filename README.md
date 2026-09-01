@@ -4,7 +4,7 @@
 
 ### [D_M_Likhith](https://leetcode.com/u/D_M_Likhith/)'s DSA Journey
 
-*821 problems solved across 54 topics in 5 language(s)*
+*822 problems solved across 54 topics in 5 language(s)*
 
 *Auto-synced from LeetCode using [GrindLog](https://github.com/likhith-gowda-7/Leetcode_Solutions-GrindLog-s)*
 
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-821-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-319-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-415-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-87-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
+![Total Solved](https://img.shields.io/badge/Total_Solved-822-brightgreen?style=for-the-badge&logo=leetcode&logoColor=white) ![Easy](https://img.shields.io/badge/Easy-319-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-416-ffc01e?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-87-ff375f?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555555?style=for-the-badge&logo=code&logoColor=white)
 
 </div>
 
@@ -827,6 +827,7 @@
 | 3542 | [Minimum Operations to Convert All Elements to Zero](https://leetcode.com/problems/minimum-operations-to-convert-all-elements-to-zero/) | 🟡 Medium | Array, Hash Table, Stack | Python | N/A | N/A |
 | 3558 | [Number of Ways to Assign Edge Weights I](https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-i/) | 🟡 Medium | Math, Tree | Python | N/A | N/A |
 | 3559 | [Number of Ways to Assign Edge Weights II](https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-ii/) | 🔴 Hard | Array, Math, Dynamic Programming | Python | N/A | N/A |
+| 3568 | [Minimum Moves to Clean the Classroom](https://leetcode.com/problems/minimum-moves-to-clean-the-classroom/) | 🟡 Medium | Array, Hash Table, Bit Manipulation | Python | N/A | N/A |
 | 3600 | [Maximize Spanning Tree Stability with Upgrades](https://leetcode.com/problems/maximize-spanning-tree-stability-with-upgrades/) | 🔴 Hard | Binary Search, Greedy, Graph Theory | Python | N/A | N/A |
 | 3606 | [Coupon Code Validator](https://leetcode.com/problems/coupon-code-validator/) | 🟢 Easy | Array, Hash Table, String | Python | N/A | N/A |
 | 3607 | [Power Grid Maintenance](https://leetcode.com/problems/power-grid-maintenance/) | 🟡 Medium | Array, Hash Table | Python | N/A | N/A |
