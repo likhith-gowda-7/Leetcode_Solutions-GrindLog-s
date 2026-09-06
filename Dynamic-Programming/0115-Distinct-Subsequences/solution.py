@@ -1,30 +1,16 @@
 class Solution:
     def numDistinct(self, s: str, t: str) -> int:
-        # backtracking i_s, i_t
-        len_t = len(t)
-        len_s = len(s)
-        memo = {}
-
-        def recursive(ind_s, ind_t):
-
-            if (ind_s, ind_t) in memo:
-                return memo[(ind_s, ind_t)]
-
-            if ind_t == len_t:
+        n1=len(s)
+        n2=len(t)
+        @cache
+        def solve(i,j):
+            if(j==n2):
                 return 1
-
-            if ind_s >= len_s or (len_s - ind_s) < (len_t - ind_t):
+            elif(i==n1):
                 return 0
-            
-            distinct_count = 0 
-            if s[ind_s] == t[ind_t]:
-                distinct_count += recursive(ind_s+1, ind_t+1)
-            
-            distinct_count += recursive(ind_s + 1, ind_t)
-            memo[(ind_s, ind_t)] = distinct_count
-
-            return distinct_count
-
-
-        return recursive(0,0)
-        
+            take=0
+            if(s[i]==t[j]):
+                take=solve(i+1,j+1)
+            skip=solve(i+1,j)
+            return take+skip
+        return solve(0,0)

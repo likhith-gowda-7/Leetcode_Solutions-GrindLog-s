@@ -82,7 +82,7 @@ The key insight is to use memoization to avoid redundant calculations and store 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 12 ms (Beats 99.16%) |
-| 💾 Memory | 24.8 MB (Beats 69.39%) |
-| 📅 Solved | 2026-02-11 |
+| ⏱️ Runtime | 712 ms (Beats 20.03%) |
+| 💾 Memory | 234.1 MB (Beats 8.65%) |
+| 📅 Solved | 2026-09-06 |
 | 💻 Language | Python |
