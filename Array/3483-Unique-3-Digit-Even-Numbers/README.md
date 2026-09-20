@@ -87,7 +87,7 @@ By brute‑forcing all 3‑digit even numbers and using the digit counts to vali
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 79 ms (Beats 19.78%) |
-| 💾 Memory | 19.5 MB (Beats 13.85%) |
-| 📅 Solved | 2026-09-11 |
+| ⏱️ Runtime | 65 ms (Beats 28.63%) |
+| 💾 Memory | 19.4 MB (Beats 36.16%) |
+| 📅 Solved | 2026-09-15 |
 | 💻 Language | Python |
