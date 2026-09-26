@@ -140,7 +140,7 @@ Only a few integer variables are used; no extra data structures grow with input 
 
 | Metric | Value |
 |:-------|:------|
-| ⏱️ Runtime | 7 ms (Beats 70%) |
-| 💾 Memory | 19.1 MB (Beats 87.39%) |
-| 📅 Solved | 2026-09-20 |
+| ⏱️ Runtime | 3 ms (Beats 98.06%) |
+| 💾 Memory | 19.2 MB (Beats 89.2%) |
+| 📅 Solved | 2026-09-22 |
 | 💻 Language | Python |
