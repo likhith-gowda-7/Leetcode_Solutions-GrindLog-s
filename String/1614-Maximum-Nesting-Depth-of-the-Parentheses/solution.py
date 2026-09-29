@@ -1,16 +1,11 @@
 class Solution:
     def maxDepth(self, s: str) -> int:
-        stack=[]
-        maxi=0
-        for i in s:
-            curr=0
-            if(i=="("):
-                stack.append(i)
-            elif(i==")"):
-                curr=len(stack)
-                maxi=max(curr,maxi)
-                stack.pop()
-        return maxi
-    
-        
-        
+        curr=0
+        res=0
+        for val in s:
+            if(val=="("):
+                curr+=1
+            elif(val==")"):
+                res=max(curr,res)
+                curr-=1
+        return res

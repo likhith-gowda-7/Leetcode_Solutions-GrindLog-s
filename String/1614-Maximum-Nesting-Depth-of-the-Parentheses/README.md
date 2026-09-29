@@ -1,7 +1,7 @@
 # 1614. Maximum Nesting Depth of the Parentheses
 
 
-![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00b8a3) ![Language](https://img.shields.io/badge/Language-Python-blue) ![String](https://img.shields.io/badge/String-purple) ![Stack](https://img.shields.io/badge/Stack-purple)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00b8a3) ![Language](https://img.shields.io/badge/Language-Python-blue) ![String](https://img.shields.io/badge/String-purple) ![Stack](https://img.shields.io/badge/Stack-purple) ![Bracket Sequences](https://img.shields.io/badge/Bracket%20Sequences-purple)
 
 
 🔗 [View on LeetCode](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/)
@@ -75,6 +75,6 @@ The key insight is that the maximum depth is only updated when a closing parenth
 | Metric | Value |
 |:-------|:------|
 | ⏱️ Runtime | 0 ms (Beats 100%) |
-| 💾 Memory | 17.7 MB (Beats 100%) |
-| 📅 Solved | 2025-02-02 |
+| 💾 Memory | 19.2 MB (Beats 85.35%) |
+| 📅 Solved | 2026-09-28 |
 | 💻 Language | Python |
